@@ -14,3 +14,9 @@ h3 {
 p {
   @apply tracking-tight;
 }
+.row-inner {
+  @apply max-w-screen-xl mx-auto;
+}
+.row-wrapper {
+  @apply px-5;
+}
