@@ -28,7 +28,7 @@ const Hero = () => {
             </Link>
             <a
               target="_blank"
-              href="https://app.cal.com/clearlydesign/30min"
+              href={process.env.NEXT_PUBLIC_BOOKING_LINK}
               className="bg-gray-700 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-8 py-5 text-xl text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-green-300 focus-visible:text-green-300 hover:transform hover:-translate-y-1.5"
             >
               Book a Call

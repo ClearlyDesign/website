@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="text-gray-500">
           <p className="inline-block mr-3">Let&#39;s make something awesome.</p>
           <a
-            href="https://app.cal.com/clearlydesign/30min"
+            href={process.env.NEXT_PUBLIC_BOOKING_LINK}
             target="_blank"
             className="inline-flex items-center hover:text-gray-700 group font-medium"
           >

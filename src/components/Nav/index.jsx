@@ -20,7 +20,7 @@ const Nav = () => {
         ))}
       </nav>
       <a
-        href="https://app.cal.com/clearlydesign/30min"
+        href={process.env.NEXT_PUBLIC_BOOKING_LINK}
         target="_blank"
         className="border border-gray-600 hover:border-transparent transition-all ease-in-out duration-200 focus:border-transparent rounded-full bg-transparent px-5 py-2.5 text-lg text-gray-400 hover:bg-lime-400 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400 focus-visible:hover:text-gray-900"
       >
