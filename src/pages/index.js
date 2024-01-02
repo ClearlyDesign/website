@@ -1,10 +1,14 @@
 import SEO from "@/components/SEO"
-import Hero from "@/components/Hero"
+import Hero from "@/sections/Hero"
 import Footer from "@/components/Footer"
-import HowItWorks from "@/components/HowItWorks"
-import Pricing from "@/components/Pricing"
-import OurWork from "@/components/OurWork"
-import FAQ from "@/components/FAQ"
+import HowItWorks from "@/sections/HowItWorks"
+import Pricing from "@/sections/Pricing"
+import OurWork from "@/sections/OurWork"
+import FAQ from "@/sections/FAQ"
+import WhyUseUs from "@/sections/WhyUseUs"
+import Testimonials from "@/sections/Testimonials"
+import WhatWeDo from "@/sections/WhatWeDo"
+import CTABlock from "@/sections/CTABlock"
 
 const Home = () => {
   return (
@@ -12,9 +16,13 @@ const Home = () => {
       <SEO title="Clearly Design | Product Design Subscription" />
       <Hero />
       <OurWork />
+      <WhyUseUs />
+      <Testimonials />
       <HowItWorks />
       <Pricing />
+      <WhatWeDo />
       <FAQ />
+      <CTABlock />
       <Footer />
     </div>
   )

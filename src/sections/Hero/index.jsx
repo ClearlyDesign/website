@@ -1,5 +1,5 @@
 import { Link } from "react-scroll"
-import Header from "../Header"
+import Header from "../../components/Header"
 
 const Hero = () => {
   return (
