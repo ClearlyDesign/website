@@ -1,5 +1,5 @@
-import { ArrowLongRightIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline"
 
 const Footer = () => {
   return (
@@ -8,7 +8,8 @@ const Footer = () => {
         <div className="text-gray-500">
           <p className="inline-block mr-3">Let&#39;s make something awesome.</p>
           <a
-            href="#"
+            href="https://app.cal.com/clearlydesign/30min"
+            target="_blank"
             className="inline-flex items-center hover:text-gray-700 group font-medium"
           >
             Book a Call{" "}

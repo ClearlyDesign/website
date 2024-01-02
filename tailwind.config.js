@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     colors: {
+      white: "#ffffff",
+      inherit: "inherit",
+      current: "currentColor",
+      transparent: "transparent",
       gray: {
         50: "#F8FAFC",
         100: "#F1F5F9",

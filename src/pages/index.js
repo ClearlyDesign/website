@@ -1,15 +1,20 @@
+import SEO from "@/components/SEO"
+import Hero from "@/components/Hero"
 import Footer from "@/components/Footer"
+import HowItWorks from "@/components/HowItWorks"
+import Pricing from "@/components/Pricing"
+import OurWork from "@/components/OurWork"
+import FAQ from "@/components/FAQ"
 
 const Home = () => {
   return (
     <div>
-      <h1>Heading 1</h1>
-      <h2>Heading 1</h2>
-      <h3>Heading 1</h3>
-      <p>
-        We’ve spent decades making it this simple. You’ll never want to go back to random
-        freelancers, expensive agencies, or junior internal designers.
-      </p>
+      <SEO title="Clearly Design | Product Design Subscription" />
+      <Hero />
+      <OurWork />
+      <HowItWorks />
+      <Pricing />
+      <FAQ />
       <Footer />
     </div>
   )
