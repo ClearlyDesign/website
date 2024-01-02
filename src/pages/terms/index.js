@@ -1,13 +1,17 @@
 import Footer from "@/components/Footer"
+import PageHeader from "@/sections/PageHeader"
 
 const Terms = () => {
   return (
-    <div className="row-wrapper">
-      <div className="row-inner">
-        <h1>Terms of Use</h1>
+    <>
+      <PageHeader title="Terms of Use" description="" />
+      <div className="row-wrapper">
+        <div className="row-inner py-20">
+          <p>Page Content</p>
+        </div>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 export default Terms

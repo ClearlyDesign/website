@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="row-inner">
         <Header />
         <div className="text-center pt-24 pb-48">
-          <h1 class="bg-gradient-to-r from-green-300 to-lime-300 inline-block text-transparent bg-clip-text">
+          <h1 className="bg-gradient-to-r from-green-300 to-lime-300 inline-block text-transparent bg-clip-text">
             Pixel-Perfect
           </h1>
           <h1 className="text-white">Design Subscription</h1>

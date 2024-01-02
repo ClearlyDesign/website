@@ -17,6 +17,9 @@ p {
 .row-inner {
   @apply max-w-screen-xl mx-auto;
 }
+.row-skinny {
+  @apply max-w-screen-md mx-auto;
+}
 .row-wrapper {
   @apply px-5;
 }
