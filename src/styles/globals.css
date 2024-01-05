@@ -33,6 +33,14 @@ p {
   @apply py-6 md:py-12 lg:py-24;
 }
 
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   h1 {
     @apply text-6xl;
