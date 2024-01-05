@@ -16,7 +16,7 @@ const FAQ = () => {
             />
             <div
               className={clsx(
-                "mt-16 divide-solid divide-y divide-gray-300/40 border border-gray-300/40 overflow-hidden",
+                "mt-16 divide-solid divide-y divide-gray-300/60 border border-gray-300/60 overflow-hidden",
                 "-mx-5 sm:mx-0 sm:rounded-2xl",
               )}
             >
@@ -56,7 +56,7 @@ const Item = ({ question, answer }) => {
       </button>
       <div
         className={clsx(
-          "p-5 pb-10 bg-gradient-to-b from-gray-50 border-t border-gray-200",
+          "p-5 pb-10 bg-gradient-to-b from-gray-50 border-t border-gray-300/60",
           open ? "block" : "hidden",
         )}
       >

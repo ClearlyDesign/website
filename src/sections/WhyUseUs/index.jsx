@@ -42,16 +42,16 @@ const Item = ({ item, i }) => {
   return (
     <div
       className={clsx(
-        "bg-gray-50 border border-gray-200 p-4 rounded-2xl",
+        "bg-gray-50 border border-gray-200 p-4 sm:p-6 rounded-2xl",
         i < 3
-          ? "col-span-12 sm:col-span-6 md:col-span-3 lg:col-span-4"
-          : "col-span-12 sm:col-span-6 md:col-span-3",
+          ? "col-span-12 sm:col-span-6 md:col-span-4"
+          : "col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3",
       )}
     >
       <div className="inline-flex items-center justify-center p-3 mb-2 bg-gradient-to-tr from-green-300 to-lime-300 rounded-full">
         <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
       </div>
-      <h5 className="text-gray-900">{item.title}</h5>
+      <h5 className="text-gray-900 mt-1">{item.title}</h5>
       <p className="text-gray-600">{item.description}</p>
     </div>
   )

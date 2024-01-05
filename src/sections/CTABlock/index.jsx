@@ -2,7 +2,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline"
 
 const CTABlock = () => {
   return (
-    <section className="row-wrapper row-y-spacing">
+    <section className="row-wrapper row-b-spacing">
       <div className="row-inner bg-gradient-to-tr from-indigo-950 to-gray-950 rounded-2xl p-10 text-center">
         <div className="py-10 max-w-2xl mx-auto space-y-4">
           <h2 className="text-white">Anything still not Clear?</h2>
