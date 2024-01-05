@@ -5,8 +5,8 @@ const PrivacyPolicy = () => {
   return (
     <>
       <PageHeader title="Privacy Policy" description="" />
-      <div className="row-wrapper">
-        <div className="row-inner py-20">
+      <div className="row-wrapper row-y-spacing">
+        <div className="row-inner">
           <p>Page Content</p>
         </div>
       </div>

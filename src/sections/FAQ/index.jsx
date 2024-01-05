@@ -7,8 +7,8 @@ import { Element } from "react-scroll"
 const FAQ = () => {
   return (
     <Element name="faq">
-      <section className="pt-16 pb-4 sm:py-24 bg-gradient-to-t from-indigo-100 to bg-indigo-50">
-        <div className="row-wrapper">
+      <section className="bg-white">
+        <div className="row-wrapper row-y-spacing">
           <div className="row-skinny">
             <SectionHeader
               title="Questions"
@@ -16,7 +16,7 @@ const FAQ = () => {
             />
             <div
               className={clsx(
-                "mt-16 divide-solid divide-y divide-indigo-300/40 border border-indigo-300/40 overflow-hidden",
+                "mt-16 divide-solid divide-y divide-gray-300/40 border border-gray-300/40 overflow-hidden",
                 "-mx-5 sm:mx-0 sm:rounded-2xl",
               )}
             >
@@ -40,8 +40,8 @@ const Item = ({ question, answer }) => {
       <button
         onClick={() => setOpen((open) => !open)}
         className={clsx(
-          "grid grid-cols-[1fr,24px] gap-5 w-full items-center text-left p-5 hover:bg-indigo-200 hover:text-indigo-800",
-          open ? "bg-indigo-200 text-indigo-800" : "text-gray-900 bg-white",
+          "grid grid-cols-[1fr,24px] gap-5 w-full items-center text-left p-5 hover:bg-gradient-to-br from-green-100 to-lime-100 hover:text-green-900 group",
+          open ? "bg-gradient-to-br text-green-900" : "text-gray-900 bg-white",
         )}
       >
         <p
@@ -49,14 +49,14 @@ const Item = ({ question, answer }) => {
           className="text-lg sm:text-xl"
         />
         {open ? (
-          <MinusCircleIcon className="w-6 h-6" />
+          <MinusCircleIcon className="w-6 h-6 text-green-500" />
         ) : (
-          <PlusCircleIcon className="w-6 h-6 text-gray-500" />
+          <PlusCircleIcon className="w-6 h-6 text-gray-400 group-hover:text-green-500" />
         )}
       </button>
       <div
         className={clsx(
-          "p-5 pb-10 bg-white border-t border-indigo-200",
+          "p-5 pb-10 bg-gradient-to-b from-gray-50 border-t border-gray-200",
           open ? "block" : "hidden",
         )}
       >
@@ -78,7 +78,7 @@ const items = [
   {
     question: "Why wouldn&#39;t I just hire a full-time designer?",
     answer:
-      "Well, if you really do the math, it would be a lot more expensive hiring someone with decades of experience. You&#39;ll exclusively work with senior-level designers which would easily cost you $100k+, require benefits, vacation days, etc. It adds up!",
+      "Well, if you really do the math, it would be a lot more expensive hiring someone with decades of experience. You&#39;ll exclusively work with senior-level designers which would easily cost you $120k+, require benefits, vacation days, etc. It adds up!",
   },
   {
     question: "Is there a limit to how many requests I can have?",

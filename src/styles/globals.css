@@ -11,6 +11,12 @@ h2 {
 h3 {
   @apply tracking-tighter text-4xl font-bold;
 }
+h4 {
+  @apply tracking-tighter text-3xl font-bold;
+}
+h5 {
+  @apply tracking-tighter text-2xl font-bold;
+}
 p {
   @apply tracking-tight;
 }
@@ -22,4 +28,25 @@ p {
 }
 .row-wrapper {
   @apply px-5;
+}
+.row-y-spacing {
+  @apply py-6 md:py-12 lg:py-24;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
 }
