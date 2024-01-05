@@ -30,7 +30,7 @@ p {
   @apply px-5;
 }
 .row-y-spacing {
-  @apply py-6 md:py-12 lg:py-24;
+  @apply py-10 md:py-12 lg:py-24;
 }
 
 .hide-scroll-bar {
