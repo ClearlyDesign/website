@@ -64,3 +64,9 @@ p {
     @apply text-xl;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    @apply text-5xl;
+  }
+}
