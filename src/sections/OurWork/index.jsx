@@ -1,5 +1,6 @@
 import SectionHeader from "@/components/SectionHeader"
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline"
+import Image from "next/image"
 import { Element } from "react-scroll"
 
 const OurWork = () => {
@@ -15,22 +16,78 @@ const OurWork = () => {
           </div>
         </div>
         <div className="overflow-hidden">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 -mx-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 -mx-5 md:-mx-8">
             <div className="space-y-5 pt-5 md:pt-10 lg:pt-20 hidden md:block">
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-video"></div>
+              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
+                <Image
+                  src="/portfolio/portfolio-s-01.jpg"
+                  alt=""
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
+                <Image
+                  src="/portfolio/portfolio-r-01.jpg"
+                  alt=""
+                  width={400}
+                  height={225}
+                />
+              </div>
             </div>
             <div className="space-y-5">
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-video"></div>
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>
+              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
+                <Image
+                  src="/portfolio/portfolio-r-02.jpg"
+                  alt=""
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
+                <Image
+                  src="/portfolio/portfolio-s-02.jpg"
+                  alt=""
+                  width={400}
+                  height={225}
+                />
+              </div>
             </div>
             <div className="space-y-5 pt-5 md:pt-10 lg:pt-20">
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-video"></div>
+              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
+                <Image
+                  src="/portfolio/portfolio-s-03.jpg"
+                  alt=""
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
+                <Image
+                  src="/portfolio/portfolio-r-03.jpg"
+                  alt=""
+                  width={400}
+                  height={225}
+                />
+              </div>
             </div>
             <div className="space-y-5 hidden lg:block">
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-video"></div>
+              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
+                <Image
+                  src="/portfolio/portfolio-r-04.jpg"
+                  alt=""
+                  width={400}
+                  height={225}
+                />
+              </div>
+              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
+                <Image
+                  src="/portfolio/portfolio-s-04.jpg"
+                  alt=""
+                  width={400}
+                  height={400}
+                />
+              </div>
             </div>
           </div>
           <div className="mt-20 text-center px-5">
