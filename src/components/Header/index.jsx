@@ -2,14 +2,14 @@ import Nav from "../Nav"
 import Logo from "../Logo"
 import Link from "next/link"
 
-const Header = () => {
+const Header = ({ linkFromExternal = false }) => {
   return (
     <header>
       <div className="row-inner flex justify-between py-6">
         <Link href="/">
           <Logo />
         </Link>
-        <Nav />
+        <Nav linkFromExternal={linkFromExternal} />
       </div>
     </header>
   )

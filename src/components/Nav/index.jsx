@@ -1,10 +1,11 @@
-import { Link } from "react-scroll"
-import { useState } from "react"
-import { Dialog } from "@headlessui/react"
-import { ArrowLongRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import Logo from "../Logo"
+import Link from "next/link"
+import { Dialog } from "@headlessui/react"
+import { useState } from "react"
+import { Link as JumpLink } from "react-scroll"
+import { ArrowLongRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
-const Nav = () => {
+const Nav = ({ linkFromExternal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -23,18 +24,30 @@ const Nav = () => {
         <div className="flex items-center space-x-4">
           <nav className="space-x-4 text-lg">
             {items.map((item) => (
-              <Link
-                key={item.to}
-                activeClass="active"
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-                className="hover:text-lime-400 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-5 py-2.5 text-lg text-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400"
-              >
-                {item.label}
-              </Link>
+              <>
+                {linkFromExternal ? (
+                  <Link
+                    key={item.to}
+                    href={`/#${item.to}`}
+                    className="hover:text-lime-400 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-5 py-2.5 text-lg text-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <JumpLink
+                    key={item.to}
+                    activeClass="active"
+                    to={item.to}
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    className="hover:text-lime-400 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-5 py-2.5 text-lg text-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400"
+                  >
+                    {item.label}
+                  </JumpLink>
+                )}
+              </>
             ))}
           </nav>
           <a
@@ -57,7 +70,9 @@ const Nav = () => {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-950/90 backdrop-blur-lg px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-300/30">
           <div className="flex items-center justify-between">
             <div className="-ml-1">
-              <Logo />
+              <Link href="/">
+                <Logo />
+              </Link>
             </div>
             <button
               type="button"
@@ -71,23 +86,35 @@ const Nav = () => {
           <div className="-mx-6 mt-6 flow-root">
             <div className="">
               {items.map((item) => (
-                <Link
-                  key={item.to}
-                  activeClass="active"
-                  to={item.to}
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center hover:bg-indigo-950/40 hover:text-lime-300 hover:cursor-pointer px-6 py-3 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400 group"
-                >
-                  {item.label}
-                  <ArrowLongRightIcon
-                    className="w-5 h-5 ml-2 hidden group-hover:inline-block"
-                    aria-hidden={true}
-                  />
-                </Link>
+                <>
+                  {linkFromExternal ? (
+                    <Link
+                      key={item.to}
+                      href={`/#${item.to}`}
+                      className="flex items-center hover:bg-indigo-950/40 hover:text-lime-300 hover:cursor-pointer px-6 py-3 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400 group"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <JumpLink
+                      key={item.to}
+                      activeClass="active"
+                      to={item.to}
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center hover:bg-indigo-950/40 hover:text-lime-300 hover:cursor-pointer px-6 py-3 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400 group"
+                    >
+                      {item.label}
+                      <ArrowLongRightIcon
+                        className="w-5 h-5 ml-2 hidden group-hover:inline-block"
+                        aria-hidden={true}
+                      />
+                    </JumpLink>
+                  )}
+                </>
               ))}
             </div>
             <a
