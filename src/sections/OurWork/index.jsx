@@ -14,7 +14,7 @@ const OurWork = () => {
             />
           </div>
         </div>
-        <div>
+        <div className="overflow-hidden">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 lg:gap-8 -mx-10">
             <div className="space-y-5 lg:space-y-8 pt-5 md:pt-10 lg:pt-20 hidden md:block">
               <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>

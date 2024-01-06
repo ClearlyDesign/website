@@ -1,8 +1,8 @@
+import clsx from "clsx"
+import { Element } from "react-scroll"
+import { useState } from "react"
 import SectionHeader from "@/components/SectionHeader"
 import { MinusCircleIcon, PlusCircleIcon } from "@heroicons/react/24/outline"
-import clsx from "clsx"
-import { useState } from "react"
-import { Element } from "react-scroll"
 
 const FAQ = () => {
   return (
@@ -73,7 +73,7 @@ const items = [
   {
     question: "How many designs could I get?",
     answer:
-      "It all depends on how big your requests are and how many you create. We ask you to prioritize your request to tell us what order to work in, and then start delivering designs one after the other. The faster the feedback and completion of the first task, the faster we can move to the next task, so it depends on you as well.",
+      "It all depends on how big your requests are and how many requests you have. We ask you to prioritize your requests to tell us what order to work in, and then start delivering designs one after the other. The faster the feedback and completion of the first task, the faster we can move to the next task, so it depends on you as well.",
   },
   {
     question: "Why wouldn&#39;t I just hire a full-time designer?",
@@ -93,12 +93,12 @@ const items = [
   {
     question: "Do I get hours, and do those hours &#39;roll-over&#39;?",
     answer:
-      "Short answer is no. This is a subscription providing you with access to top-tier design talent. While you pay you have access to that and we deliver on your design requests. In the same way that you have an employee for a certain number of hours per week, you can&#39;t increase their time next week if this week was a slow week.",
+      "Short answer is no. This is a subscription providing you with access to top-tier design talent. While you&#39;re subscribed, you have access to our team and we deliver on your design requests. In the same way that you have an employee for a certain number of hours per week, you can&#39;t increase their time next week if this week was a slow week.",
   },
   {
     question: "How fast will I receive my designs?",
     answer:
-      "How long is a piece of string ;-) It depends on the complexity of the tasks, but we aim to deliver tasks or show progress within a couple of working days.",
+      "How long is a piece of string ;-) It depends on the complexity of the tasks, but we aim to deliver tasks or show progress within a couple of working days to contineously push it forward.",
   },
   {
     question: "Do you offer refunds if I don&#39;t like the work?",

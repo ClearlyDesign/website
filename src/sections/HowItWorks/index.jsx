@@ -1,5 +1,5 @@
-import SectionHeader from "@/components/SectionHeader"
 import { Element } from "react-scroll"
+import SectionHeader from "@/components/SectionHeader"
 
 const HowItWorks = () => {
   return (
@@ -24,7 +24,7 @@ const HowItWorks = () => {
                   </div>
                   <div>
                     <h5 className="text-white">{item.title}</h5>
-                    <p>{item.description}</p>
+                    <p dangerouslySetInnerHTML={{ __html: item.description }} />
                   </div>
                 </div>
               ))}

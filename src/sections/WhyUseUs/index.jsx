@@ -72,7 +72,7 @@ const items = [
   {
     title: "Unique and all yours",
     description:
-      "We craft each of your designs from scratch for you and is 100% yours to keep forever.",
+      "We craft each of your designs from scratch for you and it is 100% yours to keep forever.",
     icon: PaintBrushIcon,
   },
   {
