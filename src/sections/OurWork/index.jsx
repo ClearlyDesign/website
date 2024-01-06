@@ -15,24 +15,20 @@ const OurWork = () => {
           </div>
         </div>
         <div className="overflow-hidden">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 lg:gap-8 -mx-10">
-            <div className="space-y-5 lg:space-y-8 pt-5 md:pt-10 lg:pt-20 hidden md:block">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 -mx-10">
+            <div className="space-y-5 pt-5 md:pt-10 lg:pt-20 hidden md:block">
               <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>
               <div className="bg-gray-200 p-8 rounded-2xl aspect-video"></div>
             </div>
-            <div className="space-y-5 lg:space-y-8">
+            <div className="space-y-5">
               <div className="bg-gray-200 p-8 rounded-2xl aspect-video"></div>
               <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>
             </div>
-            <div className="space-y-5 lg:space-y-8 pt-5 md:pt-10 lg:pt-20">
+            <div className="space-y-5 pt-5 md:pt-10 lg:pt-20">
               <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>
               <div className="bg-gray-200 p-8 rounded-2xl aspect-video"></div>
             </div>
-            <div className="space-y-5 lg:space-y-8 hidden sm:block">
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-video"></div>
-              <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>
-            </div>
-            <div className="space-y-5 lg:space-y-8 pt-5 md:pt-10 lg:pt-20 hidden md:block">
+            <div className="space-y-5 hidden lg:block">
               <div className="bg-gray-200 p-8 rounded-2xl aspect-square"></div>
               <div className="bg-gray-200 p-8 rounded-2xl aspect-video"></div>
             </div>
