@@ -32,14 +32,14 @@ const Pricing = () => {
                     <div className="mt-8 space-y-4">
                       <a
                         href={plan.link}
-                        className="block text-center bg-gradient-to-tr from-green-300 to-lime-300 hover:cursor-pointer rounded-full px-6 py-3 text-lg text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-lime-400 hover:from-green-400 hover:to-lime-400"
+                        className="block text-center bg-gradient-to-tr from-green-300 to-lime-300 hover:cursor-pointer rounded-full px-6 py-3 text-lg text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-gray-600 hover:from-green-400 hover:to-lime-400"
                       >
                         Get Started
                       </a>
                       <a
                         href={process.env.NEXT_PUBLIC_BOOKING_LINK}
                         target="_blank"
-                        className="block text-center bg-transparent hover:cursor-pointer rounded-full px-6 py-3 text-lg text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-lime-400 hover:bg-gray-100 border border-gray-300"
+                        className="block text-center bg-transparent hover:cursor-pointer rounded-full px-6 py-3 text-lg text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-gray-600 hover:bg-gray-100 border border-gray-300"
                       >
                         Book a Call
                       </a>
