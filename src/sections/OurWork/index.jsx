@@ -90,7 +90,7 @@ const OurWork = () => {
               </div>
             </div>
           </div>
-          <div className="mt-20 text-center px-5">
+          {/* <div className="mt-20 text-center px-5">
             <a
               target="_blank"
               href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?page-id=0%3A1&type=design&node-id=1-2&viewport=597%2C244%2C0.32&t=yLcIC7Lhu4WPwzjj-1&scaling=min-zoom&mode=design"
@@ -98,7 +98,7 @@ const OurWork = () => {
             >
               View Portfolio <ArrowLongRightIcon className="w-6 h-6 text-lime-400 ml-3" />
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
     </Element>
