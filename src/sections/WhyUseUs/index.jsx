@@ -49,7 +49,7 @@ const Item = ({ item, i }) => {
       )}
     >
       <div className="inline-flex items-center justify-center p-3 mb-2 bg-gradient-to-tr from-green-300 to-lime-300 rounded-full">
-        <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
+        <item.icon className="h-6 w-6 shrink-0 text-green-800" aria-hidden="true" />
       </div>
       <h5 className="text-gray-900 mt-1">{item.title}</h5>
       <p className="text-gray-600">{item.description}</p>
@@ -95,8 +95,7 @@ const items = [
   },
   {
     title: "Flexible and Scalable",
-    description:
-      "Scale up or down based on your needs. You can even pause or cancel at anytime.",
+    description: "Scale up or down based on your needs. You can even cancel at anytime.",
     icon: CubeTransparentIcon,
   },
   {

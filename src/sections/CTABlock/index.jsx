@@ -6,7 +6,7 @@ const CTABlock = () => {
       <div className="row-inner bg-gradient-to-tr from-indigo-950 to-gray-950 rounded-2xl px-5 sm:py-10 text-center">
         <div className="py-10 max-w-2xl mx-auto space-y-4">
           <h2 className="text-white">Anything still not Clear?</h2>
-          <p className="text-xl text-gray-500">
+          <p className="text-xl text-gray-400">
             Jump on a quick discovery call to find out why Clearly Design is different and
             how you and your team can change the way you source design, forever.
           </p>
