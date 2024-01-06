@@ -4,7 +4,7 @@ import SectionHeader from "@/components/SectionHeader"
 const HowItWorks = () => {
   return (
     <Element name="howItWorks">
-      <section className="bg-gradient-to-br from-indigo-950 to-gray-950">
+      <section className="bg-gradient-to-br from-indigo-950 to-gray-950" id="howItWorks">
         <div className="row-wrapper row-y-spacing">
           <div className="row-skinny">
             <SectionHeader

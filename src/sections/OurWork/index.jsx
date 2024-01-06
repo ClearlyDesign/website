@@ -1,12 +1,15 @@
-import SectionHeader from "@/components/SectionHeader"
-import { ArrowLongRightIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
 import { Element } from "react-scroll"
+import SectionHeader from "@/components/SectionHeader"
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline"
 
 const OurWork = () => {
   return (
     <Element name="ourWork">
-      <section className="bg-gradient-to-t from-gray-100 to bg-gray-50 row-y-spacing">
+      <section
+        className="bg-gradient-to-t from-gray-100 to bg-gray-50 row-y-spacing"
+        id="ourWork"
+      >
         <div className="row-wrapper">
           <div className="row-inner">
             <SectionHeader

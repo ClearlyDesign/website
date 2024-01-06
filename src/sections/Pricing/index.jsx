@@ -5,7 +5,7 @@ import { CheckCircleIcon, PlusCircleIcon } from "@heroicons/react/24/outline"
 const Pricing = () => {
   return (
     <Element name="pricing">
-      <section className="bg-gradient-to-t from-gray-100 to bg-gray-50">
+      <section className="bg-gradient-to-t from-gray-100 to bg-gray-50" id="pricing">
         <div className="row-wrapper row-y-spacing">
           <div className="row-inner">
             <SectionHeader

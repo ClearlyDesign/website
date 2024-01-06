@@ -7,7 +7,7 @@ import { MinusCircleIcon, PlusCircleIcon } from "@heroicons/react/24/outline"
 const FAQ = () => {
   return (
     <Element name="faq">
-      <section className="bg-white">
+      <section className="bg-white" id="faq">
         <div className="row-wrapper row-y-spacing">
           <div className="row-skinny">
             <SectionHeader
