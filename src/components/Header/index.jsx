@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const Header = () => {
   return (
-    <header className="row-wrapper">
+    <header>
       <div className="row-inner flex justify-between py-6">
         <Link href="/">
           <Logo />

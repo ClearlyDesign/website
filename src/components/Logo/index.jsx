@@ -3,6 +3,7 @@ const Logo = () => {
     <svg
       width="267"
       height="45"
+      className="w-40 md:w-52 lg:w-64"
       viewBox="0 0 267 45"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

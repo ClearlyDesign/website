@@ -70,7 +70,7 @@ const items = [
     icon: DevicePhoneMobileIcon,
     title: "Products",
     services: [
-      "User Experience",
+      "User Experience + Audits",
       "Pixel-Perfect Interface Design",
       "Design System",
       "Developer hand-off for implementation",
