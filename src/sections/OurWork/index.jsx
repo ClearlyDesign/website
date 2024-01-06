@@ -27,6 +27,7 @@ const OurWork = () => {
                   alt=""
                   width={400}
                   height={400}
+                  className="w-full"
                 />
               </div>
               <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
@@ -35,6 +36,7 @@ const OurWork = () => {
                   alt=""
                   width={400}
                   height={225}
+                  className="w-full"
                 />
               </div>
             </div>
@@ -45,6 +47,7 @@ const OurWork = () => {
                   alt=""
                   width={400}
                   height={400}
+                  className="w-full"
                 />
               </div>
               <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
@@ -53,6 +56,7 @@ const OurWork = () => {
                   alt=""
                   width={400}
                   height={225}
+                  className="w-full"
                 />
               </div>
             </div>
@@ -63,6 +67,7 @@ const OurWork = () => {
                   alt=""
                   width={400}
                   height={400}
+                  className="w-full"
                 />
               </div>
               <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
@@ -71,6 +76,7 @@ const OurWork = () => {
                   alt=""
                   width={400}
                   height={225}
+                  className="w-full"
                 />
               </div>
             </div>
@@ -81,6 +87,7 @@ const OurWork = () => {
                   alt=""
                   width={400}
                   height={225}
+                  className="w-full"
                 />
               </div>
               <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
@@ -89,6 +96,7 @@ const OurWork = () => {
                   alt=""
                   width={400}
                   height={400}
+                  className="w-full"
                 />
               </div>
             </div>

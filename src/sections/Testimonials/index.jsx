@@ -1,5 +1,7 @@
 import { Element } from "react-scroll"
 import SectionHeader from "@/components/SectionHeader"
+import { useState } from "react"
+import clsx from "clsx"
 
 const Testimonials = () => {
   return (
@@ -29,9 +31,17 @@ const Testimonials = () => {
 export default Testimonials
 
 const Item = ({ item }) => {
+  const [showMore, setShowMore] = useState(false)
+  const hasMore = item?.testimonial?.length > 220
+
   return (
     <div class="inline-block px-2">
-      <div class="w-80 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+      <div
+        class={clsx(
+          "w-80 max-w-xs overflow-hidden rounded-2xl shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out",
+          showMore ? "h-96" : "h-60",
+        )}
+      >
         <div className="p-5">
           <div className="grid grid-cols-[48px,1fr] items-center gap-3 mb-4">
             {item.avatar !== "" ? (
@@ -50,7 +60,14 @@ const Item = ({ item }) => {
               <p className="text-gray-500 text-sm tracking-tighter">{item.title}</p>
             </div>
           </div>
-          <p className="relative text-gray-700 tracking-tighter pl-2">
+          <p
+            className={clsx(
+              "relative text-gray-600 tracking-tighter leading-5 pl-2",
+              !showMore && "line-clamp-6",
+              hasMore && "hover:text-gray-900 hover:cursor-pointer",
+            )}
+            onClick={() => (hasMore ? setShowMore((s) => !s) : null)}
+          >
             <span className="font-serif absolute -left-0.5 top-0 text-indigo-400 font-bold">
               &#34;
             </span>
@@ -74,31 +91,32 @@ const items = [
   {
     name: "Werner Lans",
     title: "Director @ Canada Abroad",
-    testimonial: "Clearly Design has ...",
-    avatar: "",
+    testimonial:
+      "Francois and his team have helped me personally as well as Canada Abroad with numerous design and website projects and are still easily approachable to provide advice to help out when required. I've dealt with a lot of IT professionals in my career but there aren't many who understand exactly what is required straight off the bat and have the familiarity to lead you to a new and innovative solution and design. I can without a doubt vouch that you will be in safe hands with Francois and his team from Clearly Design.",
+    avatar: "avatar-werner.jpg",
   },
-  {
-    name: "Will Andre",
-    title: "CEO @ NodCards",
-    testimonial: "Clearly Design has ...",
-    avatar: "",
-  },
-  {
-    name: "Vincent Heys",
-    title: "CEO/Co-founder @ Wealthstack",
-    testimonial: "Clearly Design has ...",
-    avatar: "",
-  },
-  {
-    name: "Roeland van Nieuwkerk",
-    title: "Fractional CTO",
-    testimonial: "Clearly Design has ...",
-    avatar: "",
-  },
-  {
-    name: "",
-    title: "a @ b",
-    testimonial: "Clearly Design has ...",
-    avatar: "",
-  },
+  // {
+  //   name: "Will Andre",
+  //   title: "CEO @ NodCards",
+  //   testimonial: "Clearly Design has ...",
+  //   avatar: "",
+  // },
+  // {
+  //   name: "Vincent Heys",
+  //   title: "CEO/Co-founder @ Wealthstack",
+  //   testimonial: "Clearly Design has ...",
+  //   avatar: "",
+  // },
+  // {
+  //   name: "Roeland van Nieuwkerk",
+  //   title: "Fractional CTO",
+  //   testimonial: "Clearly Design has ...",
+  //   avatar: "",
+  // },
+  // {
+  //   name: "",
+  //   title: "a @ b",
+  //   testimonial: "Clearly Design has ...",
+  //   avatar: "",
+  // },
 ]
