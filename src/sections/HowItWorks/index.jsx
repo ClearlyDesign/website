@@ -48,7 +48,7 @@ const items = [
     number: 2,
     title: "Request Design Work",
     description:
-      "Use our guided process to submit new design work. You can also reorder multiple requests to determine what&#39;s next based.",
+      "Use our guided process to submit new design work or reorder multiple requests to determine the highest priority item.",
   },
   {
     number: 3,
