@@ -5,10 +5,10 @@ const CTABlock = () => {
     <section className="row-wrapper row-b-spacing">
       <div className="row-inner bg-gradient-to-tr from-indigo-950 to-gray-950 rounded-2xl px-5 sm:py-10 text-center">
         <div className="py-10 max-w-2xl mx-auto space-y-4">
-          <h2 className="text-white">Anything still not Clear?</h2>
+          <h2 className="text-white">Let&#39;s get clear on your design</h2>
           <p className="text-xl text-gray-400">
             Jump on a quick discovery call to find out why Clearly Design is different and
-            how you and your team can change the way you source design, forever.
+            how your team can change the way you source design, forever.
           </p>
           <div className="pt-5">
             <a

@@ -71,6 +71,16 @@ const Item = ({ question, answer }) => {
 
 const items = [
   {
+    question: "What is a workstream?",
+    answer:
+      "We want to offer you more than just quick design tasks. We see a workstream as a bigger project or initiative, which itself could be broken up into various smaller design tasks. Something like a rebrand (which could be broken up into: concept, logo, brand guidelines, corporate identity) or a website build (wireframes, design, build specific pages) or product specific &#39;project&#39; I.E. onboarding (audit, UX, design recommendations) - so each workstream could be broken into smaller tasks for approval as we go, but overall we're committed to complete the workstream before jumping to something completely different. So a second parallel workstream would mean we can do multiple projects simultaneously without having to wait on approval in a single workstream.",
+  },
+  {
+    question: "What if I had a specific design project only?",
+    answer:
+      "From our perspective, you can sign-up and get cracking on your project immediate, and as soon as we're done with the project, you can cancel the service. No need to stick around if you got what you came for. Working in this way makes it more predictable to figure out as we go rather than trying to scope and quote on a project that ends up changing downstream. We've found that we complete projects a lot sooner working in this way.",
+  },
+  {
     question: "How many designs could I get?",
     answer:
       "It all depends on how big your requests are and how many requests you have. We ask you to prioritize your requests to tell us what order to work in, and then start delivering designs one after the other. The faster the feedback and completion of the first task, the faster we can move to the next task, so it depends on you as well.",

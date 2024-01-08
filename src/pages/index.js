@@ -18,9 +18,9 @@ const Home = () => {
       <OurWork />
       <WhyUseUs />
       <Testimonials />
-      <HowItWorks />
-      <Pricing />
       <WhatWeDo />
+      <Pricing />
+      <HowItWorks />
       <FAQ />
       <CTABlock />
       <Footer />

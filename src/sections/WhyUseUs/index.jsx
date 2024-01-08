@@ -22,7 +22,7 @@ const WhyUseUs = () => {
         <div className="row-wrapper row-y-spacing">
           <div className="row-inner">
             <SectionHeader
-              title={`Great Design is Hard. <span class="text-green-500">We make it Easy.</span>`}
+              title={`Great design is hard. <span class="text-green-500">We make it easy.</span>`}
               description="We&#39;ve spent decades making it this simple. You&#39;ll never want to go back to random freelancers, expensive agencies, or junior internal designers."
             />{" "}
             <div className="mt-10 grid grid-cols-12 gap-4">
@@ -58,22 +58,21 @@ const Item = ({ item, i }) => {
 }
 const items = [
   {
-    title: "Premium Design",
-    description:
-      "Functional, beautiful, and highly detailed designs at your fingertips, made specifically for you.",
+    title: "Premium Quality Design",
+    description: "Beautiful, functional and highly detailed designs at your fingertips.",
     icon: SwatchIcon,
-  },
-  {
-    title: "Unlimited Revisions",
-    description:
-      "It's made for you, so we'll keep making changes until you're 100% satisfied.",
-    icon: DocumentCheckIcon,
   },
   {
     title: "Unique and all yours",
     description:
       "We craft each of your designs from scratch for you and it is 100% yours to keep forever.",
     icon: PaintBrushIcon,
+  },
+  {
+    title: "Unlimited Revisions",
+    description:
+      "It's made for you, so we'll keep making changes until you're 100% satisfied.",
+    icon: DocumentCheckIcon,
   },
   {
     title: "Affordable Pricing",

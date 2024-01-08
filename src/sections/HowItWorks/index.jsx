@@ -46,13 +46,13 @@ const items = [
   },
   {
     number: 2,
-    title: "Request Design Work",
+    title: "Request New Design Work",
     description:
       "Use our guided process to submit new design work or reorder multiple requests to determine the highest priority item.",
   },
   {
     number: 3,
-    title: "Get Designs & Make Revisions",
+    title: "Get Beautiful Designs In Days",
     description:
       "With unlimited revisions, we keep crafting your design until you&#39;re 100% satisfied. Then we move on to the next request.",
   },
