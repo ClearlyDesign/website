@@ -122,10 +122,6 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Up to 3 x Brands",
-        isUpgrade: false,
-      },
-      {
         title: "Unlimited requests & revisions",
         isUpgrade: false,
       },
@@ -165,10 +161,6 @@ const plans = [
       },
       {
         title: "Seamless Project Management",
-        isUpgrade: true,
-      },
-      {
-        title: "Unlimited brands and platforms",
         isUpgrade: true,
       },
       {
