@@ -165,7 +165,11 @@ module.exports = {
         950: "#3B0764",
       },
     },
-    extend: {},
+    extend: {
+      lineClamp: {
+        7: "7",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 }
