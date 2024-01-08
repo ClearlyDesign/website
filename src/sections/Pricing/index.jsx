@@ -122,7 +122,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Single Brand",
+        title: "Up to 3 x Brands",
         isUpgrade: false,
       },
       {
