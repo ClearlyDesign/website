@@ -81,7 +81,7 @@ const Item = ({ item }) => {
             <span className="font-serif absolute -left-0.5 top-0 text-indigo-400 font-bold">
               &#34;
             </span>
-            {item.testimonial}{" "}
+            <span dangerouslySetInnerHTML={{ __html: item.testimonial }} />{" "}
             <span className="font-serif text-indigo-400 font-bold">&#34;</span>
           </p>
         </div>
