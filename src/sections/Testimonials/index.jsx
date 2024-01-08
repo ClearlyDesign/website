@@ -100,6 +100,14 @@ const items = [
     url: "",
   },
   {
+    name: "Meryl Johnston",
+    title: "Founder & Advisor @ Bean Ninjas",
+    testimonial:
+      "Francois ran a brand and website refresh project for Bean Ninjas which I was super happy with! We&#39;ve received compliments on our new website. But not only does it look great it's helping us to have conversations with more potential clients. Francois worked collaboratively with our copywriter and was a strong project manager and communicator throughout. I highly recommend his services.",
+    avatar: "avatar-meryl.jpg",
+    url: "https://beanninjas.com",
+  },
+  {
     name: "Werner Lans",
     title: "Director @ Canada Abroad",
     testimonial:
