@@ -15,6 +15,13 @@ const Hero = () => {
             Product Design Partner For Growing Brands.
           </p>
           <div className="flex space-y-5 sm:space-y-0 sm:space-x-5 mx-auto mt-10 flex-col sm:flex-row justify-center">
+            <a
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_BOOKING_LINK}
+              className="bg-gradient-to-tr from-green-300 to-lime-300 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-6 py-3 sm:px-8 sm:py-5 text-xl text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-green-300 hover:transform hover:-translate-y-1.5 w-full sm:w-auto"
+            >
+              Book a Call
+            </a>
             <Link
               activeClass="active"
               to="pricing"
@@ -22,17 +29,10 @@ const Hero = () => {
               smooth={true}
               offset={50}
               duration={500}
-              className="bg-gradient-to-tr from-green-300 to-lime-300 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-6 py-3 sm:px-8 sm:py-5 text-xl text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-green-300 hover:transform hover:-translate-y-1.5 w-full sm:w-auto"
+              className="bg-gray-700 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-6 py-3 sm:px-8 sm:py-5 text-xl text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-green-300 focus-visible:text-green-300 hover:transform hover:-translate-y-1.5 w-full sm:w-auto"
             >
               View Pricing
             </Link>
-            <a
-              target="_blank"
-              href={process.env.NEXT_PUBLIC_BOOKING_LINK}
-              className="bg-gray-700 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-6 py-3 sm:px-8 sm:py-5 text-xl text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-green-300 focus-visible:text-green-300 hover:transform hover:-translate-y-1.5 w-full sm:w-auto"
-            >
-              Book a Call
-            </a>
           </div>
         </div>
       </div>

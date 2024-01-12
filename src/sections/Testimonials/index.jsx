@@ -113,7 +113,7 @@ const items = [
     testimonial:
       "Unlike freelancers and agencies I&#39;ve used, Francois and his team take a true partnership approach to design. They always envision themselves as “owners” in the outcomes which leads to a much higher quality of work and service. 10 out of 10, would recommend!",
     avatar: "avatar-will.jpg",
-    url: "https://nodcards.com",
+    url: "https://www.nodcards.com",
   },
   {
     name: "Werner Lans",
