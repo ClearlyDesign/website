@@ -12,7 +12,7 @@ const Hero = () => {
           </h1>
           <h1 className="text-white">Design Subscription</h1>
           <p className="text-lg sm:text-2xl text-gray-400 mt-5">
-            Product Design Partner For Growing Brands.
+            Product Design Partner For Startup Founders & Their Teams
           </p>
           <div className="flex space-y-5 sm:space-y-0 sm:space-x-5 mx-auto mt-10 flex-col sm:flex-row justify-center">
             <a

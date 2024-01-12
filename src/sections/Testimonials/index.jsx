@@ -116,6 +116,14 @@ const items = [
     url: "https://www.nodcards.com",
   },
   {
+    name: "Ben Orenstein",
+    title: "Co-founder @ Tuple",
+    testimonial:
+      "Francois is exactly what you want in a designer: fast, effective, and pleasant to work with.",
+    avatar: "avatar-ben-orenstein.jpeg",
+    url: "https://tuple.app",
+  },
+  {
     name: "Werner Lans",
     title: "Director @ Canada Abroad",
     testimonial:
