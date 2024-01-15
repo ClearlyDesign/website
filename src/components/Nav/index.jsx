@@ -138,12 +138,12 @@ const items = [
     to: "howItWorks",
   },
   {
-    label: "Pricing",
-    to: "pricing",
-  },
-  {
     label: "Our Work",
     to: "ourWork",
+  },
+  {
+    label: "Pricing",
+    to: "pricing",
   },
   {
     label: "FAQ",

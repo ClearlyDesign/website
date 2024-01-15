@@ -70,10 +70,9 @@ const Pricing = () => {
               ))}
             </div>
             <div className="row-skinny text-xs text-center text-gray-500">
-              * Pricing in USD. Canadian Clients will be billed in CAD equivalent and are
-              subject to sales tax. Limited launch special pricing is subject to change
-              without notice. Individual rates will not increase during an active
-              subscription period.
+              * Pricing in USD. Canadian Clients are subject to sales tax. Limited launch
+              special pricing is subject to change without notice. Individual rates will
+              not increase during an active subscription period.
             </div>
           </div>
         </div>

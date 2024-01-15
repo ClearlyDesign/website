@@ -19,9 +19,13 @@ const OurWork = () => {
           </div>
         </div>
         <div className="overflow-hidden">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 -mx-5 md:-mx-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 -mx-5 md:-mx-8 py-5">
             <div className="space-y-5 pt-5 md:pt-10 lg:pt-20 hidden md:block">
-              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
+              <a
+                href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=41-143&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=scale-down-width&starting-point-node-id=31%3A7"
+                target="_blank"
+                className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square block hover:transform hover:scale-[102%] duration-500 transition-all ease-in-out"
+              >
                 <Image
                   src="/portfolio/portfolio-s-01.jpg"
                   alt=""
@@ -29,8 +33,12 @@ const OurWork = () => {
                   height={400}
                   className="w-full"
                 />
-              </div>
-              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
+              </a>
+              <a
+                href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=41-143&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=scale-down-width&starting-point-node-id=31%3A7"
+                target="_blank"
+                className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video block hover:transform hover:scale-[102%] duration-500 transition-all ease-in-out"
+              >
                 <Image
                   src="/portfolio/portfolio-r-01.jpg"
                   alt=""
@@ -38,10 +46,14 @@ const OurWork = () => {
                   height={225}
                   className="w-full"
                 />
-              </div>
+              </a>
             </div>
             <div className="space-y-5">
-              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
+              <a
+                href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=1-2&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=scale-down-width&starting-point-node-id=31%3A7"
+                target="_blank"
+                className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video block hover:transform hover:scale-[102%] duration-500 transition-all ease-in-out"
+              >
                 <Image
                   src="/portfolio/portfolio-r-02.jpg"
                   alt=""
@@ -49,8 +61,12 @@ const OurWork = () => {
                   height={400}
                   className="w-full"
                 />
-              </div>
-              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
+              </a>
+              <a
+                href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=1-2&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=scale-down-width&starting-point-node-id=31%3A7"
+                target="_blank"
+                className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square block hover:transform hover:scale-[102%] duration-500 transition-all ease-in-out"
+              >
                 <Image
                   src="/portfolio/portfolio-s-02.jpg"
                   alt=""
@@ -58,10 +74,14 @@ const OurWork = () => {
                   height={225}
                   className="w-full"
                 />
-              </div>
+              </a>
             </div>
             <div className="space-y-5 pt-5 md:pt-10 lg:pt-20">
-              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
+              <a
+                href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=41-101&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=scale-down-width&starting-point-node-id=31%3A7"
+                target="_blank"
+                className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square block hover:transform hover:scale-[102%] duration-500 transition-all ease-in-out"
+              >
                 <Image
                   src="/portfolio/portfolio-s-03.jpg"
                   alt=""
@@ -69,8 +89,12 @@ const OurWork = () => {
                   height={400}
                   className="w-full"
                 />
-              </div>
-              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
+              </a>
+              <a
+                href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=41-101&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=scale-down-width&starting-point-node-id=31%3A7"
+                target="_blank"
+                className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video block hover:transform hover:scale-[102%] duration-500 transition-all ease-in-out"
+              >
                 <Image
                   src="/portfolio/portfolio-r-03.jpg"
                   alt=""
@@ -78,10 +102,14 @@ const OurWork = () => {
                   height={225}
                   className="w-full"
                 />
-              </div>
+              </a>
             </div>
             <div className="space-y-5 hidden lg:block">
-              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video">
+              <a
+                href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=41-126&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=scale-down-width&starting-point-node-id=31%3A7"
+                target="_blank"
+                className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-video block hover:transform hover:scale-[102%] duration-500 transition-all ease-in-out"
+              >
                 <Image
                   src="/portfolio/portfolio-r-04.jpg"
                   alt=""
@@ -89,8 +117,12 @@ const OurWork = () => {
                   height={225}
                   className="w-full"
                 />
-              </div>
-              <div className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square">
+              </a>
+              <a
+                href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=41-126&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=scale-down-width&starting-point-node-id=31%3A7"
+                target="_blank"
+                className="bg-gray-200 overflow-hidden rounded-2xl shadow-xl aspect-square block hover:transform hover:scale-[102%] duration-500 transition-all ease-in-out"
+              >
                 <Image
                   src="/portfolio/portfolio-s-04.jpg"
                   alt=""
@@ -98,18 +130,18 @@ const OurWork = () => {
                   height={400}
                   className="w-full"
                 />
-              </div>
+              </a>
             </div>
           </div>
-          {/* <div className="mt-20 text-center px-5">
+          <div className="mt-20 text-center px-5">
             <a
               target="_blank"
-              href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=0-1&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=min-zoom&starting-point-node-id=31%3A7"
+              href="https://www.figma.com/proto/1p8Zi5oavqbqFXy9CEk7LC/Portfolio---Clearly-Design?type=design&node-id=31-7&viewport=2247%2C497%2C0.73&t=DzmlYnm0jOBsC2VD-0&scaling=scale-down-width&starting-point-node-id=31%3A7"
               className="bg-gradient-to-r from-indigo-950 to-gray-950 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-6 py-3 sm:px-8 sm:py-4 text-xl text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-gray-500 hover:transform hover:-translate-y-1.5 inline-flex items-center w-full justify-center sm:w-auto mb-2"
             >
               View Portfolio <ArrowLongRightIcon className="w-6 h-6 text-lime-400 ml-3" />
             </a>
-          </div> */}
+          </div>
         </div>
       </section>
     </Element>
