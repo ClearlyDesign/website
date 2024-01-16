@@ -13,7 +13,7 @@ const Nav = ({ linkFromExternal }) => {
       <div className="flex lg:hidden">
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full p-2.5 bg-gray-700/40 backdrop-blur-lg text-white hover:bg-lime-400 hover:text-gray-900 fixed top-5 right-5"
+          className="inline-flex items-center justify-center rounded-full p-2.5 bg-gray-700/40 backdrop-blur-lg text-white hover:bg-lime-400 hover:text-gray-900 fixed top-5 right-5 z-10"
           onClick={() => setMobileMenuOpen(true)}
         >
           <span className="sr-only">Open main menu</span>
