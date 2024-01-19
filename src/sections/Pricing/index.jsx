@@ -69,7 +69,7 @@ const Pricing = () => {
                 </div>
               ))}
             </div>
-            <div className="row-skinny text-xs text-center text-gray-500">
+            <div className="max-w-screen-sm mx-auto text-xs text-center text-gray-500">
               * Pricing in USD. Canadian Clients are subject to sales tax. Limited launch
               special pricing is subject to change without notice. Individual rates will
               not increase during an active subscription period.
@@ -113,7 +113,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Async Communication",
+        title: "Async communication",
         isUpgrade: false,
       },
       {
@@ -129,7 +129,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "14-day cancellation notice",
+        title: "Cancel anytime",
         isUpgrade: false,
       },
       {
@@ -155,11 +155,11 @@ const plans = [
         isUpgrade: true,
       },
       {
-        title: "Async & Chat in Slack",
+        title: "Dedicated Slack channel",
         isUpgrade: true,
       },
       {
-        title: "Seamless Project Management",
+        title: "Seamless project management",
         isUpgrade: true,
       },
       {
@@ -171,7 +171,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "30-day cancellation notice",
+        title: "Cancel anytime",
         isUpgrade: false,
       },
       {

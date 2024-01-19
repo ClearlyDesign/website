@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="row-wrapper border-t border-gray-200 text-sm lg:text-base">
       <div className="row-inner py-8 md:flex justify-between space-y-3 md:space-y-0">
         <div className="text-gray-500">
-          <p className="inline-block mr-3">Let&#39;s make something awesome.</p>
+          <p className="inline-block mr-3">Let&#39;s build something awesome.</p>
           <a
             href={process.env.NEXT_PUBLIC_BOOKING_LINK}
             target="_blank"

@@ -1,11 +1,11 @@
 import { Element } from "react-scroll"
 import SectionHeader from "@/components/SectionHeader"
+import { CheckCircleIcon } from "@heroicons/react/16/solid"
 import {
   CursorArrowRippleIcon,
   DevicePhoneMobileIcon,
   SwatchIcon,
 } from "@heroicons/react/24/outline"
-import { CheckCircleIcon } from "@heroicons/react/16/solid"
 
 const WhatWeDo = () => {
   return (
@@ -63,7 +63,7 @@ const items = [
       "Performant Marketing Websites",
       "Key Landing Pages",
       "Storytelling + Design",
-      "Implementation",
+      "Framer or WebFlow development",
     ],
   },
   {
