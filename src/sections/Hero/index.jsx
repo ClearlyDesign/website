@@ -1,5 +1,5 @@
-import { Link } from "react-scroll"
 import Header from "../../components/Header"
+import { Link } from "react-scroll"
 import { useRef, useEffect } from "react"
 import {
   useInView,
@@ -8,7 +8,6 @@ import {
   useMotionTemplate,
   useMotionValue,
 } from "framer-motion"
-import { MouseEvent } from "react"
 
 const Hero = () => {
   const ref = useRef(null)

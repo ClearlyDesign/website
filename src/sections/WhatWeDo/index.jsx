@@ -1,6 +1,8 @@
+import { useRef } from "react"
 import { Element } from "react-scroll"
 import SectionHeader from "@/components/SectionHeader"
 import { CheckCircleIcon } from "@heroicons/react/16/solid"
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import {
   CursorArrowRippleIcon,
   DevicePhoneMobileIcon,
@@ -21,20 +23,7 @@ const WhatWeDo = () => {
             />
             <div className="grid md:grid-cols-3 gap-5">
               {items.map((item) => (
-                <div className="p-6 bg-gray-700/30 rounded-2xl" key={item.title}>
-                  <div className="rounded-full bg-lime-400 text-gray-900 inline-flex p-3 mb-3">
-                    <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
-                  </div>
-                  <h4 className="text-white">{item.title}</h4>
-                  <ul className="space-y-2 mt-2">
-                    {item.services.map((service) => (
-                      <li key={service} className="text-gray-400 flex leading-6">
-                        <CheckCircleIcon className="w-4 h-4 text-lime-500 mt-1 mr-2 shrink-0" />{" "}
-                        {service}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <Item item={item} key={item.title} />
               ))}
             </div>
           </div>
@@ -44,6 +33,53 @@ const WhatWeDo = () => {
   )
 }
 export default WhatWeDo
+
+const Item = ({ item }) => {
+  const ref = useRef(null)
+
+  let mouseX = useMotionValue(0)
+  let mouseY = useMotionValue(0)
+
+  function handleMouseMove({ currentTarget, clientX, clientY }) {
+    let { left, top } = currentTarget.getBoundingClientRect()
+    mouseX.set(clientX - left)
+    mouseY.set(clientY - top)
+  }
+
+  return (
+    <div
+      ref={ref}
+      key={item.title}
+      onMouseMove={handleMouseMove}
+      className="bg-gray-700/30 rounded-2xl group relative border border-white/10 px-8 py-12 shadow-2xl"
+    >
+      <motion.div
+        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+        style={{
+          background: useMotionTemplate`
+            radial-gradient(
+              400px circle at ${mouseX}px ${mouseY}px,
+              rgba(99, 102, 241, 0.15),
+              transparent 80%
+            )
+          `,
+        }}
+      />
+      <div className="rounded-full bg-lime-400 text-gray-900 inline-flex p-3 mb-3">
+        <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
+      </div>
+      <h4 className="text-white">{item.title}</h4>
+      <ul className="space-y-2 mt-2">
+        {item.services.map((service) => (
+          <li key={service} className="text-gray-400 flex leading-6">
+            <CheckCircleIcon className="w-4 h-4 text-lime-500 mt-1 mr-2 shrink-0" />{" "}
+            {service}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
 
 const items = [
   {
