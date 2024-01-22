@@ -15,24 +15,24 @@ const CTABlock = () => {
   }
 
   return (
-    <section
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      className="row-wrapper row-b-spacing group relative"
-    >
-      <motion.div
-        className="pointer-events-none absolute inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
-        style={{
-          background: useMotionTemplate`
+    <section className="row-wrapper row-b-spacing">
+      <div
+        className="row-inner bg-gradient-to-tr from-indigo-950 to-gray-950 rounded-2xl px-5 sm:py-10 text-center group relative"
+        ref={ref}
+        onMouseMove={handleMouseMove}
+      >
+        <motion.div
+          className="pointer-events-none absolute inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+          style={{
+            background: useMotionTemplate`
             radial-gradient(
               400px circle at ${mouseX}px ${mouseY}px,
               rgba(99, 102, 241, 0.15),
               transparent 80%
             )
           `,
-        }}
-      />
-      <div className="row-inner bg-gradient-to-tr from-indigo-950 to-gray-950 rounded-2xl px-5 sm:py-10 text-center">
+          }}
+        />
         <div className="py-10 max-w-2xl mx-auto space-y-4">
           <h2 className="text-white">Let&#39;s get clear on your design</h2>
           <p className="text-xl text-gray-400">
