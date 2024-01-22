@@ -16,13 +16,13 @@ const Pricing = () => {
               {plans.map((plan) => (
                 <div key={plan.title}>
                   <div className="bg-gradient-to-t from-gray-950 to-indigo-950 p-7 rounded-t-2xl">
-                    <p className="text-4xl font-bold tracking-tighter text-lime-400">
+                    <p className="text-4xl font-semibold tracking-tighter text-lime-400">
                       {plan.title}
                     </p>
                     <p className="text-gray-400 mt-2">{plan.description}</p>
                   </div>
                   <div className="bg-gradient-to-b from-emerald-50 via-white border border-gray-200 rounded-b-2xl p-7">
-                    <p className="text-5xl font-bold tracking-tighter text-gray-900">
+                    <p className="text-5xl font-semibold tracking-[-0.075em] text-gray-900">
                       {plan.price}{" "}
                       <span className="text-base text-gray-500 tracking-tight font-normal">
                         /month *

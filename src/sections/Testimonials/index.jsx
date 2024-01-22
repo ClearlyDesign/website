@@ -1,8 +1,7 @@
-import { Element } from "react-scroll"
-import SectionHeader from "@/components/SectionHeader"
-import { useState } from "react"
 import clsx from "clsx"
 import Image from "next/image"
+import { Element } from "react-scroll"
+import SectionHeader from "@/components/SectionHeader"
 
 const Testimonials = () => {
   return (
@@ -15,7 +14,6 @@ const Testimonials = () => {
               description="Some of the clients we&#39;ve had the pleasure to work with."
             />
           </div>
-
           <div className="relative isolate">
             <div
               className="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
@@ -44,7 +42,7 @@ const Testimonials = () => {
             <div className="mx-auto max-w-7xl">
               <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
                 <figure className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
-                  <blockquote className="p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8">
+                  <blockquote className="p-6 text-lg leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8">
                     <p
                       dangerouslySetInnerHTML={{
                         __html: `“${featuredTestimonial.body}”`,

@@ -1,10 +1,12 @@
 import { Element } from "react-scroll"
 import SectionHeader from "@/components/SectionHeader"
+import { useRef } from "react"
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 
 const HowItWorks = () => {
   return (
     <Element name="howItWorks">
-      <section className="bg-gradient-to-br from-indigo-950 to-gray-950" id="howItWorks">
+      <section id="howItWorks" className="bg-gradient-to-br from-indigo-950 to-gray-950">
         <div className="row-wrapper row-y-spacing">
           <div className="row-skinny">
             <SectionHeader
@@ -15,18 +17,7 @@ const HowItWorks = () => {
             />
             <div className="text-gray-400 space-y-6">
               {items.map((item) => (
-                <div
-                  className="sm:grid grid-cols-[56px,1fr] gap-4 bg-gray-700/30 p-5 rounded-2xl"
-                  key={item.number}
-                >
-                  <div className="bg-gradient-to-r from-green-300 to-lime-300  rounded-full text-gray-900 grid place-content-center font-bold text-xl w-14 h-14 mb-4">
-                    {item.number}
-                  </div>
-                  <div>
-                    <h5 className="text-white">{item.title}</h5>
-                    <p dangerouslySetInnerHTML={{ __html: item.description }} />
-                  </div>
-                </div>
+                <Item item={item} key={item.title} />
               ))}
             </div>
           </div>
@@ -36,6 +27,48 @@ const HowItWorks = () => {
   )
 }
 export default HowItWorks
+
+const Item = ({ item }) => {
+  const ref = useRef(null)
+
+  let mouseX = useMotionValue(0)
+  let mouseY = useMotionValue(0)
+
+  function handleMouseMove({ currentTarget, clientX, clientY }) {
+    let { left, top } = currentTarget.getBoundingClientRect()
+    mouseX.set(clientX - left)
+    mouseY.set(clientY - top)
+  }
+
+  return (
+    <div
+      className="sm:grid grid-cols-[56px,1fr] gap-4 bg-gray-700/30 p-5 rounded-2xl group relative"
+      key={item.number}
+      ref={ref}
+      onMouseMove={handleMouseMove}
+    >
+      <motion.div
+        className="pointer-events-none absolute inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+        style={{
+          background: useMotionTemplate`
+            radial-gradient(
+              400px circle at ${mouseX}px ${mouseY}px,
+              rgba(99, 102, 241, 0.15),
+              transparent 80%
+            )
+          `,
+        }}
+      />
+      <div className="bg-transparent group-hover:bg-gradient-to-r from-green-300 to-lime-300 rounded-full group-hover:text-gray-900 grid place-content-center font-bold text-xl w-14 h-14 mb-4 border border-dashed border-lime-400 text-lime-400">
+        {item.number}
+      </div>
+      <div>
+        <h5 className="text-white">{item.title}</h5>
+        <p dangerouslySetInnerHTML={{ __html: item.description }} />
+      </div>
+    </div>
+  )
+}
 
 const items = [
   {

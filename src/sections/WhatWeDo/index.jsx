@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { useRef } from "react"
 import { Element } from "react-scroll"
 import SectionHeader from "@/components/SectionHeader"
@@ -8,7 +9,6 @@ import {
   DevicePhoneMobileIcon,
   SwatchIcon,
 } from "@heroicons/react/24/outline"
-import Image from "next/image"
 
 const WhatWeDo = () => {
   return (
@@ -73,7 +73,7 @@ const Item = ({ item }) => {
         height={250}
         className="w-full opacity-80 group-hover:opacity-100 transition-all ease-in-out duration-200"
       />
-      <div className="p-8">
+      <div className="p-6 md:p-8">
         <div className="flex items-center gap-4 mb-4">
           <div className="rounded-full bg-lime-400 text-gray-900 inline-flex p-3">
             <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
