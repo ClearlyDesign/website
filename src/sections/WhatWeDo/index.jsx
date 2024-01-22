@@ -97,7 +97,7 @@ const items = [
   {
     icon: SwatchIcon,
     cover: "illustration-service-brands.svg",
-    title: "Brands",
+    title: "Branding",
     services: [
       "Naming, Strategy + Positioning",
       "Corporate Identity",
