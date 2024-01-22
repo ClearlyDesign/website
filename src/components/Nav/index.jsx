@@ -24,10 +24,9 @@ const Nav = ({ linkFromExternal }) => {
         <div className="flex items-center space-x-4">
           <nav className="space-x-4 text-lg">
             {items.map((item) => (
-              <>
+              <span key={item.to}>
                 {linkFromExternal ? (
                   <Link
-                    key={item.to}
                     href={`/#${item.to}`}
                     className="hover:text-lime-400 hover:cursor-pointer transition-all ease-in-out duration-300 rounded-full px-5 py-2.5 text-lg text-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400"
                   >
@@ -35,7 +34,6 @@ const Nav = ({ linkFromExternal }) => {
                   </Link>
                 ) : (
                   <JumpLink
-                    key={item.to}
                     activeClass="active"
                     to={item.to}
                     spy={true}
@@ -47,7 +45,7 @@ const Nav = ({ linkFromExternal }) => {
                     {item.label}
                   </JumpLink>
                 )}
-              </>
+              </span>
             ))}
           </nav>
           <a
@@ -86,10 +84,9 @@ const Nav = ({ linkFromExternal }) => {
           <div className="-mx-6 mt-6 flow-root">
             <div className="">
               {items.map((item) => (
-                <>
+                <span key={item.to}>
                   {linkFromExternal ? (
                     <Link
-                      key={item.to}
                       href={`/#${item.to}`}
                       className="flex items-center hover:bg-indigo-950/40 hover:text-lime-300 hover:cursor-pointer px-6 py-3 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400 group"
                     >
@@ -97,7 +94,6 @@ const Nav = ({ linkFromExternal }) => {
                     </Link>
                   ) : (
                     <JumpLink
-                      key={item.to}
                       activeClass="active"
                       to={item.to}
                       spy={true}
@@ -114,7 +110,7 @@ const Nav = ({ linkFromExternal }) => {
                       />
                     </JumpLink>
                   )}
-                </>
+                </span>
               ))}
             </div>
             <a

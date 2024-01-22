@@ -1,7 +1,13 @@
 import { Element } from "react-scroll"
 import SectionHeader from "@/components/SectionHeader"
-import { useRef } from "react"
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
+import { useEffect, useRef } from "react"
+import {
+  motion,
+  useAnimation,
+  useInView,
+  useMotionTemplate,
+  useMotionValue,
+} from "framer-motion"
 
 const HowItWorks = () => {
   return (
@@ -16,8 +22,8 @@ const HowItWorks = () => {
               descriptionStyles="text-gray-400 text-xl"
             />
             <div className="text-gray-400 space-y-6">
-              {items.map((item) => (
-                <Item item={item} key={item.title} />
+              {items.map((item, i) => (
+                <Item item={item} key={item.title} count={i} />
               ))}
             </div>
           </div>
@@ -28,8 +34,9 @@ const HowItWorks = () => {
 }
 export default HowItWorks
 
-const Item = ({ item }) => {
+const Item = ({ item, count }) => {
   const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   let mouseX = useMotionValue(0)
   let mouseY = useMotionValue(0)
@@ -40,12 +47,26 @@ const Item = ({ item }) => {
     mouseY.set(clientY - top)
   }
 
+  const mainControls = useAnimation()
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  }, [isInView])
+
   return (
-    <div
+    <motion.div
       className="sm:grid grid-cols-[56px,1fr] gap-4 bg-gray-700/30 p-5 rounded-2xl group relative"
       key={item.number}
       ref={ref}
       onMouseMove={handleMouseMove}
+      variants={{
+        hidden: { opacity: 0, x: 175 },
+        visible: { opacity: 1, x: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.3, delay: 0.5 + count * 0.1 }}
     >
       <motion.div
         className="pointer-events-none absolute inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
@@ -66,7 +87,7 @@ const Item = ({ item }) => {
         <h5 className="text-white">{item.title}</h5>
         <p dangerouslySetInnerHTML={{ __html: item.description }} />
       </div>
-    </div>
+    </motion.div>
   )
 }
 

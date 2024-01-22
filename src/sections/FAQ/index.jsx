@@ -1,10 +1,21 @@
 import clsx from "clsx"
 import { Element } from "react-scroll"
-import { useState } from "react"
+import { useRef, useEffect, useState } from "react"
 import SectionHeader from "@/components/SectionHeader"
 import { MinusCircleIcon, PlusCircleIcon } from "@heroicons/react/24/outline"
+import { useInView, motion, useAnimation } from "framer-motion"
 
 const FAQ = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  const mainControls = useAnimation()
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  }, [isInView])
+
   return (
     <Element name="faq">
       <section className="bg-white" id="faq">
@@ -14,16 +25,23 @@ const FAQ = () => {
               title="Questions"
               description="See if these help answer your questions or reach out — we&#39;re here to help."
             />
-            <div
+            <ul
+              ref={ref}
               className={clsx(
                 "mt-16 divide-solid divide-y divide-gray-300/60 border border-gray-300/60 overflow-hidden",
                 "-mx-5 sm:mx-0 sm:rounded-2xl",
               )}
             >
               {items.map((item, i) => (
-                <Item key={i} question={item.question} answer={item.answer} />
+                <Item
+                  key={i}
+                  count={i}
+                  question={item.question}
+                  answer={item.answer}
+                  mainControls={mainControls}
+                />
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </section>
@@ -32,11 +50,20 @@ const FAQ = () => {
 }
 export default FAQ
 
-const Item = ({ question, answer }) => {
+const Item = ({ question, answer, mainControls, count }) => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="bg-white">
+    <motion.li
+      className="bg-white"
+      variants={{
+        hidden: { opacity: 0, x: 175 },
+        visible: { opacity: 1, x: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.3, delay: count * 0.1 }}
+    >
       <button
         onClick={() => setOpen((open) => !open)}
         className={clsx(
@@ -65,7 +92,7 @@ const Item = ({ question, answer }) => {
           className="text-base sm:text-lg text-gray-500"
         />
       </div>
-    </div>
+    </motion.li>
   )
 }
 

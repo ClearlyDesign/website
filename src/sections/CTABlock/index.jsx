@@ -1,9 +1,16 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline"
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useInView,
+  useAnimation,
+} from "framer-motion"
 
 const CTABlock = () => {
   const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   let mouseX = useMotionValue(0)
   let mouseY = useMotionValue(0)
@@ -14,12 +21,26 @@ const CTABlock = () => {
     mouseY.set(clientY - top)
   }
 
+  const mainControls = useAnimation()
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  }, [isInView])
+
   return (
     <section className="row-wrapper row-b-spacing">
-      <div
+      <motion.div
         className="row-inner bg-gradient-to-tr from-indigo-950 to-gray-950 rounded-2xl px-5 sm:py-10 text-center group relative"
         ref={ref}
         onMouseMove={handleMouseMove}
+        variants={{
+          hidden: { opacity: 0, scale: 0.75 },
+          visible: { opacity: 1, scale: 1 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.3, delay: 0.5 }}
       >
         <motion.div
           className="pointer-events-none absolute inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
@@ -50,7 +71,7 @@ const CTABlock = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

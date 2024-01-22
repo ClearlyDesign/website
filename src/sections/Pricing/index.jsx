@@ -1,8 +1,20 @@
 import { Element } from "react-scroll"
 import SectionHeader from "@/components/SectionHeader"
+import { useRef, useEffect } from "react"
 import { CheckCircleIcon, PlusCircleIcon } from "@heroicons/react/24/outline"
+import { useInView, motion, useAnimation } from "framer-motion"
 
 const Pricing = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  const mainControls = useAnimation()
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  }, [isInView])
+
   return (
     <Element name="pricing">
       <section className="bg-gradient-to-t from-gray-100 to bg-gray-50" id="pricing">
@@ -12,9 +24,18 @@ const Pricing = () => {
               title="Clear Pricing"
               description="Choose a plan that&#39;s right for you, based on how you need design work delivered."
             />{" "}
-            <div className="row-skinny mb-14 grid md:grid-cols-2 gap-4">
-              {plans.map((plan) => (
-                <div key={plan.title}>
+            <div className="row-skinny mb-14 grid md:grid-cols-2 gap-4" ref={ref}>
+              {plans.map((plan, i) => (
+                <motion.div
+                  key={plan.title}
+                  variants={{
+                    hidden: { opacity: 0, y: 175 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.3, delay: 0.5 + i * 0.1 }}
+                >
                   <div className="bg-gradient-to-t from-gray-950 to-indigo-950 p-7 rounded-t-2xl">
                     <p className="text-4xl font-semibold tracking-tighter text-lime-400">
                       {plan.title}
@@ -66,7 +87,7 @@ const Pricing = () => {
                       </ul>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
             <div className="max-w-screen-sm mx-auto text-xs text-center text-gray-500">
