@@ -169,6 +169,9 @@ module.exports = {
       lineClamp: {
         7: "7",
       },
+      backgroundImage: (theme) => ({
+        "hero-wireframe": "url('/images/hero-wireframe.svg')",
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],

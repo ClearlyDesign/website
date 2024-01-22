@@ -43,11 +43,12 @@ const Hero = () => {
               650px circle at ${mouseX}px ${mouseY}px,
               rgba(99, 102, 241, 0.15),
               transparent 80%
-            )
-          `,
+              )
+              `,
         }}
       />
-      <div className="row-inner">
+      <div className="bg-hero-wireframe absolute left-0 top-0 w-full h-full z-0 bg-cover bg-no-repeat opacity-20 group-hover:opacity-100 transition-all ease-in-out duration-500 bg-[30%] lg:bg-top" />
+      <div className="row-inner z-10 relative">
         <Header />
         <div className="text-center pt-24 pb-20 md:pb-48">
           <motion.h1

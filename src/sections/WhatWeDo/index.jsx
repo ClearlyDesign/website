@@ -8,6 +8,7 @@ import {
   DevicePhoneMobileIcon,
   SwatchIcon,
 } from "@heroicons/react/24/outline"
+import Image from "next/image"
 
 const WhatWeDo = () => {
   return (
@@ -51,7 +52,7 @@ const Item = ({ item }) => {
       ref={ref}
       key={item.title}
       onMouseMove={handleMouseMove}
-      className="bg-gray-700/30 rounded-2xl group relative border border-white/10 px-8 py-12 shadow-2xl"
+      className="bg-gray-700/30 rounded-2xl group relative border border-white/10 shadow-2xl"
     >
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
@@ -65,18 +66,29 @@ const Item = ({ item }) => {
           `,
         }}
       />
-      <div className="rounded-full bg-lime-400 text-gray-900 inline-flex p-3 mb-3">
-        <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
+      <Image
+        src={`/images/${item.cover}`}
+        alt=""
+        width={450}
+        height={250}
+        className="w-full opacity-80 group-hover:opacity-100 transition-all ease-in-out duration-200"
+      />
+      <div className="p-8">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="rounded-full bg-lime-400 text-gray-900 inline-flex p-3">
+            <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
+          </div>
+          <h4 className="text-white">{item.title}</h4>
+        </div>
+        <ul className="space-y-2 mt-2">
+          {item.services.map((service) => (
+            <li key={service} className="text-gray-400 flex leading-6">
+              <CheckCircleIcon className="w-4 h-4 text-lime-500 mt-1 mr-2 shrink-0" />{" "}
+              {service}
+            </li>
+          ))}
+        </ul>
       </div>
-      <h4 className="text-white">{item.title}</h4>
-      <ul className="space-y-2 mt-2">
-        {item.services.map((service) => (
-          <li key={service} className="text-gray-400 flex leading-6">
-            <CheckCircleIcon className="w-4 h-4 text-lime-500 mt-1 mr-2 shrink-0" />{" "}
-            {service}
-          </li>
-        ))}
-      </ul>
     </div>
   )
 }
@@ -84,6 +96,7 @@ const Item = ({ item }) => {
 const items = [
   {
     icon: SwatchIcon,
+    cover: "illustration-service-brands.svg",
     title: "Brands",
     services: [
       "Naming, Strategy + Positioning",
@@ -94,6 +107,7 @@ const items = [
   },
   {
     icon: CursorArrowRippleIcon,
+    cover: "illustration-service-web.svg",
     title: "Websites",
     services: [
       "Performant Marketing Websites",
@@ -104,6 +118,7 @@ const items = [
   },
   {
     icon: DevicePhoneMobileIcon,
+    cover: "illustration-service-product.svg",
     title: "Products",
     services: [
       "User Experience + Audits",
