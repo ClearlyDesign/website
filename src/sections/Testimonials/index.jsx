@@ -55,8 +55,8 @@ const Testimonials = () => {
               <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
                 <motion.div
                   variants={{
-                    hidden: { opacity: 0 },
-                    visible: { opacity: 1 },
+                    hidden: { opacity: 0, y: 40 },
+                    visible: { opacity: 1, y: 0 },
                   }}
                   initial="hidden"
                   animate={mainControls}
@@ -116,6 +116,7 @@ const Testimonials = () => {
                 </motion.div>
                 {testimonials.map((columnGroup, columnGroupIdx) => (
                   <Item
+                    passRef={ref}
                     key={columnGroupIdx}
                     columnGroup={columnGroup}
                     columnGroupIdx={columnGroupIdx}
@@ -131,9 +132,8 @@ const Testimonials = () => {
 }
 export default Testimonials
 
-const Item = ({ columnGroup, columnGroupIdx }) => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: "some" })
+const Item = ({ columnGroup, columnGroupIdx, passRef }) => {
+  const isInView = useInView(passRef, { once: true, amount: "some" })
 
   const mainControls = useAnimation()
   useEffect(() => {
@@ -158,15 +158,17 @@ const Item = ({ columnGroup, columnGroupIdx }) => {
         >
           {column.map((testimonial, i) => (
             <motion.div
-              ref={ref}
               key={testimonial.author.title}
               variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1 },
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.3, delay: (i + 1) * 0.5 }}
+              transition={{
+                duration: 0.2,
+                delay: 1 + columnGroupIdx * 0.5 + i * 0.5,
+              }}
             >
               <figure className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
                 <blockquote className="text-gray-900">
