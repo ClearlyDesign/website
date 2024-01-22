@@ -24,8 +24,7 @@ const WhyUseUs = () => {
             <SectionHeader
               title={`Great design is hard. <span class="text-green-500">We make it easy.</span>`}
               description="We&#39;ve spent decades making it this simple. You&#39;ll never want to go back to random freelancers, expensive agencies, or junior internal designers."
-              titleStyles="font-[500]"
-            />{" "}
+            />
             <div className="mt-10 grid grid-cols-12 gap-4">
               {items.map((item, i) => (
                 <Item item={item} key={item.title} i={i} />

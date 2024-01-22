@@ -120,7 +120,8 @@ const Nav = ({ linkFromExternal }) => {
             <a
               href={process.env.NEXT_PUBLIC_BOOKING_LINK}
               target="_blank"
-              className="m-6 block text-center border border-gray-600 hover:border-transparent transition-all ease-in-out duration-200 focus:border-transparent rounded-full bg-transparent px-6 py-2.5 text-lg text-gray-400 hover:bg-lime-400 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400 focus-visible:hover:text-gray-900"
+              className="
+              bg-gradient-to-tr from-green-300 to-lime-300 hover:cursor-pointer text-gray-900 m-6 block text-center transition-all ease-in-out duration-200 focus:border-transparent rounded-full px-6 py-2.5 text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400 focus-visible:hover:text-gray-900"
             >
               Book a Call
             </a>
