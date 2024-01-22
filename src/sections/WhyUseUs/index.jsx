@@ -18,7 +18,7 @@ import clsx from "clsx"
 const WhyUseUs = () => {
   return (
     <Element name="whyUseUs">
-      <section className="">
+      <section>
         <div className="row-wrapper row-y-spacing">
           <div className="row-inner">
             <SectionHeader
