@@ -11,7 +11,7 @@ const HowItWorks = () => {
           <div className="row-skinny">
             <SectionHeader
               title="How it Works"
-              description="Hand crafted premium designs, unlimited requests & revisions, for one flat monthly fee."
+              description="Hand crafted premium designs, unlimited requests & revisions, for a flat monthly fee."
               titleStyles="bg-gradient-to-r from-green-300 to-lime-300 inline-block text-transparent bg-clip-text"
               descriptionStyles="text-gray-400 text-xl"
             />

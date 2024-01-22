@@ -2,8 +2,20 @@ import clsx from "clsx"
 import Image from "next/image"
 import { Element } from "react-scroll"
 import SectionHeader from "@/components/SectionHeader"
+import { useRef, useEffect } from "react"
+import { useInView, motion, useAnimation } from "framer-motion"
 
 const Testimonials = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  const mainControls = useAnimation()
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  }, [isInView])
+
   return (
     <Element name="testimonials">
       <section className="bg-gradient-to-b from-gray-50 to-gray-200 row-y-spacing">
@@ -41,55 +53,67 @@ const Testimonials = () => {
             </div>
             <div className="mx-auto max-w-7xl">
               <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-                <figure className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
-                  <blockquote className="p-6 text-lg leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8">
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: `“${featuredTestimonial.body}”`,
-                      }}
-                    />
-                  </blockquote>
-                  <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap">
-                    <Image
-                      className="h-10 w-10 flex-none rounded-full bg-gray-50 border border-gray-200"
-                      src={`/images/${featuredTestimonial.author.avatar}`}
-                      alt={featuredTestimonial.author.name}
-                      width={60}
-                      height={60}
-                    />
-                    <div className="flex-auto">
-                      <div className="font-semibold">
-                        {featuredTestimonial.author.name}
-                      </div>
-                      {featuredTestimonial.author.webUrl === "" ? (
-                        <p className="text-gray-500 text-sm tracking-tighter leading-5">
-                          {featuredTestimonial.author.title}
-                        </p>
-                      ) : (
-                        <a
-                          href={featuredTestimonial.author.webUrl}
-                          target="_blank"
-                          className="text-gray-500 text-sm tracking-tighter hover:underline leading-4"
-                        >
-                          {featuredTestimonial.author.title}
-                        </a>
-                      )}
-                    </div>
-                    <a
-                      href={featuredTestimonial.author.url}
-                      target="_blank"
-                      className="w-28"
-                    >
-                      <Image
-                        className="h-10 w-auto flex-none"
-                        src={`/logos/${featuredTestimonial.author.logo}`}
-                        alt=""
-                        width={110}
-                        height={30}
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.3, delay: 0.5 }}
+                  className="sm:col-span-2 xl:col-start-2 xl:row-end-1"
+                  ref={ref}
+                >
+                  <figure className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                    <blockquote className="p-6 text-lg leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8">
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: `“${featuredTestimonial.body}”`,
+                        }}
                       />
-                    </a>
-                  </figcaption>
-                </figure>
+                    </blockquote>
+                    <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap">
+                      <Image
+                        className="h-10 w-10 flex-none rounded-full bg-gray-50 border border-gray-200"
+                        src={`/images/${featuredTestimonial.author.avatar}`}
+                        alt={featuredTestimonial.author.name}
+                        width={60}
+                        height={60}
+                      />
+                      <div className="flex-auto">
+                        <div className="font-semibold">
+                          {featuredTestimonial.author.name}
+                        </div>
+                        {featuredTestimonial.author.webUrl === "" ? (
+                          <p className="text-gray-500 text-sm tracking-tighter leading-5">
+                            {featuredTestimonial.author.title}
+                          </p>
+                        ) : (
+                          <a
+                            href={featuredTestimonial.author.webUrl}
+                            target="_blank"
+                            className="text-gray-500 text-sm tracking-tighter hover:underline leading-4"
+                          >
+                            {featuredTestimonial.author.title}
+                          </a>
+                        )}
+                      </div>
+                      <a
+                        href={featuredTestimonial.author.url}
+                        target="_blank"
+                        className="w-28"
+                      >
+                        <Image
+                          className="h-10 w-auto flex-none"
+                          src={`/logos/${featuredTestimonial.author.logo}`}
+                          alt=""
+                          width={110}
+                          height={30}
+                        />
+                      </a>
+                    </figcaption>
+                  </figure>
+                </motion.div>
                 {testimonials.map((columnGroup, columnGroupIdx) => (
                   <Item
                     key={columnGroupIdx}
@@ -108,6 +132,16 @@ const Testimonials = () => {
 export default Testimonials
 
 const Item = ({ columnGroup, columnGroupIdx }) => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: "some" })
+
+  const mainControls = useAnimation()
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  }, [isInView])
+
   return (
     <div className="space-y-8 xl:contents xl:space-y-0">
       {columnGroup.map((column, columnIdx) => (
@@ -122,48 +156,57 @@ const Item = ({ columnGroup, columnGroupIdx }) => {
             "space-y-8",
           )}
         >
-          {column.map((testimonial) => (
-            <figure
+          {column.map((testimonial, i) => (
+            <motion.div
+              ref={ref}
               key={testimonial.author.title}
-              className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.3, delay: (i + 1) * 0.5 }}
             >
-              <blockquote className="text-gray-900">
-                <p dangerouslySetInnerHTML={{ __html: `“${testimonial.body}”` }} />
-              </blockquote>
-              <figcaption className="mt-6 flex items-center gap-x-4">
-                {testimonial.author.avatar ? (
-                  <Image
-                    className="h-10 w-10 rounded-full bg-gray-50"
-                    src={`/images/${testimonial.author.avatar}`}
-                    alt={testimonial.author.name}
-                    width={40}
-                    height={40}
-                  />
-                ) : (
-                  <div className="w-10 h-10 bg-indigo-950 text-indigo-200 rounded-full place-content-center grid">
-                    {testimonial.author.name[0]}
-                  </div>
-                )}
-                <div>
-                  <div className="font-semibold tracking-tight">
-                    {testimonial.author.name}
-                  </div>
-                  {testimonial.author.webUrl === "" ? (
-                    <p className="text-gray-500 text-sm tracking-tighter leading-5">
-                      {testimonial.author.title}
-                    </p>
+              <figure className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
+                <blockquote className="text-gray-900">
+                  <p dangerouslySetInnerHTML={{ __html: `“${testimonial.body}”` }} />
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-x-4">
+                  {testimonial.author.avatar ? (
+                    <Image
+                      className="h-10 w-10 rounded-full bg-gray-50"
+                      src={`/images/${testimonial.author.avatar}`}
+                      alt={testimonial.author.name}
+                      width={40}
+                      height={40}
+                    />
                   ) : (
-                    <a
-                      href={testimonial.author.webUrl}
-                      target="_blank"
-                      className="text-gray-500 text-sm tracking-tighter hover:underline leading-4"
-                    >
-                      {testimonial.author.title}
-                    </a>
+                    <div className="w-10 h-10 bg-indigo-950 text-indigo-200 rounded-full place-content-center grid">
+                      {testimonial.author.name[0]}
+                    </div>
                   )}
-                </div>
-              </figcaption>
-            </figure>
+                  <div>
+                    <div className="font-semibold tracking-tight">
+                      {testimonial.author.name}
+                    </div>
+                    {testimonial.author.webUrl === "" ? (
+                      <p className="text-gray-500 text-sm tracking-tighter leading-5">
+                        {testimonial.author.title}
+                      </p>
+                    ) : (
+                      <a
+                        href={testimonial.author.webUrl}
+                        target="_blank"
+                        className="text-gray-500 text-sm tracking-tighter hover:underline leading-4"
+                      >
+                        {testimonial.author.title}
+                      </a>
+                    )}
+                  </div>
+                </figcaption>
+              </figure>
+            </motion.div>
           ))}
         </div>
       ))}
