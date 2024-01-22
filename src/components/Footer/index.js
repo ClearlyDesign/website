@@ -3,7 +3,13 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline"
 
 const Footer = () => {
   return (
-    <footer className="row-wrapper border-t border-gray-200 text-sm lg:text-base">
+    <footer className="row-wrapper text-sm lg:text-base relative border-t border-gray-200">
+      <div class="absolute bottom-full left-[calc(50%-160px)] -mb-px flex h-8 items-end overflow-hidden">
+        <div class="flex -mb-px h-[2px] w-80">
+          <div class="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(41,144,244,0.3)_67.19%,rgba(41,144,244,0)_100%)]"></div>
+          <div class="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(41,144,244,0.3)_67.19%,rgba(41,144,244,0)_100%)]"></div>
+        </div>
+      </div>
       <div className="row-inner py-8 md:flex justify-between space-y-3 md:space-y-0">
         <div className="text-gray-500">
           <p className="inline-block mr-3">Let&#39;s build something awesome.</p>
