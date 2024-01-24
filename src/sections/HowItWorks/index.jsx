@@ -21,7 +21,7 @@ const HowItWorks = () => {
               titleStyles="bg-gradient-to-r from-green-300 to-lime-300 inline-block text-transparent bg-clip-text"
               descriptionStyles="text-gray-400 text-xl"
             />
-            <div className="text-gray-400 space-y-6">
+            <div className="text-gray-400 space-y-6 overflow-hidden">
               {items.map((item, i) => (
                 <Item item={item} key={item.title} count={i} />
               ))}
