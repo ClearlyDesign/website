@@ -230,6 +230,15 @@ const testimonials = [
   [
     [
       {
+        body: "I've had the pleasure of working with Francois as our UX designer for the last few years at Castos, and can't say enough great things. Him starting Clearly Design as a design-as-a-service  offering is a no brainer. If you're a SaaS company looking to put product and design first, work with Francois. Your MRR will thank you.",
+        author: {
+          name: "Craig Hewitt",
+          title: "Founder & CEO @ Castos",
+          avatar: "avatar-craig.jpeg",
+          webUrl: "https://castos.com",
+        },
+      },
+      {
         body: "Francois has consistently demonstrated exceptional skills and dedication in website development for Camps with Friends. His clear communication, timely deliveries, and unwavering commitment to providing a high-quality product have made working with him a remarkable experience. We wholeheartedly recommend his design services for anyone seeking top-notch branding, marketing websites, and product design.",
         author: {
           name: "Jason Mellet",
@@ -239,12 +248,12 @@ const testimonials = [
         },
       },
       {
-        body: "Francois and his team have helped me personally as well as Canada Abroad with numerous design and website projects and are still easily approachable to provide advice to help out when required. I've dealt with a lot of IT professionals in my career but there aren't many who understand exactly what is required straight off the bat and have the familiarity to lead you to a new and innovative solution and design. I can without a doubt vouch that you will be in safe hands with Francois and his team from Clearly Design.",
+        body: "Francois is an incredibly talented creative with strong creative direction, user experience research and development, and hands-on design production. Francois is one of the people I will always want on my team.",
         author: {
-          name: "Werner Lans",
-          title: "Director @ Canada Abroad",
-          avatar: "avatar-werner.jpg",
-          webUrl: "https://canadaabroad.com",
+          name: "Michael Masson",
+          title: "Executive Creative Director @ Group Africa Marketing",
+          avatar: "avatar-michael.jpeg",
+          webUrl: "",
         },
       },
     ],
@@ -259,12 +268,12 @@ const testimonials = [
         },
       },
       {
-        body: "Francois is an incredibly talented creative with strong creative direction, user experience research and development, and hands-on design production. Francois is one of the people I will always want on my team.",
+        body: "Francois and his team have helped me personally as well as Canada Abroad with numerous design and website projects and are still easily approachable to provide advice to help out when required. I've dealt with a lot of IT professionals in my career but there aren't many who understand exactly what is required straight off the bat and have the familiarity to lead you to a new and innovative solution and design. I can without a doubt vouch that you will be in safe hands with Francois and his team from Clearly Design.",
         author: {
-          name: "Michael Masson",
-          title: "Executive Creative Director @ Group Africa Marketing",
-          avatar: "avatar-michael.jpeg",
-          webUrl: "",
+          name: "Werner Lans",
+          title: "Director @ Canada Abroad",
+          avatar: "avatar-werner.jpg",
+          webUrl: "https://canadaabroad.com",
         },
       },
     ],
@@ -298,6 +307,15 @@ const testimonials = [
           title: "Account Director @ Creative Ink",
           avatar: "avatar-ben.jpeg",
           webUrl: "",
+        },
+      },
+      {
+        body: "Had the privilege of collaborating on a few projects with Francois. He's super talented and easy to work with. :)",
+        author: {
+          name: "Jessica Malnik",
+          title: "Marketing & Copywriter for B2B SaaS",
+          avatar: "avatar-jessica.jpeg",
+          webUrl: "newsletter.theremoteworktribe.com",
         },
       },
       {
