@@ -150,7 +150,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Cancel anytime",
+        title: "Pause or cancel anytime",
         isUpgrade: false,
       },
       {
@@ -168,7 +168,7 @@ const plans = [
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0?prefilled_promo_code=I1",
     includes: [
       {
-        title: "Two workstreams at a time",
+        title: "Multiple workstreams at a time",
         isUpgrade: true,
       },
       {
@@ -192,7 +192,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Cancel anytime",
+        title: "Pause or cancel anytime",
         isUpgrade: false,
       },
       {
