@@ -142,11 +142,15 @@ const plans = [
         isUpgrade: false,
       },
       {
+        title: "Immediate start",
+        isUpgrade: false,
+      },
+      {
         title: "Unlimited requests & revisions",
         isUpgrade: false,
       },
       {
-        title: "Credit Card or Invoice based payments",
+        title: "Credit Card or Invoice payments",
         isUpgrade: false,
       },
       {
@@ -184,11 +188,15 @@ const plans = [
         isUpgrade: true,
       },
       {
+        title: "Immediate start w/ Kick-off session",
+        isUpgrade: true,
+      },
+      {
         title: "Unlimited requests & revisions",
         isUpgrade: false,
       },
       {
-        title: "Credit Card or Invoice based payments",
+        title: "Credit Card or Invoice payments",
         isUpgrade: false,
       },
       {
