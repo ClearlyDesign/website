@@ -172,7 +172,7 @@ const plans = [
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0?prefilled_promo_code=I1",
     includes: [
       {
-        title: "Multiple workstreams at a time",
+        title: "Two workstreams at a time",
         isUpgrade: true,
       },
       {
