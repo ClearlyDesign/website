@@ -121,6 +121,7 @@ const Row = ({ row }) => {
             width={1220}
             height={188}
             alt=""
+            priority
           />
           <Image
             src={illustration.mobile}
@@ -128,6 +129,7 @@ const Row = ({ row }) => {
             width={724}
             height={188}
             alt=""
+            priority
           />
         </motion.div>
         <Image
