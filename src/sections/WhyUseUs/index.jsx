@@ -141,7 +141,7 @@ const Row = ({ row }) => {
       <div className="mt-10 grid  grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-36">
         {benefits.map((benefit) => (
           <div key={benefit.title}>
-            <p className="font-bold text-[20px] tracking-tighter inline-flex">
+            <p className="font-bold text-[20px] tracking-tighter inline-flex items-center">
               <benefit.icon className={clsx("w-6 h-6 mr-2 shrink-0", styles.icon)} />
               {benefit.title}
             </p>
