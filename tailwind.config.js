@@ -171,6 +171,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         "hero-wireframe": "url('/images/hero-wireframe.svg')",
+        "glow-lime-yellow": "url('/images/bg-glow-lime-yellow.svg')",
       }),
     },
   },

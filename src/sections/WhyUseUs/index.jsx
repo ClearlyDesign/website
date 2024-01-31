@@ -12,6 +12,10 @@ import {
   PencilIcon,
   CreditCardIcon,
   PencilSquareIcon,
+  ArrowUpOnSquareIcon,
+  BookmarkSlashIcon,
+  BellAlertIcon,
+  ClipboardIcon,
 } from "@heroicons/react/24/solid"
 import {
   CubeTransparentIcon,
@@ -48,10 +52,10 @@ const WhyUseUs = () => {
 export default WhyUseUs
 
 const Row = ({ row }) => {
-  const { eyebrow, title, description, benefits, styles, illustration } = row
+  const { eyebrow, title, description, benefits, styles, illustration, bgHover } = row
   return (
     <>
-      <div className="group pt-10 border border-gray-200 rounded-2xl bg-gradient-to-b from-gray-50 via-gray-100 to-gray-100">
+      <div className="group pt-10 border border-gray-200 rounded-2xl bg-gradient-to-b from-gray-50 via-gray-100 to-gray-100 relative">
         <div className="flex justify-center">
           <div
             className={clsx(
@@ -63,14 +67,27 @@ const Row = ({ row }) => {
             {eyebrow.title}
           </div>
         </div>
-        <div className="text-center px-10 mt-5 mb-10 space-y-5 max-w-4xl">
+        <div className="text-center px-10 mt-5 mb-10 space-y-5 max-w-4xl mx-auto relative z-20">
           <h2 className="text-4xl text-gray-800">{title}</h2>
           <p
             className="text-lg text-gray-500"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>
-        <Image src={illustration} className="" width={1220} height={188} alt="" />
+        <Image
+          src={illustration}
+          className="z-10 relative w-full"
+          width={1220}
+          height={188}
+          alt=""
+        />
+        <Image
+          src={bgHover}
+          className="absolute w-full bottom-0 z-0 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1000"
+          width={1220}
+          height={188}
+          alt=""
+        />
       </div>
       <div className="mt-10 grid  grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-36">
         {benefits.map((benefit) => (
@@ -100,6 +117,7 @@ const rows = [
     description:
       "At the heart of your product lies the potential for a distinctive design that not only sets you apart but becomes your signature. We specialize in crafting bespoke designs that&#39;s unique and timeless.",
     illustration: "/images/illustration-benefit-craft.svg",
+    bgHover: "/images/bg-glow-green-yellow.svg",
     benefits: [
       {
         title: "Made Just For You",
@@ -128,7 +146,8 @@ const rows = [
     ],
     styles: {
       icon: "text-green-500",
-      eyebrow: "group-hover:text-green-600 group-hover:border-green-600",
+      eyebrow:
+        "group-hover:text-green-600 group-hover:border-green-600 group-hover:bg-green-50",
     },
   },
   {
@@ -140,12 +159,13 @@ const rows = [
     description:
       "Our process is streamlined for efficiency, centred around clear communication. Experience the ease of a design service that adapts to your pace, ensuring your creative needs are met with precision and promptness.",
     illustration: "/images/illustration-benefit-workflow.svg",
+    bgHover: "/images/bg-glow-indigo-blue.svg",
     benefits: [
       {
         title: "Stay In Control",
         description:
           "Plan projects, submit design requests, organize priority and view active or completed tasks with ease.",
-        icon: PencilSquareIcon,
+        icon: ClipboardIcon,
       },
       {
         title: "Delivery Matters To Us",
@@ -157,7 +177,7 @@ const rows = [
         title: "Async Or Integrated",
         description:
           "Keep us in the background or ingrained with your team for real-time collaboration.",
-        icon: ArrowsRightLeftIcon,
+        icon: BellAlertIcon,
       },
       {
         title: "Add Your Team",
@@ -168,7 +188,8 @@ const rows = [
     ],
     styles: {
       icon: "text-indigo-500",
-      eyebrow: "group-hover:text-indigo-600 group-hover:border-indigo-600",
+      eyebrow:
+        "group-hover:text-indigo-600 group-hover:border-indigo-600 group-hover:bg-indigo-50",
     },
   },
   {
@@ -180,6 +201,7 @@ const rows = [
     description:
       "We&#39;re looking for partners that want to work with us. So no long-term commitments or agreements from us. We want you to continuously get value and amazing designs so we can grow together.",
     illustration: "/images/illustration-benefit-admin.svg",
+    bgHover: "/images/bg-glow-lime-yellow.svg",
     benefits: [
       {
         title: "Payments Your Way",
@@ -191,13 +213,13 @@ const rows = [
         title: "No Contracts",
         description:
           "We don&#39;t do SOW&#39;s, long-terms agreements, or any other documents to drag out the process.",
-        icon: NoSymbolIcon,
+        icon: BookmarkSlashIcon,
       },
       {
         title: "Flexible and Scalable",
         description:
           "Scale up or down based on your needs. Get the added firing power with bigger projects and tighter deadlines.",
-        icon: CubeTransparentIcon,
+        icon: ArrowUpOnSquareIcon,
       },
       {
         title: "Pause or Cancel Anytime",
@@ -208,7 +230,8 @@ const rows = [
     ],
     styles: {
       icon: "text-lime-500",
-      eyebrow: "group-hover:text-lime-600 group-hover:border-lime-600",
+      eyebrow:
+        "group-hover:text-lime-600 group-hover:border-lime-600 group-hover:bg-lime-50",
     },
   },
 ]
