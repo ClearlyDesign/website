@@ -167,7 +167,7 @@ const rows = [
       "At the heart of your product lies the potential for a distinctive design that not only sets you apart but becomes your signature. We specialize in crafting bespoke designs that&#39;s unique and timeless.",
     illustration: {
       desktop: "/images/illustration-benefit-craft.svg",
-      mobile: "/images/illustration-benefit-craft-mobile.svg",
+      mobile: "/images/illustration-benefit-craft-mobile.png",
     },
     bgHover: "/images/bg-glow-green-yellow.svg",
     benefits: [
@@ -212,7 +212,7 @@ const rows = [
       "Our process is streamlined for efficiency, centred around clear communication. Experience the ease of a design service that adapts to your pace, ensuring your creative needs are met with precision and promptness.",
     illustration: {
       desktop: "/images/illustration-benefit-workflow.svg",
-      mobile: "/images/illustration-benefit-workflow-mobile.svg",
+      mobile: "/images/illustration-benefit-workflow-mobile.png",
     },
     bgHover: "/images/bg-glow-indigo-blue.svg",
     benefits: [
@@ -257,14 +257,14 @@ const rows = [
       "We&#39;re looking for partners that want to work with us. So no long-term commitments or agreements from us. We want you to continuously get value and amazing designs so we can grow together.",
     illustration: {
       desktop: "/images/illustration-benefit-admin.svg",
-      mobile: "/images/illustration-benefit-admin-mobile.svg",
+      mobile: "/images/illustration-benefit-admin-mobile.png",
     },
     bgHover: "/images/bg-glow-lime-yellow.svg",
     benefits: [
       {
         title: "Payments Your Way",
         description:
-          "Easy credit card payments or invoice based terms, whichever works best for your team.",
+          "Easy credit card payments or invoice based terms`, whichever works best for your team.",
         icon: CreditCardIcon,
       },
       {
