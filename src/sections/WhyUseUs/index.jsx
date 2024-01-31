@@ -34,7 +34,7 @@ const WhyUseUs = () => {
               title={`Great design is hard. <span class="text-green-500">We make it easy.</span>`}
               description="We&#39;ve spent decades making it this simple. You&#39;ll never want to go back to random freelancers, expensive agencies, or junior internal designers."
             />
-            <div className="">
+            <div>
               {rows.map((row, i) => (
                 <Row row={row} key={i} />
               ))}
@@ -62,11 +62,11 @@ const Row = ({ row }) => {
 
   return (
     <div className="bg-white" ref={ref}>
-      <div className="group pt-10 border border-gray-200 rounded-2xl bg-gradient-to-b from-gray-50 via-gray-100 to-gray-100 relative overflow-hidden">
+      <div className="-mx-5 sm:mx-0 group pt-7 sm:pt-10 border border-gray-200 sm:rounded-2xl bg-gradient-to-b from-gray-50 via-gray-100 to-gray-100 relative overflow-hidden">
         <div className="flex justify-center">
           <motion.div
             className={clsx(
-              "text-sm uppercase text-gray-400 inline-flex items-center gap-2 border border-gray-300 rounded-full py-2 pl-3.5 pr-4 ani",
+              "text-xs sm:text-sm uppercase text-gray-400 inline-flex items-center gap-2 border border-gray-300 rounded-full py-2 pl-3.5 pr-4 ani",
               styles.eyebrow,
             )}
             variants={{
@@ -81,9 +81,9 @@ const Row = ({ row }) => {
             {eyebrow.title}
           </motion.div>
         </div>
-        <div className="text-center px-10 mt-5 mb-10 space-y-5 max-w-4xl mx-auto relative z-20">
+        <div className="text-center px-5 sm:px-10 mt-5 mb-10 space-y-5 max-w-4xl mx-auto relative z-20">
           <motion.h2
-            className="text-4xl text-gray-800"
+            className="text-3xl sm:text-4xl text-gray-800"
             variants={{
               hidden: { opacity: 0, y: 75 },
               visible: { opacity: 1, y: 0 },
@@ -95,7 +95,7 @@ const Row = ({ row }) => {
             {title}
           </motion.h2>
           <motion.p
-            className="text-lg text-gray-500"
+            className="text-base sm:text-lg text-gray-500"
             dangerouslySetInnerHTML={{ __html: description }}
             variants={{
               hidden: { opacity: 0, y: 75 },
@@ -116,16 +116,23 @@ const Row = ({ row }) => {
           transition={{ duration: 0.3, delay: 0.75 }}
         >
           <Image
-            src={illustration}
-            className="z-10 relative w-full"
+            src={illustration.desktop}
+            className="z-10 relative w-full hidden md:block"
             width={1220}
+            height={188}
+            alt=""
+          />
+          <Image
+            src={illustration.mobile}
+            className="z-10 relative w-full block md:hidden"
+            width={724}
             height={188}
             alt=""
           />
         </motion.div>
         <Image
           src={bgHover}
-          className="absolute w-full bottom-0 z-0 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1000"
+          className="absolute w-full h-1/2 sm:h-full object-cover bottom-0 z-0 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1000"
           width={1220}
           height={188}
           alt=""
@@ -158,7 +165,10 @@ const rows = [
     title: "Elevate Your Product with Cutting-Edge Design",
     description:
       "At the heart of your product lies the potential for a distinctive design that not only sets you apart but becomes your signature. We specialize in crafting bespoke designs that&#39;s unique and timeless.",
-    illustration: "/images/illustration-benefit-craft.svg",
+    illustration: {
+      desktop: "/images/illustration-benefit-craft.svg",
+      mobile: "/images/illustration-benefit-craft-mobile.svg",
+    },
     bgHover: "/images/bg-glow-green-yellow.svg",
     benefits: [
       {
@@ -200,7 +210,10 @@ const rows = [
     title: "Seamless Workflow for Design On Demand",
     description:
       "Our process is streamlined for efficiency, centred around clear communication. Experience the ease of a design service that adapts to your pace, ensuring your creative needs are met with precision and promptness.",
-    illustration: "/images/illustration-benefit-workflow.svg",
+    illustration: {
+      desktop: "/images/illustration-benefit-workflow.svg",
+      mobile: "/images/illustration-benefit-workflow-mobile.svg",
+    },
     bgHover: "/images/bg-glow-indigo-blue.svg",
     benefits: [
       {
@@ -242,7 +255,10 @@ const rows = [
     title: "We Make Working With Us As Simple As Possible",
     description:
       "We&#39;re looking for partners that want to work with us. So no long-term commitments or agreements from us. We want you to continuously get value and amazing designs so we can grow together.",
-    illustration: "/images/illustration-benefit-admin.svg",
+    illustration: {
+      desktop: "/images/illustration-benefit-admin.svg",
+      mobile: "/images/illustration-benefit-admin-mobile.svg",
+    },
     bgHover: "/images/bg-glow-lime-yellow.svg",
     benefits: [
       {
