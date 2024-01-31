@@ -46,6 +46,9 @@ p {
 .hide-scroll-bar::-webkit-scrollbar {
   display: none;
 }
+.ani {
+  @apply transition-all ease-in-out duration-200;
+}
 
 @media only screen and (max-width: 768px) {
   h1 {
