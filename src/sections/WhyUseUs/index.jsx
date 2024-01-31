@@ -1,6 +1,7 @@
+import clsx from "clsx"
+import Image from "next/image"
 import { Element } from "react-scroll"
 import SectionHeader from "@/components/SectionHeader"
-import clsx from "clsx"
 import {
   DocumentCheckIcon,
   SwatchIcon,
@@ -9,24 +10,19 @@ import {
   PlayPauseIcon,
   ClockIcon,
   UsersIcon,
-  PencilIcon,
   CreditCardIcon,
-  PencilSquareIcon,
   ArrowUpOnSquareIcon,
   BookmarkSlashIcon,
   BellAlertIcon,
   ClipboardIcon,
 } from "@heroicons/react/24/solid"
 import {
-  CubeTransparentIcon,
-  NoSymbolIcon,
-  ArrowsRightLeftIcon,
   ClipboardDocumentCheckIcon,
   CursorArrowRaysIcon,
-  RocketLaunchIcon,
   SparklesIcon,
 } from "@heroicons/react/16/solid"
-import Image from "next/image"
+import { useRef, useEffect } from "react"
+import { useInView, motion, useAnimation } from "framer-motion"
 
 const WhyUseUs = () => {
   return (
@@ -52,35 +48,81 @@ const WhyUseUs = () => {
 export default WhyUseUs
 
 const Row = ({ row }) => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  const mainControls = useAnimation()
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  }, [isInView])
+
   const { eyebrow, title, description, benefits, styles, illustration, bgHover } = row
+
   return (
-    <>
-      <div className="group pt-10 border border-gray-200 rounded-2xl bg-gradient-to-b from-gray-50 via-gray-100 to-gray-100 relative">
+    <div className="bg-white" ref={ref}>
+      <div className="group pt-10 border border-gray-200 rounded-2xl bg-gradient-to-b from-gray-50 via-gray-100 to-gray-100 relative overflow-hidden">
         <div className="flex justify-center">
-          <div
+          <motion.div
             className={clsx(
               "text-sm uppercase text-gray-400 inline-flex items-center gap-2 border border-gray-300 rounded-full py-2 pl-3.5 pr-4 ani",
               styles.eyebrow,
             )}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
             <eyebrow.icon className="w-4 h-4" aria-hidden={true} />
             {eyebrow.title}
-          </div>
+          </motion.div>
         </div>
         <div className="text-center px-10 mt-5 mb-10 space-y-5 max-w-4xl mx-auto relative z-20">
-          <h2 className="text-4xl text-gray-800">{title}</h2>
-          <p
+          <motion.h2
+            className="text-4xl text-gray-800"
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.3, delay: 0.25 }}
+          >
+            {title}
+          </motion.h2>
+          <motion.p
             className="text-lg text-gray-500"
             dangerouslySetInnerHTML={{ __html: description }}
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.3, delay: 0.5 }}
           />
         </div>
-        <Image
-          src={illustration}
-          className="z-10 relative w-full"
-          width={1220}
-          height={188}
-          alt=""
-        />
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 175 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.3, delay: 0.75 }}
+        >
+          <Image
+            src={illustration}
+            className="z-10 relative w-full"
+            width={1220}
+            height={188}
+            alt=""
+          />
+        </motion.div>
         <Image
           src={bgHover}
           className="absolute w-full bottom-0 z-0 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1000"
@@ -103,7 +145,7 @@ const Row = ({ row }) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 
