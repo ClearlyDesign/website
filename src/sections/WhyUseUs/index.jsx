@@ -81,7 +81,7 @@ const Row = ({ row }) => {
             {eyebrow.title}
           </motion.div>
         </div>
-        <div className="text-center px-5 sm:px-10 mt-5 mb-10 space-y-5 max-w-4xl mx-auto relative z-20">
+        <div className="text-center px-5 sm:px-10 mt-5 mb-10 space-y-5 max-w-4xl mx-auto">
           <motion.h2
             className="text-3xl sm:text-4xl text-gray-800"
             variants={{
@@ -114,10 +114,11 @@ const Row = ({ row }) => {
           initial="hidden"
           animate={mainControls}
           transition={{ duration: 0.3, delay: 0.75 }}
+          className="relative z-[2]"
         >
           <Image
             src={illustration.desktop}
-            className="z-10 relative w-full hidden md:block"
+            className="w-full hidden md:block"
             width={1220}
             height={188}
             alt=""
@@ -125,7 +126,7 @@ const Row = ({ row }) => {
           />
           <Image
             src={illustration.mobile}
-            className="z-10 relative w-full block md:hidden"
+            className="w-full block md:hidden"
             width={724}
             height={188}
             alt=""
@@ -134,7 +135,7 @@ const Row = ({ row }) => {
         </motion.div>
         <Image
           src={bgHover}
-          className="absolute w-full h-1/2 sm:h-full object-cover bottom-0 z-0 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1000"
+          className="absolute w-full h-1/2 sm:h-full object-cover bottom-0 z-[1] opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1000"
           width={1220}
           height={188}
           alt=""
@@ -266,7 +267,7 @@ const rows = [
       {
         title: "Payments Your Way",
         description:
-          "Easy credit card payments or invoice based terms`, whichever works best for your team.",
+          "Easy credit card payments or invoice based terms, whichever works best for your team.",
         icon: CreditCardIcon,
       },
       {
