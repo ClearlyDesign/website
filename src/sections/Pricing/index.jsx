@@ -121,9 +121,9 @@ const plans = [
   {
     title: "Collaborator",
     description: "Delivering design work as and when you need it, asynchronously.",
-    price: "$2,495",
-    spots: "Introductory offer. 4 spots left",
-    link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx?prefilled_promo_code=C1",
+    price: "$2,995",
+    spots: "Introductory offer. 2 spots left",
+    link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx?prefilled_promo_code=C2",
     includes: [
       {
         title: "One workstream at a time",
@@ -168,7 +168,7 @@ const plans = [
     description:
       "Integrated in to your team to deliver design work when you need it most.",
     price: "$5,995",
-    spots: "Introductory offer. 2 spots left",
+    spots: "Introductory offer. 1 spot left",
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0?prefilled_promo_code=I1",
     includes: [
       {
