@@ -180,7 +180,7 @@ const plans = [
         isUpgrade: true,
       },
       {
-        title: "Contineous progress updates",
+        title: "Continuous progress updates",
         isUpgrade: true,
       },
       {
