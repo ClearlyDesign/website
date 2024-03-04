@@ -130,6 +130,10 @@ const plans = [
         isUpgrade: false,
       },
       {
+        title: "Weekly progress updates",
+        isUpgrade: false,
+      },
+      {
         title: "24/7 access to Figma designs",
         isUpgrade: false,
       },
@@ -173,6 +177,10 @@ const plans = [
     includes: [
       {
         title: "Two workstreams at a time",
+        isUpgrade: true,
+      },
+      {
+        title: "Contineous progress updates",
         isUpgrade: true,
       },
       {
