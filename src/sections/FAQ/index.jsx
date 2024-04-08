@@ -105,7 +105,7 @@ const items = [
   {
     question: "What if I had a specific design project only?",
     answer:
-      "From our perspective, you can sign-up and get cracking on your project immediate, and as soon as we're done with the project, you can cancel the service. No need to stick around if you got what you came for. Working in this way makes it more predictable to figure out as we go rather than trying to scope and quote on a project that ends up changing downstream. We've found that we complete projects a lot sooner working in this way.",
+      "From our perspective, you can sign-up and get cracking on your project immediately, and as soon as we're done with the project, you can cancel the service. No need to stick around if you got what you came for. Working in this way makes it more predictable to figure out as we go rather than trying to scope and quote on a project that ends up changing downstream. We've found that we complete projects a lot sooner working in this way.",
   },
   {
     question: "How many designs could I get?",

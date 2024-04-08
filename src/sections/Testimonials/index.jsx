@@ -330,3 +330,7 @@ const testimonials = [
     ],
   ],
 ]
+
+// Roeland van Nieuwkerk
+
+// Having worked with numerous designers in the past, I can confidently say that Francois brings an unrivaled level of detail and product thinking. He goes beyond just the aesthetics of design, always digging deeper to consider how design decisions impact the product, brand, and the broader customer experience. You definitely want Francois on your product team!
