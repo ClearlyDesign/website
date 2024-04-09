@@ -327,10 +327,33 @@ const testimonials = [
           webUrl: "",
         },
       },
+      // {
+      //   body: "Having worked with numerous designers in the past, I can confidently say that Francois brings an unrivaled level of detail and product thinking. He goes beyond just the aesthetics of design, always digging deeper to consider how design decisions impact the product, brand, and the broader customer experience. You definitely want Francois on your product team!",
+      //   author: {
+      //     name: "Roeland van Nieuwkerk",
+      //     title: "CTO @ Wealthstack",
+      //     avatar: "avatar-roeland.jpg",
+      //     webUrl: "https://wealthstack.ca",
+      //   },
+      // },
+      // {
+      //   body: "Amazing! Our site has been live only a couple weeks and I've already received several comments about how great it looks. Our message is presented loudly and clearly. For previous websites I've had to be much more involved in the minutia. Francois took our ideas and copy, and came up with a beautiful design in the first go. He made the whole process very easy, stress-free, and we have a beautiful result!",
+      //   author: {
+      //     name: "Isaac Smith",
+      //     title: "Founder, TeamUp",
+      //     avatar: "avatar-isaac-smith.jpg",
+      //     webUrl: "https://hireteamup.com",
+      //   },
+      // },
+      // {
+      //   body: "",
+      //   author: {
+      //     name: "",
+      //     title: "",
+      //     avatar: "",
+      //     webUrl: "",
+      //   },
+      // },
     ],
   ],
 ]
-
-// Roeland van Nieuwkerk
-
-// Having worked with numerous designers in the past, I can confidently say that Francois brings an unrivaled level of detail and product thinking. He goes beyond just the aesthetics of design, always digging deeper to consider how design decisions impact the product, brand, and the broader customer experience. You definitely want Francois on your product team!
