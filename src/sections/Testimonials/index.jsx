@@ -301,6 +301,15 @@ const testimonials = [
     ],
     [
       {
+        body: "Amazing! Our site has been live only a couple weeks and I've already received several comments about how great it looks. Our message is presented loudly and clearly. For previous websites I've had to be much more involved in the minutia. Francois took our ideas and copy, and came up with a beautiful design in the first go. He made the whole process very easy, stress-free, and we have a beautiful result!",
+        author: {
+          name: "Isaac Smith",
+          title: "Founder, TeamUp",
+          avatar: "avatar-isaac-smith.jpg",
+          webUrl: "https://hireteamup.com",
+        },
+      },
+      {
         body: "Francois is a magician! If there is anything digital you would like to do, Francois can make it happen, with style, finesse and most importantly, on time. I learnt a great deal when working with Francois on the Kaya FM website. The turn around times were enough to break anyone, but Francois always had a way to present the solution on time. Working with Francois was a great pleasure. I would recommend him and Creative Ink any day!",
         author: {
           name: "Ben Mamathuba",
@@ -318,15 +327,15 @@ const testimonials = [
           webUrl: "newsletter.theremoteworktribe.com",
         },
       },
-      {
-        body: "Francois is brilliant both from a creative and development point of view. His attention to detail is astounding and he consistently delivers top quality work and on time. He is able to grasp any brief I send him but is also proactive enough to suggest his own ideas and additions which are always welcome. I have never dealt with such a stable, creative genius!",
-        author: {
-          name: "Isabel van Niekerk",
-          title: "Account Director @ eMethod",
-          avatar: "",
-          webUrl: "",
-        },
-      },
+      // {
+      //   body: "Francois is brilliant both from a creative and development point of view. His attention to detail is astounding and he consistently delivers top quality work and on time. He is able to grasp any brief I send him but is also proactive enough to suggest his own ideas and additions which are always welcome. I have never dealt with such a stable, creative genius!",
+      //   author: {
+      //     name: "Isabel van Niekerk",
+      //     title: "Account Director @ eMethod",
+      //     avatar: "",
+      //     webUrl: "",
+      //   },
+      // },
       // {
       //   body: "Having worked with numerous designers in the past, I can confidently say that Francois brings an unrivaled level of detail and product thinking. He goes beyond just the aesthetics of design, always digging deeper to consider how design decisions impact the product, brand, and the broader customer experience. You definitely want Francois on your product team!",
       //   author: {
@@ -336,15 +345,7 @@ const testimonials = [
       //     webUrl: "https://wealthstack.ca",
       //   },
       // },
-      // {
-      //   body: "Amazing! Our site has been live only a couple weeks and I've already received several comments about how great it looks. Our message is presented loudly and clearly. For previous websites I've had to be much more involved in the minutia. Francois took our ideas and copy, and came up with a beautiful design in the first go. He made the whole process very easy, stress-free, and we have a beautiful result!",
-      //   author: {
-      //     name: "Isaac Smith",
-      //     title: "Founder, TeamUp",
-      //     avatar: "avatar-isaac-smith.jpg",
-      //     webUrl: "https://hireteamup.com",
-      //   },
-      // },
+
       // {
       //   body: "",
       //   author: {

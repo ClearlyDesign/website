@@ -49,7 +49,15 @@ const Pricing = () => {
                         /month *
                       </span>
                     </p>
-                    <p className="text-gray-500 mt-1">{plan.spots}</p>
+                    <div className="mt-3 flex items-center">
+                      {plan.spotIsImmediate && (
+                        <div className="relative mr-2">
+                          <div className="bg-lime-400 animate-ping rounded-full w-2.5 h-2.5" />
+                          <div className="bg-green-400 rounded-full w-2.5 h-2.5 absolute top-0" />
+                        </div>
+                      )}
+                      <p className="text-gray-500">{plan.spots}</p>
+                    </div>
                     <div className="mt-8 space-y-4">
                       <a
                         href={plan.link}
@@ -103,6 +111,18 @@ const Pricing = () => {
 }
 export default Pricing
 
+const getNextMonth = () => {
+  let nextMonth = "July"
+  const currentMonthNum = new Date().getMonth()
+
+  switch (currentMonthNum) {
+    case 3:
+      nextMonth = "May"
+      break
+  }
+  return `${nextMonth} 1, ${new Date().getFullYear()}`
+}
+
 // C1 - $2,495
 // C2 - $2,995
 // C3 - $3,495
@@ -122,7 +142,8 @@ const plans = [
     title: "Collaborator",
     description: "Delivering design work as and when you need it, asynchronously.",
     price: "$2,995",
-    spots: "Introductory offer. 2 spots left",
+    spotIsImmediate: true,
+    spots: "Immediate Availablility",
     link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx?prefilled_promo_code=C2",
     includes: [
       {
@@ -138,7 +159,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Async communication",
+        title: "Dedicated Slack Channel",
         isUpgrade: false,
       },
       {
@@ -172,7 +193,8 @@ const plans = [
     description:
       "Integrated in to your team to deliver design work when you need it most.",
     price: "$5,995",
-    spots: "Introductory offer. 1 spot left",
+    spotIsImmediate: false,
+    spots: `Available from ${getNextMonth()}`,
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0?prefilled_promo_code=I1",
     includes: [
       {
@@ -188,7 +210,7 @@ const plans = [
         isUpgrade: true,
       },
       {
-        title: "Dedicated Slack channel",
+        title: "Dedicated Slack channel & Check-ins",
         isUpgrade: true,
       },
       {
