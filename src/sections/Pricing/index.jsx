@@ -116,8 +116,41 @@ const getNextMonth = () => {
   const currentMonthNum = new Date().getMonth()
 
   switch (currentMonthNum) {
+    case 0:
+      nextMonth = "Feb"
+      break
+    case 1:
+      nextMonth = "Mar"
+      break
+    case 2:
+      nextMonth = "Apr"
+      break
     case 3:
       nextMonth = "May"
+      break
+    case 4:
+      nextMonth = "Jun"
+      break
+    case 5:
+      nextMonth = "Jul"
+      break
+    case 6:
+      nextMonth = "Aug"
+      break
+    case 7:
+      nextMonth = "Sep"
+      break
+    case 8:
+      nextMonth = "Oct"
+      break
+    case 9:
+      nextMonth = "Nov"
+      break
+    case 10:
+      nextMonth = "Dec"
+      break
+    case 11:
+      nextMonth = "Jan"
       break
   }
   return `${nextMonth} 1, ${new Date().getFullYear()}`
@@ -141,10 +174,10 @@ const plans = [
   {
     title: "Collaborator",
     description: "Delivering design work as and when you need it, asynchronously.",
-    price: "$2,995",
+    price: "$3,495",
     spotIsImmediate: true,
     spots: "Immediate Availablility",
-    link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx?prefilled_promo_code=C2",
+    link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx?prefilled_promo_code=C3",
     includes: [
       {
         title: "One workstream at a time",
