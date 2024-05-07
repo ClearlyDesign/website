@@ -174,10 +174,10 @@ const plans = [
   {
     title: "Collaborator",
     description: "Delivering design work as and when you need it, asynchronously.",
-    price: "$3,495",
+    price: "$3,995",
     spotIsImmediate: true,
     spots: "Immediate Availablility",
-    link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx?prefilled_promo_code=C3",
+    link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx?prefilled_promo_code=C4",
     includes: [
       {
         title: "One workstream at a time",
