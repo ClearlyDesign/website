@@ -176,7 +176,7 @@ const plans = [
     description: "Delivering design work as and when you need it, asynchronously.",
     price: "$3,995",
     spotIsImmediate: true,
-    spots: "Immediate Availablility",
+    spots: "Pause/Cancel Anytime",
     link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx?prefilled_promo_code=C4",
     includes: [
       {
@@ -227,7 +227,7 @@ const plans = [
       "Integrated in to your team to deliver design work when you need it most.",
     price: "$5,995",
     spotIsImmediate: false,
-    spots: `Available from ${getNextMonth()}`,
+    spots: "Pause/Cancel Anytime",
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0?prefilled_promo_code=I1",
     includes: [
       {
