@@ -226,7 +226,7 @@ const plans = [
     description:
       "Integrated in to your team to deliver design work when you need it most.",
     price: "$5,995",
-    spotIsImmediate: false,
+    spotIsImmediate: true,
     spots: "Pause/Cancel Anytime",
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0?prefilled_promo_code=I1",
     includes: [
