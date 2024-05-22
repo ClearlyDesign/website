@@ -160,7 +160,7 @@ const getNextMonth = () => {
 // C2 - $2,995
 // C3 - $3,495
 // C4 - $3,995
-// C5 - $4,495
+// C5 - $4,495 ?prefilled_promo_code=C5
 // None - $4,995
 
 // I1 - $5,995
@@ -174,10 +174,10 @@ const plans = [
   {
     title: "Collaborator",
     description: "Delivering design work as and when you need it, asynchronously.",
-    price: "$4,495",
+    price: "$4,995",
     spotIsImmediate: true,
     spots: `Available from ${getNextMonth()}`,
-    link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx?prefilled_promo_code=C5",
+    link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx",
     includes: [
       {
         title: "One workstream at a time",
