@@ -153,7 +153,7 @@ const getNextMonth = () => {
       nextMonth = "Jan"
       break
   }
-  return `${nextMonth} 1, ${new Date().getFullYear()}`
+  return `${nextMonth} 1`
 }
 
 // C1 - $2,495
@@ -172,11 +172,11 @@ const getNextMonth = () => {
 
 const plans = [
   {
-    title: "Collaborator",
+    title: "Standard",
     description: "Delivering design work as and when you need it, asynchronously.",
     price: "$4,995",
     spotIsImmediate: true,
-    spots: `Available from ${getNextMonth()}`,
+    spots: "Pause or Cancel Anytime",
     link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx",
     includes: [
       {
@@ -200,7 +200,11 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Immediate start",
+        title: "WebFlow Development",
+        isUpgrade: false,
+      },
+      {
+        title: "Immediate Start",
         isUpgrade: false,
       },
       {
@@ -222,13 +226,13 @@ const plans = [
     ],
   },
   {
-    title: "Integrator",
+    title: "Advanced",
     description:
-      "Integrated in to your team to deliver design work when you need it most.",
-    price: "$6,995",
+      "Double the capacity and integrated in to your team for when you need it most.",
+    price: "$7,495",
     spotIsImmediate: true,
-    spots: `Available from ${getNextMonth()}`,
-    link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0?prefilled_promo_code=I2",
+    spots: "Pause or Cancel Anytime",
+    link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0",
     includes: [
       {
         title: "Two workstreams at a time",
@@ -249,6 +253,10 @@ const plans = [
       {
         title: "Seamless project management",
         isUpgrade: true,
+      },
+      {
+        title: "WebFlow Development",
+        isUpgrade: false,
       },
       {
         title: "Immediate start w/ Kick-off session",

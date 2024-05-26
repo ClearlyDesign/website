@@ -85,7 +85,7 @@ const Terms = () => {
           <h3>2. Overview of Services</h3>
           <p>
             Clearly Design shall provide to Client design services as outlined in the
-            sservice plan. The recurring fee is paid for access to such services, and
+            service plan. The recurring fee is paid for access to such services, and
             submitting work requests are the sole responsibility of the client in order to
             utilize this service.
           </p>
@@ -325,11 +325,11 @@ const Terms = () => {
           <ul>
             <li>Client can cancel at any time with a reasonable cancellation notice;</li>
             <li>
-              On the “Collaborator” subscription we require a minimum of 14 days notice of
+              On the “Standard” subscription we require a minimum of 14 days notice of
               cancellation;
             </li>
             <li>
-              On the “Integrator” subscription we require a minimum of 30 days notice of
+              On the “Advanced” subscription we require a minimum of 30 days notice of
               cancellation;
             </li>
           </ul>

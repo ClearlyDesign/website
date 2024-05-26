@@ -105,12 +105,12 @@ const items = [
   {
     question: "What if I had a specific design project only?",
     answer:
-      "From our perspective, you can sign-up and get cracking on your project immediately, and as soon as we're done with the project, you can cancel the service. No need to stick around if you got what you came for. Working in this way makes it more predictable to figure out as we go rather than trying to scope and quote on a project that ends up changing downstream. We've found that we complete projects a lot sooner working in this way.",
+      "From our perspective, you can sign-up and get cracking on your project immediately, and as soon as we're done with the project, you can cancel the service. No need to stick around if you got what you came for. Working in this way makes it more predictable to figure out as we go rather than trying to scope and quote on a project that ends up changing downstream. We've found that we complete projects a lot faster working in this way.",
   },
   {
     question: "How many designs could I get?",
     answer:
-      "It all depends on how big your requests are and how many requests you have. We ask you to prioritize your requests to tell us what order to work in, and then start delivering designs one after the other. The faster the feedback and completion of the first task, the faster we can move to the next task, so it depends on you as well.",
+      "It all depends on how big your requests are and how many requests you have. We ask you to prioritize your requests to tell us what order to work in, and then start delivering designs one after the other. The faster the feedback and completion of the first task, the faster we can move to the next task, so it depends on you as well. We can discus this in your discovery call and provide some estimates based on standard jobs if that's helpful to you.",
   },
   {
     question: "Why wouldn&#39;t I just hire a full-time designer?",
@@ -120,7 +120,12 @@ const items = [
   {
     question: "Is there a limit to how many requests I can have?",
     answer:
-      "Nope. Once subscribed, you can add as many requests as you want to your &#39;backlog&#39;. We do all project management to ensure it flows as smoothly as possible. We&#39;ll keep working on all requests one at a time - or two on the integrator plan, based on the priority you set.",
+      "Nope. Once subscribed, you can add as many requests as you want to your &#39;backlog&#39;. We do all project management to ensure it flows as smoothly as possible. We&#39;ll keep working on all requests one at a time - or two on the advanced plan, based on the priority you set.",
+  },
+  {
+    question: "Do you do WebFlow development?",
+    answer:
+      "Absolutely, we don't stop in Figma. We can craft your pixel-perfect production ready website in WebFlow to get you from concept to shipped in no time. It's all supported on both packages, and we can build, maintain and extend your website as long as you have an active subscription.",
   },
   {
     question: "What if I&#39;m not happy with my designs?",
