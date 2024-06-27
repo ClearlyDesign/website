@@ -176,7 +176,7 @@ const plans = [
     description: "Delivering design work as and when you need it, asynchronously.",
     price: "$4,995",
     spotIsImmediate: true,
-    spots: "Pause or Cancel Anytime",
+    spots: `Available from ${getNextMonth()}`,
     link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx",
     includes: [
       {
@@ -204,7 +204,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Immediate Start",
+        title: "Motion Design",
         isUpgrade: false,
       },
       {
@@ -231,7 +231,7 @@ const plans = [
       "Double the capacity and integrated in to your team for when you need it most.",
     price: "$7,495",
     spotIsImmediate: true,
-    spots: "Pause or Cancel Anytime",
+    spots: `Available from ${getNextMonth()}`,
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0",
     includes: [
       {
@@ -259,8 +259,12 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Immediate start w/ Kick-off session",
+        title: "Custom Components built in Tailwind (React or HTML)",
         isUpgrade: true,
+      },
+      {
+        title: "Motion Design",
+        isUpgrade: false,
       },
       {
         title: "Unlimited requests & revisions",
