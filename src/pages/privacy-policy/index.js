@@ -129,8 +129,8 @@ const PrivacyPolicy = () => {
           <p>
             We welcome any questions, comments and requests regarding this privacy policy
             and should be emailed to{" "}
-            <a href="mailto:hey@clearly.digital?subject=Questions%20about%20Privacy%20Policy">
-              hey@clearly.digital
+            <a href="mailto:f@clearly.design?subject=Questions%20about%20Privacy%20Policy">
+              f@clearly.design
             </a>
             .
           </p>

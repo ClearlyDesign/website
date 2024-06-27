@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="sm:flex items-center sm:space-x-5">
           <ul className="text-gray-500 space-x-3 lg:space-x-6">
             <li className="inline-block">
-              <a href="mailto:hey@clearly.digital" className="hover:text-gray-700">
+              <a href="mailto:f@clearly.design" className="hover:text-gray-700">
                 Contact
               </a>
             </li>
