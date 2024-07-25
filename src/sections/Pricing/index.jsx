@@ -99,9 +99,7 @@ const Pricing = () => {
               ))}
             </div>
             <div className="max-w-screen-sm mx-auto text-xs text-center text-gray-500">
-              * Pricing in USD. Canadian Clients are subject to sales tax. Limited launch
-              special pricing is subject to change without notice. Individual rates will
-              not increase during an active subscription period.
+              * Pricing in USD. Canadian Clients are subject to sales tax.
             </div>
           </div>
         </div>
@@ -110,6 +108,9 @@ const Pricing = () => {
   )
 }
 export default Pricing
+// Limited launch
+// special pricing is subject to change without notice. Individual rates will
+// not increase during an active subscription period.
 
 const getNextMonth = () => {
   let nextMonth = "July"
@@ -173,7 +174,8 @@ const getNextMonth = () => {
 const plans = [
   {
     title: "Standard",
-    description: "Delivering design work as and when you need it, asynchronously.",
+    description:
+      "Delivering design work as and when you need it, completely asynchronously.",
     price: "$4,995",
     spotIsImmediate: true,
     spots: `Available from ${getNextMonth()}`,
@@ -184,7 +186,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Weekly progress updates",
+        title: "Completely Async with weekly progress updates",
         isUpgrade: false,
       },
       {
@@ -192,7 +194,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "Dedicated Slack Channel",
+        title: "Looms & Dedicated Slack Channel",
         isUpgrade: false,
       },
       {
@@ -227,8 +229,7 @@ const plans = [
   },
   {
     title: "Advanced",
-    description:
-      "Double the capacity and integrated in to your team for when you need it most.",
+    description: "Double the capacity with availability for check-ins as required.",
     price: "$7,495",
     spotIsImmediate: true,
     spots: `Available from ${getNextMonth()}`,
@@ -239,7 +240,7 @@ const plans = [
         isUpgrade: true,
       },
       {
-        title: "Continuous progress updates",
+        title: "Continuous progress updates with check-ins as needed",
         isUpgrade: true,
       },
       {
@@ -247,7 +248,7 @@ const plans = [
         isUpgrade: true,
       },
       {
-        title: "Dedicated Slack channel & Check-ins",
+        title: "Looms, Slack & Check-ins",
         isUpgrade: true,
       },
       {
@@ -255,12 +256,12 @@ const plans = [
         isUpgrade: true,
       },
       {
-        title: "WebFlow Development",
-        isUpgrade: false,
+        title: "Custom Components built in TailwindCSS (React or HTML)",
+        isUpgrade: true,
       },
       {
-        title: "Custom Components built in Tailwind (React or HTML)",
-        isUpgrade: true,
+        title: "WebFlow Development",
+        isUpgrade: false,
       },
       {
         title: "Motion Design",
