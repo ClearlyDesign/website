@@ -118,40 +118,40 @@ const getNextMonth = () => {
 
   switch (currentMonthNum) {
     case 0:
-      nextMonth = "Feb"
-      break
-    case 1:
       nextMonth = "Mar"
       break
-    case 2:
+    case 1:
       nextMonth = "Apr"
       break
-    case 3:
+    case 2:
       nextMonth = "May"
       break
-    case 4:
+    case 3:
       nextMonth = "Jun"
       break
-    case 5:
+    case 4:
       nextMonth = "Jul"
       break
-    case 6:
+    case 5:
       nextMonth = "Aug"
       break
-    case 7:
+    case 6:
       nextMonth = "Sep"
       break
-    case 8:
+    case 7:
       nextMonth = "Oct"
       break
-    case 9:
+    case 8:
       nextMonth = "Nov"
       break
-    case 10:
+    case 9:
       nextMonth = "Dec"
       break
-    case 11:
+    case 10:
       nextMonth = "Jan"
+      break
+    case 11:
+      nextMonth = "Feb"
       break
   }
   return `${nextMonth} 1`
