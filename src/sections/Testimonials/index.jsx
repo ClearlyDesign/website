@@ -177,7 +177,7 @@ const Item = ({ columnGroup, columnGroupIdx, passRef }) => {
                 <figcaption className="mt-6 flex items-center gap-x-4">
                   {testimonial.author.avatar ? (
                     <Image
-                      className="h-10 w-10 rounded-full bg-gray-50"
+                      className="h-10 w-10 rounded-full bg-gray-50 border border-gray-800/15"
                       src={`/images/${testimonial.author.avatar}`}
                       alt={testimonial.author.name}
                       width={40}
@@ -239,6 +239,15 @@ const testimonials = [
         },
       },
       {
+        body: "Clearly Design is a wonderful solution for any business that needs top-notch design work. I had the best experience and was impressed by the designs, turn around time, and communication. Truly a great experience!",
+        author: {
+          name: "Krish",
+          title: "CEO, Do Amore",
+          avatar: "avatar-krish.jpg",
+          webUrl: "https://doamore.com",
+        },
+      },
+      {
         body: "Francois has consistently demonstrated exceptional skills and dedication in website development for Camps with Friends. His clear communication, timely deliveries, and unwavering commitment to providing a high-quality product have made working with him a remarkable experience. We wholeheartedly recommend his design services for anyone seeking top-notch branding, marketing websites, and product design.",
         author: {
           name: "Jason Mellet",
@@ -276,6 +285,15 @@ const testimonials = [
           webUrl: "https://canadaabroad.com",
         },
       },
+      {
+        body: "Francois is an amazing talent. They made the process of rebranding my company extremely easy. From helping with the visual aspect to also creating a lot of copy based on the resources I provided, we managed to roll out a fresh, modern website that looks incredible in under 3 months. His communication and follow up is amazing and gives constructive feedback along the way to ensure you are making the best choices for your business. Will continue using Francois for all my design needs in the future.",
+        author: {
+          name: "Brett Keppler",
+          title: "CEO, Nekst",
+          avatar: "avatar-brett.jpg",
+          webUrl: "https://nekst.com",
+        },
+      },
     ],
   ],
   [
@@ -296,6 +314,15 @@ const testimonials = [
           title: "Founder & Advisor @ Bean Ninjas",
           avatar: "avatar-meryl.jpg",
           webUrl: "https://beanninjas.com",
+        },
+      },
+      {
+        body: "Having worked with numerous designers in the past, I can confidently say that Francois brings an unrivaled level of detail and product thinking. He goes beyond just the aesthetics of design, always digging deeper to consider how design decisions impact the product, brand, and the broader customer experience. You definitely want Francois on your product team!",
+        author: {
+          name: "Roeland van Nieuwkerk",
+          title: "CTO @ Wealthstack",
+          avatar: "avatar-roeland.jpg",
+          webUrl: "https://wealthstack.ca",
         },
       },
     ],
@@ -327,24 +354,15 @@ const testimonials = [
           webUrl: "newsletter.theremoteworktribe.com",
         },
       },
-      // {
-      //   body: "Francois is brilliant both from a creative and development point of view. His attention to detail is astounding and he consistently delivers top quality work and on time. He is able to grasp any brief I send him but is also proactive enough to suggest his own ideas and additions which are always welcome. I have never dealt with such a stable, creative genius!",
-      //   author: {
-      //     name: "Isabel van Niekerk",
-      //     title: "Account Director @ eMethod",
-      //     avatar: "",
-      //     webUrl: "",
-      //   },
-      // },
-      // {
-      //   body: "Having worked with numerous designers in the past, I can confidently say that Francois brings an unrivaled level of detail and product thinking. He goes beyond just the aesthetics of design, always digging deeper to consider how design decisions impact the product, brand, and the broader customer experience. You definitely want Francois on your product team!",
-      //   author: {
-      //     name: "Roeland van Nieuwkerk",
-      //     title: "CTO @ Wealthstack",
-      //     avatar: "avatar-roeland.jpg",
-      //     webUrl: "https://wealthstack.ca",
-      //   },
-      // },
+      {
+        body: "Francois is brilliant both from a creative and development point of view. His attention to detail is astounding and he consistently delivers top quality work and on time. He is able to grasp any brief I send him but is also proactive enough to suggest his own ideas and additions which are always welcome. I have never dealt with such a stable, creative genius!",
+        author: {
+          name: "Isabel van Niekerk",
+          title: "Account Director @ eMethod",
+          avatar: "",
+          webUrl: "",
+        },
+      },
 
       // {
       //   body: "",
