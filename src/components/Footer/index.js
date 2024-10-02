@@ -24,11 +24,11 @@ const Footer = () => {
         </div>
         <div className="sm:flex items-center sm:space-x-5">
           <ul className="text-gray-500 space-x-3 lg:space-x-6">
-            <li className="inline-block">
+            {/* <li className="inline-block">
               <a href="mailto:f@clearly.design" className="hover:text-gray-700">
                 Contact
               </a>
-            </li>
+            </li> */}
             <li className="inline-block">
               <Link href="/privacy-policy" className="hover:text-gray-700">
                 Privacy Policy

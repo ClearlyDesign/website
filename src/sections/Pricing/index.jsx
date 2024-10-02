@@ -178,7 +178,7 @@ const plans = [
       "Delivering design work as and when you need it, completely asynchronously.",
     price: "$4,995",
     spotIsImmediate: true,
-    spots: `Available from ${getNextMonth()}`,
+    spots: `Pause or Cancel Anytime`,
     link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx",
     includes: [
       {
@@ -202,7 +202,7 @@ const plans = [
         isUpgrade: false,
       },
       {
-        title: "WebFlow Development",
+        title: "Framer/WebFlow Development",
         isUpgrade: false,
       },
       {
@@ -232,7 +232,7 @@ const plans = [
     description: "Double the capacity with availability for check-ins as required.",
     price: "$7,495",
     spotIsImmediate: true,
-    spots: `Available from ${getNextMonth()}`,
+    spots: `Pause or Cancel Anytime`,
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0",
     includes: [
       {
@@ -260,7 +260,7 @@ const plans = [
         isUpgrade: true,
       },
       {
-        title: "WebFlow Development",
+        title: "Framer/WebFlow Development",
         isUpgrade: false,
       },
       {

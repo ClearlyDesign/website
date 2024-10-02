@@ -125,7 +125,7 @@ const PrivacyPolicy = () => {
             We will where appropriate notify you by email of any changes made to our
             privacy policy and these changes will also be posted on this page.
           </p>
-          <h3>Contact</h3>
+          {/* <h3>Contact</h3>
           <p>
             We welcome any questions, comments and requests regarding this privacy policy
             and should be emailed to{" "}
@@ -133,7 +133,7 @@ const PrivacyPolicy = () => {
               f@clearly.design
             </a>
             .
-          </p>
+          </p> */}
           <p>Thank you for taking the time to read our privacy policy.</p>
         </div>
       </div>
