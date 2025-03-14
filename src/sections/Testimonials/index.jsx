@@ -267,15 +267,7 @@ const testimonials = [
       },
     ],
     [
-      {
-        body: "Francois is exactly what you want in a designer: fast, effective, and pleasant to work with.",
-        author: {
-          name: "Ben Orenstein",
-          title: "Co-founder @ Tuple",
-          avatar: "avatar-ben-orenstein.jpeg",
-          webUrl: "https://tuple.app",
-        },
-      },
+      
       {
         body: "Francois and his team have helped me personally as well as Canada Abroad with numerous design and website projects and are still easily approachable to provide advice to help out when required. I've dealt with a lot of IT professionals in my career but there aren't many who understand exactly what is required straight off the bat and have the familiarity to lead you to a new and innovative solution and design. I can without a doubt vouch that you will be in safe hands with Francois and his team from Clearly Design.",
         author: {
@@ -286,12 +278,12 @@ const testimonials = [
         },
       },
       {
-        body: "Francois is an amazing talent. They made the process of rebranding my company extremely easy. From helping with the visual aspect to also creating a lot of copy based on the resources I provided, we managed to roll out a fresh, modern website that looks incredible in under 3 months. His communication and follow up is amazing and gives constructive feedback along the way to ensure you are making the best choices for your business. Will continue using Francois for all my design needs in the future.",
+        body: "Francois is brilliant both from a creative and development point of view. His attention to detail is astounding and he consistently delivers top quality work and on time. He is able to grasp any brief I send him but is also proactive enough to suggest his own ideas and additions which are always welcome. I have never dealt with such a stable, creative genius!",
         author: {
-          name: "Brett Keppler",
-          title: "CEO, Nekst",
-          avatar: "avatar-brett.jpg",
-          webUrl: "https://nekst.com",
+          name: "Isabel van Niekerk",
+          title: "Account Director @ eMethod",
+          avatar: "",
+          webUrl: "",
         },
       },
     ],
@@ -299,21 +291,21 @@ const testimonials = [
   [
     [
       {
+        body: "Francois is exactly what you want in a designer: fast, effective, and pleasant to work with.",
+        author: {
+          name: "Ben Orenstein",
+          title: "Co-founder @ Tuple",
+          avatar: "avatar-ben-orenstein.jpeg",
+          webUrl: "https://tuple.app",
+        },
+      },
+      {
         body: "Francois brings a level of detail and dedication to his craft that is unmatched in the space. His ability to bring even the most vague concepts to life is a true super power!",
         author: {
           name: "Matt Medeiros",
           title: "Founder/Publisher @ WP Minute",
           avatar: "avatar-matt.jpg",
           webUrl: "",
-        },
-      },
-      {
-        body: "Francois ran a brand and website refresh project for Bean Ninjas which I was super happy with! We&#39;ve received compliments on our new website. But not only does it look great it's helping us to have conversations with more potential clients. Francois worked collaboratively with our copywriter and was a strong project manager and communicator throughout. I highly recommend his services.",
-        author: {
-          name: "Meryl Johnston",
-          title: "Founder & Advisor @ Bean Ninjas",
-          avatar: "avatar-meryl.jpg",
-          webUrl: "https://beanninjas.com",
         },
       },
       {
@@ -328,12 +320,12 @@ const testimonials = [
     ],
     [
       {
-        body: "Amazing! Our site has been live only a couple weeks and I've already received several comments about how great it looks. Our message is presented loudly and clearly. For previous websites I've had to be much more involved in the minutia. Francois took our ideas and copy, and came up with a beautiful design in the first go. He made the whole process very easy, stress-free, and we have a beautiful result!",
+        body: "Francois is an amazing talent. They made the process of rebranding my company extremely easy. From helping with the visual aspect to also creating a lot of copy based on the resources I provided, we managed to roll out a fresh, modern website that looks incredible in under 3 months. His communication and follow up is amazing and gives constructive feedback along the way to ensure you are making the best choices for your business. Will continue using Francois for all my design needs in the future.",
         author: {
-          name: "Isaac Smith",
-          title: "Founder, TeamUp",
-          avatar: "avatar-isaac-smith.jpg",
-          webUrl: "https://hireteamup.com",
+          name: "Brett Keppler",
+          title: "CEO, Nekst",
+          avatar: "avatar-brett.jpg",
+          webUrl: "https://nekst.com",
         },
       },
       {
@@ -354,15 +346,7 @@ const testimonials = [
           webUrl: "newsletter.theremoteworktribe.com",
         },
       },
-      {
-        body: "Francois is brilliant both from a creative and development point of view. His attention to detail is astounding and he consistently delivers top quality work and on time. He is able to grasp any brief I send him but is also proactive enough to suggest his own ideas and additions which are always welcome. I have never dealt with such a stable, creative genius!",
-        author: {
-          name: "Isabel van Niekerk",
-          title: "Account Director @ eMethod",
-          avatar: "",
-          webUrl: "",
-        },
-      },
+      
 
       // {
       //   body: "",
@@ -376,3 +360,22 @@ const testimonials = [
     ],
   ],
 ]
+
+// {
+//   body: "Francois ran a brand and website refresh project for Bean Ninjas which I was super happy with! We&#39;ve received compliments on our new website. But not only does it look great it's helping us to have conversations with more potential clients. Francois worked collaboratively with our copywriter and was a strong project manager and communicator throughout. I highly recommend his services.",
+//   author: {
+//     name: "Meryl Johnston",
+//     title: "Founder & Advisor @ Bean Ninjas",
+//     avatar: "avatar-meryl.jpg",
+//     webUrl: "https://beanninjas.com",
+//   },
+// },
+// {
+//   body: "Amazing! Our site has been live only a couple weeks and I've already received several comments about how great it looks. Our message is presented loudly and clearly. For previous websites I've had to be much more involved in the minutia. Francois took our ideas and copy, and came up with a beautiful design in the first go. He made the whole process very easy, stress-free, and we have a beautiful result!",
+//   author: {
+//     name: "Isaac Smith",
+//     title: "Founder, TeamUp",
+//     avatar: "avatar-isaac-smith.jpg",
+//     webUrl: "https://hireteamup.com",
+//   },
+// },
