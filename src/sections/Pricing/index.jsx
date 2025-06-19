@@ -59,20 +59,20 @@ const Pricing = () => {
                       <p className="text-gray-500">{plan.spots}</p>
                     </div>
                     <div className="mt-8 space-y-4">
-                      {/* <a
+                      <a
                         href={plan.link}
                         className="block text-center bg-gradient-to-tr from-green-300 to-lime-300 hover:cursor-pointer rounded-full px-6 py-3 text-lg text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-gray-600 hover:from-green-400 hover:to-lime-400"
                         >
                         Get Started
-                        </a> */}
-                      <a
+                        </a> 
+                      {/* <a
                         href={process.env.NEXT_PUBLIC_BOOKING_LINK}
                         target="_blank"
-                        className="block text-center bg-gradient-to-tr from-green-300 to-lime-300 hover:cursor-pointer rounded-full px-6 py-3 text-lg text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-gray-600 hover:from-green-400 hover:to-lime-400"
-                        // className="block text-center bg-transparent hover:cursor-pointer rounded-full px-6 py-3 text-lg text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-gray-600 hover:bg-gray-100 border border-gray-300"
+                        // className="block text-center bg-gradient-to-tr from-green-300 to-lime-300 hover:cursor-pointer rounded-full px-6 py-3 text-lg text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-gray-600 hover:from-green-400 hover:to-lime-400"
+                        className="block text-center bg-transparent hover:cursor-pointer rounded-full px-6 py-3 text-lg text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-medium focus-visible:outline-gray-600 hover:bg-gray-100 border border-gray-300"
                       >
                         Book a Call
-                      </a>
+                      </a> */}
                     </div>
                     <div className="mt-8 space-y-4">
                       <p className="font-medium text-gray-700">What&#39;s Included</p>
@@ -177,9 +177,9 @@ const plans = [
     title: "Standard",
     description:
       "Delivering design work as and when you need it, completely asynchronously.",
-    price: "$5,995",
+    price: "$4,995",
     spotIsImmediate: true,
-    spots: `Pause or Cancel Anytime`,
+    spots: `Cancel Anytime`,
     link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx",
     includes: [
       {
@@ -231,9 +231,9 @@ const plans = [
   {
     title: "Advanced",
     description: "Double the capacity with availability for check-ins as required.",
-    price: "$8,495",
+    price: "$7,495",
     spotIsImmediate: true,
-    spots: `Pause or Cancel Anytime`,
+    spots: `Cancel Anytime`,
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0",
     includes: [
       {
