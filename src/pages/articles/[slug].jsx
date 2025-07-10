@@ -139,7 +139,7 @@ export default function Article({ frontmatter, content }) {
             className="w-full h-auto sm:rounded-3xl object-cover shadow-perfect"
           />
         </div>
-        <div className="max-w-4xl mx-auto prose-xl px-6">
+        <div className="max-w-4xl mx-auto prose sm:prose-xl px-6">
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </article>
