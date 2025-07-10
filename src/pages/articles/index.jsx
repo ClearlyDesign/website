@@ -65,7 +65,7 @@ const Articles = ({ articles }) => {
         </div>
       </header>
       <div className="mx-auto max-w-2xl lg:max-w-5xl">
-        <div className="mt-16 sm:mt-20">
+        <div className="mt-1 lg:mt-12 xl:mt-20">
           {articles.map((article) => (
             <ArticleCard key={article?.title} {...article} />
           ))}
