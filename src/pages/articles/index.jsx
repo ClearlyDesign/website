@@ -59,7 +59,7 @@ const Articles = ({ articles }) => {
             <div className="hidden bg-lime-400 ml-2 text-gray-900 rounded-full p-3 sm:inline-flex items-center justify-center">
               <SparklesIcon className="size-5 sm:size-8" />
             </div>{" "}
-            crafting delightful digital products.
+            crafting delightful digital products
           </h1>
         </div>
       </header>
