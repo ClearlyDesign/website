@@ -10,11 +10,39 @@ import {
   SwatchIcon,
 } from "@heroicons/react/24/outline"
 import Footer from "@/components/Footer"
+import { useRef } from "react"
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 
 const Articles = ({ articles }) => {
+  // Mouse move animation logic (from [slug].jsx)
+  const headerRef = useRef(null)
+  let mouseX = useMotionValue(0)
+  let mouseY = useMotionValue(0)
+  function handleMouseMove({ currentTarget, clientX, clientY }) {
+    let { left, top } = currentTarget.getBoundingClientRect()
+    mouseX.set(clientX - left)
+    mouseY.set(clientY - top)
+  }
   return (
     <>
-      <header className="bg-gradient-to-br from-indigo-950 to-gray-950">
+      <header
+        className="bg-gradient-to-br from-indigo-950 to-gray-950 relative group"
+        ref={headerRef}
+        onMouseMove={handleMouseMove}
+      >
+        {/* Mouse-following radial gradient */}
+        <motion.div
+          className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+          style={{
+            background: useMotionTemplate`
+              radial-gradient(
+                650px circle at ${mouseX}px ${mouseY}px,
+                rgba(99, 102, 241, 0.15),
+                transparent 80%
+              )
+            `,
+          }}
+        />
         <div className="flex justify-between items-center py-6 px-6">
           <Link
             href="/"
