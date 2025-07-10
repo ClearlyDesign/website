@@ -30,20 +30,20 @@ const Articles = ({ articles }) => {
           <div className="flex items-center gap-2">
             <Link
               href="/"
-              className="transition-all ease-in-out duration-200 px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+              className="hidden sm:flex transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
             >
               Home
             </Link>
             <Link
               href="/articles"
-              className="transition-all ease-in-out duration-200 px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+              className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
             >
               Articles
             </Link>
             <a
               href={process.env.NEXT_PUBLIC_BOOKING_LINK}
               target="_blank"
-              className="transition-all ease-in-out duration-200 px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+              className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
             >
               Book a Call
             </a>
@@ -116,7 +116,7 @@ export async function getStaticProps() {
   const articlesDir = path.join(process.cwd(), "src/articles")
   const files = fs.readdirSync(articlesDir)
   const articles = files
-    .filter((file) => file.endsWith(".mdx"))
+    .filter((file) => file.endsWith(".mdx") && !file.startsWith("draft-"))
     .map((filename) => {
       const filePath = path.join(articlesDir, filename)
       const fileContents = fs.readFileSync(filePath, "utf8")
