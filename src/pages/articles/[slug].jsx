@@ -1,8 +1,8 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import { remark } from "remark"
-import html from "remark-html"
+import { MDXRemote } from "next-mdx-remote"
+import { MDXRemoteSerializeResult, serialize } from "next-mdx-remote/serialize"
 import { CalendarDaysIcon, ClockIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
 import Link from "next/link"
@@ -10,6 +10,8 @@ import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
+import * as Icons from "@heroicons/react/24/outline"
+import { NextSeo } from "next-seo"
 
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join(process.cwd(), "src/articles"))
@@ -23,16 +25,16 @@ export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), "src/articles", `${params.slug}.mdx`)
   const fileContents = fs.readFileSync(filePath, "utf8")
   const { data, content } = matter(fileContents)
-  const processedContent = await remark().use(html).process(content)
+  const mdxSource = await serialize(content)
   return {
     props: {
       frontmatter: data,
-      content: processedContent.toString(),
+      mdxSource,
     },
   }
 }
 
-export default function Article({ frontmatter, content }) {
+export default function Article({ frontmatter, mdxSource }) {
   // Mouse move animation logic (from Hero)
   const headerRef = useRef(null)
   let mouseX = useMotionValue(0)
@@ -43,8 +45,37 @@ export default function Article({ frontmatter, content }) {
     mouseY.set(clientY - top)
   }
 
+  // Pass your custom components here
+  const components = {
+    ...Icons,
+    // Add any other custom React components you want to use in MDX
+  }
+
   return (
     <>
+      <NextSeo
+        title={`${frontmatter.title} | Clearly Design`}
+        description={frontmatter.description}
+        canonical={`https://clearly.design/articles/${frontmatter.slug}`}
+        openGraph={{
+          url: `https://clearly.design/articles/${frontmatter.slug}`,
+          title: frontmatter.title,
+          description: frontmatter.description,
+          site_name: "Clearly Design",
+          images: [{ url: "https://clearly.design/images/og-image.png" }],
+        }}
+        twitter={{
+          handle: "@fbrill",
+          site: "https://clearly.design",
+          cardType: "summary_large_image",
+        }}
+        additionalMetaTags={[
+          {
+            name: "keywords",
+            content: `Product Design, Website Design, Framer, Webflow, Design, UX Design, UI Design, User Interface Design, AI Design, Design Agency, Design Studio, Design Agency`,
+          },
+        ]}
+      />
       <article className="mb-40">
         <header
           className="bg-gradient-to-br from-indigo-950 to-gray-950 relative group pb-20"
@@ -139,8 +170,8 @@ export default function Article({ frontmatter, content }) {
             className="w-full h-auto sm:rounded-3xl object-cover shadow-perfect"
           />
         </div>
-        <div className="max-w-4xl mx-auto prose sm:prose-xl px-6">
-          <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="max-w-4xl mx-auto prose sm:prose-xl px-6 mt-12 sm:mt-16">
+          <MDXRemote {...mdxSource} components={components} />
         </div>
       </article>
       <CTABlock />

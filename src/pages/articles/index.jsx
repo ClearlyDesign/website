@@ -12,6 +12,7 @@ import {
 import Footer from "@/components/Footer"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
+import { NextSeo } from "next-seo"
 
 const Articles = ({ articles }) => {
   // Mouse move animation logic (from [slug].jsx)
@@ -23,8 +24,36 @@ const Articles = ({ articles }) => {
     mouseX.set(clientX - left)
     mouseY.set(clientY - top)
   }
+  const title = "Articles | Clearly Design"
+  const description =
+    "Clearly Design specializes in straightforward, results-driven website and product design. We cut through the noise to create clean, effective designs that make your vision clear. No frills—just impactful design."
+  const url = "https://clearly.design/articles"
+
   return (
     <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url: url,
+          title: title,
+          description: description,
+          site_name: "Clearly Design",
+          images: [{ url: "https://clearly.design/images/og-image.png" }],
+        }}
+        twitter={{
+          handle: "@fbrill",
+          site: "https://clearly.design",
+          cardType: "summary_large_image",
+        }}
+        additionalMetaTags={[
+          {
+            name: "keywords",
+            content: `Product Design, Website Design, Framer, Webflow, Design, UX Design, UI Design, User Interface Design, AI Design, Design Agency, Design Studio, Design Agency`,
+          },
+        ]}
+      />
       <header
         className="bg-gradient-to-br from-indigo-950 to-gray-950 relative group"
         ref={headerRef}

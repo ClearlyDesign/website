@@ -56,6 +56,27 @@ p {
 .prose-xl a:hover {
   @apply border-green-500 border-solid text-gray-950;
 }
+.h-dot-01 {
+  @apply bg-h-dot-01 object-contain text-white rounded-full p-3 bg-cover;
+}
+.h-dot-02 {
+  @apply bg-h-dot-02 object-contain text-white rounded-full p-3 bg-cover;
+}
+.h-dot-03 {
+  @apply bg-h-dot-03 object-contain text-white rounded-full p-3 bg-cover;
+}
+.h-dot-04 {
+  @apply bg-h-dot-04 object-contain text-white rounded-full p-3 bg-cover;
+}
+.h-dot-05 {
+  @apply bg-h-dot-05 object-contain text-white rounded-full p-3 bg-cover;
+}
+.h-dot-06 {
+  @apply bg-h-dot-06 object-contain text-white rounded-full p-3 bg-cover;
+}
+.h-dot-07 {
+  @apply bg-h-dot-07 object-contain text-white rounded-full p-3 bg-cover;
+}
 
 @media only screen and (max-width: 768px) {
   h1 {

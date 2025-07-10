@@ -172,6 +172,13 @@ module.exports = {
       backgroundImage: (theme) => ({
         "hero-wireframe": "url('/images/hero-wireframe.svg')",
         "glow-lime-yellow": "url('/images/bg-glow-lime-yellow.svg')",
+        "h-dot-01": "url('/images/bg-h-dot-01.jpg')",
+        "h-dot-02": "url('/images/bg-h-dot-02.jpg')",
+        "h-dot-03": "url('/images/bg-h-dot-03.jpg')",
+        "h-dot-04": "url('/images/bg-h-dot-04.jpg')",
+        "h-dot-05": "url('/images/bg-h-dot-05.jpg')",
+        "h-dot-06": "url('/images/bg-h-dot-06.jpg')",
+        "h-dot-07": "url('/images/bg-h-dot-07.jpg')",
       }),
 
       boxShadow: {

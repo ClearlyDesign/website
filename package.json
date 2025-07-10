@@ -11,6 +11,8 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.1.1",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.3.5",
     "@tailwindcss/typography": "^0.5.10",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.8",
@@ -19,6 +21,7 @@
     "geist": "^1.2.0",
     "gray-matter": "^4.0.3",
     "next": "14.0.4",
+    "next-mdx-remote": "^5.0.0",
     "next-seo": "^6.6.0",
     "react": "^18",
     "react-dom": "^18",
