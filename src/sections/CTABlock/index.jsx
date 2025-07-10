@@ -8,7 +8,7 @@ import {
   useAnimation,
 } from "framer-motion"
 
-const CTABlock = () => {
+const CTABlock = ({ ctaTitle = "Let's get clear on your design goals", ctaText = "Jump on a quick discovery call to find out why Clearly Design is different and how your team can change the way you source design, forever.", ctaLabel = "Book a Call" }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -54,11 +54,10 @@ const CTABlock = () => {
           `,
           }}
         />
-        <div className="py-10 max-w-2xl mx-auto space-y-4">
-          <h2 className="text-white">Let&#39;s get clear on your design</h2>
+        <div className="py-10 max-w-3xl mx-auto space-y-4">
+          <h2 className="text-white">{ctaTitle}</h2>
           <p className="text-xl text-gray-400">
-            Jump on a quick discovery call to find out why Clearly Design is different and
-            how your team can change the way you source design, forever.
+            {ctaText}
           </p>
           <div className="pt-5">
             <a
@@ -66,7 +65,7 @@ const CTABlock = () => {
               target="_blank"
               className="bg-gradient-to-tr from-green-300 to-lime-300 hover:cursor-pointer hover:transform hover:-translate-y-1.5 inline-flex items-center bg-yellow-300 text-gray-900 hover:bg-yellow-400 transition-all ease-in-out duration-200 rounded-full bg-transparent px-8 py-4 text-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-300 w-full justify-center sm:w-auto"
             >
-              Book a Call
+              {ctaLabel}
               <ArrowLongRightIcon className="w-7 h-7 ml-2 text-green-600" />
             </a>
           </div>

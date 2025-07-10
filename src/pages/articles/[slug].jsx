@@ -174,7 +174,7 @@ export default function Article({ frontmatter, mdxSource }) {
           <MDXRemote {...mdxSource} components={components} />
         </div>
       </article>
-      <CTABlock />
+      <CTABlock ctaTitle={frontmatter.ctaTitle} ctaText={frontmatter.ctaText} ctaLabel={frontmatter.ctaLabel} />
       <Footer />
     </>
   )
