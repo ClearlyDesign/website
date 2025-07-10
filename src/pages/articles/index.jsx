@@ -9,6 +9,7 @@ import {
   SparklesIcon,
   SwatchIcon,
 } from "@heroicons/react/24/outline"
+import Footer from "@/components/Footer"
 
 const Articles = ({ articles }) => {
   return (
@@ -69,6 +70,9 @@ const Articles = ({ articles }) => {
             <ArticleCard key={article?.title} {...article} />
           ))}
         </div>
+      </div>
+      <div className="mt-16 sm:mt-20">
+        <Footer />
       </div>
     </>
   )
