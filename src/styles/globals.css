@@ -50,6 +50,13 @@ p {
   @apply transition-all ease-in-out duration-200;
 }
 
+.prose-xl a {
+  @apply border-b-2 border-dashed border-gray-300 pb-1 transition-all;
+}
+.prose-xl a:hover {
+  @apply border-green-500 border-solid text-gray-950;
+}
+
 @media only screen and (max-width: 768px) {
   h1 {
     @apply text-6xl;

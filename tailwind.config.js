@@ -173,6 +173,11 @@ module.exports = {
         "hero-wireframe": "url('/images/hero-wireframe.svg')",
         "glow-lime-yellow": "url('/images/bg-glow-lime-yellow.svg')",
       }),
+
+      boxShadow: {
+        "perfect":
+          "0px 0px 0px 1px rgba(255, 255, 255, 0.08), 0px 1px 1px -0.5px rgba(42, 51, 69, 0.04), 0px 3px 3px -1.5px rgba(42, 51, 70, 0.04), 0px 6px 6px -3px rgba(42, 51, 70, 0.04), 0px 12px 12px -6px rgba(14, 63, 126, 0.04), 0px 24px 24px -12px rgba(14, 63, 126, 0.04)",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

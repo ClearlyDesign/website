@@ -1,39 +1,54 @@
+import Image from "next/image"
+import Link from "next/link"
+import fs from "fs"
+import path from "path"
+import matter from "gray-matter"
 import {
-  ArrowLeftIcon,
   CalendarDaysIcon,
   ClockIcon,
   SparklesIcon,
   SwatchIcon,
-  TvIcon,
 } from "@heroicons/react/24/outline"
-import Image from "next/image"
-import Logo from "../../components/Logo"
-import Link from "next/link"
 
-const Articles = () => {
+const Articles = ({ articles }) => {
   return (
     <>
       <header className="bg-gradient-to-br from-indigo-950 to-gray-950">
-          <div className="flex justify-between items-center py-6 px-6">
+        <div className="flex justify-between items-center py-6 px-6">
+          <Link
+            href="/"
+            className="bg-white/5 hover:bg-white/10 transition-all duration-300 rounded-full p-2 group relative inline-flex items-center justify-center w-14 h-14 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400"
+          >
+            <Image
+              src="/images/icon-clearly-design.svg"
+              alt="Clearly Design"
+              width={40}
+              height={40}
+              className="w-10 h-10 hover:scale-110 transition-all duration-300"
+            />
+          </Link>
+          <div className="flex items-center gap-2">
             <Link
               href="/"
-              className="bg-white/5 hover:bg-white/10 transition-all duration-300 rounded-full p-2 group relative inline-flex items-center justify-center w-20 h-20"
+              className="transition-all ease-in-out duration-200 px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
             >
-              <Image
-                src="/images/icon-clearly-design.svg"
-                alt="Clearly Design"
-                width={60}
-                height={60}
-                className="w-16 h-16 hover:scale-110 transition-all duration-300"
-              />
+              Home
             </Link>
             <Link
-              href="/"
-              className="hidden sm:block border border-gray-600/50 hover:border-transparent transition-all ease-in-out duration-200 focus:border-transparent rounded-full bg-transparent px-5 py-2.5 text-lg text-white/50 hover:bg-lime-400 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-400 focus-visible:text-lime-400 focus-visible:hover:text-gray-900"
+              href="/articles"
+              className="transition-all ease-in-out duration-200 px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
             >
-              Product Design Services
+              Articles
             </Link>
+            <a
+              href={process.env.NEXT_PUBLIC_BOOKING_LINK}
+              target="_blank"
+              className="transition-all ease-in-out duration-200 px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+            >
+              Book a Call
+            </a>
           </div>
+        </div>
         <div className="mx-auto max-w-2xl lg:max-w-5xl px-6 pt-8 sm:pt-20 pb-14">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
             Thoughts on{" "}
@@ -71,22 +86,22 @@ const ArticleCard = ({ date, title, description, image, tags, link, readingTime 
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-6">
-          <p className="text-sm text-gray-500 flex items-center gap-2">
-            <CalendarDaysIcon className="w-5 h-5 text-gray-400" />
+          <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
+            <CalendarDaysIcon className="w-4 h-4" />
             {date}
           </p>
-          <p className="text-sm text-gray-500 flex items-center gap-2">
-            <ClockIcon className="w-5 h-5 text-gray-400" />
+          <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
+            <ClockIcon className="w-4 h-4" />
             {readingTime}
           </p>
         </div>
         <p className="text-3xl font-bold text-gray-900 tracking-tight mt-2">{title}</p>
         <p className="text-base text-gray-500">{description}</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mt-2">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="text-sm text-gray-500 bg-gray-200/50 rounded-md px-2.5 py-1"
+              className="text-xs text-gray-500 font-mono uppercase tracking-wide bg-gray-200/50 rounded-md px-2.5 py-1"
             >
               {tag}
             </span>
@@ -97,15 +112,20 @@ const ArticleCard = ({ date, title, description, image, tags, link, readingTime 
   )
 }
 
-const articles = [
-  {
-    date: "Jul 23, 2025",
-    title: "Designing for the Age of AI Agents",
-    description:
-      "As AI agents become part of everyday software, UX and UI designers are evolving from interface makers to orchestrators of intelligent, human-like interactions. This post explores where design fits in the age of AI, the new skills UX teams need, and how founders can create agent experiences that feel trustworthy and natural.",
-    image: "/images/article-designing-for-the-new-age-of-ai-agents.jpg",
-    tags: ["Design", "AI", "AI Agents"],
-    link: "/articles/designing-for-the-age-of-ai-agents",
-    readingTime: "4 min read",
-  },
-]
+export async function getStaticProps() {
+  const articlesDir = path.join(process.cwd(), "src/articles")
+  const files = fs.readdirSync(articlesDir)
+  const articles = files
+    .filter((file) => file.endsWith(".mdx"))
+    .map((filename) => {
+      const filePath = path.join(articlesDir, filename)
+      const fileContents = fs.readFileSync(filePath, "utf8")
+      const { data } = matter(fileContents)
+      return {
+        ...data,
+        link: `/articles/${filename.replace(/\.mdx$/, "")}`,
+      }
+    })
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+  return { props: { articles } }
+}
