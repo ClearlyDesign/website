@@ -30,11 +30,12 @@ export async function getStaticProps({ params }) {
     props: {
       frontmatter: data,
       mdxSource,
+      slug: params.slug,
     },
   }
 }
 
-export default function Article({ frontmatter, mdxSource }) {
+export default function Article({ frontmatter, mdxSource, slug }) {
   // Mouse move animation logic (from Hero)
   const headerRef = useRef(null)
   let mouseX = useMotionValue(0)
@@ -56,13 +57,13 @@ export default function Article({ frontmatter, mdxSource }) {
       <NextSeo
         title={`${frontmatter.title} | Clearly Design`}
         description={frontmatter.description}
-        canonical={`https://clearly.design/articles/${frontmatter.slug}`}
+        canonical={`https://clearly.design/articles/${slug}`}
         openGraph={{
-          url: `https://clearly.design/articles/${frontmatter.slug}`,
+          url: `https://clearly.design/articles/${slug}`,
           title: frontmatter.title,
           description: frontmatter.description,
           site_name: "Clearly Design",
-          images: [{ url: "https://clearly.design/images/og-image.png" }],
+          images: [{ url: `https://clearly.design${frontmatter.image}` || "https://clearly.design/images/og-image.png" }],
         }}
         twitter={{
           handle: "@fbrill",
