@@ -147,7 +147,7 @@ const ArticleCard = ({ date, title, description, image, tags, link, readingTime 
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
       <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
           <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
             <CalendarDaysIcon className="w-4 h-4" />
             {date}
