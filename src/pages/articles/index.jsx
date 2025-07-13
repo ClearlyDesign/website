@@ -8,6 +8,7 @@ import {
   ClockIcon,
   SparklesIcon,
   SwatchIcon,
+  TagIcon,
 } from "@heroicons/react/24/outline"
 import Footer from "@/components/Footer"
 import { useRef } from "react"
@@ -155,19 +156,13 @@ const ArticleCard = ({ date, title, description, image, tags, link, readingTime 
             <ClockIcon className="w-4 h-4" />
             {readingTime}
           </p>
+          <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
+            <TagIcon className="w-4 h-4 text-gray-500" />
+            {tags.join(", ")}
+          </p>
         </div>
         <p className="text-3xl font-bold text-gray-900 tracking-tight mt-2">{title}</p>
         <p className="text-base text-gray-500">{description}</p>
-        <div className="flex flex-wrap gap-2 mt-2">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs text-gray-500 font-mono uppercase tracking-wide bg-gray-200/50 rounded-md px-2.5 py-1"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
       </div>
     </a>
   )

@@ -54,7 +54,7 @@ const CTABlock = ({ ctaTitle = "Let's get clear on your design goals", ctaText =
           `,
           }}
         />
-        <div className="py-10 max-w-3xl mx-auto space-y-4">
+        <div className="py-10 max-w-4xl mx-auto space-y-4">
           <h2 className="text-white">{ctaTitle}</h2>
           <p className="text-xl text-gray-400">
             {ctaText}
