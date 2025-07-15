@@ -63,7 +63,13 @@ export default function Article({ frontmatter, mdxSource, slug }) {
           title: frontmatter.title,
           description: frontmatter.description,
           site_name: "Clearly Design",
-          images: [{ url: `https://clearly.design${frontmatter.image}` || "https://clearly.design/images/og-image.png" }],
+          images: [
+            {
+              url:
+                `https://clearly.design${frontmatter.image}` ||
+                "https://clearly.design/images/og-image.png",
+            },
+          ],
         }}
         twitter={{
           handle: "@fbrill",
@@ -132,7 +138,7 @@ export default function Article({ frontmatter, mdxSource, slug }) {
             </div>
           </div>
           <div className="mx-auto max-w-4xl px-6 pt-8 sm:pt-20 pb-10 sm:pb-14">
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-x-6 gap-y-2 flex-wrap">
               <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
                 <CalendarDaysIcon className="w-4 h-4" />
                 {frontmatter.date}
@@ -141,6 +147,12 @@ export default function Article({ frontmatter, mdxSource, slug }) {
                 <ClockIcon className="w-4 h-4" />
                 {frontmatter.readingTime}
               </p>
+              {frontmatter.series && (
+                <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
+                  <Icons.RectangleStackIcon className="w-4 h-4" />
+                  {frontmatter.series.join(", ")}
+                </p>
+              )}
             </div>
             <h1 className="mt-6 sm:mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
               {frontmatter.title}
@@ -175,7 +187,11 @@ export default function Article({ frontmatter, mdxSource, slug }) {
           <MDXRemote {...mdxSource} components={components} />
         </div>
       </article>
-      <CTABlock ctaTitle={frontmatter.ctaTitle} ctaText={frontmatter.ctaText} ctaLabel={frontmatter.ctaLabel} />
+      <CTABlock
+        ctaTitle={frontmatter.ctaTitle}
+        ctaText={frontmatter.ctaText}
+        ctaLabel={frontmatter.ctaLabel}
+      />
       <Footer />
     </>
   )

@@ -8,7 +8,7 @@ import {
   ClockIcon,
   SparklesIcon,
   SwatchIcon,
-  TagIcon,
+  RectangleStackIcon,
 } from "@heroicons/react/24/outline"
 import Footer from "@/components/Footer"
 import { useRef } from "react"
@@ -137,7 +137,7 @@ const Articles = ({ articles }) => {
 }
 export default Articles
 
-const ArticleCard = ({ date, title, description, image, tags, link, readingTime }) => {
+const ArticleCard = ({ date, title, description, image, series, link, readingTime }) => {
   return (
     <a
       href={link}
@@ -156,10 +156,12 @@ const ArticleCard = ({ date, title, description, image, tags, link, readingTime 
             <ClockIcon className="w-4 h-4" />
             {readingTime}
           </p>
-          <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
-            <TagIcon className="w-4 h-4 text-gray-500" />
-            {tags.join(", ")}
-          </p>
+          {series && (
+            <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
+              <RectangleStackIcon className="w-4 h-4 text-gray-500" />
+              {series.join(", ")}
+            </p>
+          )}
         </div>
         <p className="text-3xl font-bold text-gray-900 tracking-tight mt-2">{title}</p>
         <p className="text-base text-gray-500">{description}</p>
