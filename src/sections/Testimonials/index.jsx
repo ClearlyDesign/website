@@ -267,7 +267,6 @@ const testimonials = [
       },
     ],
     [
-      
       {
         body: "Francois and his team have helped me personally as well as Canada Abroad with numerous design and website projects and are still easily approachable to provide advice to help out when required. I've dealt with a lot of IT professionals in my career but there aren't many who understand exactly what is required straight off the bat and have the familiarity to lead you to a new and innovative solution and design. I can without a doubt vouch that you will be in safe hands with Francois and his team from Clearly Design.",
         author: {
@@ -275,6 +274,15 @@ const testimonials = [
           title: "Director @ Canada Abroad",
           avatar: "avatar-werner.jpg",
           webUrl: "https://canadaabroad.com",
+        },
+      },
+      {
+        body: "Francois ran a brand and website refresh project for Bean Ninjas which I was super happy with! We&#39;ve received compliments on our new website. But not only does it look great it's helping us to have conversations with more potential clients. Francois worked collaboratively with our copywriter and was a strong project manager and communicator throughout. I highly recommend his services.",
+        author: {
+          name: "Meryl Johnston",
+          title: "Founder & Advisor @ Bean Ninjas",
+          avatar: "avatar-meryl.jpg",
+          webUrl: "https://beanninjas.com",
         },
       },
       {
@@ -317,8 +325,26 @@ const testimonials = [
           webUrl: "https://wealthstack.ca",
         },
       },
+      {
+        body: "Amazing! Our site has been live only a couple weeks and I've already received several comments about how great it looks. Our message is presented loudly and clearly. For previous websites I've had to be much more involved in the minutia. Francois took our ideas and copy, and came up with a beautiful design in the first go. He made the whole process very easy, stress-free, and we have a beautiful result!",
+        author: {
+          name: "Isaac Smith",
+          title: "Founder, TeamUp",
+          avatar: "avatar-isaac-smith.jpg",
+          webUrl: "https://hireteamup.com",
+        },
+      },
     ],
     [
+      {
+        body: "If your team needs great design, but you don't want to hire in-house, I highly recommend checking out our designer partner at Rosie, Clearly Design. Flat monthly fee, quick turnaround, and high level of execution. We've been with Francois for months and it's made a tremendous impact on the business.",
+        author: {
+          name: "Jordan Gal",
+          title: "Founder & CEO @ Rosie",
+          avatar: "avatar-jordan.jpg",
+          webUrl: "https://heyrosie.com",
+        },
+      },
       {
         body: "Francois is an amazing talent. They made the process of rebranding my company extremely easy. From helping with the visual aspect to also creating a lot of copy based on the resources I provided, we managed to roll out a fresh, modern website that looks incredible in under 3 months. His communication and follow up is amazing and gives constructive feedback along the way to ensure you are making the best choices for your business. Will continue using Francois for all my design needs in the future.",
         author: {
@@ -346,36 +372,6 @@ const testimonials = [
           webUrl: "newsletter.theremoteworktribe.com",
         },
       },
-      
-
-      // {
-      //   body: "",
-      //   author: {
-      //     name: "",
-      //     title: "",
-      //     avatar: "",
-      //     webUrl: "",
-      //   },
-      // },
     ],
   ],
 ]
-
-// {
-//   body: "Francois ran a brand and website refresh project for Bean Ninjas which I was super happy with! We&#39;ve received compliments on our new website. But not only does it look great it's helping us to have conversations with more potential clients. Francois worked collaboratively with our copywriter and was a strong project manager and communicator throughout. I highly recommend his services.",
-//   author: {
-//     name: "Meryl Johnston",
-//     title: "Founder & Advisor @ Bean Ninjas",
-//     avatar: "avatar-meryl.jpg",
-//     webUrl: "https://beanninjas.com",
-//   },
-// },
-// {
-//   body: "Amazing! Our site has been live only a couple weeks and I've already received several comments about how great it looks. Our message is presented loudly and clearly. For previous websites I've had to be much more involved in the minutia. Francois took our ideas and copy, and came up with a beautiful design in the first go. He made the whole process very easy, stress-free, and we have a beautiful result!",
-//   author: {
-//     name: "Isaac Smith",
-//     title: "Founder, TeamUp",
-//     avatar: "avatar-isaac-smith.jpg",
-//     webUrl: "https://hireteamup.com",
-//   },
-// },
