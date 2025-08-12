@@ -105,7 +105,7 @@ When writing blog articles for Clearly Design, follow these style guidelines:
 - **Series connectivity** - Link articles with "Earlier/Next in this series" references
 
 ### Language Preferences
-- **Em dashes (—)** for emphasis and flow, not hyphens (-)
+- **Avoid em dashes (—)** - Use periods, commas, or parentheses instead for better readability
 - **Contractions** for conversational tone (don't, it's, we'll)
 - **Sentence variety** - Mix short, punchy statements with longer explanations
 - **Technical terms explained** - Define jargon in context, don't assume knowledge

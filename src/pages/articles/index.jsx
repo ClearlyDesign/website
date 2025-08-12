@@ -137,7 +137,7 @@ const Articles = ({ articles }) => {
 }
 export default Articles
 
-const ArticleCard = ({ date, title, description, image, series, link, readingTime }) => {
+const ArticleCard = ({ date, title, description, image, series, link, readingTime, seriesOrder }) => {
   return (
     <a
       href={link}
@@ -159,7 +159,7 @@ const ArticleCard = ({ date, title, description, image, series, link, readingTim
           {series && (
             <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
               <RectangleStackIcon className="w-4 h-4 text-gray-500" />
-              {series.join(", ")}
+              {series.join(", ")} ({seriesOrder}/12)
             </p>
           )}
         </div>

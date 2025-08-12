@@ -152,7 +152,7 @@ export default function Article({ frontmatter, mdxSource, slug }) {
               {frontmatter.series && (
                 <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
                   <Icons.RectangleStackIcon className="w-4 h-4" />
-                  {frontmatter.series.join(", ")}
+                  {frontmatter.series.join(", ")} ({frontmatter.seriesOrder}/12)
                 </p>
               )}
             </div>

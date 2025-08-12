@@ -75,6 +75,68 @@ p {
   @apply w-32 h-0.5;
 }
 
+/* Icon container styles for MDX content */
+.icon-container {
+  @apply size-12 rounded-full inline-flex items-center justify-center flex-shrink-0;
+}
+.icon-container svg {
+  @apply size-7;
+}
+.icon-container.blue {
+  @apply bg-blue-100;
+  svg {
+    @apply text-blue-600;
+  }
+}
+.icon-container.emerald {
+  @apply bg-emerald-100;
+  svg {
+    @apply text-emerald-600;
+  }
+}
+.icon-container.purple {
+  @apply bg-purple-100;
+  svg {
+    @apply text-purple-600;
+  }
+}
+.icon-container.rose {
+  @apply bg-rose-100;
+  svg {
+    @apply text-rose-600;
+  }
+}
+.icon-container.yellow {
+  @apply bg-yellow-100;
+  svg {
+    @apply text-yellow-600;
+  }
+}
+.icon-container.gray {
+  @apply bg-gray-100;
+  svg {
+    @apply text-gray-600;
+  }
+}
+.highlight.blue {
+  @apply bg-blue-50 px-2.5 py-1.5 rounded text-blue-900;
+}
+.highlight.emerald {
+  @apply bg-emerald-50 px-2.5 py-1.5 rounded text-emerald-900;
+}
+.highlight.purple {
+  @apply bg-purple-50 px-2.5 py-1.5 rounded text-purple-900;
+}
+.highlight.rose {
+  @apply bg-rose-50 px-2.5 py-1.5 rounded text-rose-900;
+}
+.highlight.yellow {
+  @apply bg-yellow-50 px-2.5 py-1.5 rounded text-yellow-900;
+}
+.highlight.gray {
+  @apply bg-gray-50 px-2.5 py-1.5 rounded text-gray-900;
+}
+
 .h-dot-01 {
   @apply bg-h-dot-01 object-contain text-white rounded-full p-3 bg-cover;
 }
