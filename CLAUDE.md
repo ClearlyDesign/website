@@ -106,6 +106,7 @@ When writing blog articles for Clearly Design, follow these style guidelines:
 
 ### Language Preferences
 - **Avoid em dashes (—)** - Use periods, commas, or parentheses instead for better readability
+- **Avoid emojis** - Keep all content clean and professional without emoji use
 - **Contractions** for conversational tone (don't, it's, we'll)
 - **Sentence variety** - Mix short, punchy statements with longer explanations
 - **Technical terms explained** - Define jargon in context, don't assume knowledge
