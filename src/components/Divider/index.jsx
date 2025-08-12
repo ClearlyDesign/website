@@ -4,13 +4,13 @@ const Divider = ({
   className = '', 
   spacing = 'default' 
 }) => {
-  const baseClasses = 'flex justify-center w-full'
+  const baseClasses = 'flex justify-center w-2/3 mx-auto sm:w-full'
   
   const spacingClasses = {
-    small: 'my-12',
-    default: 'my-24',
-    large: 'my-32',
-    xlarge: 'my-40'
+    small: 'my-12 sm:my-16',
+    default: 'my-12 sm:my-24',
+    large: 'my-16 sm:my-32',
+    xlarge: 'my-20 sm:my-40'
   }
   
   const classes = `${baseClasses} ${spacingClasses[spacing]} ${className}`
