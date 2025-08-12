@@ -8,6 +8,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
+import Divider from "@/components/Divider"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import * as Icons from "@heroicons/react/24/outline"
@@ -49,6 +50,7 @@ export default function Article({ frontmatter, mdxSource, slug }) {
   // Pass your custom components here
   const components = {
     ...Icons,
+    Divider,
     // Add any other custom React components you want to use in MDX
   }
 

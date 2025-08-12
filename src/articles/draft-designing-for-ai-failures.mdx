@@ -1,0 +1,113 @@
+---
+title: "Designing for AI Failures: Error States and Recovery Patterns"
+date: "TBD"
+author: "Francois Brill"
+description: "AI will make mistakes—it's probabilistic, not deterministic. This article explores how to design graceful failure states, recovery patterns, and error experiences that maintain user trust even when AI gets things wrong."
+image: "/images/article-designing-for-ai-failures.jpg"
+series: ["Designing for AI"]
+seriesOrder: 4
+readingTime: "6 min read"
+ctaTitle: "Design AI That Fails Gracefully"
+ctaText: "We help teams prepare for AI failures with elegant error states and recovery patterns. Let's ensure your AI builds trust even when it makes mistakes."
+ctaLabel: "Build resilient AI experiences"
+---
+
+## OUTLINE - Designing for AI Failures
+
+**Hook:**
+- Unlike traditional software, AI is probabilistic—failures are inevitable
+- 23% of AI interactions result in unsatisfactory outputs
+- How you handle failures determines user trust more than success rates
+
+**Core Problem:**
+- Most teams design for AI success, not failure
+- Users expect perfect accuracy but AI delivers probabilistic results
+- Poor error handling destroys trust faster than good features build it
+
+**Main Framework: The AI Failure Spectrum**
+
+### 1. Predictable Errors (System knows it's wrong)
+- Low confidence scores
+- Missing training data scenarios  
+- Ambiguous user inputs
+- **Design:** Show uncertainty, ask for clarification
+
+### 2. Edge Case Failures (Unexpected scenarios)
+- Novel use cases outside training data
+- Complex multi-step reasoning breakdowns
+- Context switching errors
+- **Design:** Graceful degradation, human handoff
+
+### 3. Silent Failures (System doesn't know it's wrong)
+- Hallucinations and confident wrong answers
+- Biased or inappropriate outputs
+- Context misunderstanding
+- **Design:** User feedback loops, verification systems
+
+**Recovery Patterns:**
+
+### The "Confidence Cascade"
+- High confidence: Auto-proceed with user visibility
+- Medium confidence: Show suggestion with explanation
+- Low confidence: Ask for clarification or offer options
+- **Example:** Voice assistants saying "I'm not sure, did you mean..."
+
+### The "Graceful Degradation"
+- AI fails → Simplified AI response
+- Still fails → Basic rule-based response  
+- Still fails → Human handoff
+- **Example:** Chatbots escalating from AI to human support
+
+### The "Learn-and-Recover"
+- Acknowledge the error clearly
+- Show what the AI learned from it
+- Demonstrate improved behavior
+- **Example:** "I made a mistake earlier. Here's what I learned..."
+
+**UI Patterns for Failure States:**
+
+### Error Communication
+- Clear, non-technical error messages
+- Specific guidance on next steps
+- Visual hierarchy that doesn't blame the user
+- **Example:** "I couldn't find that information. Try asking about..."
+
+### Recovery Actions
+- Easy retry mechanisms
+- Alternative approaches suggested
+- Human help readily available
+- Feedback collection for improvement
+
+### Learning Indicators
+- Show AI is improving from errors
+- Progress indicators for accuracy
+- Version updates that address known issues
+
+**Types of AI Errors:**
+- Hallucinations (confident wrong answers)
+- Misunderstanding context
+- Bias in responses
+- Technical failures
+- Scope limitations
+
+**Design Principles:**
+- Fail fast and obviously (don't hide errors)
+- Provide clear recovery paths
+- Learn from every failure
+- Maintain user agency
+- Be honest about limitations
+
+**Testing AI Failure States:**
+- Red team testing for edge cases
+- Bias testing across user groups
+- Stress testing with unusual inputs
+- Recovery path validation
+
+**Questions for Product Teams:**
+- How does your AI communicate uncertainty?
+- What happens when AI is confidently wrong?
+- Can users easily recover from AI mistakes?
+- How do you learn from failures?
+- What's your escalation strategy?
+
+**Next in Series:** Link to Co-pilot article or Conversational AI
