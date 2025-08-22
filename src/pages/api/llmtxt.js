@@ -41,7 +41,7 @@ export default function handler(req, res) {
   
   output += `**Founded:** 2023\n`
   output += `**Location:** Remote-first design studio (North America)\n`
-  output += `**Focus:** Helping ambitious founders build products that users love and businesses need\n\n`
+  output += `**Focus:** Helping ambitious founders build products that users love and businesses need.\n\n`
   
   output += `---\n\n`
   

@@ -114,7 +114,7 @@ When writing blog articles for Clearly Design, follow these style guidelines:
 
 ### Visual Elements
 - **Colored icon sections** - Use `<span className="flex items-center gap-3"><IconName className="size-8 text-color-500" /> Section Title</span>`
-- **Horizontal rules** - Use `---` to separate major sections
+- **Horizontal rules** - Use `<Divider />` to separate major sections
 - **Visual callouts** - Use colored backgrounds and icons for key points
 - **Highlighted quotes** - Use `<strong className="bg-color-50 px-2.5 py-1.5 rounded text-color-900">Key insight</strong>`
 

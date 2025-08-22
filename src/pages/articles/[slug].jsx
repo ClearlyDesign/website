@@ -9,6 +9,7 @@ import Link from "next/link"
 import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import Divider from "@/components/Divider"
+import ExampleBlock from "@/components/ExampleBlock"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import * as Icons from "@heroicons/react/24/outline"
@@ -51,6 +52,7 @@ export default function Article({ frontmatter, mdxSource, slug }) {
   const components = {
     ...Icons,
     Divider,
+    ExampleBlock,
     // Add any other custom React components you want to use in MDX
   }
 
@@ -185,7 +187,7 @@ export default function Article({ frontmatter, mdxSource, slug }) {
             className="w-full h-auto sm:rounded-3xl object-cover shadow-perfect"
           />
         </div>
-        <div className="max-w-4xl mx-auto prose sm:prose-xl px-6 mt-12 sm:mt-16">
+        <div className="max-w-4xl mx-auto prose sm:prose-lg px-6 mt-12 sm:mt-16">
           <MDXRemote {...mdxSource} components={components} />
         </div>
       </article>
