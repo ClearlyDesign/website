@@ -1,6 +1,6 @@
 ---
 title: "How to Turn AI into a Co-pilot, Not a Black Box"
-date: "Aug 26, 2025"
+date: "Sep 14, 2025"
 author: "Francois Brill"
 description: "The future isn't bots that replace people, it's interfaces where AI collaborates with the user. This article explores how to design for human-AI collaboration, creating co-pilot experiences where software becomes a trusted teammate that enhances human decision-making while keeping people in control."
 image: "/images/article-how-to-turn-ai-into-a-co-pilot-not-a-black-box.jpg"
@@ -14,7 +14,7 @@ ctaLabel: "Build better AI experiences"
 
 We're seeing a major shift in how software products are being built. It's not just about integrating AI - it's about redefining how people and machines work together.
 
-Most teams start with a familiar pattern: "Let's add a chatbot" or "Let's generate summaries". But that's just one piece of a much bigger opportunity.
+Most teams start with a familiar pattern: "Let's add a chat box" or "Let's generate summaries". But that's just one piece of a much bigger opportunity.
 
 The future isn't bots that replace people, it's interfaces where AI collaborates with the user. Where software becomes a co-pilot: surfacing ideas, automating steps, adapting in real time... but always keeping the human in control.
 
@@ -59,12 +59,9 @@ Designing for collaboration means rethinking how decisions happen in your produc
 
 Here are three foundational patterns we focus on when designing collaborative AI:
 
-### <span className="flex items-center gap-3"><span className="h-dot-02"><UserGroupIcon className="size-8" /></span> Co-Pilot Interfaces</span>
+### <span className="flex items-center gap-3"><UserGroupIcon className="size-8 text-blue-500" /> Co-Pilot Interfaces</span>
 
 Let AI suggest, not act autonomously. Great co-pilots propose actions, offer alternatives, and invite approval. They don't take control without explicit permission.
-
-**Example:**
-In a writing tool, the AI might rewrite a sentence or generate a first draft, but presents options like "Replace," "Keep original," or "See more alternatives." The user ultimately decides how to proceed.
 
 **Design principles:**
 - Use clear call-to-actions like "Use this," "Edit further," or "Why this suggestion?"
@@ -72,12 +69,13 @@ In a writing tool, the AI might rewrite a sentence or generate a first draft, bu
 - Provide easy undo/redo functionality
 - Always offer alternatives, not just one "right" answer
 
-### <span className="flex items-center gap-3"><span className="h-dot-03"><ShieldCheckIcon className="size-8" /></span> Human-in-the-Loop Authority</span>
+<ExampleBlock>
+    In a writing tool, the AI might rewrite a sentence or generate a first draft, but presents options like "Replace," "Keep original," or "See more alternatives." The user ultimately decides how to proceed.
+</ExampleBlock>
+
+### <span className="flex items-center gap-3"><ShieldCheckIcon className="size-8 text-emerald-500" /> Human-in-the-Loop Authority</span>
 
 Even when AI can act autonomously, users need context and veto power. This means showing what the AI did, or is about to do, and allowing users to intervene at any point.
-
-**Example:**
-An automation dashboard that schedules meetings based on preferences should preview the proposed agenda and timing, allowing edits before sending invites to participants.
 
 **Design principles:**
 - Always provide a confirmation step before high-stakes actions
@@ -86,12 +84,13 @@ An automation dashboard that schedules meetings based on preferences should prev
 - Make it easy to override or modify AI actions
 - Provide feedback mechanisms to improve future suggestions
 
-### <span className="flex items-center gap-3"><span className="h-dot-04"><AdjustmentsHorizontalIcon className="size-8" /></span> Adjustable Autonomy</span>
+<ExampleBlock>
+    An automation dashboard that schedules meetings based on preferences should preview the proposed agenda and timing, allowing edits before sending invites to participants.
+</ExampleBlock>
+
+### <span className="flex items-center gap-3"><AdjustmentsHorizontalIcon className="size-8 text-purple-500" /> Adjustable Autonomy</span>
 
 Users and teams differ in how much they want to delegate. Design systems that allow flexible control, from fully manual to fully automated, with granular settings in between.
-
-**Example:**
-In a lead scoring tool, the AI might auto-prioritize leads by default, but allow users to adjust scoring criteria, set custom thresholds, or manually reorder results based on their expertise. So it's still just starting out with a predefined suggestion, and allowing the human-in-the-loop to make changes based on experience. 
 
 **Design principles:**
 - Use toggleable settings and sliders for autonomy levels
@@ -99,6 +98,10 @@ In a lead scoring tool, the AI might auto-prioritize leads by default, but allow
 - Allow users to customize which tasks AI handles automatically
 - Provide team-level controls for shared workspaces
 - Remember user preferences and adapt over time
+
+<ExampleBlock>
+    In a lead scoring tool, the AI might auto-prioritize leads by default, but allow users to adjust scoring criteria, set custom thresholds, or manually reorder results based on their expertise. So it's still just starting out with a predefined suggestion, and allowing the human-in-the-loop to make changes based on experience. 
+</ExampleBlock>
 
 <Divider />
 
@@ -197,27 +200,27 @@ The human-AI relationship evolves as users become more comfortable with the syst
 If you're building AI into your product, ask yourself:
 
 <div className="flex items-center gap-3 m-0">
-    <span className="bg-yellow-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><UserIcon className="size-7 text-yellow-600" /></span>
+    <span className="bg-gray-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><UserIcon className="size-7 text-gray-600" /></span>
     **Who owns the final decision?** Make authority clear in every interaction
 </div>
 <div className="flex items-center gap-3 m-0">
-    <span className="bg-yellow-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><ArrowPathIcon className="size-7 text-yellow-600" /></span>
+    <span className="bg-gray-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><ArrowPathIcon className="size-7 text-gray-600" /></span>
     **Can users preview, edit, or decline AI suggestions?** Always provide escape hatches  
 </div>
 <div className="flex items-center gap-3 m-0">
-    <span className="bg-yellow-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><EyeIcon className="size-7 text-yellow-600" /></span>
+    <span className="bg-gray-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><EyeIcon className="size-7 text-gray-600" /></span>
     **Does the UI communicate what the AI is doing and why?** Transparency builds trust
 </div>
 <div className="flex items-center gap-3 m-0">
-    <span className="bg-yellow-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><UserGroupIcon className="size-7 text-yellow-600" /></span>
+    <span className="bg-gray-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><UserGroupIcon className="size-7 text-gray-600" /></span>
     **Are you designing around AI or with human workflows?** Start with human needs
 </div>
 <div className="flex items-center gap-3 m-0">
-    <span className="bg-yellow-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><ChatBubbleLeftRightIcon className="size-7 text-yellow-600" /></span>
+    <span className="bg-gray-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><ChatBubbleLeftRightIcon className="size-7 text-gray-600" /></span>
     **Can users provide feedback to improve future suggestions?** Create learning loops
 </div>
 <div className="flex items-center gap-3 m-0">
-    <span className="bg-yellow-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><ExclamationTriangleIcon className="size-7 text-yellow-600" /></span>
+    <span className="bg-gray-100 size-12 rounded-full flex items-center justify-center flex-shrink-0"><ExclamationTriangleIcon className="size-7 text-gray-600" /></span>
     **What happens when the AI is uncertain or wrong?** Plan for graceful failures
 </div>
 
