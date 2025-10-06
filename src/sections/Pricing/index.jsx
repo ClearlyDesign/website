@@ -179,7 +179,7 @@ const plans = [
       "Delivering design work as and when you need it, completely asynchronously.",
     price: "$4,995",
     spotIsImmediate: true,
-    spots: `2 spots open. Cancel anytime.`,
+    spots: `1 spot open. Pause or cancel anytime.`,
     link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx",
     includes: [
       {
@@ -233,7 +233,7 @@ const plans = [
     description: "Double the capacity with availability for check-ins as required.",
     price: "$7,495",
     spotIsImmediate: false,
-    spots: `Cancel anytime.`,
+    spots: `Pause or cancel anytime.`,
     link: "https://buy.stripe.com/00g6ra1m37YZcVyfZ0",
     includes: [
       {

@@ -59,9 +59,9 @@ const Hero = () => {
             initial="hidden"
             animate={mainControls}
             transition={{ duration: 0.3, delay: 0.25 }}
-            className="bg-gradient-to-r from-green-300 to-lime-300 inline-block text-transparent bg-clip-text"
+            className="bg-gradient-to-r from-green-300 to-lime-300 inline-block text-transparent bg-clip-text leading-tight px-5"
           >
-            Pixel-Perfect
+            Design clarity
           </motion.h1>
           <motion.h1
             variants={{
@@ -71,9 +71,9 @@ const Hero = () => {
             initial="hidden"
             animate={mainControls}
             transition={{ duration: 0.3, delay: 0.5 }}
-            className="text-white"
+            className="text-white leading-tight"
           >
-            Design Subscription
+             for growing companies
           </motion.h1>
           <motion.p
             variants={{
