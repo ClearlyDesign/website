@@ -135,3 +135,8 @@ When writing blog articles for Clearly Design, follow these style guidelines:
 - **Series tags** - Use consistent series names like ["Designing for AI"]
 - **CTA components** - Include ctaTitle, ctaText, and ctaLabel for conversion
 - **SEO descriptions** - Write compelling 150-character descriptions that sell the value
+
+## Feature Documentation
+
+For specific feature requirements, see:
+- /docs / `USE-CASE-PAGES.md` - Use case landing pages build (in progress)
