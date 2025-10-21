@@ -138,9 +138,9 @@ export default function UseCaseLayout({ frontmatter, mdxSource, slug }) {
 
       {/* CTA Section */}
       <CTABlock
-        ctaTitle="Stop losing momentum to slow agency timelines"
-        ctaText="You've built the product. You know there's demand. Every week without a proper site is opportunity cost you can't get back. 2 weeks. Conversion-focused. Built for your growth stage."
-        ctaLabel="Start Your Project"
+        ctaTitle={frontmatter.ctaBlockTitle || "Ready to get started?"}
+        ctaText={frontmatter.ctaBlockText || "Book a 30-minute call and we'll discuss how we can help with your project."}
+        ctaLabel={frontmatter.ctaBlockLabel || "Start Your Project"}
       />
 
       <Footer />

@@ -8,6 +8,9 @@ ctaSecondary: "View Subscription Option"
 trustElement: "Framer or Custom Next.js • Built for conversion, not just aesthetics."
 pricing: "$8-12K"
 timeline: "2 weeks"
+ctaBlockTitle: "Stop losing momentum to slow agency timelines"
+ctaBlockText: "You've built the product. You know there's demand. Every week without a proper site is opportunity cost you can't get back. 2 weeks. Conversion-focused. Built for your growth stage."
+ctaBlockLabel: "Start Your Project"
 ---
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container rose"><ExclamationTriangleIcon/></span></span> Here's what we're hearing from founders</h2>

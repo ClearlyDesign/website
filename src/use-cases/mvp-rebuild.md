@@ -8,6 +8,9 @@ ctaSecondary: "See Pricing"
 trustElement: "A faithful rebuild of something validated • Not a greenfield rewrite"
 pricing: "$15-25K"
 timeline: "4-6 weeks"
+ctaBlockTitle: "You validated the concept. Now make it last."
+ctaBlockText: "No-code got you to product-market fit. That's the hard part. Rebuilding with proper architecture is the straightforward part. We take what's proven and make it scalable. 4-6 weeks to feature parity."
+ctaBlockLabel: "Discuss Your Rebuild"
 ---
 
 ## Here's what happens after you validate with no-code

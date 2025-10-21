@@ -8,6 +8,9 @@ ctaSecondary: "See Pricing"
 trustElement: "Flexible design systems • No rigid component libraries"
 pricing: "$8-12K"
 timeline: "2-3 weeks"
+ctaBlockTitle: "Keep shipping fast. Stop looking inconsistent."
+ctaBlockText: "AI tools let you build features in hours, not days. But without design systems, every feature looks different. We give you the prompts and guidelines that make AI-generated code consistent. Same speed, better results."
+ctaBlockLabel: "Get Your System"
 ---
 
 ## Here's what we're seeing from AI-assisted dev teams

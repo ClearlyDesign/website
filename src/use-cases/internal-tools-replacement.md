@@ -8,6 +8,9 @@ ctaSecondary: "See Pricing"
 trustElement: "Internal Tools Replacement • Fixed-price projects • You own the code"
 pricing: "$12-20K"
 timeline: "3-4 weeks"
+ctaBlockTitle: "Stop bleeding money on per-seat pricing"
+ctaBlockText: "Your SaaS stack costs more every time you hire someone. Custom tools cost the same whether you have 5 users or 50. Most projects pay for themselves in 6-12 months of saved subscriptions."
+ctaBlockLabel: "Discuss Your Tool"
 ---
 
 ## Here's what we're hearing from operations teams and agencies
