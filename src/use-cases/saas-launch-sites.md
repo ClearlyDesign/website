@@ -5,7 +5,7 @@ metaTitle: "SaaS Launch Sites in 2 Weeks - Conversion-Focused Design | Clearly D
 metaDescription: "Launch your SaaS site in 2 weeks, not months. Conversion-optimized design and development for pre-seed to Series A founders. $8-12K project-based."
 ctaPrimary: "Start Your Project"
 ctaSecondary: "View Subscription Option"
-trustElement: "2-week delivery. Built for conversion, not just aesthetics."
+trustElement: "Framer or Custom Next.js • Built for conversion, not just aesthetics."
 pricing: "$8-12K"
 timeline: "2 weeks"
 ---
