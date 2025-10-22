@@ -18,12 +18,13 @@ import {
   BeakerIcon,
   CheckBadgeIcon,
   ArrowPathIcon,
+  FilmIcon,
 } from "@heroicons/react/24/outline"
 import { CheckCircleIcon } from "@heroicons/react/24/solid"
 
 const filters = {
   "All Project Types": [],
-  "Build Something New": ["ux-first-mvp", "saas-launch-sites"],
+  "Build Something New": ["ux-first-mvp", "saas-launch-sites", "product-launch-videos"],
   "Improve What Exists": ["product-redesigns", "website-redesigns", "mvp-rebuild"],
   "Infrastructure & Tools": ["design-systems-ai", "internal-tools-replacement"],
 }
@@ -171,9 +172,25 @@ const projects = [
     stage: "Growth",
     idealFor: ["Outdated tech stack", "Hard to maintain", "Platform migration"],
     category: "Marketing",
-    outcomes: ["Design refresh", "Modern platform", "Easy updates", "Better conversion"],
+    outcomes: ["Unique positioning","Modern platform", "Easy updates", "Better conversion"],
     includes: ["Platform strategy", "Custom design", "Full rebuild", "Team training"],
     bestFor: "Outdated site needing modern foundation",
+  },
+  {
+    slug: "product-launch-videos",
+    title: "Product Launch Videos",
+    description:
+      "Animated explainer videos for SaaS launches and feature releases. Clear storytelling that turns confusion into conversions.",
+    pricing: "$8-10K",
+    timeline: "4 weeks",
+    icon: FilmIcon,
+    color: "rose",
+    stage: "Launch",
+    idealFor: ["Product launches", "Feature releases", "Complex products"],
+    category: "Marketing",
+    outcomes: ["Quick buy-in","Explain clearly", "Drive conversions", "Professional credibility"],
+    includes: ["Script writing", "Storyboarding", "Animation", "Voiceover & sound"],
+    bestFor: "Need video to explain your product",
   },
 ]
 
@@ -198,6 +215,9 @@ const colorClasses = {
   },
   teal: {
     icon: "text-teal-500 bg-teal-500/10",
+  },
+  rose: {
+    icon: "text-rose-500 bg-rose-500/10",
   },
 }
 

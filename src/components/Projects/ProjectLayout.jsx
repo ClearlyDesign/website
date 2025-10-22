@@ -7,6 +7,7 @@ import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import ProjectFAQ from "@/components/Projects/ProjectFAQ"
 import * as Icons from "@heroicons/react/24/outline"
+import { ArrowLeftIcon } from "@heroicons/react/24/solid"
 
 export default function ProjectLayout({ frontmatter, mdxSource, slug }) {
   // Mouse move animation logic
