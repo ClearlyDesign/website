@@ -8,9 +8,9 @@ export default function handler(req, res) {
     .readdirSync(articlesDir)
     .filter((f) => f.endsWith(".mdx") && !f.startsWith("draft-"))
 
-  const useCasesDir = path.join(process.cwd(), "src/use-cases")
-  const useCaseFiles = fs
-    .readdirSync(useCasesDir)
+  const projectsDir = path.join(process.cwd(), "src/projects")
+  const projectFiles = fs
+    .readdirSync(projectsDir)
     .filter((f) => f.endsWith(".md"))
 
   let output = `# Clearly Design\n\n`
@@ -54,15 +54,15 @@ export default function handler(req, res) {
 
   output += `Fixed-price design and development projects with 2-6 week delivery. You own everything we create.\n\n`
 
-  useCaseFiles.forEach((file) => {
-    const content = fs.readFileSync(path.join(useCasesDir, file), "utf-8")
+  projectFiles.forEach((file) => {
+    const content = fs.readFileSync(path.join(projectsDir, file), "utf-8")
     const { data } = matter(content)
     const slug = file.replace(".md", "")
     const title = data.title || slug
     const description = data.subtitle || data.metaDescription || ""
     const pricing = data.pricing || ""
     const timeline = data.timeline || ""
-    const url = `https://clearly.design/use-cases/${slug}`
+    const url = `https://clearly.design/projects/${slug}`
     output += `- [${title}](${url})\n  ${description}\n  Pricing: ${pricing} | Timeline: ${timeline}\n`
   })
 

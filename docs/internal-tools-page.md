@@ -150,7 +150,7 @@ We deploy to production, hand over the complete codebase, and document everythin
 
 ### Monthly Subscription Alternative
 
-Not ready to commit to a project? Our monthly design subscription includes development work. $4-8K/month, pause or cancel anytime. Good for ongoing iteration rather than fixed-scope builds.
+Not ready to commit to a project? Our monthly design subscription includes development work. $5-8K/month, pause or cancel anytime. Good for ongoing iteration rather than fixed-scope builds.
 
 **CTA:** "Discuss Your Project"
 
@@ -267,7 +267,7 @@ You own the hosting account either way. We're never a middleman.
 
 First 30 days: Minor bug fixes and tweaks included.
 
-After that: You can handle changes yourself (you own the code), hire us on monthly subscription ($4-8K/month), or pay for project-based updates.
+After that: You can handle changes yourself (you own the code), hire us on monthly subscription ($5-8K/month), or pay for project-based updates.
 
 Most clients don't need changes for 6-12 months. These tools are built to be stable.
 

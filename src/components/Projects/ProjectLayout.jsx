@@ -7,7 +7,7 @@ import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import * as Icons from "@heroicons/react/24/outline"
 
-export default function UseCaseLayout({ frontmatter, mdxSource, slug }) {
+export default function ProjectLayout({ frontmatter, mdxSource, slug }) {
   // Mouse move animation logic
   const headerRef = useRef(null)
   let mouseX = useMotionValue(0)

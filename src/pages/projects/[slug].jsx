@@ -3,10 +3,10 @@ import path from "path"
 import matter from "gray-matter"
 import { serialize } from "next-mdx-remote/serialize"
 import { NextSeo } from "next-seo"
-import UseCaseLayout from "@/components/UseCases/UseCaseLayout"
+import ProjectLayout from "@/components/Projects/ProjectLayout"
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join(process.cwd(), "src/use-cases"))
+  const files = fs.readdirSync(path.join(process.cwd(), "src/projects"))
   const paths = files.map((filename) => ({
     params: { slug: filename.replace(".md", "") },
   }))
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), "src/use-cases", `${params.slug}.md`)
+  const filePath = path.join(process.cwd(), "src/projects", `${params.slug}.md`)
   const fileContents = fs.readFileSync(filePath, "utf8")
   const { data, content } = matter(fileContents)
   const mdxSource = await serialize(content)
@@ -27,15 +27,15 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function UseCase({ frontmatter, mdxSource, slug }) {
+export default function Project({ frontmatter, mdxSource, slug }) {
   return (
     <>
       <NextSeo
         title={frontmatter.metaTitle || `${frontmatter.title} | Clearly Design`}
         description={frontmatter.metaDescription}
-        canonical={`https://clearly.design/use-cases/${slug}`}
+        canonical={`https://clearly.design/projects/${slug}`}
         openGraph={{
-          url: `https://clearly.design/use-cases/${slug}`,
+          url: `https://clearly.design/projects/${slug}`,
           title: frontmatter.title,
           description: frontmatter.metaDescription,
           site_name: "Clearly Design",
@@ -57,7 +57,7 @@ export default function UseCase({ frontmatter, mdxSource, slug }) {
           },
         ]}
       />
-      <UseCaseLayout frontmatter={frontmatter} mdxSource={mdxSource} slug={slug} />
+      <ProjectLayout frontmatter={frontmatter} mdxSource={mdxSource} slug={slug} />
     </>
   )
 }

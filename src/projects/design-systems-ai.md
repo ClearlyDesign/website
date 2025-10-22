@@ -2,12 +2,12 @@
 title: "Ship fast with AI. Get consistent design without slowing down."
 subtitle: "Design systems built for teams using Cursor, Copilot, and v0. Guidelines and prompts that keep AI-generated interfaces cohesive."
 metaTitle: "Design Systems for AI-Assisted Development Teams | Clearly Design"
-metaDescription: "Ship fast with Cursor, Claude Code, and v0 while staying visually consistent. Design systems with AI prompts for lean tech teams. 2-3 weeks, $8-12K."
+metaDescription: "Ship fast with Cursor, Claude Code, and v0 while staying visually consistent. Design systems with AI prompts for lean tech teams. 2-4 weeks, $8-12K."
 ctaPrimary: "Get Your Design System"
 ctaSecondary: "See Pricing"
 trustElement: "Flexible design systems • No rigid component libraries"
 pricing: "$8-12K"
-timeline: "2-3 weeks"
+timeline: "2-4 weeks"
 ctaBlockTitle: "Keep shipping fast. Stop looking inconsistent."
 ctaBlockText: "AI tools let you build features in hours, not days. But without design systems, every feature looks different. We give you the prompts and guidelines that make AI-generated code consistent. Same speed, better results."
 ctaBlockLabel: "Get Your System"
@@ -137,13 +137,13 @@ Design agency:
 
 Our approach:
 - $8-12K one-time
-- 2-3 weeks delivery
+- 2-4 weeks delivery
 - Built specifically for AI workflows
 - Lean teams can maintain it themselves
 
 **Monthly subscription alternative:**
 
-Want ongoing design support as your product evolves? Our monthly subscription ($4-8K/month) includes design system maintenance plus new feature design. Good for continuous iteration.
+Want ongoing design support as your product evolves? Our monthly subscription ($5-8K/month) includes design system maintenance plus new feature design. Good for continuous iteration.
 
 ## Example projects
 
@@ -252,7 +252,7 @@ First 30 days: Minor adjustments included (tweaking colors, refining patterns).
 
 After that: Three options:
 1. Maintain it yourself (it's built to be maintainable by engineers)
-2. Monthly subscription for ongoing updates ($4-8K/month)
+2. Monthly subscription for ongoing updates ($5-8K/month)
 3. Project-based updates when you need major additions
 
 Most teams maintain simple patterns themselves and hire us for major expansions (adding mobile guidelines, new product surfaces, etc.).

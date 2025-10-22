@@ -173,7 +173,7 @@ We migrate your data, test everything with real user scenarios, and launch along
 
 ### Monthly Subscription Alternative
 
-Rather do this gradually? Our monthly subscription ($4-8K/month) lets you rebuild over 2-3 months while still shipping. Good if you can't pause feature development during a rebuild.
+Rather do this gradually? Our monthly subscription ($5-8K/month) lets you rebuild over 2-3 months while still shipping. Good if you can't pause feature development during a rebuild.
 
 **CTA:** "Discuss Your Rebuild"
 
@@ -276,7 +276,7 @@ Will you hire engineers to extend it? Use our monthly subscription for updates? 
 
 ### Can we rebuild gradually instead of all at once?
 
-Yes. Our monthly subscription ($4-8K/month) works for gradual rebuilds. Good if you need to keep shipping features during the transition. Takes 2-3 months but you don't pause development.
+Yes. Our monthly subscription ($5-8K/month) works for gradual rebuilds. Good if you need to keep shipping features during the transition. Takes 2-3 months but you don't pause development.
 
 Project-based is faster and often cheaper if you can pause new features for 4-6 weeks.
 
@@ -305,7 +305,7 @@ We adjust based on your needs. Need real-time features? We'll use websockets. Ne
 You own the code completely. Three options:
 
 1. **Handle it yourself** - Hire your own developers
-2. **Monthly subscription** - Use our team for ongoing updates ($4-8K/month)
+2. **Monthly subscription** - Use our team for ongoing updates ($5-8K/month)
 3. **Project-based updates** - Hire us for specific new features as needed
 
 Most clients hire their own developers 6-12 months after launch. By then the product is stable and they're ready to build in-house teams.

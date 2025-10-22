@@ -180,7 +180,7 @@ We deliver Figma files, documentation site, and prompt library. We train your te
 
 ### Monthly Subscription Alternative
 
-Want ongoing design support as your product evolves? Our monthly subscription ($4-8K/month) includes design system maintenance plus new feature design. Good for continuous iteration.
+Want ongoing design support as your product evolves? Our monthly subscription ($5-8K/month) includes design system maintenance plus new feature design. Good for continuous iteration.
 
 **CTA:** "Get Started"
 
@@ -302,7 +302,7 @@ The system we build is designed to be extended, not replaced. When you hire a de
 
 **After that:** Three options:
 1. Maintain it yourself (it's built to be maintainable by engineers)
-2. Monthly subscription for ongoing updates ($4-8K/month)
+2. Monthly subscription for ongoing updates ($5-8K/month)
 3. Project-based updates when you need major additions
 
 Most teams maintain simple patterns themselves and hire us for major expansions (adding mobile guidelines, new product surfaces, etc.).
