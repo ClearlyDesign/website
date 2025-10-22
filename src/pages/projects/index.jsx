@@ -22,7 +22,7 @@ import {
 import { CheckCircleIcon } from "@heroicons/react/24/solid"
 
 const filters = {
-  "All Projects": [],
+  "All Project Types": [],
   "Build Something New": ["ux-first-mvp", "saas-launch-sites"],
   "Improve What Exists": ["product-redesigns", "website-redesigns", "mvp-rebuild"],
   "Infrastructure & Tools": ["design-systems-ai", "internal-tools-replacement"],
@@ -41,7 +41,7 @@ const projects = [
     stage: "Pre-revenue",
     idealFor: ["First-time founders", "Complex concepts", "Beyond no-code"],
     category: "Product",
-    outcomes: ["Validate demand", "Test with users", "Learn fast"],
+    outcomes: ["Validate demand", "Test with users", "Learn fast", "Start to monetize"],
     includes: ["User flows", "Core features", "Beta testing", "Clean code"],
     bestFor: "Too complex for no-code, need proper UX",
   },
@@ -57,31 +57,45 @@ const projects = [
     stage: "Launch",
     idealFor: ["Pre-seed founders", "Technical co-founders", "First-time launchers"],
     category: "Marketing",
-    outcomes: ["Convert visitors", "Look credible", "Ship fast"],
-    includes: ["Conversion optimization", "Responsive design", "SEO setup", "Analytics"],
+    outcomes: [
+      "Convert visitors",
+      "Look credible",
+      "Ship fast",
+      "Gain online visibility",
+    ],
+    includes: [
+      "Conversion optimization",
+      "Responsive design",
+      "AEO/SEO setup",
+      "Analytics",
+    ],
     bestFor: "Need a marketing site before launch",
   },
   {
     slug: "product-redesigns",
-    title: "Product Redesigns",
+    title: "Product UI/UX Redesign",
     description:
-      "Your product works and has customers. Now make it look like it. Modern UI/UX without rebuilding everything.",
+      "UX audit and UI redesign for working products. We deliver modern designs and UX strategy your team implements.",
     pricing: "$15-25K",
     timeline: "4-6 weeks",
     icon: PaintBrushIcon,
     color: "purple",
     stage: "Growth",
-    idealFor: ["Revenue-stage companies", "Series A+", "Established products"],
+    idealFor: ["Revenue-stage products", "Dated UI/UX", "Have dev team"],
     category: "Product",
-    outcomes: ["Win enterprise deals", "Improve NPS", "Reduce support"],
-    includes: ["UX audit", "Visual redesign", "In-codebase work", "User testing"],
-    bestFor: "Working product that looks dated",
+    outcomes: [
+      "Modern UI design",
+      "Better UX flows",
+      "Design system",
+    ],
+    includes: ["UX audit", "Figma designs", "Design system", "Dev handoff docs"],
+    bestFor: "Product needs design work, not rebuild",
   },
   {
     slug: "design-systems-ai",
     title: "Design Systems for AI Teams",
     description:
-      "Ship fast with Cursor, Copilot, and v0 while staying visually consistent. Guidelines and prompts that keep AI-generated interfaces cohesive.",
+      "Ship fast with Cursor, Claude Code, and v0 while staying visually consistent. Guidelines and prompts that keep AI-generated interfaces cohesive.",
     pricing: "$8-12K",
     timeline: "2-4 weeks",
     icon: SparklesIcon,
@@ -89,7 +103,12 @@ const projects = [
     stage: "Growth",
     idealFor: ["AI-assisted teams", "Lean startups", "Solo founders"],
     category: "Infrastructure",
-    outcomes: ["Stay consistent", "Ship faster", "No designer needed"],
+    outcomes: [
+      "Stay consistent",
+      "Ship faster",
+      "No designer needed",
+      "Differentiate yourself",
+    ],
     includes: ["AI prompt library", "Design tokens", "Component patterns", "Figma files"],
     bestFor: "Building with AI but everything looks different",
   },
@@ -105,7 +124,7 @@ const projects = [
     stage: "Operational",
     idealFor: ["Operations teams", "Agencies", "High SaaS costs"],
     category: "Operations",
-    outcomes: ["Reduce costs", "Match workflow", "Own the code"],
+    outcomes: ["Reduce costs", "Match workflow", "Own the code", "Custom made"],
     includes: [
       "Workflow automation",
       "SaaS integrations",
@@ -126,7 +145,12 @@ const projects = [
     stage: "Validated",
     idealFor: ["No-code graduates", "Bubble users", "Post-PMF founders"],
     category: "Product",
-    outcomes: ["Scale properly", "Hire engineers", "Reduce costs"],
+    outcomes: [
+      "Scale properly",
+      "Hire engineers",
+      "Reduce costs",
+      "Add new features fast",
+    ],
     includes: [
       "Architecture planning",
       "Data migration",
@@ -147,7 +171,7 @@ const projects = [
     stage: "Growth",
     idealFor: ["Outdated tech stack", "Hard to maintain", "Platform migration"],
     category: "Marketing",
-    outcomes: ["Modern platform", "Easy updates", "Better conversion"],
+    outcomes: ["Design refresh", "Modern platform", "Easy updates", "Better conversion"],
     includes: ["Platform strategy", "Custom design", "Full rebuild", "Team training"],
     bestFor: "Outdated site needing modern foundation",
   },
@@ -179,7 +203,7 @@ const colorClasses = {
 
 export default function ProjectsIndex() {
   const headerRef = useRef(null)
-  const [activeFilter, setActiveFilter] = useState("All Projects")
+  const [activeFilter, setActiveFilter] = useState("All Project Types")
   let mouseX = useMotionValue(0)
   let mouseY = useMotionValue(0)
 
@@ -330,17 +354,19 @@ export default function ProjectsIndex() {
                     href={`/projects/${project.slug}`}
                     className="group relative bg-white rounded-2xl border border-gray-200 shadow-sm p-8 transition-all duration-300 hover:shadow-lg hover:border-gray-300"
                   >
-                    <div className="flex flex-col md:flex-row items-start gap-4 h-full">
-                      <div
-                        className={`p-3 rounded-xl bg-gray-50 border border-gray-700/10 ${colors.icon}`}
-                      >
-                        <Icon className={`w-6 h-6 text-current`} />
+                    <div className="flex flex-col items-start gap-4 h-full">
+                      <div className="flex items-center gap-4">
+                        <div
+                          className={`p-3 rounded-xl bg-gray-50 border border-gray-700/10 ${colors.icon}`}
+                        >
+                          <Icon className={`w-6 h-6 text-current`} />
+                        </div>
+                        <h2 className="text-2xl font-bold text-gray-900">
+                          {project.title}
+                        </h2>
                       </div>
                       <div className="flex-1 flex flex-col md:gap-2 justify-between h-full">
                         <div>
-                          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                            {project.title}
-                          </h2>
                           <p className="text-gray-600 text-base leading-relaxed mb-4">
                             {project.description}
                           </p>

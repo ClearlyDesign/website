@@ -1,29 +1,29 @@
 ---
 title: "Your Product Works. Now Make It Look Like It."
-subtitle: "Redesign your working product with modern UI/UX. Same functionality, better experience. For companies past the MVP stage."
-metaTitle: "Product Redesign Services - Modern UI/UX for Working Products | Clearly Design"
-metaDescription: "Redesign your product without rebuilding it. Modern UI, better UX, same functionality. 4-6 weeks, $15-25K. For revenue-stage companies."
+subtitle: "UX audit and UI redesign for working products. We identify UX issues and deliver modern designs your team can implement."
+metaTitle: "Product UI/UX Redesign Services - Modern Design for Working Products | Clearly Design"
+metaDescription: "UX audits and UI redesign for revenue-stage products. Modern design system and component designs. 4-6 weeks, $15-25K."
 ctaPrimary: "Start Your Redesign"
 ctaSecondary: "See Pricing"
-trustElement: "Built on your existing codebase • No downtime for users"
+trustElement: "UX audit • Modern UI design • Component library"
 pricing: "$15-25K"
 timeline: "4-6 weeks"
 ctaBlockTitle: "Stop Apologizing for Your Product's Design"
-ctaBlockText: "Your product delivers value. Your customers stick around because it works. But dated design is costing you deals, hurting satisfaction scores, and making your team embarrassed in demos. Same functionality. Same codebase. Modern design. Better UX."
+ctaBlockText: "Your product delivers value. Your customers stick around because it works. But dated design is costing you deals. We audit UX, redesign UI, and deliver modern component designs your team implements."
 ctaBlockLabel: "Start Your Redesign"
 faqs:
+  - question: "Do you integrate the designs into our codebase?"
+    answer: "<strong>Not by default.</strong> We deliver design files (Figma), UX documentation, and optionally Tailwind CSS component code. Your team handles integration into your codebase. We can provide implementation support for an additional fee, but standard delivery is design handoff. This keeps costs down and lets your team maintain control."
+  - question: "What exactly do we get at the end?"
+    answer: "<strong>Complete design deliverables:</strong> Figma files with all screens and states, design system documentation (colors, typography, spacing), UX audit findings and recommendations, component specifications, and optionally HTML/Tailwind CSS component code. Everything your developers need to implement the designs."
+  - question: "Can you build the components for us?"
+    answer: "<strong>Yes, for an additional fee.</strong> Standard project is design delivery. If you want us to build production-ready Tailwind CSS components, that's available but adds cost and time. Most teams prefer to implement themselves since they know their codebase best."
   - question: "How is this different from an MVP Rebuild?"
-    answer: "<strong>Scope and risk.</strong> MVP Rebuild is for products that need new architecture, better tech stack, or can't scale. We're rebuilding the foundation. Product Redesigns keeps your existing foundation. We're improving what users see and interact with. Lower cost, lower risk, faster delivery. If your tech stack is good and your product scales fine, but it just looks/feels bad – this is the right project."
-  - question: "Will this disrupt our existing users?"
-    answer: "<strong>Minimal disruption.</strong> Functionality stays the same. Users might notice things look different, but they can still do everything they could before, just more easily. We can do gradual rollouts, A/B tests, or beta releases to minimize surprise. Most users react positively (\"finally!\" is common feedback)."
-  - question: "Can you work with our existing engineering team?"
-    answer: "<strong>Yes, that's the model.</strong> We don't work in isolation. We collaborate with your engineers. They review our code. They understand the changes because it's their codebase, just improved. Many teams have us work directly in their repo. Others prefer we provide components they integrate. Either works."
-  - question: "What if users hate the new design?"
-    answer: "<strong>Unlikely, but we plan for it.</strong> We test with real users before full launch. We can roll back easily because we're working in your existing codebase, not replacing it. We also document every change and why we made it. Design decisions are data-informed, not just aesthetic preferences."
+    answer: "<strong>This is design work, not development.</strong> MVP Rebuild involves rearchitecting and rebuilding your product with code. Product Redesign is UX audit and UI design delivery. We're not touching your codebase unless you specifically add implementation services. If your tech stack needs rebuilding, that's MVP Rebuild territory."
   - question: "Do you only do visual design or UX improvements too?"
-    answer: "<strong>Both, always.</strong> Visual design without UX improvements is just lipstick on a pig. UX improvements without visual design don't feel complete. We improve workflows, simplify navigation, fix confusion points, AND make it look modern. The goal is: easier to use and looks professional."
-  - question: "What happens after the 4-6 weeks?"
-    answer: "<strong>First 30 days:</strong> Minor adjustments and bug fixes included. After that: Three options: 1. Your team maintains it (we hand off everything cleanly) 2. Monthly subscription for ongoing improvements ($5-8K/month) 3. Future project-based redesigns when needed. Most products don't need major redesigns for 2-3 years after we're done."
+    answer: "<strong>Both, always.</strong> Visual design without UX improvements is just lipstick on a pig. We audit user flows, identify friction points, optimize navigation, and then design modern UI. You get UX strategy plus visual design, not just mockups."
+  - question: "Will this disrupt our existing users?"
+    answer: "<strong>That depends on implementation.</strong> We deliver designs and UX recommendations. How and when you roll them out is up to your team. We can advise on phased rollouts and testing strategies, but implementation timeline is your decision since your team handles the build."
 ---
 
 <h2 className="flex items-start gap-3"> <span className="flex items-center gap-3"><span className="icon-container rose"><ExclamationTriangleIcon/></span></span> Here's what we're hearing from revenue-stage companies</h2>
@@ -48,135 +48,138 @@ We redesigned their core product in 5 weeks. Same React codebase, same functiona
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container emerald"><CheckBadgeIcon/></span></span> Here's how we solve it</h2>
 
-We redesign your product without rebuilding it. Same tech stack. Same functionality. Same database. Just better design and UX.
+We audit your product's UX and redesign the UI. You get modern designs and UX strategy your team implements.
 
-**This isn't a rebuild.** We work within your existing codebase. We're not changing architecture or rewriting features. We're improving how everything looks and feels. Lower risk, faster delivery, immediate improvement.
+**This is design work, not development.** We deliver Figma files, design systems, UX recommendations, and optionally Tailwind CSS component code. Your team handles the implementation in your codebase. You maintain control, we provide the design expertise.
 
-**Not just visual polish.** We improve workflows, simplify navigation, and fix UX issues. It's visual design plus user experience redesign. Your product becomes easier to use, not just prettier to look at.
+**Not just visual polish.** We audit user flows, identify friction points, and redesign the entire experience. It's UX strategy plus modern UI design. Better flows and better visuals.
 
-### Work within your existing codebase
+### UX audit comes first
 
-We don't start from scratch. We redesign components in your current tech stack (React, Vue, whatever you use). Your engineering team reviews our work. They're familiar with the code because it's theirs, just improved.
+We analyze your product like real users would. We review analytics, watch session recordings, read support tickets, and identify where users struggle. The UX audit tells us what to fix before we design anything.
 
-### Functionality stays exactly the same
+### Modern UI design system
 
-Every feature works the same way for users. We're not removing things or changing behavior. We're making existing functionality look better and feel easier to use. No retraining required, just better experience.
+We create a complete design system: colors, typography, spacing, components. Every screen designed in Figma with all states (loading, error, empty, success). Your developers get clear specs for implementation.
 
-### Data-informed improvements
+### Data-informed design decisions
 
-We analyze your user behavior data, support tickets, and session recordings. We identify where users struggle. The redesign fixes actual pain points, not just aesthetic preferences. Every change is justified by user data.
+Every design change is justified by user data or UX best practices. We're not redesigning for aesthetics. We're solving actual user problems identified in the audit. Design decisions are documented and explained.
 
-### Phased rollout with minimal risk
+### Optional: Tailwind CSS components
 
-We don't flip a switch and change everything overnight. We redesign in phases, test with real users, and deploy gradually. Your team can roll back anything that causes problems. Low risk, measurable improvement.
+If you want implementation-ready code, we can deliver Tailwind CSS components. They're production-quality HTML/CSS, but your team still integrates them into your framework. This is optional and adds to project cost.
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><RocketLaunchIcon/></span></span> What's included</h2>
 
-**Discovery & Audit:**
+**Discovery & UX Audit:**
 - Product walkthrough and feature inventory
-- User behavior analysis (analytics, session recordings)
+- User behavior analysis (analytics, session recordings, heatmaps)
 - Support ticket review (common confusion points)
-- Competitive design analysis (what standards users expect)
-- Technical codebase review (understand constraints)
+- User flow mapping (identify friction and drop-off points)
+- Competitive analysis (what standards users expect)
 - Stakeholder interviews (business goals and priorities)
+- UX audit report (prioritized list of issues to address)
 
-**UX Improvements:**
-- User flow optimization (remove friction from common tasks)
-- Navigation restructuring (easier to find features)
-- Onboarding redesign (faster time to first value)
-- Form and input improvements (reduce errors and confusion)
-- Error state improvements (clear guidance when things go wrong)
-- Mobile responsiveness audit and fixes
+**UX Strategy & Recommendations:**
+- User flow optimization recommendations
+- Navigation restructuring proposals
+- Onboarding redesign strategy
+- Form and input improvements
+- Error state and empty state recommendations
+- Mobile responsiveness strategy
+- Accessibility recommendations (WCAG compliance)
 
-**Visual Design:**
-- Modern design system (colors, typography, spacing)
-- Component library redesign (buttons, cards, tables, forms)
-- Consistent visual language across product
-- Data visualization improvements (charts, graphs, dashboards)
-- Empty states and loading states
-- Accessibility improvements (WCAG compliance)
+**UI Design Deliverables:**
+- Complete design system (colors, typography, spacing, grid)
+- Component library designs (buttons, cards, tables, forms, etc.)
+- All key screens designed in Figma with full specifications
+- All states designed (default, hover, active, disabled, loading, error)
+- Data visualization redesigns (if applicable)
+- Style guide and design documentation
+- Developer handoff documentation
 
-**Implementation & Testing:**
-- Design implementation in your existing codebase
-- Component-by-component rollout
-- User testing with real customers
-- Performance optimization
-- Cross-browser and device testing
-- Handoff to your engineering team
+**Optional Add-on (Additional Cost):**
+- Tailwind CSS component code (production-ready HTML/CSS)
+- Component implementation support
+- Design QA during your team's implementation
 
 **Timeline:**
-- Week 1: Audit and UX strategy
-- Weeks 2-3: Visual design and early implementation
-- Weeks 4-5: Full implementation and testing
-- Week 6: Refinement, testing, and gradual rollout
+- Week 1: Discovery, audit, and UX strategy
+- Weeks 2-3: UI design system and component designs
+- Weeks 4-5: Full screen designs and specifications
+- Week 6: Refinement, documentation, and handoff
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><SwatchIcon/></span></span> How it works</h2>
 
-**Step 1: Understand What's Broken (Week 1)** — We use your product like a real user. We analyze where people get stuck in your analytics. We read support tickets. We interview your team and customers. We identify the biggest UX problems and outdated design patterns. This becomes the priority list.
+**Step 1: UX Audit (Week 1)** — We use your product like a real user. We analyze analytics to see where people get stuck. We read support tickets to understand complaints. We interview your team and customers. We deliver a UX audit report with prioritized issues and recommendations.
 
-**Step 2: Design the Improvements (Weeks 1-2)** — We redesign key screens and workflows. You see mockups before we touch code. We present options and explain design decisions. Your team provides feedback. We iterate until you're confident in the direction.
+**Step 2: Design System & UI Design (Weeks 2-4)** — We create the design system (colors, typography, components). We redesign key screens and workflows in Figma. You review designs, provide feedback, we iterate. Every design decision is explained and justified. You see the full vision before implementation starts.
 
-**Step 3: Implement in Your Codebase (Weeks 3-5)** — We work directly in your repo (or provide clean component code). We redesign one section at a time. Your engineering team reviews pull requests. This isn't mysterious agency work. It's collaborative improvement of your existing code.
+**Step 3: Final Designs & Specifications (Weeks 4-5)** — We design remaining screens, all interaction states, and edge cases. We create developer handoff documentation with full specifications. If you purchased component code, we build Tailwind CSS components during this phase.
 
-**Step 4: Test and Roll Out Gradually (Weeks 5-6)** — We test with real users before full launch. We can do beta releases, A/B tests, or gradual rollouts. If something doesn't work, we adjust. We monitor analytics to confirm improvements. Only when you're confident do we roll out to all users.
+**Step 4: Handoff & Support (Week 6)** — We deliver all Figma files, documentation, and any code. We walk your team through the designs and answer questions. Your team implements in your codebase on your timeline. We're available for design questions during your implementation phase.
 
-<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
+<h2 className="flex items-center gap-3" id="pricing"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
-**$15,000 - $25,000** for most product redesigns
+**$15,000 - $25,000** for UX audit + UI redesign
 
 ### What affects pricing
 
 **Lower end ($15-18K):**
-- Single product area (dashboard, settings, etc.)
+- Single product area (one workflow or feature set)
 - 5-10 core screens
-- Existing design system to build from
+- Existing design system to extend
 - Straightforward component library
-- Standard responsive requirements
+- Design delivery only (no component code)
 
 **Mid-range ($18-22K):**
 - Multiple product areas
 - 10-20 core screens
 - Creating new design system from scratch
-- Complex data visualization
+- Complex data visualization or dashboards
 - Advanced interactions and states
+- Optional: Add Tailwind CSS component code (+$3-5K)
 
 **Higher end ($22-25K):**
 - Full product redesign
-- 20+ screens
-- Multiple user types/roles with different views
+- 20+ screens with comprehensive states
+- Multiple user roles with different views
 - Extensive data-heavy interfaces
-- Custom component library build
-- Comprehensive accessibility work
+- Complete component library rebuild
+- Includes Tailwind CSS component code
+
+### What's NOT included in base price
+
+These are available as add-ons:
+- **Tailwind CSS component code:** +$3-5K depending on complexity
+- **Implementation support:** +$5-8K for hands-on help integrating designs
+- **Design QA during your implementation:** +$2-3K for ongoing review
+- **User testing sessions:** +$2-4K for moderated user testing
+
+We also have a number of teams that go onto our [design subscription](/) to make ongoing support easier and more predictable from a budget perspective. 
 
 ### Compare to alternatives
 
-**Full rebuild:**
+**Full product rebuild:**
 - Cost: $75-150K
-- Time: 4-6 months
-- Risk: High (everything changes at once)
-- Disruption: Major (users must relearn)
+- What you get: Rebuilt codebase
+- Good for: Major architecture changes needed
 
 **Hire senior product designer:**
-- Cost: $10-15K/month
-- Time: 3-4 months minimum
-- Capacity: One person, slower progress
-- Overhead: Managing, onboarding, tools
+- Cost: $10-15K/month (3-4 month minimum)
+- What you get: Design work at one person's pace
+- Good for: Ongoing design needs
 
-**Design agency (traditional):**
+**Traditional design agency:**
 - Cost: $40-80K
-- Time: 8-12 weeks
-- Implementation: Often handoff only (your team builds)
-- Iteration: Expensive change orders
+- What you get: Design files, often slow process
+- Good for: Enterprise budgets and timelines
 
 **Our approach:**
 - Cost: $15-25K
-- Time: 4-6 weeks
-- Risk: Low (works within existing product)
-- Implementation: Included, ready to deploy
-
-### Monthly subscription alternative
-
-Rather improve continuously over time? Our monthly subscription ($5-8K/month) works for gradual redesigns with ongoing feature work. Good for products actively shipping new features.
+- What you get: UX audit + complete UI redesign in Figma + handoff docs
+- Good for: Teams who can implement designs themselves
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container yellow"><LightBulbIcon/></span></span> Questions for product teams</h2>
 

@@ -103,7 +103,7 @@ We rebuild features in priority order: most-used first, nice-to-haves last. You'
 **Step 4: Migration and Launch (Weeks 5-6)**
 We migrate your data, test everything with real user scenarios, and launch alongside your no-code version. Users can transition gradually or all at once. We monitor closely and fix issues fast.
 
-<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
+<h2 className="flex items-center gap-3" id="pricing"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
 **$15,000 - $25,000** for most MVP rebuilds
 

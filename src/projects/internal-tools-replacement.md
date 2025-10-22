@@ -1,5 +1,5 @@
 ---
-title: "Stop paying per seat for tools that don't fit"
+title: "Stop paying for 80% of software that you don't need"
 subtitle: "Custom internal tools that replace multiple SaaS subscriptions and actually match how your team works."
 metaTitle: "Custom Internal Tools That Replace SaaS Subscriptions | Clearly Design"
 metaDescription: "Stop paying per seat for tools that don't fit. We build custom internal tools for operations teams and agencies. $12-20K projects, 3-4 week delivery, you own the code."
@@ -95,7 +95,7 @@ Your team uses the tool in a staging environment. We fix bugs, adjust workflows,
 **Step 4: Launch and Handoff (End of Week 4)**
 We deploy to production, hand over the complete codebase, and document everything. You own it from day one. We can stick around for ongoing support if needed, but you're not locked into anything.
 
-<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
+<h2 className="flex items-center gap-3" id="pricing"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
 **$12,000 - $20,000** for most internal tools
 

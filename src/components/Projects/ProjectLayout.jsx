@@ -109,12 +109,19 @@ export default function ProjectLayout({ frontmatter, mdxSource, slug }) {
               >
                 {frontmatter.ctaPrimary}
               </a>
-              <Link
-                href="/#pricing"
+              <a
+                href="#pricing"
+                onClick={(e) => {
+                  e.preventDefault()
+                  document.getElementById('pricing')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                  })
+                }}
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-white/10 rounded-full hover:bg-white/20 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 {frontmatter.ctaSecondary}
-              </Link>
+              </a>
             </div>
 
             {frontmatter.pricing && frontmatter.timeline && (

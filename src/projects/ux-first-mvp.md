@@ -116,7 +116,7 @@ MVPs change. We build with that assumption. Clean code, clear structure, easy to
 
 **Step 4: Launch and Learn (Week 6)** — We help you recruit beta users and structure feedback collection. You're not launching to the world. You're launching to 50-100 people who want to help shape the product. Their feedback tells you what to build next.
 
-<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
+<h2 className="flex items-center gap-3" id="pricing"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
 **$15,000 - $25,000** for most validation-stage MVPs
 

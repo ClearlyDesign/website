@@ -116,7 +116,7 @@ We document common UI patterns (buttons, forms, tables, etc.) and write correspo
 
 We deliver Figma files, documentation site, and prompt library. We train your team on using the prompts with Cursor / Claude Code / v0. You start generating consistent UI immediately.
 
-<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
+<h2 className="flex items-center gap-3" id="pricing"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
 **$8,000 - $12,000** for most design systems
 

@@ -190,7 +190,7 @@ We don't use templates. Every site is designed specifically for your company, yo
 
 **Step 4: Launch and Hand Off (Week 6)** — We test everything thoroughly, optimize performance, set up hosting and domains, then launch. For Framer sites, we train your team to make updates. For Next.js sites, we provide documentation. You get 30 days of post-launch support for refinements and tweaks.
 
-<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
+<h2 className="flex items-center gap-3" id="pricing"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
 **$8,000 - $12,000** for most marketing site rebuilds
 
