@@ -11,6 +11,19 @@ timeline: "2 weeks"
 ctaBlockTitle: "Stop losing momentum to slow agency timelines"
 ctaBlockText: "You've built the product. You know there's demand. Every week without a proper site is opportunity cost you can't get back. 2 weeks. Conversion-focused. Built for your growth stage."
 ctaBlockLabel: "Start Your Project"
+faqs:
+  - question: "Why 2 weeks instead of the typical 6-8?"
+    answer: "We've built enough launch sites to have a repeatable process. No discovery sprawl, no endless revision rounds. Tight scope, clear deliverables, experienced team."
+  - question: "What if we need changes after launch?"
+    answer: "Included revisions cover feedback during the build. Post-launch we have maintenance packages or you can move to our subscription model for ongoing updates."
+  - question: "Do you write the copy or do we need to provide it?"
+    answer: "<strong>We can do either.</strong> If you have clear messaging, we'll design around your copy. If you need copywriting, that's an add-on (usually $2-3K depending on page count)."
+  - question: "Framer or custom code? How do we decide?"
+    answer: "<strong>Honest answer:</strong> If you're non-technical and don't plan to hire developers soon, Framer gives you the flexibility to make updates yourself. If you're engineering-led or planning to build an in-house team, custom Next.js means no platform fees and full control."
+  - question: "What happens if we're not happy with the first design?"
+    answer: "We include 2 revision rounds specifically for this. First round is usually about direction and tone. Second round is refinement. In 100+ projects, we've never had a founder walk away unhappy."
+  - question: "Can you integrate with our existing tools (CRM, analytics, etc.)?"
+    answer: "<strong>Basic integrations</strong> (Google Analytics, simple forms) are included. Complex integrations (Salesforce, custom APIs, etc.) may affect timeline and pricing, but we'll be upfront about that in the kickoff call."
 ---
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container rose"><ExclamationTriangleIcon/></span></span> Here's what we're hearing from founders</h2>
@@ -67,7 +80,7 @@ We build conversion-focused launch sites in 2 weeks. Not just pretty pages, but 
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
-**$8-12K project-based**
+**$8,000 - $12,000** project-based
 
 What affects pricing:
 - Number of pages (5-page site vs 8-page site)
@@ -96,22 +109,4 @@ Before we start, ask yourself:
 
 **Do you have positioning and copy figured out?** We can work with what you have or help craft your positioning and final copy for the website.
 
-<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container gray"><QuestionMarkCircleIcon/></span></span> FAQ</h2>
-
-**Why 2 weeks instead of the typical 6-8?**
-We've built enough launch sites to have a repeatable process. No discovery sprawl, no endless revision rounds. Tight scope, clear deliverables, experienced team.
-
-**What if we need changes after launch?**
-Included revisions cover feedback during the build. Post-launch we have maintenance packages or you can move to our subscription model for ongoing updates.
-
-**Do you write the copy or do we need to provide it?**
-We can do either. If you have clear messaging, we'll design around your copy. If you need copywriting, that's an add-on (usually $2-3K depending on page count).
-
-**Framer or custom code? How do we decide?**
-Honest answer: If you're non-technical and don't plan to hire developers soon, Framer gives you the flexibility to make updates yourself. If you're engineering-led or planning to build an in-house team, custom Next.js means no platform fees and full control.
-
-**What happens if we're not happy with the first design?**
-We include 2 revision rounds specifically for this. First round is usually about direction and tone. Second round is refinement. In 100+ projects, we've never had a founder walk away unhappy.
-
-**Can you integrate with our existing tools (CRM, analytics, etc.)?**
-Basic integrations (Google Analytics, simple forms) are included. Complex integrations (Salesforce, custom APIs, etc.) may affect timeline and pricing, but we'll be upfront about that in the kickoff call.
+<ProjectFAQ title="Frequently asked questions" />

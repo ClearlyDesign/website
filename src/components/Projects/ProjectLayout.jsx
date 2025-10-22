@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
+import ProjectFAQ from "@/components/Projects/ProjectFAQ"
 import * as Icons from "@heroicons/react/24/outline"
 
 export default function ProjectLayout({ frontmatter, mdxSource, slug }) {
@@ -21,6 +22,7 @@ export default function ProjectLayout({ frontmatter, mdxSource, slug }) {
 
   const components = {
     ...Icons,
+    ProjectFAQ: (props) => <ProjectFAQ {...props} faqs={frontmatter.faqs} />,
     // Add any custom components needed for use case pages
   }
 

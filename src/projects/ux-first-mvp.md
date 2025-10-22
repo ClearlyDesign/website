@@ -11,9 +11,22 @@ timeline: "4-6 weeks"
 ctaBlockTitle: "Stop Guessing. Start Validating With Real Users."
 ctaBlockText: "You don't need perfection. You need something good enough to test with real users. Intentional UX. Core features working well. Clean enough that feedback is about your concept, not your interface."
 ctaBlockLabel: "Start Your MVP"
+faqs:
+  - question: "How is this different from the MVP Rebuild use case?"
+    answer: "<strong>Timing and risk.</strong> MVP Rebuild is for founders who already validated demand in no-code tools. You've proven people want this. Now you need proper code. This use case is earlier: You're still validating IF people want this. You need something good enough to test demand, but you're not proven yet. Different stages, different approaches."
+  - question: "Why not just use v0 or Loveable for initial validation?"
+    answer: "<strong>You can try.</strong> Many founders do. AI generators are great for visual testing (\"does this concept look interesting?\"). But they're terrible for usage testing (\"can people actually accomplish tasks?\"). If your validation question is \"will people sign up?\" AI generators might work. If your validation question is \"will people use this regularly?\" you need proper UX, which means intentional design."
+  - question: "Can't I just hire a freelance developer cheaper?"
+    answer: "<strong>Maybe. But here's the tradeoff:</strong> A generalist developer will build what you ask for. We'll help you figure out what you should ask for. Most founders over-scope MVPs. We specialize in ruthless prioritization. We also include UX design. Most developers don't. They'll build your feature list, but users won't know how to use it. If you're confident in your scope and have design skills, a freelancer might work. Most founders aren't and don't."
+  - question: "What if we need to pivot after launch?"
+    answer: "<strong>Expected and encouraged.</strong> Every MVP changes based on user feedback. We build with clean architecture and clear code specifically so pivoting is fast. Need to add a feature? Modify a flow? Change the user model? All doable without rebuilding. Many clients stay on our monthly subscription ($5-8K/month) after MVP launch specifically for iteration support."
+  - question: "Do you help with the business model and pricing?"
+    answer: "<strong>Strategy, yes. Execution, no.</strong> We'll help you think through pricing validation (how to test willingness to pay). We can implement payment flows (Stripe integration). But we're not business consultants. You need a hypothesis about monetization. We'll help you test it."
+  - question: "What happens if we can't get traction?"
+    answer: "<strong>You'll learn why. That's the point of MVPs.</strong> Sometimes it's the concept (people don't want this). Sometimes it's positioning (wrong audience). Sometimes it's one missing feature. Good MVPs tell you which. The UX is good enough that if people don't use it, you know it's not the interface. That's valuable learning, even if it's not the outcome you wanted."
 ---
 
-## Here's what we're hearing from founders trying to build their first version
+<h2 className="flex items-start gap-3"> <span className="flex items-center gap-3"><span className="icon-container rose"><ExclamationTriangleIcon/></span></span> Here's what we're hearing from founders trying to build their first version</h2>
 
 **No-code tools are too limited for your concept.** Bubble and Airtable are great for simple CRUD apps. But your idea has complex workflows, specific user interactions, or features that no-code platforms just can't handle. You need real code, but hiring developers is $150K+/year.
 
@@ -23,6 +36,7 @@ ctaBlockLabel: "Start Your MVP"
 
 **You know UX matters for validation but you're not a designer.** You're technical enough to understand architecture. Or business-minded enough to understand market fit. But you can't design interfaces that feel intuitive. Every founder says "just ship it" until they watch real users struggle with their MVP.
 
+{/*
 **Example:** A founder building a scheduling tool for distributed teams tried three approaches:
 
 **Calendly-style no-code:** Couldn't handle the team coordination features his concept required.
@@ -32,8 +46,9 @@ ctaBlockLabel: "Start Your MVP"
 **Custom agency quote:** $75K and 4 months. Too expensive and slow for validation.
 
 We built a focused MVP in 5 weeks for $18K. Clear onboarding flow. Intuitive team scheduling. Proper error handling. Launched with 100 beta users, 60% became active. Found product-market fit in 8 weeks because users could actually use the product.
+*/}
 
-## Here's how we solve it
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container emerald"><CheckBadgeIcon/></span></span> Here's how we solve it</h2>
 
 We build MVPs with one goal: help you validate demand as quickly as possible with UX good enough that users can actually test your concept.
 
@@ -57,7 +72,7 @@ You probably have 20 features in your head. We help you identify the 5-7 that ac
 
 MVPs change. We build with that assumption. Clean code, clear structure, easy to modify. When users tell you what they actually need (vs. what you thought), pivoting is fast.
 
-## What's included
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><RocketLaunchIcon/></span></span> What's included</h2>
 
 **Discovery & Validation Planning:**
 - Core hypothesis identification (what are we actually testing?)
@@ -91,7 +106,7 @@ MVPs change. We build with that assumption. Clean code, clear structure, easy to
 - Weeks 2-4: Core development
 - Weeks 5-6: Testing, refinement, and launch
 
-## How it works
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><SwatchIcon/></span></span> How it works</h2>
 
 **Step 1: Define What We're Testing (Week 1)** — We start with your hypothesis, not your feature list. What assumption needs to be true for this to work? Then we map the user journey that tests that assumption. This becomes the scope. Everything else is noise.
 
@@ -101,7 +116,7 @@ MVPs change. We build with that assumption. Clean code, clear structure, easy to
 
 **Step 4: Launch and Learn (Week 6)** — We help you recruit beta users and structure feedback collection. You're not launching to the world. You're launching to 50-100 people who want to help shape the product. Their feedback tells you what to build next.
 
-## Pricing
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
 **$15,000 - $25,000** for most validation-stage MVPs
 
@@ -161,76 +176,7 @@ MVPs change. We build with that assumption. Clean code, clear structure, easy to
 
 Rather build gradually while you're still refining the concept? Our monthly subscription ($5-8K/month) works for MVPs built over 2-3 months with ongoing iteration.
 
-## Example projects
-
-### Team Scheduling Platform
-
-**Problem:** Founder needed scheduling tool for distributed teams. Calendly-style tools didn't handle team coordination. v0 generated version was too confusing for users to figure out.
-
-**What we built:**
-- Clear team creation and invitation flow
-- Intuitive availability setting interface
-- Smart conflict resolution when scheduling
-- Slack integration for notifications
-- Onboarding that taught the product
-
-**Results:**
-- Beta launch: 100 users invited, 60 became active
-- Validation: Found PMF in 8 weeks with clear user feedback
-- Traction: 15% converting to paid after trial
-- Learning: Users wanted async scheduling most, not video calls
-- Tech: Next.js + PostgreSQL + Slack API
-- Timeline: 5-week build
-
-**What happened next:** Raised pre-seed based on early traction, hired us for MVP rebuild phase.
-
----
-
-### Freelancer Collaboration Tool
-
-**Problem:** Designer building tool for freelancers to collaborate with clients. Tried building in Bubble, but real-time collaboration wasn't possible. Needed custom code but wasn't technical.
-
-**What we built:**
-- Client project dashboard
-- File sharing with version control
-- Commenting and feedback system
-- Simple approval workflow
-- Payment request features
-
-**Results:**
-- Beta: 40 freelancer + client pairs testing
-- Validation: 70% said they'd pay, identified pricing willingness
-- Learning: File versioning mattered more than real-time editing
-- Pivot: Simplified based on what users actually used
-- Tech: React + Supabase + Stripe
-- Timeline: 6-week build including payment integration
-
-**What happened next:** Founder joined accelerator, continued building with our monthly subscription.
-
----
-
-### B2B Workflow Automation Tool
-
-**Problem:** Technical founder trying to replace manual processes for operations teams. Concept too complex for no-code. Built prototype with AI tools but sales demos failed because UX was confusing.
-
-**What we built:**
-- Visual workflow builder (drag-and-drop)
-- Template library for common workflows
-- Integration with existing tools (Airtable, Slack)
-- Clear error states and workflow testing
-- Admin analytics dashboard
-
-**Results:**
-- Beta: 5 companies (15-30 people each) testing
-- Validation: 4 of 5 wanted to become paying customers
-- Pricing validation: Willing to pay $500-1500/month
-- Learning: Templates mattered more than customization
-- Tech: Next.js + PostgreSQL + integration APIs
-- Timeline: 6-week build
-
-**What happened next:** Secured first paying customers, raised seed round, hired full engineering team.
-
-## Questions for founders
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container yellow"><LightBulbIcon/></span></span> Questions for founders</h2>
 
 Think through these before we talk. They help us understand if you're ready to build and what to prioritize:
 
@@ -244,54 +190,4 @@ Think through these before we talk. They help us understand if you're ready to b
 
 **What's your timeline and budget?** Most MVPs are $15-25K and take 4-6 weeks. If that doesn't work, let's discuss phasing the work or adjusting scope. Better to build less well than more poorly.
 
-## FAQ
-
-### How is this different from the MVP Rebuild use case?
-
-**Timing and risk.** MVP Rebuild is for founders who already validated demand in no-code tools. You've proven people want this. Now you need proper code.
-
-This use case is earlier: You're still validating IF people want this. You need something good enough to test demand, but you're not proven yet.
-
-Different stages, different approaches.
-
-### Why not just use v0 or Loveable for initial validation?
-
-**You can try.** Many founders do. Here's what we see:
-
-AI generators are great for visual testing ("does this concept look interesting?"). But they're terrible for usage testing ("can people actually accomplish tasks?").
-
-If your validation question is "will people sign up?" AI generators might work.
-
-If your validation question is "will people use this regularly?" you need proper UX, which means intentional design.
-
-### Can't I just hire a freelance developer cheaper?
-
-**Maybe.** But here's the tradeoff:
-
-A generalist developer will build what you ask for. We'll help you figure out what you should ask for. Most founders over-scope MVPs. We specialize in ruthless prioritization.
-
-We also include UX design. Most developers don't. They'll build your feature list, but users won't know how to use it.
-
-If you're confident in your scope and have design skills, a freelancer might work. Most founders aren't and don't.
-
-### What if we need to pivot after launch?
-
-**Expected and encouraged.** Every MVP changes based on user feedback.
-
-We build with clean architecture and clear code specifically so pivoting is fast. Need to add a feature? Modify a flow? Change the user model? All doable without rebuilding.
-
-Many clients stay on our monthly subscription ($5-8K/month) after MVP launch specifically for iteration support.
-
-### Do you help with the business model and pricing?
-
-**Strategy, yes. Execution, no.** We'll help you think through pricing validation (how to test willingness to pay). We can implement payment flows (Stripe integration).
-
-But we're not business consultants. You need a hypothesis about monetization. We'll help you test it.
-
-### What happens if we can't get traction?
-
-**You'll learn why.** That's the point of MVPs.
-
-Sometimes it's the concept (people don't want this). Sometimes it's positioning (wrong audience). Sometimes it's one missing feature.
-
-Good MVPs tell you which. The UX is good enough that if people don't use it, you know it's not the interface. That's valuable learning, even if it's not the outcome you wanted.
+<ProjectFAQ title="Frequently asked questions" />

@@ -11,9 +11,22 @@ timeline: "4-6 weeks"
 ctaBlockTitle: "Stop Apologizing for Your Product's Design"
 ctaBlockText: "Your product delivers value. Your customers stick around because it works. But dated design is costing you deals, hurting satisfaction scores, and making your team embarrassed in demos. Same functionality. Same codebase. Modern design. Better UX."
 ctaBlockLabel: "Start Your Redesign"
+faqs:
+  - question: "How is this different from an MVP Rebuild?"
+    answer: "<strong>Scope and risk.</strong> MVP Rebuild is for products that need new architecture, better tech stack, or can't scale. We're rebuilding the foundation. Product Redesigns keeps your existing foundation. We're improving what users see and interact with. Lower cost, lower risk, faster delivery. If your tech stack is good and your product scales fine, but it just looks/feels bad – this is the right project."
+  - question: "Will this disrupt our existing users?"
+    answer: "<strong>Minimal disruption.</strong> Functionality stays the same. Users might notice things look different, but they can still do everything they could before, just more easily. We can do gradual rollouts, A/B tests, or beta releases to minimize surprise. Most users react positively (\"finally!\" is common feedback)."
+  - question: "Can you work with our existing engineering team?"
+    answer: "<strong>Yes, that's the model.</strong> We don't work in isolation. We collaborate with your engineers. They review our code. They understand the changes because it's their codebase, just improved. Many teams have us work directly in their repo. Others prefer we provide components they integrate. Either works."
+  - question: "What if users hate the new design?"
+    answer: "<strong>Unlikely, but we plan for it.</strong> We test with real users before full launch. We can roll back easily because we're working in your existing codebase, not replacing it. We also document every change and why we made it. Design decisions are data-informed, not just aesthetic preferences."
+  - question: "Do you only do visual design or UX improvements too?"
+    answer: "<strong>Both, always.</strong> Visual design without UX improvements is just lipstick on a pig. UX improvements without visual design don't feel complete. We improve workflows, simplify navigation, fix confusion points, AND make it look modern. The goal is: easier to use and looks professional."
+  - question: "What happens after the 4-6 weeks?"
+    answer: "<strong>First 30 days:</strong> Minor adjustments and bug fixes included. After that: Three options: 1. Your team maintains it (we hand off everything cleanly) 2. Monthly subscription for ongoing improvements ($5-8K/month) 3. Future project-based redesigns when needed. Most products don't need major redesigns for 2-3 years after we're done."
 ---
 
-## Here's what we're hearing from revenue-stage companies
+<h2 className="flex items-start gap-3"> <span className="flex items-center gap-3"><span className="icon-container rose"><ExclamationTriangleIcon/></span></span> Here's what we're hearing from revenue-stage companies</h2>
 
 **Your product works, but it looks like it's from 2018.** You built fast. You found customers. But now when you demo to enterprise prospects, the dated interface makes you look less credible. Competitors with worse products look more professional because they invested in design.
 
@@ -23,6 +36,7 @@ ctaBlockLabel: "Start Your Redesign"
 
 **Users complain about the experience but keep using it anyway.** They don't leave because your functionality is valuable. But NPS scores are lower than they should be. Support tickets about "how do I..." are constant. Users tolerate your product instead of loving it.
 
+{/*
 **Example:** A B2B analytics platform had 150 customers and $2M ARR. Their product worked well and delivered value. But their interface was built by engineers in 2019 and never updated.
 
 Enterprise prospects in demos would say "this looks outdated" or "the UI feels clunky." Existing customers complained about confusing workflows. They were losing deals to prettier competitors with worse analytics.
@@ -30,8 +44,9 @@ Enterprise prospects in demos would say "this looks outdated" or "the UI feels c
 They couldn't justify a full rebuild (too risky, too expensive). But they couldn't ignore the problem. Every sales call meant apologizing for the interface.
 
 We redesigned their core product in 5 weeks. Same React codebase, same functionality. New visual design, streamlined workflows, modern interface patterns. Enterprise deals started closing. Customer satisfaction jumped 40%.
+*/}
 
-## Here's how we solve it
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container emerald"><CheckBadgeIcon/></span></span> Here's how we solve it</h2>
 
 We redesign your product without rebuilding it. Same tech stack. Same functionality. Same database. Just better design and UX.
 
@@ -55,7 +70,7 @@ We analyze your user behavior data, support tickets, and session recordings. We 
 
 We don't flip a switch and change everything overnight. We redesign in phases, test with real users, and deploy gradually. Your team can roll back anything that causes problems. Low risk, measurable improvement.
 
-## What's included
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><RocketLaunchIcon/></span></span> What's included</h2>
 
 **Discovery & Audit:**
 - Product walkthrough and feature inventory
@@ -95,7 +110,7 @@ We don't flip a switch and change everything overnight. We redesign in phases, t
 - Weeks 4-5: Full implementation and testing
 - Week 6: Refinement, testing, and gradual rollout
 
-## How it works
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><SwatchIcon/></span></span> How it works</h2>
 
 **Step 1: Understand What's Broken (Week 1)** — We use your product like a real user. We analyze where people get stuck in your analytics. We read support tickets. We interview your team and customers. We identify the biggest UX problems and outdated design patterns. This becomes the priority list.
 
@@ -105,7 +120,7 @@ We don't flip a switch and change everything overnight. We redesign in phases, t
 
 **Step 4: Test and Roll Out Gradually (Weeks 5-6)** — We test with real users before full launch. We can do beta releases, A/B tests, or gradual rollouts. If something doesn't work, we adjust. We monitor analytics to confirm improvements. Only when you're confident do we roll out to all users.
 
-## Pricing
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
 **$15,000 - $25,000** for most product redesigns
 
@@ -163,76 +178,7 @@ We don't flip a switch and change everything overnight. We redesign in phases, t
 
 Rather improve continuously over time? Our monthly subscription ($5-8K/month) works for gradual redesigns with ongoing feature work. Good for products actively shipping new features.
 
-## Example projects
-
-### B2B Analytics Dashboard Redesign
-
-**Problem:** Analytics platform with 150 customers looked outdated. Interface from 2019 unchanged. Complex data dense screens. Enterprise prospects saying "looks dated" in demos. Customers complained about confusing navigation.
-
-**What we redesigned:**
-- Main dashboard and data visualizations
-- Navigation structure (sidebar to top nav)
-- Report builder interface
-- Settings and configuration screens
-- Empty states and onboarding flow
-
-**Results:**
-- Enterprise close rate: 15% → 28%
-- Customer satisfaction: +40% in NPS
-- Support tickets about navigation: down 60%
-- Time to first report: 20 minutes → 6 minutes
-- Tech: React + Recharts, existing codebase
-- Timeline: 5-week redesign
-
-**What they said:** "Same product, feels 3 years newer. We can finally compete with Tableau on design."
-
----
-
-### Consumer Fintech App Modernization
-
-**Problem:** Personal finance app with 50K users built in 2020. Functional but dated design. Users calling it "clunky" in reviews. iOS and Android versions inconsistent. Losing users to newer, prettier competitors.
-
-**What we redesigned:**
-- Dashboard and account overview
-- Transaction categorization flow
-- Budget setup and management
-- Settings and preferences
-- Dark mode implementation
-
-**Results:**
-- App store rating: 3.8 → 4.6 stars
-- User retention (30-day): +25%
-- Session length: +40% (users exploring more)
-- Design mentioned positively in 80% of new reviews
-- Tech: React Native, existing codebase
-- Timeline: 6-week redesign with mobile testing
-
-**What they said:** "Users finally stopped complaining about the design. Now feedback is about features, which we can build on."
-
----
-
-### Internal Operations Platform Refresh
-
-**Problem:** Operations team using internal tool daily but hated the experience. Built by engineers 4 years ago, never designed. Training new employees took 2 weeks. High error rates due to confusing forms.
-
-**What we redesigned:**
-- Main workflow screens (order processing)
-- Complex multi-step forms
-- Search and filtering interfaces
-- Admin configuration screens
-- Help and documentation integration
-
-**Results:**
-- New employee training: 2 weeks → 3 days
-- Data entry errors: down 70%
-- Task completion time: improved 35%
-- Team satisfaction with tool: "frustrated" → "efficient"
-- Tech: Vue.js internal tool
-- Timeline: 4-week redesign
-
-**What they said:** "Our team actually enjoys using the tool now. Productivity went up measurably."
-
-## Questions for product teams
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container yellow"><LightBulbIcon/></span></span> Questions for product teams</h2>
 
 Before we talk, think through these questions. They help us scope the redesign properly:
 
@@ -248,47 +194,4 @@ Before we talk, think through these questions. They help us scope the redesign p
 
 **Can we do a gradual rollout?** Feature flags, beta testing, phased releases? This reduces risk. If not technically possible, we plan differently.
 
-## FAQ
-
-### How is this different from an MVP Rebuild?
-
-**Scope and risk.** MVP Rebuild is for products that need new architecture, better tech stack, or can't scale. We're rebuilding the foundation.
-
-Product Redesigns keeps your existing foundation. We're improving what users see and interact with. Lower cost, lower risk, faster delivery.
-
-If your tech stack is good and your product scales fine, but it just looks/feels bad – this is the right project.
-
-### Will this disrupt our existing users?
-
-**Minimal disruption.** Functionality stays the same. Users might notice things look different, but they can still do everything they could before, just more easily.
-
-We can do gradual rollouts, A/B tests, or beta releases to minimize surprise. Most users react positively ("finally!" is common feedback).
-
-### Can you work with our existing engineering team?
-
-**Yes, that's the model.** We don't work in isolation. We collaborate with your engineers. They review our code. They understand the changes because it's their codebase, just improved.
-
-Many teams have us work directly in their repo. Others prefer we provide components they integrate. Either works.
-
-### What if users hate the new design?
-
-**Unlikely, but we plan for it.** We test with real users before full launch. We can roll back easily because we're working in your existing codebase, not replacing it.
-
-We also document every change and why we made it. Design decisions are data-informed, not just aesthetic preferences.
-
-### Do you only do visual design or UX improvements too?
-
-**Both, always.** Visual design without UX improvements is just lipstick on a pig. UX improvements without visual design don't feel complete.
-
-We improve workflows, simplify navigation, fix confusion points, AND make it look modern. The goal is: easier to use and looks professional.
-
-### What happens after the 4-6 weeks?
-
-**First 30 days:** Minor adjustments and bug fixes included.
-
-**After that:** Three options:
-1. Your team maintains it (we hand off everything cleanly)
-2. Monthly subscription for ongoing improvements ($5-8K/month)
-3. Future project-based redesigns when needed
-
-Most products don't need major redesigns for 2-3 years after we're done.
+<ProjectFAQ title="Frequently asked questions" />

@@ -11,9 +11,22 @@ timeline: "4-6 weeks"
 ctaBlockTitle: "You validated the concept. Now make it last."
 ctaBlockText: "No-code got you to product-market fit. That's the hard part. Rebuilding with proper architecture is the straightforward part. We take what's proven and make it scalable. 4-6 weeks to feature parity."
 ctaBlockLabel: "Discuss Your Rebuild"
+faqs:
+  - question: "Why not just hire a developer to rebuild it?"
+    answer: "<strong>Risk and timeline.</strong> A generalist developer will take 3-6 months figuring out what we already know from rebuilding no-code MVPs regularly. We know the common patterns, the gotchas, and what works. Complete handoff. We document everything and build with your future team in mind. Clean code, modern frameworks, no shortcuts that create technical debt. Design maintained. Your users are used to the current experience. We keep the good UX decisions and only improve what's necessary. A developer might want to redesign everything (and take longer)."
+  - question: "Can we rebuild gradually instead of all at once?"
+    answer: "Yes. Our monthly subscription ($5-8K/month) works for gradual rebuilds. Good if you need to keep shipping features during the transition. Takes 2-3 months but you don't pause development. Project-based is faster and often cheaper if you can pause new features for 4-6 weeks."
+  - question: "What if users hate the new version?"
+    answer: "We rebuild the user experience they already know. If they loved the Bubble version, they'll love this version. Same flows, same interface patterns, just faster. We also do parallel testing: both versions running simultaneously so users can compare. We only fully migrate after confirming the new version works as expected."
+  - question: "Do you migrate all our data?"
+    answer: "Yes. User accounts, content, transactions, everything. We write migration scripts and test thoroughly. You don't lose any data in the transition. We can also set up a sync period where both platforms run in parallel if needed."
+  - question: "What tech stack do you use?"
+    answer: "Most common: Next.js + PostgreSQL + Vercel. Why: Modern, well-documented, lots of developers understand it. When you hire engineers later, they'll be productive immediately. We adjust based on your needs. Need real-time features? We'll use websockets. Need mobile apps later? We'll architecture with that in mind."
+  - question: "What happens after the 30-day post-launch period?"
+    answer: "You own the code completely. Three options: 1. Handle it yourself - Hire your own developers 2. Monthly subscription - Use our team for ongoing updates ($5-8K/month) 3. Project-based updates - Hire us for specific new features as needed. Most clients hire their own developers 6-12 months after launch. By then the product is stable and they're ready to build in-house teams."
 ---
 
-## Here's what happens after you validate with no-code
+<h2 className="flex items-start gap-3"> <span className="flex items-center gap-3"><span className="icon-container rose"><ExclamationTriangleIcon/></span></span> Here's what happens after you validate with no-code</h2>
 
 **Your no-code tool is hitting performance limits.** Pages load slowly. Workflows time out. Your database is approaching row limits. Users are starting to notice. You're one viral moment away from everything breaking.
 
@@ -23,13 +36,15 @@ ctaBlockLabel: "Discuss Your Rebuild"
 
 **You're patching workarounds on top of workarounds.** The no-code tool wasn't built for your exact use case. You've cobbled together plugins, Zapier chains, and custom code injections. It works, but barely. Every new feature takes twice as long as it should.
 
+{/*
 **Example:** A marketplace founder validated their concept in Bubble. They had 200 active users, $15K MRR, and clear demand. But their app was maxing out Bubble's database capacity. Page loads were 4-5 seconds. They couldn't implement the features users wanted most because Bubble didn't support them.
 
 They were stuck between staying on Bubble (and accepting limitations) or doing a full rebuild (and risking 3-6 months without shipping new features).
 
 We rebuilt their core product in 5 weeks. They launched with feature parity plus the two most-requested features Bubble couldn't handle. Performance improved 10x. Their engineers could finally extend the product themselves.
+*/}
 
-## Here's how we solve it
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container emerald"><CheckBadgeIcon/></span></span> Here's how we solve it</h2>
 
 We don't start from scratch. We rebuild what's already proven to work.
 
@@ -45,7 +60,7 @@ We don't start from scratch. We rebuild what's already proven to work.
 
 **Built for your future engineering team.** Clean, documented code using modern frameworks. When you hire engineers later, they'll thank you. No technical debt, no mystery code, no "why did they build it this way?"
 
-## What's included
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><RocketLaunchIcon/></span></span> What's included</h2>
 
 **Discovery & Audit:**
 - Current product audit (feature inventory and data models)
@@ -74,7 +89,7 @@ We don't start from scratch. We rebuild what's already proven to work.
 - Weeks 3-4: Core features and integrations
 - Weeks 5-6: Testing, migration, and launch
 
-## How it works
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><SwatchIcon/></span></span> How it works</h2>
 
 **Step 1: Product Audit (Week 1)**
 We spend time in your current app as users. We map every feature, every workflow, every integration. We export your data schema. We identify what to keep exactly as-is and what to improve during the rebuild.
@@ -88,9 +103,9 @@ We rebuild features in priority order: most-used first, nice-to-haves last. You'
 **Step 4: Migration and Launch (Weeks 5-6)**
 We migrate your data, test everything with real user scenarios, and launch alongside your no-code version. Users can transition gradually or all at once. We monitor closely and fix issues fast.
 
-## Pricing
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
-**$15,000 - $25,000 for most MVP rebuilds**
+**$15,000 - $25,000** for most MVP rebuilds
 
 What affects pricing:
 
@@ -132,69 +147,7 @@ Custom rebuild:
 
 Rather do this gradually? Our monthly subscription ($5-8K/month) lets you rebuild over 2-3 months while still shipping. Good if you can't pause feature development during a rebuild.
 
-## Example projects
-
-### Marketplace Rebuild (Bubble → Next.js)
-
-**Problem:** Coaching marketplace with 200 users hitting Bubble's performance limits. Page loads taking 4-5 seconds. Couldn't implement requested features (advanced search, real-time messaging).
-
-**What we built:**
-- Next.js app with PostgreSQL database
-- Stripe integration for payments
-- Real-time messaging with proper notifications
-- Advanced search and filtering
-- Admin dashboard for marketplace management
-
-**Results:**
-- Page load: 4-5 seconds → under 1 second
-- New features: Added 3 features Bubble couldn't support
-- Cost: $800/month Bubble → $80/month hosting
-- Tech: Next.js + PostgreSQL + Vercel
-- Timeline: 5-week rebuild, parallel launch
-
----
-
-### SaaS Dashboard Rebuild (Airtable → Custom App)
-
-**Problem:** Analytics dashboard built in Airtable with 50 customers. Interface Builder was slow, couldn't white-label properly, hitting row limits. Customers complaining about performance.
-
-**What we built:**
-- Custom React dashboard
-- White-label capability (customer branding)
-- Better data visualization
-- CSV export and reporting features
-- Role-based access control
-
-**Results:**
-- Interface speed: 3x faster
-- White-labeling: Full brand customization now possible
-- Cost: $500/month Airtable → $120/month hosting
-- Scalability: No more row limits
-- Tech: React + Node.js + PostgreSQL + Railway
-- Timeline: 4-week rebuild
-
----
-
-### Booking Platform Rebuild (Webflow CMS → Full Stack)
-
-**Problem:** Service booking platform using Webflow CMS + Zapier + Airtable. 100 bookings/week. Setup was fragile, broke regularly, couldn't add features customers wanted.
-
-**What we built:**
-- Custom booking platform
-- Calendar integration (Google Calendar sync)
-- Automated email sequences
-- Payment processing with Stripe
-- Customer portal for managing bookings
-
-**Results:**
-- Reliability: Zero unexpected breaks vs. weekly issues
-- Features: Added 5 features the Webflow stack couldn't support
-- Cost: $600/month tools → $150/month hosting
-- Time saved: 10 hours/week on manual fixes
-- Tech: Next.js + PostgreSQL + Stripe + Resend
-- Timeline: 6-week rebuild with gradual migration
-
-## Questions for founders
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container yellow"><LightBulbIcon/></span></span> Questions for founders</h2>
 
 Think through these before scheduling a call. They help us determine if a rebuild makes sense now or if you should wait:
 
@@ -208,48 +161,4 @@ Think through these before scheduling a call. They help us determine if a rebuil
 
 **What's your plan after the rebuild?** Will you hire engineers to extend it? Use our monthly subscription for updates? Just want a stable product you rarely change? This affects how we architect things.
 
-## FAQ
-
-**Why not just hire a developer to rebuild it?**
-
-Risk and timeline. A generalist developer will take 3-6 months figuring out what we already know from rebuilding no-code MVPs regularly. We know the common patterns, the gotchas, and what works.
-
-Complete handoff. We document everything and build with your future team in mind. Clean code, modern frameworks, no shortcuts that create technical debt.
-
-Design maintained. Your users are used to the current experience. We keep the good UX decisions and only improve what's necessary. A developer might want to redesign everything (and take longer).
-
-**Can we rebuild gradually instead of all at once?**
-
-Yes. Our monthly subscription ($5-8K/month) works for gradual rebuilds. Good if you need to keep shipping features during the transition. Takes 2-3 months but you don't pause development.
-
-Project-based is faster and often cheaper if you can pause new features for 4-6 weeks.
-
-**What if users hate the new version?**
-
-We rebuild the user experience they already know. If they loved the Bubble version, they'll love this version. Same flows, same interface patterns, just faster.
-
-We also do parallel testing: both versions running simultaneously so users can compare. We only fully migrate after confirming the new version works as expected.
-
-**Do you migrate all our data?**
-
-Yes. User accounts, content, transactions, everything. We write migration scripts and test thoroughly. You don't lose any data in the transition.
-
-We can also set up a sync period where both platforms run in parallel if needed.
-
-**What tech stack do you use?**
-
-Most common: Next.js + PostgreSQL + Vercel or Railway
-
-Why: Modern, well-documented, lots of developers understand it. When you hire engineers later, they'll be productive immediately.
-
-We adjust based on your needs. Need real-time features? We'll use websockets. Need mobile apps later? We'll architecture with that in mind.
-
-**What happens after the 30-day post-launch period?**
-
-You own the code completely. Three options:
-
-1. Handle it yourself - Hire your own developers
-2. Monthly subscription - Use our team for ongoing updates ($5-8K/month)
-3. Project-based updates - Hire us for specific new features as needed
-
-Most clients hire their own developers 6-12 months after launch. By then the product is stable and they're ready to build in-house teams.
+<ProjectFAQ title="Frequently asked questions" />

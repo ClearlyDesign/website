@@ -294,9 +294,6 @@ export default function ProjectsIndex() {
         <div className="px-6 pt-12 pb-8">
           <div className="row-inner">
             <div className="flex flex-col md:flex-row items-start md:items-center md:justify-center gap-6">
-              <div className="flex md:items-center gap-2 text-sm text-gray-600">
-                <span className="font-medium">I want to...</span>
-              </div>
               <div className="flex flex-wrap gap-2">
                 {Object.keys(filters).map((filterName) => (
                   <button

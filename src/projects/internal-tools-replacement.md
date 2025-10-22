@@ -11,9 +11,22 @@ timeline: "3-4 weeks"
 ctaBlockTitle: "Stop bleeding money on per-seat pricing"
 ctaBlockText: "Your SaaS stack costs more every time you hire someone. Custom tools cost the same whether you have 5 users or 50. Most projects pay for themselves in 6-12 months of saved subscriptions."
 ctaBlockLabel: "Discuss Your Tool"
+faqs:
+  - question: "How is this different from hiring a developer?"
+    answer: "<strong>Speed and focus.</strong> We've built dozens of internal tools. We know the common patterns, the edge cases, and what actually works. A generalist developer will spend weeks figuring out what we already know. Design included. You're not just getting code. You're getting an interface your team will actually enjoy using. No developer UI that only makes sense to engineers. Complete handoff. We document everything and hand over clean, maintainable code. You're not dependent on us after launch."
+  - question: "What if our needs change after you build it?"
+    answer: "<strong>You own the code,</strong> so you can modify it anytime. Hire your own developer, use our monthly subscription for updates, or just leave it as-is. Many clients start with a fixed project, then use our monthly subscription for ongoing improvements. Totally flexible."
+  - question: "Can you integrate with [specific tool]?"
+    answer: "<strong>Probably yes.</strong> If it has an API or webhook support, we can connect to it. Common integrations: Airtable, Google Sheets, Shopify, Stripe, Slack, most CRMs, most project management tools. If it doesn't have an API, we can usually work around it with Zapier or Make as a bridge."
+  - question: "Do you host it or do we?"
+    answer: "<strong>Your choice.</strong> We can deploy to Vercel, Netlify, or your own hosting. Most clients use Vercel (free for most internal tools) or we can set up a simple DigitalOcean server. You own the hosting account either way. We're never a middleman."
+  - question: "What if we need changes after launch?"
+    answer: "First 30 days: Minor bug fixes and tweaks included. After that: You can handle changes yourself (you own the code), hire us on monthly subscription ($5-8K/month), or pay for project-based updates. Most clients don't need changes for 6-12 months. These tools are built to be stable."
+  - question: "Is this actually cheaper than SaaS tools?"
+    answer: "<strong>Run the math.</strong> If you're paying $2000/month across multiple tools for one workflow, a $15K custom tool pays for itself in 7-8 months. Every month after that is pure savings. Plus, you're not locked into price increases, seat limits, or feature changes you didn't ask for."
 ---
 
-## Here's what we're hearing from operations teams and agencies
+<h2 className="flex items-start gap-3"> <span className="flex items-center gap-3"><span className="icon-container rose"><ExclamationTriangleIcon/></span></span> Here's what we're hearing from operations teams and agencies</h2>
 
 **You're paying $50-200 per seat for tools that solve 20% of your workflow.** The other 80% still lives in spreadsheets, Slack threads, and manual processes. You've built workarounds on top of workarounds.
 
@@ -23,11 +36,13 @@ ctaBlockLabel: "Discuss Your Tool"
 
 **Adding team members means exponential cost increases.** Your tools charge per seat. Hire three people and your monthly SaaS bill jumps $1500. Scale your agency and watch your margins shrink.
 
+{/*
 **Example:** A remote hiring agency was paying $180/month for an ATS, $300/month for scheduling tools, and $150/month for a candidate portal. Their recruiters still spent 4 hours per role manually screening applications because the tools didn't talk to each other.
 
 We built them a custom candidate portal with integrated screening. Total cost: $14K. Payback period: 8 months. Screening time: down to 45 minutes per role.
+*/}
 
-## Here's how we solve it
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container emerald"><CheckBadgeIcon/></span></span> Here's how we solve it</h2>
 
 We build custom internal tools as web applications. No app store. No per-seat pricing. Just software that fits your exact workflow and runs in any browser.
 
@@ -41,7 +56,7 @@ We build custom internal tools as web applications. No app store. No per-seat pr
 
 **Pays for itself in saved SaaS costs.** Most projects cost $12-20K. If you're paying $2000/month across multiple tools for a workflow, that's a 6-10 month payback. After that, it's pure savings.
 
-## What's included
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><RocketLaunchIcon/></span></span> What's included</h2>
 
 **Discovery & Planning:**
 - Workflow mapping session (we document your current process)
@@ -66,7 +81,7 @@ We build custom internal tools as web applications. No app store. No per-seat pr
 - Weeks 2-3: Development and integration
 - Week 4: Testing, refinements, and handoff
 
-## How it works
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><SwatchIcon/></span></span> How it works</h2>
 
 **Step 1: Workflow Audit (Week 1)**
 We spend 2-3 hours with your team understanding the current process. What tools are you using? Where do things break down? What takes the most time? We map the entire workflow and identify the highest-impact improvements.
@@ -80,9 +95,9 @@ Your team uses the tool in a staging environment. We fix bugs, adjust workflows,
 **Step 4: Launch and Handoff (End of Week 4)**
 We deploy to production, hand over the complete codebase, and document everything. You own it from day one. We can stick around for ongoing support if needed, but you're not locked into anything.
 
-## Pricing
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
-**$12-20K for most internal tools**
+**$12,000 - $20,000** for most internal tools
 
 What affects pricing:
 
@@ -109,63 +124,7 @@ Savings year 2+: $18-36K annually
 
 Not ready to commit to a project? Our monthly design subscription includes development work. $5-8K/month, pause or cancel anytime. Good for ongoing iteration rather than fixed-scope builds.
 
-## Example projects
-
-### Candidate Screening Portal
-
-**Problem:** Remote hiring agency spending 4 hours per role manually reviewing applications across multiple tools. ATS didn't integrate with their workflow.
-
-**What we built:**
-- Custom application portal with structured questions
-- Auto-scoring system based on must-have criteria
-- Integrated with Airtable for candidate tracking
-- Slack notifications for qualified candidates
-
-**Results:**
-- Screening time: 4 hours → 45 minutes per role
-- Replaced: $180/month ATS + $150/month portal
-- Tech: Webflow + Airtable integration
-- Timeline: 2-week build, launched week 3
-
----
-
-### Client Onboarding Dashboard
-
-**Problem:** Marketing agency using 6 different tools for client onboarding. New clients confused about what information to provide. Team spending hours chasing missing details.
-
-**What we built:**
-- Custom onboarding portal for new clients
-- Checklist with file uploads and form submissions
-- Auto-reminders for incomplete items
-- Integration with project management tool
-
-**Results:**
-- Onboarding time: 2 weeks → 3 days average
-- Replaced: $200/month form tool + $300/month project portal
-- Clients rated experience 4.8/5 vs. 3.2/5 previously
-- Tech: Next.js + Google Sheets backend
-- Timeline: 3-week build
-
----
-
-### Inventory Management System
-
-**Problem:** E-commerce brand tracking inventory across spreadsheets. Manual updates causing stockouts and overselling. No way to forecast reorder points.
-
-**What we built:**
-- Real-time inventory dashboard
-- Low-stock alerts via email and Slack
-- Reorder point calculations based on sales velocity
-- Integration with Shopify and supplier systems
-
-**Results:**
-- Stockouts: down 80%
-- Time spent on inventory: 10 hours/week → 1 hour/week
-- Replaced: $400/month inventory software that didn't integrate
-- Tech: React app + PostgreSQL + Shopify API
-- Timeline: 4-week build
-
-## Questions for operations teams
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container yellow"><LightBulbIcon/></span></span> Questions for teams</h2>
 
 Before scheduling a call, think through these questions. They'll help us determine if a custom tool is the right fit:
 
@@ -179,44 +138,4 @@ Before scheduling a call, think through these questions. They'll help us determi
 
 **What's your budget and timeline?** Most projects are $12-20K and take 3-4 weeks. If you need something faster or have a smaller budget, let's talk about phasing the work.
 
-## FAQ
-
-**How is this different from hiring a developer?**
-
-Speed and focus. We've built dozens of internal tools. We know the common patterns, the edge cases, and what actually works. A generalist developer will spend weeks figuring out what we already know.
-
-Design included. You're not just getting code. You're getting an interface your team will actually enjoy using. No developer UI that only makes sense to engineers.
-
-Complete handoff. We document everything and hand over clean, maintainable code. You're not dependent on us after launch.
-
-**What if our needs change after you build it?**
-
-You own the code, so you can modify it anytime. Hire your own developer, use our monthly subscription for updates, or just leave it as-is.
-
-Many clients start with a fixed project, then use our monthly subscription for ongoing improvements. Totally flexible.
-
-**Can you integrate with [specific tool]?**
-
-Probably yes. If it has an API or webhook support, we can connect to it. Common integrations: Airtable, Google Sheets, Shopify, Stripe, Slack, most CRMs, most project management tools.
-
-If it doesn't have an API, we can usually work around it with Zapier or Make as a bridge.
-
-**Do you host it or do we?**
-
-Your choice. We can deploy to Vercel, Netlify, or your own hosting. Most clients use Vercel (free for most internal tools) or we can set up a simple DigitalOcean server.
-
-You own the hosting account either way. We're never a middleman.
-
-**What if we need changes after launch?**
-
-First 30 days: Minor bug fixes and tweaks included.
-
-After that: You can handle changes yourself (you own the code), hire us on monthly subscription ($5-8K/month), or pay for project-based updates.
-
-Most clients don't need changes for 6-12 months. These tools are built to be stable.
-
-**Is this actually cheaper than SaaS tools?**
-
-Run the math. If you're paying $2000/month across multiple tools for one workflow, a $15K custom tool pays for itself in 7-8 months. Every month after that is pure savings.
-
-Plus, you're not locked into price increases, seat limits, or feature changes you didn't ask for.
+<ProjectFAQ title="Frequently asked questions" />
