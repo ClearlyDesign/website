@@ -137,19 +137,19 @@ const projects = [
   },
   {
     slug: "website-redesigns",
-    title: "Website Redesigns",
+    title: "Website Rebuilds",
     description:
-      "Redesign your marketing site with modern design and better conversion. For companies with revenue but outdated sites losing deals.",
-    pricing: "$10-18K",
-    timeline: "2-4 weeks",
+      "Rebuild your marketing site on the right platform. We help you choose between Framer (no-code) or Next.js (custom), then rebuild from scratch.",
+    pricing: "$8-12K",
+    timeline: "3-6 weeks",
     icon: ArrowPathIcon,
     color: "teal",
     stage: "Growth",
-    idealFor: ["Revenue-stage companies", "Outdated sites", "Poor conversion"],
+    idealFor: ["Outdated tech stack", "Hard to maintain", "Platform migration"],
     category: "Marketing",
-    outcomes: ["Improve conversion", "Win deals", "Look credible"],
-    includes: ["Modern design", "Conversion optimization", "Your stack", "SEO preserved"],
-    bestFor: "Working site that looks dated or doesn't convert",
+    outcomes: ["Modern platform", "Easy updates", "Better conversion"],
+    includes: ["Platform strategy", "Custom design", "Full rebuild", "Team training"],
+    bestFor: "Outdated site needing modern foundation",
   },
 ]
 

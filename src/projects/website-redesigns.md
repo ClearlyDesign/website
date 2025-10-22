@@ -1,195 +1,272 @@
 ---
-title: "Your Website Works. Now Make It Convert."
-subtitle: "Redesign your marketing site with modern design and better conversion. For companies with revenue but outdated sites losing deals."
-metaTitle: "Website Redesign Services - Modern Marketing Sites That Convert | Clearly Design"
-metaDescription: "Redesign your marketing website with modern design and conversion optimization. 2-4 weeks, $10-18K. For revenue-stage companies."
-ctaPrimary: "Start Your Redesign"
+title: "Time to Rebuild Your Website the Right Way"
+subtitle: "Modern redesign + platform strategy. We help you choose between no-code (Framer) or custom stack (Next.js), then rebuild your marketing site in 3-6 weeks."
+metaTitle: "Website Redesign & Rebuild Services - Framer or Next.js | Clearly Design"
+metaDescription: "Need a website redesign? We help you choose the right platform (Framer or Next.js) and rebuild your marketing site. 3-6 weeks, $8-12K."
+ctaPrimary: "Plan Your Rebuild"
 ctaSecondary: "See Pricing"
-trustElement: "Modern design • Conversion-focused • Built in your stack"
-pricing: "$10-18K"
-timeline: "2-4 weeks"
-ctaBlockTitle: "Stop Losing Deals to Better-Looking Competitors"
-ctaBlockText: "Your product is solid. Your customers love it. But your website looks dated and prospects judge you in 3 seconds. Modern design, better conversion, same stack. No migration headaches."
-ctaBlockLabel: "Start Your Redesign"
+trustElement: "Platform strategy • Modern design • Built right"
+pricing: "$8-12K"
+timeline: "3-6 weeks"
+ctaBlockTitle: "Stop Patching. Time to Rebuild."
+ctaBlockText: "Your website is showing its age. Not just design, the whole foundation. We help you choose the right platform (no-code or custom) and rebuild from scratch. Modern, fast, easier to maintain."
+ctaBlockLabel: "Get Platform Guidance"
 faqs:
-  - question: "Will this hurt our SEO?"
-    answer: "<strong>No, if done correctly.</strong> We preserve URLs, maintain meta tags, keep your site structure. We actually often improve SEO through better page speed, clearer content hierarchy, and mobile optimization. We monitor rankings throughout and after launch."
-  - question: "Can we do a gradual rollout instead of changing everything at once?"
-    answer: "<strong>Absolutely.</strong> We can launch new design to new traffic only (via feature flag), do A/B tests, or roll out page by page. Whatever makes you comfortable. Most clients do homepage first, then other pages over 2-3 weeks."
-  - question: "What if we want to change platforms during the redesign?"
-    answer: "Different project. Platform migrations add risk, cost, and time. If you need to migrate (Webflow to Next.js, WordPress to Webflow, etc.), that's a separate conversation. We recommend redesigning first, then migrating later if needed."
-  - question: "Do you help with copywriting?"
-    answer: "<strong>Yes, with guidance.</strong> We're not full copywriters, but we help structure messaging, clarify value props, and write conversion-focused copy. If you need extensive writing (blog posts, long-form content), we partner with copywriters or you can hire separately."
-  - question: "How involved do we need to be?"
-    answer: "<strong>Moderate involvement.</strong> Initial kickoff (2-3 hours). Mid-point design review (1-2 hours). Pre-launch review (1 hour). Plus async feedback on designs. Most clients spend 8-10 hours total across the project."
-  - question: "What happens after the 30-day post-launch period?"
-    answer: "Three options: 1. You maintain it yourself (we hand off everything cleanly) 2. Retainer for small updates ($1-2K/month) 3. Monthly subscription for ongoing optimization ($5-8K/month). Most sites don't need major work after a good redesign. Small tweaks here and there, maybe optimization based on data."
-  - question: "Can you migrate our content from the old design?"
-    answer: "<strong>Included for structured content.</strong> If your content is in a CMS or markdown files, migration is straightforward. If it's hardcoded across 50 HTML files, that's a different story (and adds time/cost)."
-  - question: "Do you provide training for our team?"
-    answer: "<strong>Yes, especially for CMS-based sites.</strong> If you're on Webflow or WordPress, we show your team how to make updates, add pages, etc. For code-based sites (Next.js), we provide documentation. 1-hour training session included."
+  - question: "How do you help us choose between Framer and Next.js?"
+    answer: "<strong>We walk through your specific needs.</strong> We ask about your team structure, technical requirements, maintenance preferences, and future plans. Then we explain the tradeoffs honestly. We're not pushing you toward one or the other - we build in both regularly and care about the right fit."
+  - question: "Can we switch platforms later if we choose wrong?"
+    answer: "<strong>Yes, but it's work.</strong> If you start on Framer and later need Next.js (or vice versa), it's a migration project. Not impossible, but adds cost and time. That's why we spend time on platform selection upfront. Better to choose right the first time."
+  - question: "Will rebuilding hurt our SEO?"
+    answer: "<strong>No, if done correctly.</strong> We preserve URLs (or set up proper redirects), maintain meta tags, and keep site structure. Modern platforms (Framer and Next.js) are both great for SEO. We often improve SEO through better page speed and mobile optimization. We monitor rankings throughout and after launch."
+  - question: "What if our current site is on WordPress or Webflow?"
+    answer: "<strong>We rebuild on Framer or Next.js.</strong> We don't redesign in WordPress or Webflow. If your current site is on those platforms, we're migrating you to something better. That's the whole point - getting you onto a modern foundation."
+  - question: "Do you write the copy or do we need to provide it?"
+    answer: "<strong>We can help, but we're not copywriters.</strong> We provide messaging guidance, structure content, and write conversion-focused copy for CTAs and headlines. If you need extensive writing (full page copy, blog content), you'll either provide it or hire a copywriter. We can recommend people."
+  - question: "How involved do we need to be during the project?"
+    answer: "<strong>Moderate involvement.</strong> Initial kickoff (2-3 hours). Mid-point design review (1-2 hours). Pre-launch review (1 hour). Plus async feedback on designs. Most clients spend 8-10 hours total across the 3-6 week project."
+  - question: "Can we update the site ourselves after launch?"
+    answer: "<strong>Depends on platform choice.</strong> Framer sites: Yes, your marketing team can edit content, add pages, make updates (we provide training). Next.js sites: Requires developer for most changes (we provide documentation). This is one reason platform choice matters."
+  - question: "What happens after the 30-day post-launch support?"
+    answer: "<strong>Three options:</strong> 1) You maintain it yourself (we hand off everything cleanly) 2) Small retainer for occasional updates ($1-2K/month) 3) Ongoing subscription for continuous optimization ($5-8K/month). Most sites don't need much after a solid rebuild. Framer sites especially are self-sufficient."
 ---
 
-<h2 className="flex items-start gap-3"> <span className="flex items-center gap-3"><span className="icon-container rose"><ExclamationTriangleIcon/></span></span> Here's what we're hearing from revenue-stage companies</h2>
+<h2 className="flex items-start gap-3"> <span className="flex items-center gap-3"><span className="icon-container rose"><ExclamationTriangleIcon/></span></span> Signs you need a full rebuild, not just a facelift</h2>
 
-**Your website looks like it's from 2019 and prospects notice.** You're getting traffic. You're getting demo requests. But you hear "your site looks dated" in sales calls. Competitors with worse products look more credible because they invested in design.
+**Your site is held together with patches and workarounds.** Adding new pages is painful. Making updates takes longer than it should. Your CMS is clunky or your codebase is messy. You're avoiding changes because the site is fragile.
 
-**You built fast to get to market, and it shows.** Launch was about speed, not polish. That made sense then. But now your site is costing you deals. Enterprise buyers expect professional design. Your DIY site signals "small company, might not be around."
+**The tech stack is outdated and limiting you.** Built on WordPress in 2018? Custom PHP stack your founder wrote? Old version of a framework you can't upgrade? The technology is actively holding you back from what you want to do.
 
-**Your messaging has evolved but your site hasn't.** You've learned what resonates. You've refined your positioning. But your site still has the generic messaging from year one. New visitors don't understand what you do or why it matters.
+**You're paying too much to host and maintain it.** Whether it's expensive WordPress hosting with plugins breaking constantly, or custom infrastructure that requires developer time every month. The operating costs don't match what modern platforms offer.
 
-**Conversion rates are lower than they should be.** You're driving traffic through content, ads, or referrals. But too many visitors bounce. Forms are confusing. Value propositions are buried. CTAs don't stand out. Small fixes could double your conversion rate.
+**Mobile experience is an afterthought.** Site wasn't built mobile-first. Responsive design is broken. Google is penalizing your search rankings. More than half your traffic is mobile but the experience is terrible.
 
-{/* **Example:** A B2B SaaS company with $3M ARR and 400 customers had a site built by their founding engineer in 2020. Functional, but dated. Generic hero sections. Unclear value prop. Mobile experience was broken.
+**You want in-house editing but don't have it.** Every content change requires a developer. Marketing can't move fast. Landing pages take weeks to ship. You want your team to own updates without technical dependencies.
 
-Enterprise prospects would visit the site and then ask in sales calls "are you guys still in business?" Existing customers loved the product, but the site made them look unprofessional.
+**The design looks dated and conversion is suffering.** First impressions matter. Your site signals "this company hasn't invested in themselves." Modern prospects expect modern design. You're losing credibility before anyone reads your copy.
 
-Full rebuild quotes were $40-60K and 3 months. Too expensive and risky for a site redesign. They couldn't justify it.
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container emerald"><CheckBadgeIcon/></span></span> How we rebuild websites (the right way)</h2>
 
-We redesigned their site in 3 weeks for $14K. Same Next.js stack, modern design, clearer messaging. Enterprise deal close rate went from 12% to 23%. Site visitors booking demos increased 40%. */}
+We rebuild marketing websites on modern platforms. Not bandaid fixes. Full rearchitecture from the ground up. First, we help you choose the right platform. Then we build it properly.
 
-<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container emerald"><CheckBadgeIcon/></span></span> Here's how we solve it</h2>
+### We help you choose: No-code or custom stack
 
-We redesign marketing sites for revenue-stage companies. Modern design, conversion optimization, built in your existing stack. No migration, no downtime, no risk.
+**Most companies guess at platform choice.** They pick based on what they know, not what's right for their needs. We walk you through the decision with real tradeoffs.
 
-**Not a rebuild.** We work within your current framework (Next.js, WordPress, Webflow, whatever you have). Same hosting, same CMS, same deployment process. Just better design and better conversion.
+**Two paths we specialize in:**
+1. **Framer** (No-code platform) - Visual builder, marketing team owns updates, fast to launch
+2. **Next.js** (Custom stack) - Code-based, unlimited flexibility, scales with complex needs
 
-**Not just visual polish.** We improve messaging, restructure information architecture, and optimize for conversion. It's design + UX + copywriting guidance. Your site becomes a revenue driver, not just a brochure.
+We build in both. The choice depends on your team, budget, technical needs, and how you want to maintain the site long-term.
 
-### Work in your existing stack
+<div className="overflow-x-auto my-8">
+  <table className="w-full border-collapse">
+    <thead>
+      <tr className="border-b-2 border-gray-200">
+        <th className="text-left py-3 px-4 font-semibold">Factor</th>
+        <th className="text-left py-3 px-4 font-semibold">Framer (No-code)</th>
+        <th className="text-left py-3 px-4 font-semibold">Next.js (Custom)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="border-b border-gray-100">
+        <td className="py-3 px-4 font-medium">Hosting Cost</td>
+        <td className="py-3 px-4">$15-45/month</td>
+        <td className="py-3 px-4">$0-20/month (Vercel free tier)</td>
+      </tr>
+      <tr className="border-b border-gray-100">
+        <td className="py-3 px-4 font-medium">Ease of Editing</td>
+        <td className="py-3 px-4"><strong>Marketing team can edit</strong></td>
+        <td className="py-3 px-4">Requires developer for most changes</td>
+      </tr>
+      <tr className="border-b border-gray-100">
+        <td className="py-3 px-4 font-medium">Setup Time</td>
+        <td className="py-3 px-4">3-4 weeks</td>
+        <td className="py-3 px-4">4-6 weeks</td>
+      </tr>
+      <tr className="border-b border-gray-100">
+        <td className="py-3 px-4 font-medium">Performance</td>
+        <td className="py-3 px-4">Fast (Framer optimizes automatically)</td>
+        <td className="py-3 px-4"><strong>Fastest</strong> (full control over optimization)</td>
+      </tr>
+      <tr className="border-b border-gray-100">
+        <td className="py-3 px-4 font-medium">Custom Features</td>
+        <td className="py-3 px-4">Limited to platform capabilities</td>
+        <td className="py-3 px-4"><strong>Unlimited</strong> (build anything)</td>
+      </tr>
+      <tr className="border-b border-gray-100">
+        <td className="py-3 px-4 font-medium">Integrations</td>
+        <td className="py-3 px-4">Common tools (Zapier, Segment, etc.)</td>
+        <td className="py-3 px-4"><strong>Any API</strong> (full flexibility)</td>
+      </tr>
+      <tr className="border-b border-gray-100">
+        <td className="py-3 px-4 font-medium">SEO Control</td>
+        <td className="py-3 px-4">Good (built-in tools)</td>
+        <td className="py-3 px-4"><strong>Complete control</strong></td>
+      </tr>
+      <tr className="border-b border-gray-100">
+        <td className="py-3 px-4 font-medium">Maintenance</td>
+        <td className="py-3 px-4"><strong>Minimal</strong> (platform handles updates)</td>
+        <td className="py-3 px-4">Requires occasional dev work</td>
+      </tr>
+      <tr className="border-b border-gray-100">
+        <td className="py-3 px-4 font-medium">Cost to Build</td>
+        <td className="py-3 px-4">$8-10K</td>
+        <td className="py-3 px-4">$10-12K</td>
+      </tr>
+      <tr>
+        <td className="py-3 px-4 font-medium"><strong>Best For</strong></td>
+        <td className="py-3 px-4"><strong>Marketing sites</strong> where team wants control</td>
+        <td className="py-3 px-4"><strong>Technical products</strong> needing custom features</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-We don't force you to migrate platforms. You're on WordPress? We redesign in WordPress. Next.js? We build there. Webflow? We work in Webflow. No platform risk, no URL migration nightmares.
+**Our recommendation process:**
+- Understand your team structure (do you have developers on staff?)
+- Review your technical requirements (complex integrations? Dynamic content?)
+- Consider your maintenance preference (who will update the site?)
+- Map future needs (what might you need in 12 months?)
 
-### Conversion optimization, not just aesthetics
+Then we tell you honestly which platform makes sense. No steering you toward what's easier for us. We build in both regularly.
 
-Pretty sites that don't convert are useless. We study your analytics, identify drop-off points, and redesign to remove friction. Better CTAs, clearer value props, streamlined navigation. Design decisions driven by conversion goals.
+### Modern design and conversion focus
 
-### Content and messaging guidance
+Regardless of platform, we design for conversion. Modern visual design, clear messaging, optimized user flows. Your site should look credible and drive action.
 
-Most sites fail because messaging is unclear, not because design is ugly. We help you clarify your positioning, restructure content, and write copy that resonates. (Or work with your existing content if it's already strong.)
+### Built from scratch, not templates
 
-### Fast delivery, minimal disruption
-
-Most agencies quote 2-3 months for website redesigns. We deliver in 2-4 weeks. No endless revision cycles. No scope creep. Tight process, clear milestones, predictable delivery.
+We don't use templates. Every site is designed specifically for your company, your audience, your goals. Custom design system, custom components, custom everything.
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><RocketLaunchIcon/></span></span> What's included</h2>
 
-**Discovery & Strategy:**
-- Site audit (what's working, what's not)
-- Analytics review (where visitors drop off)
-- Competitor analysis (what design standards exist in your space)
-- Messaging workshop (clarify positioning and value props)
-- Conversion funnel mapping (identify optimization opportunities)
-- Content inventory and IA restructure
+**Platform Strategy Session:**
+- Review your current tech stack and pain points
+- Map your team structure and capabilities
+- Identify technical requirements and integrations
+- Walk through Framer vs Next.js tradeoffs
+- Make platform recommendation with reasoning
+- Document decision rationale for your team
 
-**Design & Development:**
-- Modern visual design system
-- Homepage redesign (hero, social proof, features, CTA flow)
-- Core page redesigns (product, pricing, about, contact, etc.)
-- Mobile-responsive development
-- Conversion-optimized CTAs and forms
-- SEO maintenance (preserve rankings)
+**Site Architecture & Design:**
+- Information architecture planning
+- Content strategy and messaging framework
+- Modern visual design system (colors, typography, components)
+- Homepage design (hero, social proof, value prop, CTAs)
+- Core page designs (product, pricing, about, contact, etc.)
+- Mobile-responsive layouts
+- Conversion optimization (clear CTAs, trust signals, friction reduction)
 
-**Optimization:**
-- Page speed improvements
-- Analytics setup/refinement
-- A/B testing recommendations
-- Lead capture optimization
-- Trust signal placement (logos, testimonials, case studies)
+**Development & Build:**
+- Build in chosen platform (Framer or Next.js)
+- Custom components and interactions
+- CMS setup (if using Framer CMS or Next.js content system)
+- Form integrations (contact forms, newsletter signups)
+- Analytics implementation (GA4, tracking pixels, etc.)
+- SEO optimization (meta tags, structured data, sitemap)
 
-**Delivery:**
-- Staged rollout or full launch (your choice)
+**Launch & Handoff:**
+- Pre-launch QA across devices and browsers
+- Performance optimization
+- DNS and domain setup
+- Gradual or full launch (your choice)
 - Documentation for your team
-- 30 days of post-launch tweaks
-- Training if needed (for Webflow or CMS-based sites)
+- Training session (especially for Framer sites)
+- 30 days of post-launch support for tweaks
 
 **Timeline:**
-- Week 1: Discovery, messaging, design direction
-- Weeks 2-3: Design implementation and development
-- Week 4: Testing, refinement, and launch
+- Week 1: Discovery, platform selection, information architecture
+- Weeks 2-3: Design system and page designs
+- Weeks 3-5: Development and build
+- Week 6: QA, refinement, and launch
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><SwatchIcon/></span></span> How it works</h2>
 
-**Step 1: Audit What's Not Working (Week 1)** — We analyze your site with fresh eyes. Where do visitors drop off? What messaging is unclear? What design patterns hurt credibility? We use your analytics, heatmaps, and session recordings. Then we map out exactly what needs to change and why.
+**Step 1: Choose Your Platform (Week 1)** — We audit your current site, understand your team and technical needs, then walk you through the Framer vs Next.js decision. We explain tradeoffs honestly. No pushing you toward one or the other. The goal is the right platform for your specific situation, not what's easiest for us.
 
-**Step 2: Design Modern, Conversion-Focused Pages (Weeks 1-2)** — We redesign your core pages with two goals: look credible, convert better. Modern design patterns your audience expects. Clear value props that explain what you do. CTAs that stand out. Social proof that builds trust. You review mockups before we build anything.
+**Step 2: Design Everything from Scratch (Weeks 2-3)** — We design your new site with modern standards and conversion focus. Custom visual design, not templates. Information architecture that makes sense. Messaging that's clear. You review designs before we build anything. Feedback rounds until it's right.
 
-**Step 3: Build in Your Existing Stack (Weeks 2-3)** — We implement the redesign in your current platform. No migration risk. Your URLs stay the same. Your SEO stays intact. Your team knows how to maintain it because it's the same stack, just better.
+**Step 3: Build on Your Chosen Platform (Weeks 3-5)** — We build in Framer or Next.js based on the platform decision. Clean code or clean Framer structure. Custom components. Proper SEO. Fast performance. Mobile-first responsive design. Integrations with your tools. Everything built properly from the start.
 
-**Step 4: Test and Launch with Confidence (Week 4)** — We test on real devices, real browsers, real user scenarios. We can do staged rollouts (new traffic only, then all traffic) or flip the switch all at once. We monitor analytics post-launch and make adjustments. You get 30 days of refinement included.
+**Step 4: Launch and Hand Off (Week 6)** — We test everything thoroughly, optimize performance, set up hosting and domains, then launch. For Framer sites, we train your team to make updates. For Next.js sites, we provide documentation. You get 30 days of post-launch support for refinements and tweaks.
 
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
-**$10,000 - $18,000** for most marketing site redesigns
+**$8,000 - $12,000** for most marketing site rebuilds
 
 ### What affects pricing
 
-**Lower end ($10-12K):**
-- 5-7 core pages
-- Working in existing design system
-- You provide copy, we structure it
-- Standard Webflow or WordPress site
+**$8-9K (Framer, simpler sites):**
+- 5-8 core pages
 - Straightforward information architecture
+- You provide copy, we structure it
+- Standard integrations (forms, analytics, CRM)
+- Minimal custom interactions
 
-**Mid-range ($12-15K):**
+**$9-11K (Framer or Next.js, typical projects):**
 - 8-12 core pages
-- Creating new design system from scratch
-- Some copywriting and messaging help
-- Custom React/Next.js implementation
-- Form and integration optimization
+- Custom design system from scratch
+- Messaging and copywriting guidance
+- CMS setup (Framer CMS or Next.js content layer)
+- Custom animations and interactions
+- Standard integrations
 
-**Higher end ($15-18K):**
+**$11-12K (Next.js, complex sites):**
 - 12-15+ pages
 - Complex information architecture
-- Full messaging and copywriting overhaul
-- Multiple user types/personas to address
-- Advanced integrations (CRM, marketing automation)
-- Extensive conversion optimization work
+- Multiple user types or use cases to address
+- Advanced integrations (custom APIs, complex CRM flows)
+- Dynamic content or personalization
+- Extensive conversion optimization
 
-### Compare to alternatives
+### Platform choice affects cost
 
-**DIY with Webflow templates:**
-- Cost: $500-2K
-- Time: 2-4 weeks (learning curve)
-- Result: Looks like a template, doesn't convert
-- Best for: Pre-revenue companies
+**Framer builds:** Usually faster to build (visual interface), slightly lower cost. Best when marketing team wants editing control and technical needs are standard.
 
-**Freelance designer:**
-- Cost: $5-10K
-- Time: 4-8 weeks
-- Limitation: Often design-only, you handle dev
-- Best for: Simple sites, have dev resources
+**Next.js builds:** Require more development time (code-based), slightly higher cost. Worth it when you need custom features, complex integrations, or plan to scale into product functionality later.
+
+Both deliver modern, fast, professional results. Choice depends on your needs, not the budget.
+
+### Compare to other options
+
+**DIY with templates:**
+- Cost: $500-2K + your time
+- Time: 2-6 weeks (learning curve, trial and error)
+- Result: Looks generic, limited customization
+- Best for: Very early stage, no budget
+
+**Freelance designer + developer:**
+- Cost: $6-15K (separate designer and dev)
+- Time: 6-12 weeks (coordination overhead)
+- Risk: Design and dev handoff issues, misalignment
+- Best for: If you already have relationships with both
 
 **Traditional agency:**
-- Cost: $30-60K
-- Time: 2-4 months
-- Limitation: Expensive, slow, over-engineered
-- Best for: Enterprise rebrands
+- Cost: $25-60K
+- Time: 8-16 weeks
+- Overhead: Account managers, meetings, process bloat
+- Best for: Enterprise budgets, committee decision-making
 
-**Our approach:**
-- Cost: $10-18K
-- Time: 2-4 weeks
-- Strength: Design + dev + conversion focus
-- Best for: Revenue-stage companies that need it done right and fast
+**Clearly Design:**
+- Cost: $8-12K
+- Time: 3-6 weeks
+- Advantage: One team, design + dev + strategy, platform expertise
+- Best for: Companies who need it done right, done fast
 
-### Monthly subscription alternative
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container yellow"><LightBulbIcon/></span></span> Questions to think through</h2>
 
-Rather improve continuously? Our subscription ($5-8K/month) works for companies doing ongoing optimization, A/B testing, and content updates. Most start with the redesign project, then decide if subscription makes sense.
+Before we talk, consider these:
 
-<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container yellow"><LightBulbIcon/></span></span> Questions for companies</h2>
+**Why rebuild now?** Is your current site technically broken? Costing you deals? Hard to maintain? Understanding the pain helps us prioritize what matters most in the rebuild.
 
-Think through these before we talk:
+**Who will maintain the site after launch?** Do you have developers on staff? Does marketing want to own updates? This heavily influences the Framer vs Next.js decision.
 
-**What specific problems is your current site causing?** Lost deals? Poor conversion? Confusing messaging? Be specific. This helps us prioritize what to fix first.
+**What integrations do you need?** CRM, email marketing, analytics, payment processing? Some are standard, some require custom work. Better to map this upfront.
 
-**Do you have analytics data?** Traffic sources, conversion rates, drop-off points? Data makes redesigns more effective. We optimize based on real user behavior, not guesses.
+**Do you have brand assets?** Logo, colors, fonts, guidelines? If yes, we work within them. If no, we create a design system as part of the project.
 
-**What's your tech stack?** Next.js, WordPress, Webflow, something else? We work in your existing platform, but need to know what we're working with.
+**What's your content situation?** Is copy written and just needs design? Or do you need help with messaging and positioning? Scope changes based on this.
 
-**Do you have brand guidelines?** Logo, colors, fonts? If yes, we extend them. If no, we create them as part of the redesign.
-
-**What pages get the most traffic?** Homepage, product pages, pricing? We prioritize redesigning your highest-traffic pages for maximum impact.
-
-**Do you need messaging help or is copy already strong?** We can help refine positioning and write copy, or work with what you have. Both work, just different scopes.
+**How technical are your needs?** Simple marketing site? Or do you need custom features, user dashboards, dynamic content? Helps us recommend Framer vs Next.js honestly.
 
 <ProjectFAQ title="Frequently asked questions" />
