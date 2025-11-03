@@ -6,7 +6,7 @@ import Link from "next/link"
 import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import ProjectFAQ from "@/components/Projects/ProjectFAQ"
-import CaseStudySnippet from "@/components/CaseStudySnippet"
+import CaseStudyCard from "@/components/CaseStudies/CaseStudyCard"
 import * as Icons from "@heroicons/react/24/outline"
 import { ArrowLeftIcon } from "@heroicons/react/24/solid"
 
@@ -28,7 +28,8 @@ export default function ProjectLayout({ frontmatter, mdxSource, slug, caseStudie
     CaseStudySnippet: (props) => {
       const slug = props.slug
       const caseStudy = caseStudies?.find(cs => cs.link === `/case-studies/${slug}`)
-      return <CaseStudySnippet caseStudy={caseStudy} />
+      if (!caseStudy) return null
+      return <CaseStudyCard {...caseStudy} />
     },
   }
 

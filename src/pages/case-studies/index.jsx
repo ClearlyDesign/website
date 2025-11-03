@@ -4,14 +4,13 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import {
-  ClockIcon,
   BriefcaseIcon,
-  BuildingOfficeIcon,
 } from "@heroicons/react/24/outline"
 import Footer from "@/components/Footer"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import { NextSeo } from "next-seo"
+import CaseStudyCard from "@/components/CaseStudies/CaseStudyCard"
 
 const CaseStudies = ({ caseStudies }) => {
   const headerRef = useRef(null)
@@ -117,7 +116,7 @@ const CaseStudies = ({ caseStudies }) => {
               </a>
             </div>
           </div>
-          <div className="mx-auto max-w-2xl lg:max-w-7xl px-6 pt-8 sm:pt-20 pb-14">
+          <div className="mx-auto max-w-2xl lg:max-w-5xl px-6 pt-8 sm:pt-20 pb-14">
             <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
               <BriefcaseIcon className="w-4 h-4" /> Case Studies
             </p>
@@ -132,7 +131,7 @@ const CaseStudies = ({ caseStudies }) => {
           </div>
         </header>
         <div className="bg-gray-100 py-12">
-          <div className="px-6 pb-16 sm:pb-24">
+          <div className="mx-auto max-w-2xl lg:max-w-5xl px-6 pb-16 sm:pb-24">
             <div className="row-inner">
               {caseStudies.map((caseStudy) => (
                 <CaseStudyCard key={caseStudy?.title} {...caseStudy} />
@@ -148,67 +147,6 @@ const CaseStudies = ({ caseStudies }) => {
   )
 }
 export default CaseStudies
-
-const CaseStudyCard = ({
-  date,
-  title,
-  client,
-  industry,
-  challenge,
-  results,
-  link,
-  timeline,
-  investment,
-  projectType,
-  image,
-}) => {
-  return (
-    <a
-      href={link}
-      className="rounded-3xl p-6 bg-white hover:translate-y-[-4px] flex flex-col lg:flex-row items-start gap-6 border border-gray-200 pb-6 group hover:shadow-lg transition-all duration-300"
-    >
-      <div className="relative aspect-square bg-gray-50 flex h-96 shrink-0 overflow-hidden rounded-lg">
-        <Image src={image} alt={title} fill className="object-cover border border-gray-400/10 rounded-lg" />
-      </div>
-      <div className="flex flex-col gap-2 w-full">
-        <div className="flex mt-4 flex-wrap items-center gap-x-6 gap-y-2">
-          {projectType && (
-            <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
-              <BriefcaseIcon className="w-4 h-4" />
-              {projectType}
-            </p>
-          )}
-          {timeline && (
-            <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
-              <ClockIcon className="w-4 h-4" />
-              {timeline}
-            </p>
-          )}
-          <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
-            <BuildingOfficeIcon className="w-4 h-4" />
-            {industry}
-          </p>
-        </div>
-        <p className="text-3xl font-bold text-gray-900 tracking-tight mt-2">{title}</p>
-        <p className="text-base text-gray-600 font-medium">{client}</p>
-        <p className="text-base text-gray-500 mt-2">{challenge}</p>
-        {results && results.length > 0 && (
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {results.slice(0, 3).map((result, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-lg p-4">
-                <p className="text-xs text-gray-700 font-mono uppercase tracking-wide">
-                  {result.metric}
-                </p>
-                <p className="text-xl font-bold text-gray-900 mt-1">{result.value}</p>
-                <p className="text-xs text-gray-700 mt-1">{result.description}</p>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </a>
-  )
-}
 
 export async function getStaticProps() {
   const caseStudiesDir = path.join(process.cwd(), "src/case-studies")
