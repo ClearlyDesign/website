@@ -5,7 +5,7 @@ export default function CaseStudySnippet({ caseStudy }) {
   if (!caseStudy) return null
 
   return (
-    <div className="bg-gradient-to-br from-emerald-50 to-gray-50 rounded-2xl p-8 border border-emerald-100">
+    <div className="bg-gradient-to-br from-indigo-950 to-gray-950 rounded-2xl p-8 border border-emerald-100">
       <div className="flex items-start justify-between gap-4 mb-6">
         <div>
           <p className="text-xs text-emerald-600 font-mono uppercase tracking-wide mb-2">

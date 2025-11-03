@@ -9,6 +9,7 @@ import ProjectFAQ from "@/components/Projects/ProjectFAQ"
 import CaseStudyCard from "@/components/CaseStudies/CaseStudyCard"
 import * as Icons from "@heroicons/react/24/outline"
 import { ArrowLeftIcon } from "@heroicons/react/24/solid"
+import NavInternal from "../Header/NavInternal"
 
 export default function ProjectLayout({ frontmatter, mdxSource, slug, caseStudies }) {
   // Mouse move animation logic
@@ -69,39 +70,7 @@ export default function ProjectLayout({ frontmatter, mdxSource, slug, caseStudie
                 className="w-10 h-10 hover:scale-110 transition-all duration-300"
               />
             </Link>
-            <div className="flex items-center gap-2">
-              <Link
-                href="/"
-                className="hidden sm:flex transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Home
-              </Link>
-              <Link
-                href="/articles"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Articles
-              </Link>
-              <Link
-                href="/projects"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/case-studies"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Case Studies
-              </Link>
-              <a
-                href={process.env.NEXT_PUBLIC_BOOKING_LINK}
-                target="_blank"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Book a Call
-              </a>
-            </div>
+            <NavInternal />
           </div>
 
           {/* Hero Section */}

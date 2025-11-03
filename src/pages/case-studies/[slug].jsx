@@ -16,6 +16,7 @@ import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import Divider from "@/components/Divider"
 import CaseStudyScreenshots from "@/components/CaseStudies/CaseStudyScreenshots"
+import NavInternal from "@/components/Header/NavInternal"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import * as Icons from "@heroicons/react/24/outline"
@@ -97,7 +98,7 @@ export default function CaseStudy({ frontmatter, mdxSource, slug }) {
       />
       <article className="mb-40">
         <header
-          className="bg-gradient-to-br from-emerald-950 to-gray-950 relative group pb-20"
+          className="bg-gradient-to-br from-indigo-950 to-gray-950 relative group pb-20"
           ref={headerRef}
           onMouseMove={handleMouseMove}
         >
@@ -107,7 +108,7 @@ export default function CaseStudy({ frontmatter, mdxSource, slug }) {
               background: useMotionTemplate`
               radial-gradient(
                 650px circle at ${mouseX}px ${mouseY}px,
-                rgba(16, 185, 129, 0.15),
+                rgba(99, 102, 241, 0.15),
                 transparent 80%
               )
             `,
@@ -126,39 +127,7 @@ export default function CaseStudy({ frontmatter, mdxSource, slug }) {
                 className="w-10 h-10 hover:scale-110 transition-all duration-300"
               />
             </Link>
-            <div className="flex items-center gap-2">
-              <Link
-                href="/"
-                className="hidden sm:flex transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Home
-              </Link>
-              <Link
-                href="/articles"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Articles
-              </Link>
-              <Link
-                href="/projects"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/case-studies"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Case Studies
-              </Link>
-              <a
-                href={process.env.NEXT_PUBLIC_BOOKING_LINK}
-                target="_blank"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Book a Call
-              </a>
-            </div>
+            <NavInternal />
           </div>
           <div className="mx-auto max-w-4xl px-6 pt-8 sm:pt-20 pb-10 sm:pb-14">
             <div className="flex items-center gap-x-6 gap-y-2 flex-wrap">
@@ -198,7 +167,7 @@ export default function CaseStudy({ frontmatter, mdxSource, slug }) {
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {frontmatter.results.map((result, idx) => (
                   <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                    <p className="text-xs text-emerald-300 font-mono uppercase tracking-wide">{result.metric}</p>
+                    <p className="text-xs text-blue-300 font-mono uppercase tracking-wide">{result.metric}</p>
                     <p className="text-2xl font-bold text-white mt-1">{result.value}</p>
                     <p className="text-xs text-white/70 mt-1">{result.description}</p>
                   </div>
