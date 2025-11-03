@@ -158,7 +158,7 @@ export default function CaseStudy({ frontmatter, mdxSource, slug }) {
                 {frontmatter.industry}
               </p>
             </div>
-            <h1 className="mt-6 sm:mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
+            <h1 className="mt-6 sm:mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl leading-snug sm:leading-tight">
               {frontmatter.title}
             </h1>
             <p className="mt-4 text-lg text-white/70">{frontmatter.client}</p>

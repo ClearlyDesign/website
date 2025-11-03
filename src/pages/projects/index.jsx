@@ -19,9 +19,9 @@ import {
   CheckBadgeIcon,
   ArrowPathIcon,
   FilmIcon,
-  BriefcaseIcon,
 } from "@heroicons/react/24/outline"
 import { CheckCircleIcon } from "@heroicons/react/24/solid"
+import NavInternal from "@/components/Header/NavInternal"
 
 const filters = {
   "All Project Types": [],
@@ -289,45 +289,13 @@ export default function ProjectsIndex() {
                 className="w-10 h-10 hover:scale-110 transition-all duration-300"
               />
             </Link>
-            <div className="flex items-center gap-2">
-              <Link
-                href="/"
-                className="hidden sm:flex transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Home
-              </Link>
-              <Link
-                href="/articles"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Articles
-              </Link>
-              <Link
-                href="/projects"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/case-studies"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Case Studies
-              </Link>
-              <a
-                href={process.env.NEXT_PUBLIC_BOOKING_LINK}
-                target="_blank"
-                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
-              >
-                Book a Call
-              </a>
-            </div>
+            <NavInternal />
           </div>
 
           {/* Hero Section */}
           <div className="mx-auto max-w-6xl px-6 pt-8 sm:pt-20 pb-10 sm:pb-14 relative z-10">
             <div className="text-center">
-              <p className="text-xs text-white/50 tracking-wide items-center gap-2 font-mono uppercase inline-flex"><LightBulbIcon className="w-4 h-4" /> Projects</p>
+              <p className="text-xs text-white/50 tracking-wide items-center gap-2 font-mono uppercase inline-flex"><LightBulbIcon className="w-4 h-4" /> Solutions</p>
               <h1 className="text-4xl mt-4 font-bold tracking-tight text-white sm:text-6xl">
                 Project-Based Design & Development
               </h1>

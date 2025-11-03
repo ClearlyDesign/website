@@ -20,7 +20,7 @@ const CaseStudyCard = ({
   return (
     <Link
       href={link}
-      className="rounded-3xl p-6 not-prose bg-white hover:translate-y-[-4px] grid grid-cols-1 items-start gap-6 border border-gray-200 pb-6 group hover:shadow-lg transition-all duration-300"
+      className="rounded-3xl p-6 not-prose bg-white hover:translate-y-[-4px] grid grid-cols-1 items-start gap-6 border border-gray-200 hover:border-gray-300 pb-6 group hover:shadow-lg transition-all duration-300"
     >
       <div className="relative aspect-video bg-gray-50 flex w-full h-full shrink-0 overflow-hidden rounded-lg">
         <Image src={image} alt={title} fill className="object-cover object-top !m-0 border border-gray-400/10 rounded-lg" />

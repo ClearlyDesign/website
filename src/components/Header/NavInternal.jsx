@@ -1,3 +1,4 @@
+import Logo from "@/components/Logo"
 import Link from "next/link"
 import { Dialog } from "@headlessui/react"
 import { useState } from "react"
@@ -9,7 +10,7 @@ const NavInternal = () => {
   const navItems = [
     { href: "/", label: "Home", hiddenOnMobile: true },
     { href: "/articles", label: "Articles" },
-    { href: "/projects", label: "Projects" },
+    { href: "/projects", label: "Solutions" },
     { href: "/case-studies", label: "Case Studies" },
   ]
 
@@ -58,7 +59,9 @@ const NavInternal = () => {
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-950/95 backdrop-blur-lg px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-lg font-semibold text-white">Navigation</h2>
+            <Link href="/">
+              <Logo />
+            </Link>
             <button
               type="button"
               className="bg-white/10 rounded-full p-2.5 text-white hover:bg-white/20 transition-all duration-200"
@@ -68,7 +71,7 @@ const NavInternal = () => {
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="space-y-1">
+          <div className="">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -96,4 +99,3 @@ const NavInternal = () => {
 }
 
 export default NavInternal
-
