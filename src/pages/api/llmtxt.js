@@ -13,6 +13,11 @@ export default function handler(req, res) {
     .readdirSync(projectsDir)
     .filter((f) => f.endsWith(".md"))
 
+  const caseStudiesDir = path.join(process.cwd(), "src/case-studies")
+  const caseStudyFiles = fs
+    .readdirSync(caseStudiesDir)
+    .filter((f) => f.endsWith(".mdx"))
+
   let output = `# Clearly Design\n\n`
 
   output += `> Clearly Design is a design studio specializing in brand identity, website design, and product design for ambitious founders and their teams.\n\n`
@@ -64,6 +69,23 @@ export default function handler(req, res) {
     const timeline = data.timeline || ""
     const url = `https://clearly.design/projects/${slug}`
     output += `- [${title}](${url})\n  ${description}\n  Pricing: ${pricing} | Timeline: ${timeline}\n`
+  })
+
+  output += `\n---\n\n`
+
+  output += `## Case Studies\n\n`
+
+  output += `Real-world examples of how we've helped clients solve complex problems through custom design and development. Each case study details the challenge, solution, and measurable results.\n\n`
+
+  caseStudyFiles.forEach((file) => {
+    const content = fs.readFileSync(path.join(caseStudiesDir, file), "utf-8")
+    const { data } = matter(content)
+    const slug = file.replace(".mdx", "")
+    const title = data.title || slug
+    const description = data.challenge || data.solution || ""
+    const client = data.client || ""
+    const url = `https://clearly.design/case-studies/${slug}`
+    output += `- [${title}](${url})${client ? ` - ${client}` : ""}\n  ${description}\n`
   })
 
   output += `\n---\n\n`

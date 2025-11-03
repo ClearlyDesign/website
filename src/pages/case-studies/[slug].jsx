@@ -2,31 +2,35 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import { MDXRemote } from "next-mdx-remote"
-import { MDXRemoteSerializeResult, serialize } from "next-mdx-remote/serialize"
-import { CalendarDaysIcon, ClockIcon } from "@heroicons/react/24/outline"
+import { serialize } from "next-mdx-remote/serialize"
+import {
+  CalendarDaysIcon,
+  ClockIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  BriefcaseIcon,
+} from "@heroicons/react/24/outline"
 import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import Divider from "@/components/Divider"
-import ExampleBlock from "@/components/ExampleBlock"
+import CaseStudyScreenshots from "@/components/CaseStudies/CaseStudyScreenshots"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import * as Icons from "@heroicons/react/24/outline"
 import { NextSeo } from "next-seo"
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join(process.cwd(), "src/articles"))
-  const paths = files
-    .filter((filename) => filename.endsWith(".mdx"))
-    .map((filename) => ({
-      params: { slug: filename.replace(".mdx", "") },
-    }))
+  const files = fs.readdirSync(path.join(process.cwd(), "src/case-studies"))
+  const paths = files.map((filename) => ({
+    params: { slug: filename.replace(".mdx", "") },
+  }))
   return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), "src/articles", `${params.slug}.mdx`)
+  const filePath = path.join(process.cwd(), "src/case-studies", `${params.slug}.mdx`)
   const fileContents = fs.readFileSync(filePath, "utf8")
   const { data, content } = matter(fileContents)
   const mdxSource = await serialize(content)
@@ -39,8 +43,7 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function Article({ frontmatter, mdxSource, slug }) {
-  // Mouse move animation logic (from Hero)
+export default function CaseStudy({ frontmatter, mdxSource, slug }) {
   const headerRef = useRef(null)
   let mouseX = useMotionValue(0)
   let mouseY = useMotionValue(0)
@@ -50,24 +53,27 @@ export default function Article({ frontmatter, mdxSource, slug }) {
     mouseY.set(clientY - top)
   }
 
-  // Pass your custom components here
   const components = {
     ...Icons,
     Divider,
-    ExampleBlock,
-    // Add any other custom React components you want to use in MDX
+    CaseStudyScreenshots: (props) => (
+      <CaseStudyScreenshots
+        {...props}
+        screenshots={props.screenshots || frontmatter.screenshots}
+      />
+    ),
   }
 
   return (
     <>
       <NextSeo
-        title={`${frontmatter.title} | Clearly Design`}
-        description={frontmatter.description}
-        canonical={`https://clearly.design/articles/${slug}`}
+        title={`${frontmatter.title} | Case Studies | Clearly Design`}
+        description={frontmatter.challenge}
+        canonical={`https://clearly.design/case-studies/${slug}`}
         openGraph={{
-          url: `https://clearly.design/articles/${slug}`,
+          url: `https://clearly.design/case-studies/${slug}`,
           title: frontmatter.title,
-          description: frontmatter.description,
+          description: frontmatter.challenge,
           site_name: "Clearly Design",
           images: [
             {
@@ -85,24 +91,23 @@ export default function Article({ frontmatter, mdxSource, slug }) {
         additionalMetaTags={[
           {
             name: "keywords",
-            content: `Product Design, Website Design, Framer, Webflow, Design, UX Design, UI Design, User Interface Design, AI Design, Design Agency, Design Studio, Design Agency`,
+            content: `Custom Internal Tools, SaaS Replacement, ${frontmatter.industry}, Case Study, Internal Tool Development`,
           },
         ]}
       />
       <article className="mb-40">
         <header
-          className="bg-gradient-to-br from-indigo-950 to-gray-950 relative group pb-20"
+          className="bg-gradient-to-br from-emerald-950 to-gray-950 relative group pb-20"
           ref={headerRef}
           onMouseMove={handleMouseMove}
         >
-          {/* Mouse-following radial gradient */}
           <motion.div
             className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
             style={{
               background: useMotionTemplate`
               radial-gradient(
                 650px circle at ${mouseX}px ${mouseY}px,
-                rgba(99, 102, 241, 0.15),
+                rgba(16, 185, 129, 0.15),
                 transparent 80%
               )
             `,
@@ -134,6 +139,18 @@ export default function Article({ frontmatter, mdxSource, slug }) {
               >
                 Articles
               </Link>
+              <Link
+                href="/projects"
+                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+              >
+                Projects
+              </Link>
+              <Link
+                href="/case-studies"
+                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+              >
+                Case Studies
+              </Link>
               <a
                 href={process.env.NEXT_PUBLIC_BOOKING_LINK}
                 target="_blank"
@@ -145,58 +162,60 @@ export default function Article({ frontmatter, mdxSource, slug }) {
           </div>
           <div className="mx-auto max-w-4xl px-6 pt-8 sm:pt-20 pb-10 sm:pb-14">
             <div className="flex items-center gap-x-6 gap-y-2 flex-wrap">
+              {frontmatter.projectType && (
+                <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
+                  <BriefcaseIcon className="w-4 h-4" />
+                  {frontmatter.projectType}
+                </p>
+              )}
+              {frontmatter.timeline && (
+                <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
+                  <ClockIcon className="w-4 h-4" />
+                  {frontmatter.timeline}
+                </p>
+              )}
+              {frontmatter.investment && (
+                <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
+                  <CurrencyDollarIcon className="w-4 h-4" />
+                  {frontmatter.investment}
+                </p>
+              )}
               <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
                 <CalendarDaysIcon className="w-4 h-4" />
                 {frontmatter.date}
               </p>
               <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
-                <ClockIcon className="w-4 h-4" />
-                {frontmatter.readingTime}
+                <BuildingOfficeIcon className="w-4 h-4" />
+                {frontmatter.industry}
               </p>
-              {frontmatter.series && (
-                <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
-                  <Icons.RectangleStackIcon className="w-4 h-4" />
-                  {frontmatter.series.join(", ")} ({frontmatter.seriesOrder}/12)
-                </p>
-              )}
             </div>
             <h1 className="mt-6 sm:mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
               {frontmatter.title}
             </h1>
-            <div className="flex items-center gap-3 mt-7 sm:mt-6 text-white/50">
-              <Image
-                src="/images/fb-clearly.svg"
-                alt="Francois Brill"
-                width={48}
-                height={48}
-                className="size-12 rounded-full object-cover"
-              />
-              <div className="flex flex-col text-sm gap-1">
-                <p className="font-medium text-white text-md">{frontmatter.author}</p>
-                <p className="text-xs text-white/50 tracking-wide font-mono uppercase">
-                  Founding Designer
-                </p>
+            <p className="mt-4 text-lg text-white/70">{frontmatter.client}</p>
+
+            {frontmatter.results && frontmatter.results.length > 0 && (
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {frontmatter.results.map((result, idx) => (
+                  <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                    <p className="text-xs text-emerald-300 font-mono uppercase tracking-wide">{result.metric}</p>
+                    <p className="text-2xl font-bold text-white mt-1">{result.value}</p>
+                    <p className="text-xs text-white/70 mt-1">{result.description}</p>
+                  </div>
+                ))}
               </div>
-            </div>
+            )}
           </div>
         </header>
-        <div className="max-w-4xl mx-auto px-0 sm:px-6 -mt-14 sm:-mt-20 z-10 relative">
-          <Image
-            src={frontmatter.image}
-            alt={frontmatter.title}
-            width={1200}
-            height={630}
-            className="w-full h-auto sm:rounded-3xl object-cover shadow-perfect"
-          />
-        </div>
+
         <div className="max-w-4xl mx-auto prose sm:prose-lg px-6 mt-12 sm:mt-16">
           <MDXRemote {...mdxSource} components={components} />
         </div>
       </article>
       <CTABlock
-        ctaTitle={frontmatter.ctaTitle}
-        ctaText={frontmatter.ctaText}
-        ctaLabel={frontmatter.ctaLabel}
+        ctaTitle="Ready to replace your SaaS stack?"
+        ctaText="Let's map your workflow and identify where custom tools could save you thousands annually while giving you full control."
+        ctaLabel="Schedule Workflow Audit"
       />
       <Footer />
     </>

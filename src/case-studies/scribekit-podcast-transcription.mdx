@@ -1,0 +1,178 @@
+---
+title: "Creating ScribeKit: From $10K+ in SaaS Costs to Under $2 per Project"
+client: "Podcast Production Agency"
+industry: "Media Production"
+projectType: "Internal Tool Replacement"
+date: "Oct 2025"
+challenge: "A podcast production agency was spending thousands annually on transcription software with per-user licensing, credit-based pricing, and limited collaboration features."
+solution: "Custom transcription tool with AI-powered diarization, collaborative editing, and multiple export formats."
+results:
+  - metric: "Cost Reduction"
+    value: "From $10K+/year to <$2/project"
+    description: "Eliminated recurring SaaS fees and pay-per-credit pricing"
+  - metric: "Team Collaboration"
+    value: "100% improvement"
+    description: "Shared workspace replaced shared logins to the same account"
+  - metric: "Feature Control"
+    value: "Full ownership"
+    description: "Foundation for custom features built to their exact workflow"
+technologies: ["Next.js", "OpenAI Whisper API", "React", "Tailwind CSS"]
+timeline: "3 weeks"
+investment: "$15,000"
+image: "/case-studies/clearly-design-work-scribekit-cover.png"
+---
+
+<h2 className="flex items-center gap-3 m-0"><span className="icon-container rose"><XCircleIcon/></span> The Problem</h2>
+
+A podcast production agency produces high-quality podcasts for clients across multiple industries. Their workflow required accurate transcription for:
+- Client review and approval
+- Editor reference during post-production
+- Show notes and content creation
+- Accessibility and SEO
+
+They were paying thousands annually for transcription software that:
+- Charged per user, per month (limited team scaling)
+- Required purchasing credits in bulk ($1000+ annually in transcription credits)
+- Offered limited collaboration (editors worked in isolation)
+- Locked them into rigid export formats
+- Couldn't be customized for their specific client needs
+
+Every new team member meant another seat license. Every project consumed expensive credits. The tool worked, but it was built for everyone, which meant it was perfect for no one.
+
+<h2 className="flex items-center gap-3 m-0"><span className="icon-container yellow"><LightBulbIcon/></span> The Solution: ScribeKit</h2>
+
+We built ScribeKit, a custom internal tool designed specifically for their podcast production workflow.
+
+<CaseStudyScreenshots
+  screenshots={[
+    {
+      src: "/case-studies/clearly-design-work-scribekit-new-transcripts.png",
+      caption: "Upload audio or video files and start transcription with automatic speaker diarization."
+    },
+    {
+      src: "/case-studies/clearly-design-work-scribekit-manage-transcripts.png",
+      caption: "View and manage all transcriptions in a centralized workspace with status tracking."
+    },
+    {
+      src: "/case-studies/clearly-design-work-scribekit-user-management.png",
+      caption: "Role-based access control with admin and editor permissions for team collaboration."
+    },
+    {
+      src: "/case-studies/clearly-design-work-scribekit.png",
+      caption: "Collaborative editing interface with real-time transcript updates and media playback."
+    }
+  ]}
+/>
+
+### Core Features
+
+**User Management & Roles:**
+- Admin users: Full system control, user management, project oversight
+- Editor users: Project access, transcription editing, client deliverables
+- Role-based permissions matched their actual team structure
+
+**Audio/Video Upload & Transcription:**
+- Drag-and-drop upload for audio or video files
+- Automatic transcription using AI (AssemblyAI API)
+- Speaker diarization to automatically identify and label different speakers
+- Processing status tracking with estimated completion times
+
+**Collaborative Editing Interface:**
+- Real-time text editing of transcriptions
+- Bulk speaker renaming (change "Speaker A" across entire transcript)
+- Timestamp synchronization with original audio
+- Comment and annotation system for editor notes
+- Shared workspace for team collaboration
+- Media playback with transcripts that auto-follows for editing
+
+**Multiple Export Formats:**
+- Client proof format (clean, formatted for review)
+- Editor reference format (timestamps, speaker labels)
+- Show notes template (optimized for content creation)
+- Custom export formats tailored to specific client needs
+- Batch export for multiple episodes
+
+### Technical Architecture
+
+**Built as a modern web application:**
+- Next.js for server-side rendering and API routes
+- React for interactive editing interface
+- Tailwind CSS for responsive, professional design
+- AssemblyAI API for AI-powered transcription and diarization
+- Vercel deployment (low-cost hosting, scales automatically)
+
+The entire codebase was handed over to the client. They own it completely.
+
+<h2 className="flex items-center gap-3 m-0"><span className="icon-container blue"><ArrowTrendingUpIcon/></span> The Results</h2>
+
+### Cost Transformation
+
+**Before ScribeKit:**
+- Software licenses: $150/month per user × 6 users = $900/month
+- Transcription credits: $1,000-2,000 annually (bulk purchases)
+- Annual cost: $12,000-13,000
+
+**After ScribeKit:**
+- One-time development: $15,000
+- Transcription API costs: ~$1.50 per hour of audio
+- Hosting: Free tier (Vercel)
+- Per-project cost: under $2 (most podcasts are 30-60 minutes)
+
+Payback period: 13 months. After that, pure savings.
+
+### Operational Improvements
+
+**Team Collaboration:**
+Editors now work in a shared workspace instead of isolated individual accounts. They can see each other's progress, share annotations, and collaborate on complex episodes. The tool scales perfectly. Hiring new team members costs nothing.
+
+**Customization Freedom:**
+They can now build custom features exactly matching their workflow. Need a client-specific export format? Add it. Want integration with their project management system? Build it. They own the code.
+
+**Client Experience:**
+Custom export formats mean clients receive transcripts formatted exactly how they need them. No more reformatting in Word. Deliverables look professional and consistent across all projects.
+
+<h2 className="flex items-center gap-3 m-0"><span className="icon-container purple"><BookOpenIcon/></span> What Made This Work</h2>
+
+**Focused Scope:**
+We didn't try to build a general-purpose transcription platform. ScribeKit solves one specific workflow for one specific type of team. That focus meant we could build it in 3 weeks instead of 6 months.
+
+**Workflow-First Design:**
+We started by mapping their actual process. Where did work get stuck? What took too long? What required too many manual steps? The tool was built around their workflow, not forcing them to adapt to generic software.
+
+**Progressive Ownership:**
+- **Week 1:** Workflow mapping and design
+- **Week 2-3:** Development and integration
+- **Week 4:** Testing with their actual team and projects
+- **Handoff:** Complete codebase, documentation, and hosting setup
+
+They were involved throughout. By the time we handed over the code, they already knew how it worked because they'd been using it with real projects.
+
+<h2 className="flex items-center gap-3 m-0"><span className="icon-container emerald"><CursorArrowRippleIcon/></span> The Business Impact</h2>
+
+This project paid for itself in saved SaaS costs within 13 months.
+
+But the real value isn't just cost savings. It's:
+- **Control:** They can modify the tool as their business evolves
+- **Scalability:** No per-seat pricing means they can grow without software costs increasing
+- **Competitive advantage:** Custom features their competitors using off-the-shelf tools can't match
+- **Foundation for innovation:** They can now build additional workflow tools on the same foundation - optimising more of their custom workflow
+
+<h2 className="flex items-center gap-3 m-0"><span className="icon-container blue"><BoltIcon/></span> Lessons for Other Teams</h2>
+
+This pattern works when:
+- You're paying for 80% of features you don't use
+- Per-seat pricing punishes you for growing your team
+- You need 3-4 different tools to accomplish one workflow
+- Your process is stable enough to build around
+- The cost of customization is lower than ongoing SaaS fees
+
+This isn't for every scenario:
+If your workflow changes every month, you might not be ready for custom tools. If you need 100+ integrations with other platforms, off-the-shelf tools might make more sense.
+
+But if you're an operations team, agency, or service business with established workflows and growing SaaS costs, custom internal tools can fundamentally change your economics.
+
+<Divider />
+
+ScribeKit represents a typical [Clearly Design internal tools project](/projects/internal-tools-replacement): 3-4 weeks of development, $12-20K investment, complete code ownership, and economics that make sense within the first year.
+
+Want to explore custom tools for your team? [Schedule a workflow audit call](https://app.cal.com/clearlydesign/discovery) to see if internal tool replacement makes sense for your business.

@@ -6,10 +6,11 @@ import Link from "next/link"
 import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import ProjectFAQ from "@/components/Projects/ProjectFAQ"
+import CaseStudySnippet from "@/components/CaseStudySnippet"
 import * as Icons from "@heroicons/react/24/outline"
 import { ArrowLeftIcon } from "@heroicons/react/24/solid"
 
-export default function ProjectLayout({ frontmatter, mdxSource, slug }) {
+export default function ProjectLayout({ frontmatter, mdxSource, slug, caseStudies }) {
   // Mouse move animation logic
   const headerRef = useRef(null)
   let mouseX = useMotionValue(0)
@@ -24,7 +25,11 @@ export default function ProjectLayout({ frontmatter, mdxSource, slug }) {
   const components = {
     ...Icons,
     ProjectFAQ: (props) => <ProjectFAQ {...props} faqs={frontmatter.faqs} />,
-    // Add any custom components needed for use case pages
+    CaseStudySnippet: (props) => {
+      const slug = props.slug
+      const caseStudy = caseStudies?.find(cs => cs.link === `/case-studies/${slug}`)
+      return <CaseStudySnippet caseStudy={caseStudy} />
+    },
   }
 
   return (
@@ -75,6 +80,18 @@ export default function ProjectLayout({ frontmatter, mdxSource, slug }) {
                 className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
               >
                 Articles
+              </Link>
+              <Link
+                href="/projects"
+                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+              >
+                Projects
+              </Link>
+              <Link
+                href="/case-studies"
+                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+              >
+                Case Studies
               </Link>
               <a
                 href={process.env.NEXT_PUBLIC_BOOKING_LINK}

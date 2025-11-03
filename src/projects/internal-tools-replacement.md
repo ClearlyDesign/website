@@ -56,6 +56,10 @@ We build custom internal tools as web applications. No app store. No per-seat pr
 
 **Pays for itself in saved SaaS costs.** Most projects cost $12-20K. If you're paying $2000/month across multiple tools for a workflow, that's a 6-10 month payback. After that, it's pure savings.
 
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container purple"><DocumentTextIcon/></span></span> Real-world example</h2>
+
+<CaseStudySnippet slug="scribekit-podcast-transcription" />
+
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><RocketLaunchIcon/></span></span> What's included</h2>
 
 **Discovery & Planning:**

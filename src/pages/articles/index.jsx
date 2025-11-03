@@ -9,6 +9,7 @@ import {
   SparklesIcon,
   SwatchIcon,
   RectangleStackIcon,
+  PencilSquareIcon,
 } from "@heroicons/react/24/outline"
 import Footer from "@/components/Footer"
 import { useRef } from "react"
@@ -109,7 +110,8 @@ const Articles = ({ articles }) => {
           </div>
         </div>
         <div className="mx-auto max-w-2xl lg:max-w-5xl px-6 pt-8 sm:pt-20 pb-14">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
+        <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase"><PencilSquareIcon className="w-4 h-4" /> Articles</p>
+          <h1 className="text-4xl mt-4 font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
             Thoughts on{" "}
             <div className="hidden bg-lime-400 ml-2 text-gray-900 rounded-full p-3 sm:inline-flex items-center justify-center">
               <SwatchIcon className="size-5 sm:size-8" />

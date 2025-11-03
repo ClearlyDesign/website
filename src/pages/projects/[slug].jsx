@@ -18,16 +18,36 @@ export async function getStaticProps({ params }) {
   const fileContents = fs.readFileSync(filePath, "utf8")
   const { data, content } = matter(fileContents)
   const mdxSource = await serialize(content)
+
+  // Fetch case studies for embedding
+  const caseStudiesDir = path.join(process.cwd(), "src/case-studies")
+  let caseStudies = []
+  if (fs.existsSync(caseStudiesDir)) {
+    const files = fs.readdirSync(caseStudiesDir)
+    caseStudies = files
+      .filter((file) => file.endsWith(".mdx"))
+      .map((filename) => {
+        const csFilePath = path.join(caseStudiesDir, filename)
+        const csFileContents = fs.readFileSync(csFilePath, "utf8")
+        const { data } = matter(csFileContents)
+        return {
+          ...data,
+          link: `/case-studies/${filename.replace(/\.mdx$/, "")}`,
+        }
+      })
+  }
+
   return {
     props: {
       frontmatter: data,
       mdxSource,
       slug: params.slug,
+      caseStudies,
     },
   }
 }
 
-export default function Project({ frontmatter, mdxSource, slug }) {
+export default function Project({ frontmatter, mdxSource, slug, caseStudies }) {
   return (
     <>
       <NextSeo
@@ -57,7 +77,7 @@ export default function Project({ frontmatter, mdxSource, slug }) {
           },
         ]}
       />
-      <ProjectLayout frontmatter={frontmatter} mdxSource={mdxSource} slug={slug} />
+      <ProjectLayout frontmatter={frontmatter} mdxSource={mdxSource} slug={slug} caseStudies={caseStudies} />
     </>
   )
 }

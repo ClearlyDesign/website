@@ -19,6 +19,7 @@ import {
   CheckBadgeIcon,
   ArrowPathIcon,
   FilmIcon,
+  BriefcaseIcon,
 } from "@heroicons/react/24/outline"
 import { CheckCircleIcon } from "@heroicons/react/24/solid"
 
@@ -301,6 +302,18 @@ export default function ProjectsIndex() {
               >
                 Articles
               </Link>
+              <Link
+                href="/projects"
+                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+              >
+                Projects
+              </Link>
+              <Link
+                href="/case-studies"
+                className="transition-all ease-in-out duration-200 px-4 sm:px-5 py-2.5 text-sm text-white/50 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400 focus-visible:text-green-400 focus-visible:hover:text-green-400 rounded-full"
+              >
+                Case Studies
+              </Link>
               <a
                 href={process.env.NEXT_PUBLIC_BOOKING_LINK}
                 target="_blank"
@@ -314,7 +327,8 @@ export default function ProjectsIndex() {
           {/* Hero Section */}
           <div className="mx-auto max-w-6xl px-6 pt-8 sm:pt-20 pb-10 sm:pb-14 relative z-10">
             <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              <p className="text-xs text-white/50 tracking-wide items-center gap-2 font-mono uppercase inline-flex"><LightBulbIcon className="w-4 h-4" /> Projects</p>
+              <h1 className="text-4xl mt-4 font-bold tracking-tight text-white sm:text-6xl">
                 Project-Based Design & Development
               </h1>
               <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
