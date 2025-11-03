@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { PhotoIcon } from "@heroicons/react/24/outline"
 
-export default function CaseStudyScreenshots({ screenshots, title = "Screenshots" }) {
+export default function CaseStudyScreenshots({ screenshots, ratio = "aspect-square" }) {
   if (!screenshots || screenshots.length === 0) return null
 
   // Ensure we only show up to 4 screenshots
@@ -23,7 +23,7 @@ export default function CaseStudyScreenshots({ screenshots, title = "Screenshots
         {displayScreenshots.map((screenshot, idx) => (
           <div key={idx} className="flex flex-col">
             <div
-              className="group relative aspect-square rounded-lg overflow-hidden border border-gray-200 bg-gray-50 shadow-sm hover:shadow-md transition-all duration-300"
+              className={`group relative ${ratio} rounded-lg overflow-hidden border border-gray-200 bg-gray-50 shadow-sm hover:shadow-md transition-all duration-300`}
             >
               <Image
                 src={screenshot.src}
@@ -35,8 +35,8 @@ export default function CaseStudyScreenshots({ screenshots, title = "Screenshots
               {screenshot.caption && (
                 <>
                   {/* Desktop: Hover overlay */}
-                  <div className="hidden sm:flex absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-end">
-                    <p className="text-white text-sm sm:text-base p-4 font-medium">
+                  <div className="hidden sm:flex absolute inset-0 bg-gradient-to-t from-gray-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-end">
+                    <p className="text-white text-sm sm:text-base px-4 font-medium">
                       {screenshot.caption}
                     </p>
                   </div>

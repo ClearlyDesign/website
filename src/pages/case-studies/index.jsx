@@ -101,7 +101,7 @@ const CaseStudies = ({ caseStudies }) => {
         </header>
         <div className="bg-gray-100 py-12">
           <div className="mx-auto max-w-4xl lg:max-w-5xl px-6 pb-16 sm:pb-24">
-            <div className="row-inner">
+            <div className="row-inner space-y-8">
               {caseStudies.map((caseStudy) => (
                 <CaseStudyCard key={caseStudy?.title} {...caseStudy} />
               ))}

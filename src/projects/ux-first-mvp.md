@@ -72,6 +72,10 @@ You probably have 20 features in your head. We help you identify the 5-7 that ac
 
 MVPs change. We build with that assumption. Clean code, clear structure, easy to modify. When users tell you what they actually need (vs. what you thought), pivoting is fast.
 
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container purple"><DocumentTextIcon/></span></span> Real-world example</h2>
+
+<CaseStudySnippet slug="nekst-directory" />
+
 <h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><RocketLaunchIcon/></span></span> What's included</h2>
 
 **Discovery & Validation Planning:**
