@@ -110,6 +110,12 @@ Most agencies quote 8-12 weeks for explainer videos. We deliver in 4 weeks. Tigh
 
 **Step 4: Finalize and Deliver (Week 4)** — We add background music, sound effects, and polish the audio mix. Final color grading and quality checks. We deliver the video in multiple formats (homepage embed, social media, ads). You get all files. Use it anywhere. We provide 30 days of support for minor tweaks after delivery.
 
+<h2 className="flex items-center gap-3"> <span className="flex items-center gap-3"><span className="icon-container blue"><FilmIcon/></span></span> Real world example</h2>
+
+Here's an example of a product launch video we created. This animated explainer video demonstrates how we combine clear storytelling, modern motion graphics, and professional sound design to explain complex SaaS products in an engaging way.
+
+<YouTubeEmbed videoId="lqLaocIu8UE" title="Product Launch Video Example" />
+
 <h2 className="flex items-center gap-3" id="pricing"> <span className="flex items-center gap-3"><span className="icon-container blue"><CurrencyDollarIcon/></span></span> Pricing</h2>
 
 **$8,000 - $10,000** for most SaaS explainer videos

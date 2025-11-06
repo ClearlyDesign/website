@@ -7,6 +7,7 @@ import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import ProjectFAQ from "@/components/Projects/ProjectFAQ"
 import CaseStudyCard from "@/components/CaseStudies/CaseStudyCard"
+import YouTubeEmbed from "@/components/YouTubeEmbed"
 import * as Icons from "@heroicons/react/24/outline"
 import { ArrowLeftIcon } from "@heroicons/react/24/solid"
 import NavInternal from "../Header/NavInternal"
@@ -32,6 +33,7 @@ export default function ProjectLayout({ frontmatter, mdxSource, slug, caseStudie
       if (!caseStudy) return null
       return <CaseStudyCard {...caseStudy} />
     },
+    YouTubeEmbed,
   }
 
   return (
