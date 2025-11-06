@@ -118,6 +118,12 @@ p {
     @apply text-gray-600;
   }
 }
+.icon-container.indigo {
+  @apply bg-indigo-100;
+  svg {
+    @apply text-indigo-600;
+  }
+}
 .highlight.blue {
   @apply bg-blue-50 px-2.5 py-1.5 rounded text-blue-900;
 }
