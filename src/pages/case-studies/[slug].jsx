@@ -16,6 +16,7 @@ import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import Divider from "@/components/Divider"
 import CaseStudyScreenshots from "@/components/CaseStudies/CaseStudyScreenshots"
+import TestimonialCard from "@/components/CaseStudies/TestimonialCard"
 import NavInternal from "@/components/Header/NavInternal"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
@@ -63,6 +64,7 @@ export default function CaseStudy({ frontmatter, mdxSource, slug }) {
         screenshots={props.screenshots || frontmatter.screenshots}
       />
     ),
+    TestimonialCard,
   }
 
   return (
