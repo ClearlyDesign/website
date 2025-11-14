@@ -99,7 +99,7 @@ const Item = ({ item, count }) => {
           <div className="rounded-full bg-lime-400 text-gray-900 inline-flex p-3">
             <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
           </div>
-          <h4 className="text-white">{item.title}</h4>
+          <h4 className="tracking-tighter text-3xl font-bold text-white">{item.title}</h4>
         </div>
         <ul className="space-y-2 mt-2">
           {item.services.map((service) => (

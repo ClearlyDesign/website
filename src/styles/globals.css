@@ -11,12 +11,7 @@ h2 {
 h3 {
   @apply tracking-tighter text-4xl font-bold;
 }
-h4 {
-  @apply tracking-tighter text-3xl font-bold;
-}
-h5 {
-  @apply tracking-tighter text-2xl font-bold;
-}
+
 p {
   @apply tracking-tight;
 }
