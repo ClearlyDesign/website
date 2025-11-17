@@ -179,7 +179,7 @@ const plans = [
       "Delivering design work as and when you need it, completely asynchronously.",
     price: "$4,995",
     spotIsImmediate: true,
-    spots: `1 spot open. Pause or cancel anytime.`,
+    spots: `Pause or cancel anytime.`,
     link: "https://buy.stripe.com/5kAbLu4yf3IJf3G8wx",
     includes: [
       {
