@@ -42,7 +42,7 @@ const Articles = ({ articles }) => {
   )
 }
 
-const ArticlePreview = ({ date, title, description, image, series, link, readingTime, seriesOrder }) => {
+const ArticlePreview = ({ date, title, description, image, series, link, readingTime, seriesOrder, seriesTotal }) => {
   return (
     <Link
       href={link}
@@ -80,7 +80,7 @@ const ArticlePreview = ({ date, title, description, image, series, link, reading
             {series && (
               <div className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
                 <RectangleStackIcon className="w-4 h-4 text-gray-500" />
-                {series.join(", ")} {seriesOrder && `(${seriesOrder}/12)`}
+                {series.join(", ")} {seriesOrder && `(${seriesOrder}${seriesTotal ? `/${seriesTotal}` : ""})`}
               </div>
             )}
           </div>

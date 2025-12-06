@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
+import { calculateSeriesTotals } from "@/utils"
 import { MDXRemote } from "next-mdx-remote"
 import { MDXRemoteSerializeResult, serialize } from "next-mdx-remote/serialize"
 import { CalendarDaysIcon, ClockIcon } from "@heroicons/react/24/outline"
@@ -10,6 +11,7 @@ import Footer from "@/components/Footer"
 import CTABlock from "@/sections/CTABlock"
 import Divider from "@/components/Divider"
 import ExampleBlock from "@/components/ExampleBlock"
+import QuoteHandwritten from "@/components/QuoteHandwritten"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import * as Icons from "@heroicons/react/24/outline"
@@ -30,16 +32,42 @@ export async function getStaticProps({ params }) {
   const fileContents = fs.readFileSync(filePath, "utf8")
   const { data, content } = matter(fileContents)
   const mdxSource = await serialize(content)
+  
+  // Calculate series total if this article is part of a series
+  let seriesTotal = null
+  if (data.series && data.series.length > 0) {
+    const articlesDir = path.join(process.cwd(), "src/articles")
+    const files = fs.readdirSync(articlesDir)
+    const allArticles = files
+      .filter((filename) => filename.endsWith(".mdx"))
+      .map((filename) => {
+        const articlePath = path.join(articlesDir, filename)
+        const articleContents = fs.readFileSync(articlePath, "utf8")
+        const { data: articleData } = matter(articleContents)
+        return articleData
+      })
+    
+    const articlesWithTotals = calculateSeriesTotals(allArticles)
+    // Find any article in the same series to get the seriesTotal (all articles in same series have same total)
+    const articleInSeries = articlesWithTotals.find(
+      (article) => article.series && 
+      article.series.length > 0 && 
+      article.series.some((s) => data.series.includes(s))
+    )
+    seriesTotal = articleInSeries?.seriesTotal || null
+  }
+  
   return {
     props: {
       frontmatter: data,
       mdxSource,
       slug: params.slug,
+      seriesTotal,
     },
   }
 }
 
-export default function Article({ frontmatter, mdxSource, slug }) {
+export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
   // Mouse move animation logic (from Hero)
   const headerRef = useRef(null)
   let mouseX = useMotionValue(0)
@@ -55,6 +83,7 @@ export default function Article({ frontmatter, mdxSource, slug }) {
     ...Icons,
     Divider,
     ExampleBlock,
+    QuoteHandwritten,
     // Add any other custom React components you want to use in MDX
   }
 
@@ -156,7 +185,7 @@ export default function Article({ frontmatter, mdxSource, slug }) {
               {frontmatter.series && (
                 <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
                   <Icons.RectangleStackIcon className="w-4 h-4" />
-                  {frontmatter.series.join(", ")} ({frontmatter.seriesOrder}/12)
+                  {frontmatter.series.join(", ")} ({frontmatter.seriesOrder}{seriesTotal ? `/${seriesTotal}` : ""})
                 </p>
               )}
             </div>

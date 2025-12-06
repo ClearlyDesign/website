@@ -1,8 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import fs from "fs"
-import path from "path"
-import matter from "gray-matter"
+import { loadArticlesWithSeriesTotals } from "@/utils"
 import {
   CalendarDaysIcon,
   ClockIcon,
@@ -139,7 +137,7 @@ const Articles = ({ articles }) => {
 }
 export default Articles
 
-const ArticleCard = ({ date, title, description, image, series, link, readingTime, seriesOrder }) => {
+const ArticleCard = ({ date, title, description, image, series, link, readingTime, seriesOrder, seriesTotal }) => {
   return (
     <a
       href={link}
@@ -161,7 +159,7 @@ const ArticleCard = ({ date, title, description, image, series, link, readingTim
           {series && (
             <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
               <RectangleStackIcon className="w-4 h-4 text-gray-500" />
-              {series.join(", ")} ({seriesOrder}/12)
+              {series.join(", ")} ({seriesOrder}{seriesTotal ? `/${seriesTotal}` : ""})
             </p>
           )}
         </div>
@@ -173,19 +171,11 @@ const ArticleCard = ({ date, title, description, image, series, link, readingTim
 }
 
 export async function getStaticProps() {
-  const articlesDir = path.join(process.cwd(), "src/articles")
-  const files = fs.readdirSync(articlesDir)
-  const articles = files
-    .filter((file) => file.endsWith(".mdx") && !file.startsWith("draft-"))
-    .map((filename) => {
-      const filePath = path.join(articlesDir, filename)
-      const fileContents = fs.readFileSync(filePath, "utf8")
-      const { data } = matter(fileContents)
-      return {
-        ...data,
-        link: `/articles/${filename.replace(/\.mdx$/, "")}`,
-      }
-    })
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-  return { props: { articles } }
+  const articles = loadArticlesWithSeriesTotals()
+  
+  return { 
+    props: { 
+      articles
+    } 
+  }
 }

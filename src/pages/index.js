@@ -10,9 +10,7 @@ import WhatWeDo from "@/sections/WhatWeDo"
 import CTABlock from "@/sections/CTABlock"
 import Articles from "@/sections/Articles"
 import { NextSeo } from "next-seo"
-import fs from "fs"
-import path from "path"
-import matter from "gray-matter"
+import { loadArticlesWithSeriesTotals } from "@/utils"
 
 const Home = ({ articles }) => {
   const title = "Clearly Design | Product Design Subscription"
@@ -60,30 +58,7 @@ const Home = ({ articles }) => {
 }
 
 export async function getStaticProps() {
-  const articlesDir = path.join(process.cwd(), "src/articles")
-  
-  // Check if articles directory exists
-  if (!fs.existsSync(articlesDir)) {
-    return {
-      props: {
-        articles: []
-      }
-    }
-  }
-
-  const files = fs.readdirSync(articlesDir)
-  const articles = files
-    .filter((file) => file.endsWith(".mdx") && !file.startsWith("draft-"))
-    .map((filename) => {
-      const filePath = path.join(articlesDir, filename)
-      const fileContents = fs.readFileSync(filePath, "utf8")
-      const { data } = matter(fileContents)
-      return {
-        ...data,
-        link: `/articles/${filename.replace(/\.mdx$/, "")}`,
-      }
-    })
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
+  const articles = loadArticlesWithSeriesTotals()
 
   return {
     props: {
