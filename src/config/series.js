@@ -1,0 +1,37 @@
+/**
+ * Series configuration
+ * Maps series names to their metadata (cover image, title, overview)
+ */
+export const seriesConfig = {
+  "The New Craft": {
+    title: "The New Craft",
+    slug: "the-new-craft",
+    coverImage: "/images/the-new-craft-series-cover.jpg", // Series cover image
+    overview: "As AI tools make professional-looking design accessible to everyone, craft becomes the differentiator. This series explores how real design craft evolves in an AI-driven world, and how to spot the difference between commodity and craft.",
+  },
+  "Designing for AI": {
+    title: "Designing for AI",
+    slug: "designing-for-ai",
+    coverImage: "/images/article-why-ai-products-fail-and-how-better-design-saves-them.jpg", // Using first article's image as cover
+    overview: "AI products require fundamentally different design thinking. This series covers the patterns, principles, and practices for building AI-powered experiences that users actually trust and enjoy.",
+  },
+}
+
+/**
+ * Get series config by slug
+ * @param {string} slug - The series slug
+ * @returns {Object|null} - Series config or null if not found
+ */
+export function getSeriesBySlug(slug) {
+  return Object.values(seriesConfig).find((series) => series.slug === slug) || null
+}
+
+/**
+ * Get series config by name
+ * @param {string} name - The series name
+ * @returns {Object|null} - Series config or null if not found
+ */
+export function getSeriesByName(name) {
+  return seriesConfig[name] || null
+}
+
