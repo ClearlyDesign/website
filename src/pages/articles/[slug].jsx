@@ -89,7 +89,9 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
     // Add any other custom React components you want to use in MDX
   }
 
-  const seriesSlug = seriesNameToSlug(frontmatter.series[0])
+  const seriesSlug = frontmatter.series && frontmatter.series.length > 0 
+    ? seriesNameToSlug(frontmatter.series[0])
+    : null
 
   return (
     <>
@@ -186,7 +188,7 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
                 <ClockIcon className="w-4 h-4" />
                 {frontmatter.readingTime}
               </p>
-              {frontmatter.series && (
+              {frontmatter.series && seriesSlug && (
                 <Link
                   href={`/series/${seriesSlug}`}
                   className="text-xs hover:text-white transition-all duration-300 text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase"
@@ -230,17 +232,19 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
           <MDXRemote {...mdxSource} components={components} />
         </div>
 
-        <div className="max-w-4xl mx-auto px-6 mt-12 sm:mt-24">
-          <div className="flex items-center justify-start gap-2">
-            <Link
-              href={`/series/${seriesSlug}`}
-              className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 border border-gray-300 hover:border-gray-400 rounded-full transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-            >
-              <ArrowLeftIcon className="w-4 h-4" />
-              All articles in "{frontmatter.series[0]}"
-            </Link>
+        {frontmatter.series && frontmatter.series.length > 0 && seriesSlug && (
+          <div className="max-w-4xl mx-auto px-6 mt-12 sm:mt-24">
+            <div className="flex items-center justify-start gap-2">
+              <Link
+                href={`/series/${seriesSlug}`}
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 border border-gray-300 hover:border-gray-400 rounded-full transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              >
+                <ArrowLeftIcon className="w-4 h-4" />
+                All articles in &quot;{frontmatter.series[0]}&quot;
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </article>
       <CTABlock
         ctaTitle={frontmatter.ctaTitle}
