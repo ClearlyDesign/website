@@ -183,9 +183,9 @@ export default function Series({ seriesName, articles, seriesConfig, slug }) {
       <div className="max-w-4xl mx-auto px-0 md:px-6 mt-12 sm:mt-16 mb-20">
         <h2 className="md:ml-8 text-2xl font-bold text-gray-900 mb-8 flex justify-center md:justify-start items-center gap-2">
           Articles in this series{" "}
-          <span className="text-gray-500 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-base font-mono">
+          <div className="w-6 h-6 rounded-full text-xs font-bold z-10 text-white bg-gray-900 flex items-center justify-center gap-2 font-mono uppercase">
             {articles.length}
-          </span>
+          </div>
         </h2>
         <div className="space-y-6">
           {articles.map((article, index) => (
@@ -195,22 +195,25 @@ export default function Series({ seriesName, articles, seriesConfig, slug }) {
               className="flex flex-col md:flex-row items-start gap-6 p-6 rounded-2xl hover:bg-gray-50 transition-all duration-300 border border-transparent hover:border-gray-200 group"
             >
               {/* Article Thumbnail */}
-              <div className="relative w-full md:w-32 h-32 md:h-32 sm:w-40 sm:h-40 shrink-0 overflow-hidden rounded-lg">
+              <div className="relative w-full md:w-32 h-32 md:h-32 sm:w-40 sm:h-40 shrink-0 bg-gray-100">
+                <div className="absolute w-6 h-6 rounded-full -top-2 -left-2 text-xs font-bold z-10 text-white bg-gray-900 flex items-center justify-center gap-2 font-mono uppercase">
+                  {article.seriesOrder}
+                </div>
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"
                 />
               </div>
               {/* Article Info */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-4 mb-2">
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-500">
-                  <span className="flex items-center gap-2">
-                    <RectangleStackIcon className="w-4 h-4" />
-                    {article.seriesOrder} of {articles.length}
-                  </span>
+                    <span className="flex items-center gap-2">
+                      <RectangleStackIcon className="w-4 h-4" />
+                      {article.seriesOrder} of {articles.length}
+                    </span>
                     <span className="flex items-center gap-2">
                       <CalendarDaysIcon className="w-4 h-4" />
                       {article.date}

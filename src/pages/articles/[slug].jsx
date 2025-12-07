@@ -3,8 +3,8 @@ import path from "path"
 import matter from "gray-matter"
 import { calculateSeriesTotals } from "@/utils"
 import { MDXRemote } from "next-mdx-remote"
-import { MDXRemoteSerializeResult, serialize } from "next-mdx-remote/serialize"
-import { CalendarDaysIcon, ClockIcon } from "@heroicons/react/24/outline"
+import { serialize } from "next-mdx-remote/serialize"
+import { CalendarDaysIcon, ClockIcon, ArrowLeftIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/Footer"
@@ -16,6 +16,7 @@ import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import * as Icons from "@heroicons/react/24/outline"
 import { NextSeo } from "next-seo"
+import { seriesNameToSlug } from "@/config/series"
 
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join(process.cwd(), "src/articles"))
@@ -32,7 +33,7 @@ export async function getStaticProps({ params }) {
   const fileContents = fs.readFileSync(filePath, "utf8")
   const { data, content } = matter(fileContents)
   const mdxSource = await serialize(content)
-  
+
   // Calculate series total if this article is part of a series
   let seriesTotal = null
   if (data.series && data.series.length > 0) {
@@ -46,17 +47,18 @@ export async function getStaticProps({ params }) {
         const { data: articleData } = matter(articleContents)
         return articleData
       })
-    
+
     const articlesWithTotals = calculateSeriesTotals(allArticles)
     // Find any article in the same series to get the seriesTotal (all articles in same series have same total)
     const articleInSeries = articlesWithTotals.find(
-      (article) => article.series && 
-      article.series.length > 0 && 
-      article.series.some((s) => data.series.includes(s))
+      (article) =>
+        article.series &&
+        article.series.length > 0 &&
+        article.series.some((s) => data.series.includes(s)),
     )
     seriesTotal = articleInSeries?.seriesTotal || null
   }
-  
+
   return {
     props: {
       frontmatter: data,
@@ -86,6 +88,8 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
     QuoteHandwritten,
     // Add any other custom React components you want to use in MDX
   }
+
+  const seriesSlug = seriesNameToSlug(frontmatter.series[0])
 
   return (
     <>
@@ -183,10 +187,14 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
                 {frontmatter.readingTime}
               </p>
               {frontmatter.series && (
-                <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
+                <Link
+                  href={`/series/${seriesSlug}`}
+                  className="text-xs hover:text-white transition-all duration-300 text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase"
+                >
                   <Icons.RectangleStackIcon className="w-4 h-4" />
-                  {frontmatter.series.join(", ")} ({frontmatter.seriesOrder}{seriesTotal ? `/${seriesTotal}` : ""})
-                </p>
+                  {frontmatter.series.join(", ")} ({frontmatter.seriesOrder}
+                  {seriesTotal ? `/${seriesTotal}` : ""})
+                </Link>
               )}
             </div>
             <h1 className="mt-6 sm:mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
@@ -220,6 +228,18 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
         </div>
         <div className="max-w-4xl mx-auto prose sm:prose-lg px-6 mt-12 sm:mt-16">
           <MDXRemote {...mdxSource} components={components} />
+        </div>
+
+        <div className="max-w-4xl mx-auto px-6 mt-12 sm:mt-24">
+          <div className="flex items-center justify-start gap-2">
+            <Link
+              href={`/series/${seriesSlug}`}
+              className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 border border-gray-300 hover:border-gray-400 rounded-full transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+            >
+              <ArrowLeftIcon className="w-4 h-4" />
+              All articles in "{frontmatter.series[0]}"
+            </Link>
+          </div>
         </div>
       </article>
       <CTABlock
