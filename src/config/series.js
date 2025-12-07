@@ -35,3 +35,15 @@ export function getSeriesByName(name) {
   return seriesConfig[name] || null
 }
 
+/**
+ * Converts a series name to a URL-friendly slug
+ * @param {string} seriesName - The series name (e.g., "The New Craft")
+ * @returns {string} - The slug (e.g., "the-new-craft")
+ */
+export function seriesNameToSlug(seriesName) {
+  return seriesName
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+}
+

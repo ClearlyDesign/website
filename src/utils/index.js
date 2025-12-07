@@ -120,3 +120,70 @@ export function getArticlesBySeries(seriesName) {
   return articles
 }
 
+/**
+ * Gets all series with their articles grouped together
+ * @returns {Array} - Array of series objects with config and articles, sorted by most recent article date
+ */
+export function getAllSeriesWithArticles() {
+  const articlesDir = path.join(process.cwd(), "src/articles")
+  
+  if (!fs.existsSync(articlesDir)) {
+    return []
+  }
+
+  // Get all articles
+  const files = fs.readdirSync(articlesDir)
+  const allArticles = files
+    .filter((file) => file.endsWith(".mdx") && !file.startsWith("draft-"))
+    .map((filename) => {
+      const filePath = path.join(articlesDir, filename)
+      const fileContents = fs.readFileSync(filePath, "utf8")
+      const { data } = matter(fileContents)
+      return {
+        ...data,
+        link: `/articles/${filename.replace(/\.mdx$/, "")}`,
+        slug: filename.replace(/\.mdx$/, ""),
+      }
+    })
+
+  // Group articles by series
+  const seriesMap = new Map()
+  
+  allArticles.forEach((article) => {
+    if (article.series && article.series.length > 0) {
+      article.series.forEach((seriesName) => {
+        if (!seriesMap.has(seriesName)) {
+          seriesMap.set(seriesName, [])
+        }
+        seriesMap.get(seriesName).push(article)
+      })
+    }
+  })
+
+  // Convert to array and sort articles by seriesOrder
+  const seriesArray = Array.from(seriesMap.entries()).map(([seriesName, articles]) => {
+    const sortedArticles = articles.sort((a, b) => {
+      const orderA = a.seriesOrder || 999
+      const orderB = b.seriesOrder || 999
+      return orderA - orderB
+    })
+    
+    // Find the most recent article date for sorting series (as ISO string for serialization)
+    const mostRecentDate = sortedArticles.reduce((latest, article) => {
+      const articleDate = new Date(article.date)
+      return articleDate > latest ? articleDate : latest
+    }, new Date(0))
+
+    return {
+      seriesName,
+      articles: sortedArticles,
+      mostRecentDate: mostRecentDate.toISOString(), // Convert to string for JSON serialization
+    }
+  })
+
+  // Sort series by most recent article date (newest first)
+  seriesArray.sort((a, b) => new Date(b.mostRecentDate) - new Date(a.mostRecentDate))
+
+  return seriesArray
+}
+

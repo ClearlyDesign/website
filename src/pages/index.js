@@ -10,9 +10,9 @@ import WhatWeDo from "@/sections/WhatWeDo"
 import CTABlock from "@/sections/CTABlock"
 import Articles from "@/sections/Articles"
 import { NextSeo } from "next-seo"
-import { loadArticlesWithSeriesTotals } from "@/utils"
+import { loadArticlesWithSeriesTotals, getAllSeriesWithArticles } from "@/utils"
 
-const Home = ({ articles }) => {
+const Home = ({ articles, series }) => {
   const title = "Clearly Design | Product Design Subscription"
   const description =
     "Clearly Design specializes in straightforward, results-driven website and product design. We cut through the noise to create clean, effective designs that make your vision clear. No frills—just impactful design."
@@ -50,7 +50,7 @@ const Home = ({ articles }) => {
       <Pricing />
       <HowItWorks />
       <FAQ />
-      <Articles articles={articles} />
+      <Articles articles={articles} series={series} />
       <CTABlock />
       <Footer />
     </div>
@@ -59,10 +59,12 @@ const Home = ({ articles }) => {
 
 export async function getStaticProps() {
   const articles = loadArticlesWithSeriesTotals()
+  const series = getAllSeriesWithArticles()
 
   return {
     props: {
-      articles
+      articles,
+      series
     }
   }
 }

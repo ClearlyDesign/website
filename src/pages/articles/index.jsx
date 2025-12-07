@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { loadArticlesWithSeriesTotals } from "@/utils"
+import { getAllSeriesWithArticles } from "@/utils"
+import { getSeriesByName, seriesNameToSlug } from "@/config/series"
 import {
   CalendarDaysIcon,
   ClockIcon,
@@ -8,13 +9,14 @@ import {
   SwatchIcon,
   RectangleStackIcon,
   PencilSquareIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/outline"
 import Footer from "@/components/Footer"
 import { useRef } from "react"
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import { NextSeo } from "next-seo"
 
-const Articles = ({ articles }) => {
+const Articles = ({ series }) => {
   // Mouse move animation logic (from [slug].jsx)
   const headerRef = useRef(null)
   let mouseX = useMotionValue(0)
@@ -108,7 +110,9 @@ const Articles = ({ articles }) => {
           </div>
         </div>
         <div className="mx-auto max-w-2xl lg:max-w-5xl px-6 pt-8 sm:pt-20 pb-14">
-        <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase"><PencilSquareIcon className="w-4 h-4" /> Articles</p>
+          <p className="text-xs text-white/50 tracking-wide flex items-center gap-2 font-mono uppercase">
+            <PencilSquareIcon className="w-4 h-4" /> Articles
+          </p>
           <h1 className="text-4xl mt-4 font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
             Thoughts on{" "}
             <div className="hidden bg-lime-400 ml-2 text-gray-900 rounded-full p-3 sm:inline-flex items-center justify-center">
@@ -122,11 +126,22 @@ const Articles = ({ articles }) => {
           </h1>
         </div>
       </header>
-      <div className="mx-auto max-w-2xl lg:max-w-5xl">
-        <div className="mt-1 lg:mt-12 xl:mt-20">
-          {articles.map((article) => (
-            <ArticleCard key={article?.title} {...article} />
-          ))}
+      <div className="mx-auto max-w-2xl lg:max-w-5xl px-6">
+        <div className="mt-8 lg:mt-12 xl:mt-20 space-y-16">
+          {/* Series Overviews */}
+          {series.map((seriesData) => {
+            const seriesConfig = getSeriesByName(seriesData.seriesName)
+            if (!seriesConfig) return null
+
+            return (
+              <SeriesCard
+                key={seriesData.seriesName}
+                seriesName={seriesData.seriesName}
+                seriesConfig={seriesConfig}
+                articles={seriesData.articles}
+              />
+            )
+          })}
         </div>
       </div>
       <div className="mt-16 sm:mt-20">
@@ -137,45 +152,89 @@ const Articles = ({ articles }) => {
 }
 export default Articles
 
-const ArticleCard = ({ date, title, description, image, series, link, readingTime, seriesOrder, seriesTotal }) => {
+const SeriesCard = ({ seriesName, seriesConfig, articles }) => {
+  const seriesSlug = seriesNameToSlug(seriesName)
+
   return (
-    <a
-      href={link}
-      className="rounded-3xl p-6 flex flex-col lg:flex-row items-start gap-6 border-dashed border-b border-gray-200 pb-10 hover:bg-gray-50 transition-all duration-300 border border-transparent hover:border-gray-200"
-    >
-      <div className="relative flex w-full lg:w-96 h-60 shrink-0 overflow-hidden rounded-lg">
-        <Image src={image} alt={title} fill className="object-cover" />
-      </div>
-      <div className="flex flex-col gap-2">
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-          <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
-            <CalendarDaysIcon className="w-4 h-4" />
-            {date}
-          </p>
-          <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
-            <ClockIcon className="w-4 h-4" />
-            {readingTime}
-          </p>
-          {series && (
-            <p className="text-xs text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
-              <RectangleStackIcon className="w-4 h-4 text-gray-500" />
-              {series.join(", ")} ({seriesOrder}{seriesTotal ? `/${seriesTotal}` : ""})
+    <div className="bg-white rounded-3xl p-1 lg:p-12 lg:border lg:border-gray-200 lg:shadow-perfect">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        {/* Left Side: Series Info */}
+        <div className="flex-1 lg:max-w-sm">
+          <div className="sticky top-6">
+            <p className="text-xs mb-3 text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
+              Series
             </p>
-          )}
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              {seriesConfig.title}
+            </h2>
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              {seriesConfig.overview}
+            </p>
+            {/* Series Cover Image */}
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100">
+              <Image
+                src={seriesConfig.coverImage}
+                alt={seriesConfig.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+            {/* View Series Link */}
+            <Link
+              href={`/series/${seriesSlug}`}
+              className="hidden lg:inline-flex items-center gap-2 mt-6 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+            >
+              View full series
+              <ArrowRightIcon className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
-        <p className="text-3xl font-bold text-gray-900 tracking-tight mt-2">{title}</p>
-        <p className="text-base text-gray-500">{description}</p>
+
+        {/* Right Side: Article List */}
+        <div className="flex-1 lg:max-w-lg">
+          <p className="text-xs mb-3 text-gray-500 tracking-wide flex items-center gap-2 font-mono uppercase">
+            Articles
+          </p>
+          <div className="space-y-8 lg:space-y-0">
+            {articles.map((article) => (
+              <Link
+                key={article.slug}
+                href={article.link}
+                className="flex flex-col lg:flex-row items-start hover:cursor-pointer gap-2 lg:gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors group"
+              >
+                {/* Article Thumbnail */}
+                <div className="relative aspect-video w-full lg:w-auto lg:h-20 shrink-0 bg-gray-100">
+                  <div className="absolute w-6 h-6 rounded-full -top-2 -left-2 text-xs font-bold z-10 text-white bg-gray-900 flex items-center justify-center gap-2 font-mono uppercase">
+                    {article.seriesOrder}
+                  </div>
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"
+                  />
+                </div>
+                {/* Article Title */}
+                <div className="flex-1 min-w-0 pt-1">
+                  <h3 className="text-lg font-semibold text-gray-700 group-hover:text-gray-950 transition-colors">
+                    {article.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
-    </a>
+    </div>
   )
 }
 
 export async function getStaticProps() {
-  const articles = loadArticlesWithSeriesTotals()
-  
-  return { 
-    props: { 
-      articles
-    } 
+  const series = getAllSeriesWithArticles()
+
+  return {
+    props: {
+      series,
+    },
   }
 }
