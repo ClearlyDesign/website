@@ -204,11 +204,11 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
             </h1>
             <div className="flex items-center gap-3 mt-7 sm:mt-6 text-white/50">
               <Image
-                src="/images/fb-clearly.svg"
+                src="/images/fb-clearly.png"
                 alt="Francois Brill"
                 width={48}
                 height={48}
-                className="size-12 rounded-full object-cover"
+                className="size-12 rounded-full object-cover border-white/20 border"
               />
               <div className="flex flex-col text-sm gap-1">
                 <p className="font-medium text-white text-md">{frontmatter.author}</p>
