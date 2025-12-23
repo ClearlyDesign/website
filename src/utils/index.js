@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import { getSeriesBySlug } from "@/config/series"
+import { getSeriesBySlug, getSeriesKeyBySlug } from "@/config/series"
 
 /**
  * Calculates the total number of articles in the same series for each article
@@ -69,15 +69,15 @@ export function seriesNameToSlug(seriesName) {
 }
 
 /**
- * Converts a slug back to series name
+ * Converts a slug back to series name (the config key, which is the stable identifier)
  * @param {string} slug - The slug (e.g., "the-new-craft")
- * @returns {string} - The series name (e.g., "The New Craft")
+ * @returns {string} - The series config key (e.g., "The New Craft")
  */
 export function slugToSeriesName(slug) {
-  // Try to get series name from config first
-  const seriesConfig = getSeriesBySlug(slug)
-  if (seriesConfig && seriesConfig.title) {
-    return seriesConfig.title
+  // Get the config key (stable identifier) from the slug
+  const seriesKey = getSeriesKeyBySlug(slug)
+  if (seriesKey) {
+    return seriesKey
   }
   // Fallback to slug if not found in config
   return slug

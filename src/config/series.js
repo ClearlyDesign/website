@@ -4,7 +4,7 @@
  */
 export const seriesConfig = {
   "Branding is Product": {
-    title: "Branding is Product",
+    title: "Branding is your product's personality",
     slug: "branding-is-product",
     coverImage: "/images/series-branding-is-product-cover.jpg", // Series cover image
     overview: "When you're building fast, branding feels like something you can postpone. But users don't experience “later.” They experience the product exactly as it shows up today. Brand is a product's personality that makes someone coming back for more or forgetting you.",
@@ -30,6 +30,16 @@ export const seriesConfig = {
  */
 export function getSeriesBySlug(slug) {
   return Object.values(seriesConfig).find((series) => series.slug === slug) || null
+}
+
+/**
+ * Get series config key (the stable identifier) by slug
+ * @param {string} slug - The series slug
+ * @returns {string|null} - Series config key or null if not found
+ */
+export function getSeriesKeyBySlug(slug) {
+  const entry = Object.entries(seriesConfig).find(([key, config]) => config.slug === slug)
+  return entry ? entry[0] : null
 }
 
 /**
