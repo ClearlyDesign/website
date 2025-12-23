@@ -7,7 +7,7 @@ export const seriesConfig = {
     title: "Branding is your product's personality",
     slug: "branding-is-product",
     coverImage: "/images/series-branding-is-product-cover.jpg", // Series cover image
-    overview: "When you're building fast, branding feels like something you can postpone. But users don't experience “later.” They experience the product exactly as it shows up today. Brand is a product's personality that makes someone coming back for more or forgetting you.",
+    overview: "Branding has shifted from a marketing tactic to a product decision. When you're building fast, branding feels like something you can postpone. But users don't experience “later.” They experience the product exactly as it shows up today. Brand is a product's personality that makes someone coming back for more or forgetting you, and your product team is responsilble for shaping that experience.",
   },
   "The New Craft": {
     title: "The New Craft",
