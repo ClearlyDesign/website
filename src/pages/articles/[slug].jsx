@@ -17,6 +17,7 @@ import { motion, useMotionTemplate, useMotionValue } from "framer-motion"
 import * as Icons from "@heroicons/react/24/outline"
 import { NextSeo } from "next-seo"
 import { seriesNameToSlug } from "@/config/series"
+import BlogNextPreviousFooter from "@/components/BlogNextPreviousFooter"
 
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join(process.cwd(), "src/articles"))
@@ -34,22 +35,31 @@ export async function getStaticProps({ params }) {
   const { data, content } = matter(fileContents)
   const mdxSource = await serialize(content)
 
+  // Load all articles
+  const articlesDir = path.join(process.cwd(), "src/articles")
+  const files = fs.readdirSync(articlesDir)
+  const allArticles = files
+    .filter((filename) => filename.endsWith(".mdx") && !filename.startsWith("draft-"))
+    .map((filename) => {
+      const articlePath = path.join(articlesDir, filename)
+      const articleContents = fs.readFileSync(articlePath, "utf8")
+      const { data: articleData } = matter(articleContents)
+      return {
+        ...articleData,
+        slug: filename.replace(/\.mdx$/, ""),
+      }
+    })
+
   // Calculate series total if this article is part of a series
   let seriesTotal = null
-  if (data.series && data.series.length > 0) {
-    const articlesDir = path.join(process.cwd(), "src/articles")
-    const files = fs.readdirSync(articlesDir)
-    const allArticles = files
-      .filter((filename) => filename.endsWith(".mdx"))
-      .map((filename) => {
-        const articlePath = path.join(articlesDir, filename)
-        const articleContents = fs.readFileSync(articlePath, "utf8")
-        const { data: articleData } = matter(articleContents)
-        return articleData
-      })
+  let previousArticle = null
+  let nextArticle = null
 
+  if (data.series && data.series.length > 0 && data.seriesOrder) {
+    // Article is part of a series - get previous/next from same series based on seriesOrder
     const articlesWithTotals = calculateSeriesTotals(allArticles)
-    // Find any article in the same series to get the seriesTotal (all articles in same series have same total)
+    
+    // Find any article in the same series to get the seriesTotal
     const articleInSeries = articlesWithTotals.find(
       (article) =>
         article.series &&
@@ -57,6 +67,62 @@ export async function getStaticProps({ params }) {
         article.series.some((s) => data.series.includes(s)),
     )
     seriesTotal = articleInSeries?.seriesTotal || null
+
+    // Get all articles in the same series, sorted by seriesOrder
+    const seriesArticles = allArticles
+      .filter((article) =>
+        article.series &&
+        article.series.length > 0 &&
+        article.series.some((s) => data.series.includes(s)) &&
+        article.seriesOrder
+      )
+      .sort((a, b) => (a.seriesOrder || 999) - (b.seriesOrder || 999))
+
+    // Find current article index in series
+    const currentIndex = seriesArticles.findIndex((article) => article.slug === params.slug)
+
+    // Get previous article (lower seriesOrder)
+    if (currentIndex > 0) {
+      const prev = seriesArticles[currentIndex - 1]
+      previousArticle = {
+        slug: `/articles/${prev.slug}`,
+        title: prev.title,
+        image: prev.image,
+      }
+    }
+
+    // Get next article (higher seriesOrder)
+    if (currentIndex < seriesArticles.length - 1) {
+      const next = seriesArticles[currentIndex + 1]
+      nextArticle = {
+        slug: `/articles/${next.slug}`,
+        title: next.title,
+        image: next.image,
+      }
+    }
+  } else {
+    // Article is not part of a series - use chronological order
+    const sortedArticles = [...allArticles].sort((a, b) => new Date(b.date) - new Date(a.date))
+    const currentIndex = sortedArticles.findIndex((article) => article.slug === params.slug)
+    
+    // Previous = newer article (index - 1), Next = older article (index + 1)
+    if (currentIndex > 0) {
+      const prev = sortedArticles[currentIndex - 1]
+      previousArticle = {
+        slug: `/articles/${prev.slug}`,
+        title: prev.title,
+        image: prev.image,
+      }
+    }
+    
+    if (currentIndex < sortedArticles.length - 1) {
+      const next = sortedArticles[currentIndex + 1]
+      nextArticle = {
+        slug: `/articles/${next.slug}`,
+        title: next.title,
+        image: next.image,
+      }
+    }
   }
 
   return {
@@ -65,11 +131,13 @@ export async function getStaticProps({ params }) {
       mdxSource,
       slug: params.slug,
       seriesTotal,
+      previousArticle,
+      nextArticle,
     },
   }
 }
 
-export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
+export default function Article({ frontmatter, mdxSource, slug, seriesTotal, previousArticle, nextArticle }) {
   // Mouse move animation logic (from Hero)
   const headerRef = useRef(null)
   let mouseX = useMotionValue(0)
@@ -86,6 +154,7 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
     Divider,
     ExampleBlock,
     QuoteHandwritten,
+    BlogNextPreviousFooter,
     // Add any other custom React components you want to use in MDX
   }
 
@@ -229,15 +298,15 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal }) {
           />
         </div>
         <div className="max-w-4xl mx-auto prose sm:prose-lg px-6 mt-12 sm:mt-16">
-          <MDXRemote {...mdxSource} components={components} />
+          <MDXRemote {...mdxSource} components={components} scope={{ previousArticle, nextArticle }} />
         </div>
 
         {frontmatter.series && frontmatter.series.length > 0 && seriesSlug && (
-          <div className="max-w-4xl mx-auto px-6 mt-12 sm:mt-24">
-            <div className="flex items-center justify-start gap-2">
+          <div className="max-w-4xl mx-auto px-6 mt-12 sm:mt-16">
+            <div className="flex items-center justify-center gap-2">
               <Link
                 href={`/series/${seriesSlug}`}
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 border border-gray-300 hover:border-gray-400 rounded-full transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 border border-gray-200 hover:border-gray-300 rounded-xl transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
               >
                 <ArrowLeftIcon className="w-4 h-4" />
                 All articles in &quot;{frontmatter.series[0]}&quot;

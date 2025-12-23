@@ -7,7 +7,7 @@ export const seriesConfig = {
     title: "Branding is Product",
     slug: "branding-is-product",
     coverImage: "/images/series-branding-is-product-cover.jpg", // Series cover image
-    overview: "When you're building fast, branding feels like something you'll deal with later. But users don't experience “later.” They experience the product as it is now.",
+    overview: "When you're building fast, branding feels like something you can postpone. But users don't experience “later.” They experience the product exactly as it shows up today. Brand is a product's personality that makes someone coming back for more or forgetting you.",
   },
   "The New Craft": {
     title: "The New Craft",
