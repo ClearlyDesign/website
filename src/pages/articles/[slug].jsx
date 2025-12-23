@@ -301,9 +301,11 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal, pre
           <MDXRemote {...mdxSource} components={components} scope={{ previousArticle, nextArticle }} />
         </div>
 
+
         {frontmatter.series && frontmatter.series.length > 0 && seriesSlug && (
           <div className="max-w-4xl mx-auto px-6 mt-12 sm:mt-16">
-            <div className="flex items-center justify-center gap-2">
+            <BlogNextPreviousFooter previousArticle={previousArticle} nextArticle={nextArticle} />
+            <div className="flex items-center justify-center gap-2 mt-12 sm:mt-16">
               <Link
                 href={`/series/${seriesSlug}`}
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 border border-gray-200 hover:border-gray-300 rounded-xl transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
