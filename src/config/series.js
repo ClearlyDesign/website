@@ -3,6 +3,12 @@
  * Maps series names to their metadata (cover image, title, overview)
  */
 export const seriesConfig = {
+  "Branding is Product": {
+    title: "Branding is Product",
+    slug: "branding-is-product",
+    coverImage: "/images/series-branding-is-product-cover.jpg", // Series cover image
+    overview: "When you're building fast, branding feels like something you'll deal with later. But users don't experience “later.” They experience the product as it is now.",
+  },
   "The New Craft": {
     title: "The New Craft",
     slug: "the-new-craft",

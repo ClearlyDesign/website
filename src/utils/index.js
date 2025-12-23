@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
+import { getSeriesBySlug } from "@/config/series"
 
 /**
  * Calculates the total number of articles in the same series for each article
@@ -73,12 +74,13 @@ export function seriesNameToSlug(seriesName) {
  * @returns {string} - The series name (e.g., "The New Craft")
  */
 export function slugToSeriesName(slug) {
-  // Map of known slugs to series names
-  const slugToName = {
-    "the-new-craft": "The New Craft",
-    "designing-for-ai": "Designing for AI",
+  // Try to get series name from config first
+  const seriesConfig = getSeriesBySlug(slug)
+  if (seriesConfig && seriesConfig.title) {
+    return seriesConfig.title
   }
-  return slugToName[slug] || slug
+  // Fallback to slug if not found in config
+  return slug
 }
 
 /**
