@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["geist"],
+  transpilePackages: ["geist", "next-mdx-remote"],
   async rewrites() {
     return [
       { source: '/sitemap.xml', destination: '/api/sitemap' },
