@@ -3,6 +3,12 @@
  * Maps series names to their metadata (cover image, title, overview)
  */
 export const seriesConfig = {
+  "The Judgment Layer": {
+    title: "The Judgment Layer",
+    slug: "the-judgment-layer",
+    coverImage: "/images/series-the-judgment-layer-cover.jpg", // Series cover image
+    overview: "As AI collapses the cost of execution, the most valuable thing a product team can have isn't faster output, it's clearer judgment about what to build and why. Crafting this first helps you move at the speed of thought when executing.",
+  },
   "Branding is Product": {
     title: "Branding is your product's personality",
     slug: "branding-is-product",
