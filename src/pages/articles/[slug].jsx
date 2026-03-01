@@ -282,7 +282,7 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal, pre
               <div className="flex flex-col text-sm gap-1">
                 <p className="font-medium text-white text-md">{frontmatter.author}</p>
                 <p className="text-xs text-white/50 tracking-wide font-mono uppercase">
-                  Founding Designer
+                  Designer + Builder
                 </p>
               </div>
             </div>
