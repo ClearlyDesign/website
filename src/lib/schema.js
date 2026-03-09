@@ -1,6 +1,16 @@
 const SITE_URL = "https://clearly.design"
 
 /**
+ * Converts a display date (e.g. "Jul 11, 2025") to ISO 8601 with timezone (UTC).
+ * Returns null if parsing fails.
+ */
+function toISO8601(dateStr) {
+  if (!dateStr) return null
+  const d = new Date(dateStr)
+  return Number.isNaN(d.getTime()) ? null : d.toISOString()
+}
+
+/**
  * Organization + WebSite schema for the whole site (brand, sitelinks).
  */
 export function organizationWebSiteSchema() {
@@ -39,18 +49,18 @@ export function organizationWebSiteSchema() {
 export function articleSchema({ title, description, image, date, author, slug }) {
   const url = `${SITE_URL}/articles/${slug}`
   const imageUrl = image?.startsWith("http") ? image : `${SITE_URL}${image}`
+  const isoDate = toISO8601(date)
 
-  return {
+  const article = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description: description,
     image: imageUrl,
-    datePublished: date,
-    dateModified: date,
     author: {
       "@type": "Person",
       name: author,
+      url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
@@ -66,6 +76,13 @@ export function articleSchema({ title, description, image, date, author, slug })
     },
     url,
   }
+
+  if (isoDate) {
+    article.datePublished = isoDate
+    article.dateModified = isoDate
+  }
+
+  return article
 }
 
 /**
