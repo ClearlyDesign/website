@@ -18,6 +18,8 @@ import * as Icons from "@heroicons/react/24/outline"
 import { NextSeo } from "next-seo"
 import { seriesNameToSlug } from "@/config/series"
 import BlogNextPreviousFooter from "@/components/BlogNextPreviousFooter"
+import JsonLd from "@/components/JsonLd"
+import { articleSchema } from "@/lib/schema"
 
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join(process.cwd(), "src/articles"))
@@ -164,6 +166,16 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal, pre
 
   return (
     <>
+      <JsonLd
+        data={articleSchema({
+          title: frontmatter.title,
+          description: frontmatter.description,
+          image: frontmatter.image,
+          date: frontmatter.date,
+          author: frontmatter.author,
+          slug,
+        })}
+      />
       <NextSeo
         title={`${frontmatter.title} | Clearly Design`}
         description={frontmatter.description}

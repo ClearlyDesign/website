@@ -11,6 +11,9 @@ import CTABlock from "@/sections/CTABlock"
 import Articles from "@/sections/Articles"
 import { NextSeo } from "next-seo"
 import { loadArticlesWithSeriesTotals, getAllSeriesWithArticles } from "@/utils"
+import JsonLd from "@/components/JsonLd"
+import { faqPageSchema } from "@/lib/schema"
+import { faqItems } from "@/sections/FAQ"
 
 const Home = ({ articles, series }) => {
   const title = "Clearly Design | Product Design Subscription"
@@ -19,6 +22,7 @@ const Home = ({ articles, series }) => {
 
   return (
     <div>
+      <JsonLd data={faqPageSchema(faqItems)} />
       <NextSeo
         title={title}
         description={description}

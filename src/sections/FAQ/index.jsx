@@ -32,7 +32,7 @@ const FAQ = () => {
                 "-mx-5 sm:mx-0 sm:rounded-2xl",
               )}
             >
-              {items.map((item, i) => (
+              {faqItems.map((item, i) => (
                 <Item
                   key={i}
                   count={i}
@@ -96,7 +96,7 @@ const Item = ({ question, answer, mainControls, count }) => {
   )
 }
 
-const items = [
+export const faqItems = [
   {
     question: "What is a workstream?",
     answer:
