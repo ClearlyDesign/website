@@ -89,6 +89,52 @@ export function articleSchema({ title, description, image, date, author, slug })
  * FAQPage schema for the homepage FAQ section.
  * @param {Array<{ question: string, answer: string }>} items - FAQ items (answer can contain HTML; will be stripped)
  */
+/**
+ * Article schema for resource/decision pages.
+ */
+export function resourceArticleSchema({
+  title,
+  description,
+  date,
+  lastUpdated,
+  author,
+  slug,
+}) {
+  const url = `${SITE_URL}/resources/${slug}`
+  const isoDate = toISO8601(date)
+  const isoModified = toISO8601(lastUpdated) || isoDate
+
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title?.replace(" | Clearly Design", ""),
+    description,
+    author: {
+      "@type": "Person",
+      name: author,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Clearly Design",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/images/icon-clearly-design.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    url,
+  }
+
+  if (isoDate) article.datePublished = isoDate
+  if (isoModified) article.dateModified = isoModified
+
+  return article
+}
+
 export function faqPageSchema(items) {
   const stripHtml = (html) =>
     html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").replace(/&#39;/g, "'")
