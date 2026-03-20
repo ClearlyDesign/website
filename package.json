@@ -28,10 +28,12 @@
     "react-dom": "19.2.3",
     "react-scroll": "1.9.3",
     "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
     "autoprefixer": "10.4.22",
+    "baseline-browser-mapping": "^2.10.9",
     "eslint": "^8",
     "eslint-config-next": "15.5.7",
     "postcss": "8.5.6",
