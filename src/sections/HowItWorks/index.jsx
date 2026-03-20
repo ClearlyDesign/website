@@ -84,7 +84,7 @@ const Item = ({ item, count }) => {
         {item.number}
       </div>
       <div>
-        <h5 className="text-white">{item.title}</h5>
+        <h3 className="text-white">{item.title}</h3>
         <p dangerouslySetInnerHTML={{ __html: item.description }} />
       </div>
     </motion.div>

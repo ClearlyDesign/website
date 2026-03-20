@@ -82,7 +82,7 @@ const Row = ({ row }) => {
           </motion.div>
         </div>
         <div className="text-center px-5 sm:px-10 mt-5 mb-10 space-y-5 max-w-4xl mx-auto">
-          <motion.h2
+          <motion.h3
             className="text-3xl sm:text-4xl text-gray-800"
             variants={{
               hidden: { opacity: 0, y: 75 },
@@ -93,7 +93,7 @@ const Row = ({ row }) => {
             transition={{ duration: 0.3, delay: 0.25 }}
           >
             {title}
-          </motion.h2>
+          </motion.h3>
           <motion.p
             className="text-base sm:text-lg text-gray-500"
             dangerouslySetInnerHTML={{ __html: description }}
@@ -121,7 +121,7 @@ const Row = ({ row }) => {
             className="w-full hidden md:block"
             width={1220}
             height={188}
-            alt=""
+            alt={`${title} illustration`}
             priority
           />
           <Image
@@ -129,7 +129,7 @@ const Row = ({ row }) => {
             className="w-full block md:hidden"
             width={724}
             height={188}
-            alt=""
+            alt={`${title} illustration`}
             priority
           />
         </motion.div>

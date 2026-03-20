@@ -89,7 +89,7 @@ const Item = ({ item, count }) => {
       />
       <Image
         src={`/images/${item.cover}`}
-        alt=""
+        alt={`${item.title} service illustration`}
         width={450}
         height={250}
         className="w-full opacity-80 group-hover:opacity-100 transition-all ease-in-out duration-200"
@@ -99,7 +99,7 @@ const Item = ({ item, count }) => {
           <div className="rounded-full bg-lime-400 text-gray-900 inline-flex p-3">
             <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
           </div>
-          <h4 className="tracking-tighter text-3xl font-bold text-white">{item.title}</h4>
+          <h3 className="tracking-tighter text-3xl font-bold text-white">{item.title}</h3>
         </div>
         <ul className="space-y-2 mt-2">
           {item.services.map((service) => (

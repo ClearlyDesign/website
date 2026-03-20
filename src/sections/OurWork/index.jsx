@@ -30,7 +30,7 @@ const OurWork = () => {
                 >
                   <Image
                     src="/portfolio/portfolio-s-01.jpg"
-                    alt=""
+                    alt="Flexi project design"
                     width={400}
                     height={400}
                     className="w-full"
@@ -45,7 +45,7 @@ const OurWork = () => {
                 >
                   <Image
                     src="/portfolio/portfolio-r-01.jpg"
-                    alt=""
+                    alt="Flexi project showcase"
                     width={400}
                     height={225}
                     className="w-full"
@@ -62,7 +62,7 @@ const OurWork = () => {
                 >
                   <Image
                     src="/portfolio/portfolio-r-02.jpg"
-                    alt=""
+                    alt="Castos project design"
                     width={400}
                     height={400}
                     className="w-full"
@@ -77,7 +77,7 @@ const OurWork = () => {
                 >
                   <Image
                     src="/portfolio/portfolio-s-02.jpg"
-                    alt=""
+                    alt="Castos project showcase"
                     width={400}
                     height={225}
                     className="w-full"
@@ -94,7 +94,7 @@ const OurWork = () => {
                 >
                   <Image
                     src="/portfolio/portfolio-s-03.jpg"
-                    alt=""
+                    alt="WStack project design"
                     width={400}
                     height={400}
                     className="w-full"
@@ -109,7 +109,7 @@ const OurWork = () => {
                 >
                   <Image
                     src="/portfolio/portfolio-r-03.jpg"
-                    alt=""
+                    alt="WStack project showcase"
                     width={400}
                     height={225}
                     className="w-full"
@@ -126,7 +126,7 @@ const OurWork = () => {
                 >
                   <Image
                     src="/portfolio/portfolio-r-04.jpg"
-                    alt=""
+                    alt="NodCards project design"
                     width={400}
                     height={225}
                     className="w-full"
@@ -141,7 +141,7 @@ const OurWork = () => {
                 >
                   <Image
                     src="/portfolio/portfolio-s-04.jpg"
-                    alt=""
+                    alt="NodCards project showcase"
                     width={400}
                     height={400}
                     className="w-full"

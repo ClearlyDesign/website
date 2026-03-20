@@ -106,7 +106,7 @@ const Testimonials = () => {
                         <Image
                           className="h-10 w-auto flex-none"
                           src={`/logos/${featuredTestimonial.author.logo}`}
-                          alt=""
+                          alt={`${featuredTestimonial.author.name} logo`}
                           width={110}
                           height={30}
                         />

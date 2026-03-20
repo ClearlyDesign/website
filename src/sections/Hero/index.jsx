@@ -61,30 +61,32 @@ const Hero = () => {
       <div className="row-inner z-10 relative">
         <Header />
         <div className="text-center pt-24 pb-20 md:pb-48">
-          <motion.h1
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="bg-gradient-to-r from-green-300 via-emerald-200 to-lime-300 inline-block text-transparent bg-clip-text leading-tight px-5 drop-shadow-[0_0_40px_rgba(134,239,172,0.15)]"
-          >
-            Design clarity
-          </motion.h1>
-          <motion.h1
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="text-white leading-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]"
-          >
-             for growing companies
-          </motion.h1>
+          <h1>
+            <motion.span
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="bg-gradient-to-r from-green-300 via-emerald-200 to-lime-300 inline-block text-transparent bg-clip-text leading-tight px-5 drop-shadow-[0_0_40px_rgba(134,239,172,0.15)]"
+            >
+              Design clarity
+            </motion.span>
+            <motion.span
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="block text-white leading-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]"
+            >
+              for growing companies
+            </motion.span>
+          </h1>
           <motion.p
             variants={{
               hidden: { opacity: 0, y: 20 },
