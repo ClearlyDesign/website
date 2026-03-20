@@ -65,17 +65,6 @@ export default function Project({ frontmatter, mdxSource, slug, caseStudies }) {
             },
           ],
         }}
-        twitter={{
-          handle: "@fbrill",
-          site: "https://clearly.design",
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content: `SaaS Design, Product Design, Website Design, Conversion Optimization, Design Agency, Design Studio`,
-          },
-        ]}
       />
       <ProjectLayout frontmatter={frontmatter} mdxSource={mdxSource} slug={slug} caseStudies={caseStudies} />
     </>

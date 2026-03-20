@@ -97,11 +97,6 @@ export default function Series({ seriesName, articles, seriesConfig, slug }) {
             },
           ],
         }}
-        twitter={{
-          handle: "@fbrill",
-          site: "https://clearly.design",
-          cardType: "summary_large_image",
-        }}
       />
       <header
         className="bg-gradient-to-br from-indigo-950 to-gray-950 relative group"

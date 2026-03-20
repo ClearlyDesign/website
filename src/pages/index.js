@@ -34,17 +34,6 @@ const Home = ({ articles, series }) => {
           site_name: "Clearly Design",
           images: [{ url: "https://clearly.design/images/og-image.png" }],
         }}
-        twitter={{
-          handle: "@fbrill",
-          site: "https://clearly.design",
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content: `Product Design, Website Design, Framer, Webflow, Design, UX Design, UI Design, User Interface Design`,
-          },
-        ]}
       />
       <Hero />
       <OurWork />

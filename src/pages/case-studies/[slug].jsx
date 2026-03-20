@@ -86,17 +86,6 @@ export default function CaseStudy({ frontmatter, mdxSource, slug }) {
             },
           ],
         }}
-        twitter={{
-          handle: "@fbrill",
-          site: "https://clearly.design",
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content: `Custom Internal Tools, SaaS Replacement, ${frontmatter.industry}, Case Study, Internal Tool Development`,
-          },
-        ]}
       />
       <article className="mb-40">
         <header

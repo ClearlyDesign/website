@@ -40,17 +40,6 @@ const CaseStudies = ({ caseStudies }) => {
           site_name: "Clearly Design",
           images: [{ url: "https://clearly.design/images/og-image.png" }],
         }}
-        twitter={{
-          handle: "@fbrill",
-          site: "https://clearly.design",
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content: `Custom Internal Tools, SaaS Replacement, Case Studies, Internal Tool Development, Custom Software, Agency Tools, Operations Software`,
-          },
-        ]}
       />
       <main className="min-h-screen bg-gray-100">
         <header

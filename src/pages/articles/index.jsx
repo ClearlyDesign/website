@@ -28,7 +28,7 @@ const Articles = ({ series }) => {
   }
   const title = "Articles | Clearly Design"
   const description =
-    "Clearly Design specializes in straightforward, results-driven website and product design. We cut through the noise to create clean, effective designs that make your vision clear. No frills—just impactful design."
+    "Articles on AI design, product branding, and design craft for SaaS founders. Practical series by Francois Brill on building products that earn trust."
   const url = "https://clearly.design/articles"
 
   return (
@@ -44,17 +44,6 @@ const Articles = ({ series }) => {
           site_name: "Clearly Design",
           images: [{ url: "https://clearly.design/images/og-image.png" }],
         }}
-        twitter={{
-          handle: "@fbrill",
-          site: "https://clearly.design",
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content: `Product Design, Website Design, Framer, Webflow, Design, UX Design, UI Design, User Interface Design, AI Design, Design Agency, Design Studio, Design Agency`,
-          },
-        ]}
       />
       <header
         className="bg-gradient-to-br from-indigo-950 to-gray-950 relative group"
