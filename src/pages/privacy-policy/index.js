@@ -1,9 +1,15 @@
 import Footer from "@/components/Footer"
 import PageHeader from "@/sections/PageHeader"
+import { NextSeo } from "next-seo"
 
 const PrivacyPolicy = () => {
   return (
     <>
+      <NextSeo
+        title="Privacy Policy"
+        description="Clearly Design privacy policy. How we collect, use, and protect your personal data."
+        canonical="https://clearly.design/privacy-policy"
+      />
       <PageHeader title="Privacy Policy" description="" />
       <div className="row-wrapper row-y-spacing">
         <div className="max-w-prose prose lg:prose-xl prose-gray mx-auto">

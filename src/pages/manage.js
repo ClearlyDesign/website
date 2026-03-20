@@ -1,8 +1,10 @@
 import { ArrowUpRightIcon } from "@heroicons/react/16/solid"
+import { NextSeo } from "next-seo"
 
 const Manage = () => {
   return (
     <div className="grid place-content-center h-screen">
+      <NextSeo noindex={true} nofollow={true} />
       <a
         href="https://billing.stripe.com/p/login/4gw2a08DS97udagbII"
         className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 inline-flex items-center"

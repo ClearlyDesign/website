@@ -1,10 +1,16 @@
 import Footer from "@/components/Footer"
 import PageHeader from "@/sections/PageHeader"
 import Link from "next/link"
+import { NextSeo } from "next-seo"
 
 const Terms = () => {
   return (
     <>
+      <NextSeo
+        title="Terms of Use"
+        description="Clearly Design terms of use and service agreement."
+        canonical="https://clearly.design/terms"
+      />
       <PageHeader title="Terms of Use" description="" />
       <div className="row-wrapper row-y-spacing">
         <div className="max-w-prose prose lg:prose-xl prose-gray mx-auto">

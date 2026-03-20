@@ -28,6 +28,13 @@ export function organizationWebSiteSchema() {
         },
         description:
           "Clearly Design specializes in straightforward, results-driven website and product design. We cut through the noise to create clean, effective designs that make your vision clear.",
+        founder: {
+          "@type": "Person",
+          name: "Francois Brill",
+          url: `${SITE_URL}`,
+          jobTitle: "Designer + Builder",
+          sameAs: ["https://x.com/fbrill"],
+        },
       },
       {
         "@type": "WebSite",
