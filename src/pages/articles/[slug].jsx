@@ -269,7 +269,7 @@ export default function Article({ frontmatter, mdxSource, slug, seriesTotal, pre
                 </Link>
               )}
             </div>
-            <h1 className="mt-6 sm:mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
+            <h1 data-speakable="headline" className="mt-6 sm:mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl sm:leading-tight">
               {frontmatter.title}
             </h1>
             <div className="flex items-center gap-3 mt-7 sm:mt-6 text-white/50">

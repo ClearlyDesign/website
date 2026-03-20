@@ -81,6 +81,10 @@ export function articleSchema({ title, description, image, date, author, slug })
       "@type": "WebPage",
       "@id": url,
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["[data-speakable='headline']"],
+    },
     url,
   }
 
@@ -149,9 +153,12 @@ export function faqPageSchema(items) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    description:
+      "Common questions about Clearly Design's product design subscription, pricing, turnaround, and how it works.",
     mainEntity: items.map(({ question, answer }) => ({
       "@type": "Question",
       name: stripHtml(question),
+      text: stripHtml(question),
       acceptedAnswer: {
         "@type": "Answer",
         text: stripHtml(answer),
